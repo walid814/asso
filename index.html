@@ -95,7 +95,7 @@
 
                 <ul class="navList">
                     <li class="navItem ">
-                        <a href="pages/fate.html" class="navLinkStrong activeNav">
+                        <a href="pages/fate.html" class="navLinkStrong">
                             FATE
                         </a>
                     </li>
@@ -141,8 +141,7 @@
                             <div class="horizontalLine"></div>
                             <li class="submenuItem">
                                 <a href="pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">
-                                    Création d'une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun
+                                    Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun
                                 </a>
                             </li>
                             <div class="horizontalLine"></div>
@@ -203,12 +202,12 @@
                         </a>
                     </li>
                     <li class="navItem ">
-                        <a href="pages/soutenir.html" class="navLinkStrong buttonNav">
+                        <a href="pages/soutenir.html" class=" buttonNav">
                             Soutenir
                         </a>
                     </li>
                     <li class="navItem ">
-                        <a href="pages/adherer.html" class="navLinkStrong buttonNav">
+                        <a href="pages/adherer.html" class=" buttonNav">
                             Adhérer
                         </a>
                     </li>
@@ -222,10 +221,41 @@
                 const toggleBtn = document.getElementById('mobileToggle');
                 const mainNav = document.getElementById('mainNav');
                 const body = document.body;
+                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
 
-                toggleBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('navOpen');
-                    body.classList.toggle('noScroll');
+                // Mobile toggle
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        mainNav.classList.toggle('navOpen');
+                        body.classList.toggle('noScroll');
+                    });
+                }
+
+                // Fermer le menu mobile quand on clique sur un lien
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Ne pas fermer si on clique sur un toggle de sous-menu
+                        if (!e.target.closest('.navToggleLink')) {
+                            mainNav.classList.remove('navOpen');
+                            body.classList.remove('noScroll');
+                        }
+                    });
+                });
+
+                // Gestion des sous-menus sur mobile
+                // Gestion des sous-menus uniquement sur mobile
+                const toggleLinks = document.querySelectorAll('.navToggleLink');
+                toggleLinks.forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
+                        if (window.innerWidth < 992) {
+                            e.preventDefault();
+                            const parentLi = toggle.closest('.hasSubmenu');
+                            if (parentLi) {
+                                parentLi.classList.toggle('submenuOpen');
+                            }
+                        }
+                    });
                 });
             });
         </script>
