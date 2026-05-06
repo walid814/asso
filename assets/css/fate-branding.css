@@ -190,17 +190,17 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(0, 0, 0, 0.1);
 }
 
-/* Bouton Adhérer - Ligne sombre clean */
+/* Bouton Adhérer - Noir par défaut, blanc au hover */
 a[href*="adherer"].buttonNav {
-    background: transparent !important;
-    color: #111827 !important;
-    border: 2px solid rgba(0, 0, 0, 0.2) !important;
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 2px solid #111827 !important;
 }
 
 a[href*="adherer"].buttonNav:hover {
+    background: #ffffff !important;
+    color: #111827 !important;
     border-color: #111827 !important;
-    background: #111827 !important;
-    color: #fff !important;
 }
 
 /* Bouton Soutenir - Jaune FATE */

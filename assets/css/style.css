@@ -13899,3 +13899,15 @@ li.hasSubmenu:hover .dropdownIcon {
   text-decoration: none;
   /* Pas de soulignement */
 }
+
+/* Style spécifique pour le bouton Adhérer en noir */
+.buttonNav.btn-adherer-noir {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid black !important;
+}
+
+.buttonNav.btn-adherer-noir:hover {
+  background-color: white !important;
+  color: black !important;
+}

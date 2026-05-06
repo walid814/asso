@@ -58,15 +58,7 @@
     <div class="conteneur-banniere">
 
 
-        <section class="section topbarSection bgBlack paddingX">
-            <div class="topbarContainer">
-                <div class="topbarRow">
-                    <div class="topbarLeft">
-                        <ul class="topbarList"></ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
 
         <header class="headerWrapper">
@@ -78,31 +70,7 @@
 
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
 
-            <div id="languageContainer">
-                <div id="languageMenu" class="hidden">
-                    <a href="https://forumassotousensemble.org/setLanguage/fr"><img src="https://flagcdn.com/w40/fr.png"
-                            class="headerFlag" alt="Français"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/ru"><img src="https://flagcdn.com/w40/ru.png"
-                            class="headerFlag" alt="Русский"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/en"><img src="https://flagcdn.com/w40/gb.png"
-                            class="headerFlag" style="width: 36px; height: 25px;" alt="English"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/cn"><img src="https://flagcdn.com/w40/cn.png"
-                            class="headerFlag" alt="中文"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/pt"><img src="https://flagcdn.com/w40/pt.png"
-                            class="headerFlag" alt="Português"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/es"><img src="https://flagcdn.com/w40/es.png"
-                            class="headerFlag" alt="Español"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/sw"><img src="https://flagcdn.com/w40/ke.png"
-                            class="headerFlag" alt="Kiswahili"></a>
-                    <a href="https://forumassotousensemble.org/setLanguage/ar"><img src="https://flagcdn.com/w40/sa.png"
-                            class="headerFlag" alt="العربية"></a>
-                </div>
-                <div id="languageToggle">
 
-                    <img src="https://flagcdn.com/w40/fr.png" class="headerFlag currentLanguage" alt="Current language"
-                        style="border-radius: 3px;">
-                </div>
-            </div>
 
 
             <div id="suggestionPrompt" class="suggestion-prompt" style="display: none;">
@@ -247,18 +215,11 @@
                         </a>
                     </li>
 
-                    <li class="navItem ">
-                        <a href="../pages/soutenir.html" class=" 
-                                         buttonNav">
-                            Soutenir
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/soutenir.html" class="buttonNav">Soutenir</a>
                     </li>
-
-                    <li class="navItem ">
-                        <a href="../pages/adherer.html" class=" 
-                                         buttonNav">
-                            Adhérer
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/adherer.html" class="btn-adherer-noir buttonNav">Adhérer</a>
                     </li>
                 </ul>
             </nav>
@@ -270,10 +231,40 @@
                 const toggleBtn = document.getElementById('mobileToggle');
                 const mainNav = document.getElementById('mainNav');
                 const body = document.body;
+                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
 
-                toggleBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('navOpen');
-                    body.classList.toggle('noScroll');
+                // Mobile toggle
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        mainNav.classList.toggle('navOpen');
+                        body.classList.toggle('noScroll');
+                    });
+                }
+
+                // Fermer le menu mobile quand on clique sur un lien
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Ne pas fermer si on clique sur un toggle de sous-menu
+                        if (!e.target.closest('.navToggleLink')) {
+                            mainNav.classList.remove('navOpen');
+                            body.classList.remove('noScroll');
+                        }
+                    });
+                });
+
+                // Gestion des sous-menus uniquement sur mobile
+                const toggleLinks = document.querySelectorAll('.navToggleLink');
+                toggleLinks.forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
+                        if (window.innerWidth < 992) {
+                            e.preventDefault();
+                            const parentLi = toggle.closest('.hasSubmenu');
+                            if (parentLi) {
+                                parentLi.classList.toggle('submenuOpen');
+                            }
+                        }
+                    });
                 });
             });
         </script>

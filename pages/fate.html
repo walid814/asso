@@ -159,10 +159,10 @@
                         <a href="../pages/contact.html" class="navLinkStrong">CONTACTS</a>
                     </li>
                     <li class="navItem">
-                        <a href="../pages/soutenir.html" class=" buttonNav">Soutenir</a>
+                        <a href="../pages/soutenir.html" class="buttonNav">Soutenir</a>
                     </li>
                     <li class="navItem">
-                        <a href="../pages/adherer.html" class=" buttonNav">Adhérer</a>
+                        <a href="../pages/adherer.html" class="btn-adherer-noir buttonNav">Adhérer</a>
                     </li>
                 </ul>
             </nav>
@@ -175,6 +175,45 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+                const toggleBtn = document.getElementById('mobileToggle');
+                const mainNav = document.getElementById('mainNav');
+                const body = document.body;
+                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
+
+                // Mobile toggle
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        mainNav.classList.toggle('navOpen');
+                        body.classList.toggle('noScroll');
+                    });
+                }
+
+                // Fermer le menu mobile quand on clique sur un lien
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Ne pas fermer si on clique sur un toggle de sous-menu
+                        if (!e.target.closest('.navToggleLink')) {
+                            mainNav.classList.remove('navOpen');
+                            body.classList.remove('noScroll');
+                        }
+                    });
+                });
+
+                // Gestion des sous-menus uniquement sur mobile
+                const toggleLinks = document.querySelectorAll('.navToggleLink');
+                toggleLinks.forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
+                        if (window.innerWidth < 992) {
+                            e.preventDefault();
+                            const parentLi = toggle.closest('.hasSubmenu');
+                            if (parentLi) {
+                                parentLi.classList.toggle('submenuOpen');
+                            }
+                        }
+                    });
+                });
+                // Logic for suggestion prompt follows below in the same block
                 const suggestionPrompt = document.getElementById('suggestionPrompt');
                 let hasShownOnce = false;
                 let isCurrentlyVisible = false;
