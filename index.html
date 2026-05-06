@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    
+
     <title>Forum Associatif Tous Ensemble (FATE) — Association loi 1901 | Lyon</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- SEO -->
-    <meta name="description" content="Le Forum Associatif Tous Ensemble (FATE) est une association loi 1901 basée à Lyon, engagée pour la solidarité, le vivre-ensemble et la valorisation du patrimoine africain depuis 2001." />
-    <meta name="keywords" content="FATE, Forum Associatif Tous Ensemble, association Lyon, solidarité, Afrique, diaspora africaine, vivre-ensemble, culture" />
+    <meta name="description"
+        content="Le Forum Associatif Tous Ensemble (FATE) est une association loi 1901 basée à Lyon, engagée pour la solidarité, le vivre-ensemble et la valorisation du patrimoine africain depuis 2001." />
+    <meta name="keywords"
+        content="FATE, Forum Associatif Tous Ensemble, association Lyon, solidarité, Afrique, diaspora africaine, vivre-ensemble, culture" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Forum Associatif Tous Ensemble (FATE)" />
     <link rel="canonical" href="https://forumassotousensemble.org/" />
@@ -21,7 +24,8 @@
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content="https://forumassotousensemble.org/" />
     <meta property="og:title" content="Forum Associatif Tous Ensemble (FATE) — Association loi 1901 | Lyon" />
-    <meta property="og:description" content="Fondé en 2001, le FATE est un collectif d'associations lyonnaises engagées pour la solidarité locale et internationale, la culture africaine et le vivre-ensemble." />
+    <meta property="og:description"
+        content="Fondé en 2001, le FATE est un collectif d'associations lyonnaises engagées pour la solidarité locale et internationale, la culture africaine et le vivre-ensemble." />
     <meta property="og:image" content="https://forumassotousensemble.org/assets/images/logoHeader.png" />
     <meta property="og:site_name" content="Forum Associatif Tous Ensemble" />
 
@@ -30,11 +34,12 @@
     <meta name="twitter:site" content="@FATEnsemble" />
     <meta name="twitter:creator" content="@FATEnsemble" />
     <meta name="twitter:title" content="Forum Associatif Tous Ensemble (FATE)" />
-    <meta name="twitter:description" content="Association loi 1901 basée à Lyon, engagée pour la solidarité et la valorisation du patrimoine africain depuis 2001." />
+    <meta name="twitter:description"
+        content="Association loi 1901 basée à Lyon, engagée pour la solidarité et la valorisation du patrimoine africain depuis 2001." />
     <meta name="twitter:image" content="https://forumassotousensemble.org/assets/images/logoHeader.png" />
 
-    
-    
+
+
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawsome.min.css">
@@ -48,83 +53,54 @@
     <link rel="stylesheet" href="assets/css/odometer.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/fate-branding.css">
+    <link rel="stylesheet" href="assets/css/accueil.css">
 
-    
+
+
+
+
     <link href="assets/images/logoHeader.png" rel="icon" type="image/png">
 
-    
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
 </head>
-<body >
 
-    
-    <div class="conteneur-banniere" >
+<body>
 
-         
-         <section class="section topbarSection bgBlack paddingX">
-    <div class="topbarContainer">
-        <div class="topbarRow">
-            <div class="topbarLeft">
-                <ul class="topbarList"></ul>
+    <div class="conteneur-banniere">
+
+        <header class="headerWrapper">
+            <div class="mobileNav paddingX">
+                <a href="index.html" class="logoLink">
+                    <img src="assets/images/logo.png" alt="logo fate" class="logoImage" />
+                </a>
             </div>
-        </div>
-    </div>
-</section>
 
+            <div class="mobileNavToggle" id="mobileToggle">☰</div>
 
-<header class="headerWrapper">
-    <div class="mobileNav paddingX">
-        <a href="index.html" class="logoLink">
-            <img src="assets/images/logo.png" alt="logo fate" class="logoImage" />
-        </a>
-    </div>
+            <div id="suggestionPrompt" class="suggestion-prompt" style="display: none;">
+                <button class="suggestion-close" onclick="closeSuggestionPrompt()" aria-label="Fermer">
+                    <i class="fas fa-times"></i>
+                </button>
+                <a href="pages/suggestions.html" class="suggestion-link">
+                    <i class="fas fa-lightbulb"></i>
+                    Avez-vous des suggestions ?
+                </a>
+            </div>
 
-    <div class="mobileNavToggle" id="mobileToggle">☰</div>
+            <nav class="mainNav" id="mainNav">
+                <a href="index.html" class="logoLink desktopOnly">
+                    <img src="assets/images/logo.png" alt="logo fate" class="logoImage" />
+                </a>
 
-    <div id="languageContainer">
-        <div id="languageMenu" class="hidden">
-            <a href="https://forumassotousensemble.org/setLanguage/fr"><img src="https://flagcdn.com/w40/fr.png" class="headerFlag" alt="Français"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/ru"><img src="https://flagcdn.com/w40/ru.png" class="headerFlag" alt="Русский"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/en"><img src="https://flagcdn.com/w40/gb.png" class="headerFlag" style="width: 36px; height: 25px;" alt="English"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/cn"><img src="https://flagcdn.com/w40/cn.png" class="headerFlag" alt="中文"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/pt"><img src="https://flagcdn.com/w40/pt.png" class="headerFlag" alt="Português"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/es"><img src="https://flagcdn.com/w40/es.png" class="headerFlag" alt="Español"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/sw"><img src="https://flagcdn.com/w40/ke.png" class="headerFlag" alt="Kiswahili"></a>
-            <a href="https://forumassotousensemble.org/setLanguage/ar"><img src="https://flagcdn.com/w40/sa.png" class="headerFlag" alt="العربية"></a>
-        </div>
-        <div id="languageToggle">
-            
-            <img src="https://flagcdn.com/w40/fr.png" class="headerFlag currentLanguage" alt="Current language" style="border-radius: 3px;">
-        </div>
-    </div>
-
-    
-        <div id="suggestionPrompt" class="suggestion-prompt" style="display: none;">
-        <button class="suggestion-close" onclick="closeSuggestionPrompt()" aria-label="Fermer">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="pages/suggestions.html" class="suggestion-link">
-            <i class="fas fa-lightbulb"></i>
-            Avez-vous des suggestions ?
-        </a>
-    </div>
-    
-    <nav class="mainNav" id="mainNav">
-        <a href="index.html" class="logoLink desktopOnly">
-            <img src="assets/images/logo.png" alt="logo fate" class="logoImage" />
-        </a>
-
-        <ul class="navList">
-                                        
-                                    <li class="navItem ">
-                        <a href="pages/fate.html"
-                           class="navLinkStrong strongerNav
-                                         ">
+                <ul class="navList">
+                    <li class="navItem ">
+                        <a href="pages/fate.html" class="navLinkStrong activeNav">
                             FATE
                         </a>
                     </li>
-                                            
-                                    <li class=" navItem hasSubmenu">
+
+                    <li class=" navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="pages/actualites.html" class="navLink navLinkStrong navToggleLink">
                                 ACTUALITÉS
@@ -133,46 +109,46 @@
                         </div>
 
                         <ul class="submenuList ">
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/festival-arta-sacra.html" class="submenuLink">
-                                        Festival ARTA SACRA
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/can-juin-2025.html" class="submenuLink">
-                                        En route pour la CAN 2025
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">
-                                        Le FATE bientôt vingt cinq ans 2001 - 2026
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">
-                                        Des routes de l&#039;esclavages à nos jours
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/actualites.html" class="submenuLink">
-                                        Eau et assainissement PK17-PK32 Douala
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">
-                                        Création d&#039;une plantation de bananiers plantains et de piments à Bihiang-Cameroun
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                    </ul>
+                            <li class="submenuItem">
+                                <a href="pages/festival-arta-sacra.html" class="submenuLink">
+                                    Festival ARTA SACRA
+                                </a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/can-juin-2025.html" class="submenuLink">
+                                    En route pour la CAN 2025
+                                </a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">
+                                    Le FATE bientôt vingt cinq ans 2001 - 2026
+                                </a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">
+                                    Des routes de l'esclavage à nos jours
+                                </a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">
+                                    Eau et assainissement PK17-PK32 Douala
+                                </a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">
+                                    Création d'une plantation de bananiers plantains et de piments à
+                                    Bihiang-Cameroun
+                                </a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                        </ul>
                     </li>
-                                            
-                                    
+
                     <li class=" navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="pages/actions.html" class="navLink navLinkStrong navToggleLink">
@@ -180,1367 +156,998 @@
                                 <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList">
                             <li class="submenuItem">
-                                <a href="pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
+                                <a href="pages/actions.html" class="submenuLink">Nos actions</a>
                             </li>
                             <div class="horizontalLine"></div>
                             <li class="submenuItem">
-                                <a href="pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
+                                <a href="pages/collaborations.html" class="submenuLink">Nos collaborations</a>
                             </li>
                         </ul>
                     </li>
-                                            
-                                    <li class="navItem ">
-                        <a href="pages/archives.html"
-                           class="navLinkStrong 
-                                         ">
+
+                    <li class="navItem ">
+                        <a href="pages/archives.html" class="navLinkStrong">
                             ARCHIVES
                         </a>
                     </li>
-                                            
-                                    <li class=" navItem hasSubmenu">
+
+                    <li class=" navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
                                 PARTENAIRES
                                 <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList partenairesSubmenuPush">
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/partenaires.html#sectionInstitutionnels" class="submenuLink">
-                                        Institutionnels
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/partenaires.html#sectionPrives" class="submenuLink">
-                                        Privés
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                                                            <li class="submenuItem">
-                                    <a href="pages/partenaires.html#sectionAssociatif" class="submenuLink">
-                                        Associatifs
-                                    </a>
-                                </li>
-                                <div class="horizontalLine"></div>
-                                                    </ul>
+                            <li class="submenuItem">
+                                <a href="pages/partenaires.html#sectionInstitutionnels"
+                                    class="submenuLink">Institutionnels</a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem">
+                                <a href="pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a>
+                            </li>
+                            <div class="horizontalLine"></div>
+                        </ul>
                     </li>
-                                            
-                                    <li class="navItem ">
-                        <a href="pages/contact.html"
-                           class="navLinkStrong 
-                                         ">
+
+                    <li class="navItem ">
+                        <a href="pages/contact.html" class="navLinkStrong">
                             CONTACTS
                         </a>
                     </li>
-                                   <li class="navItem ">
-                        <a href="pages/soutenir.html"
-                           class="navLinkStrong 
-                                          buttonNav">
+                    <li class="navItem ">
+                        <a href="pages/soutenir.html" class="navLinkStrong buttonNav">
                             Soutenir
                         </a>
-                    </li>                
-                                   <li class="navItem ">
-                        <a href="pages/adherer.html"
-                           class="navLinkStrong 
-                                          buttonNav">
+                    </li>
+                    <li class="navItem ">
+                        <a href="pages/adherer.html" class="navLinkStrong buttonNav">
                             Adhérer
                         </a>
-                    </li>                 
-                                    </ul>
-    </nav>
-</header>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('mobileToggle');
-    const mainNav = document.getElementById('mainNav');
-    const body = document.body;
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const toggleBtn = document.getElementById('mobileToggle');
+                const mainNav = document.getElementById('mainNav');
+                const body = document.body;
 
-    toggleBtn.addEventListener('click', () => {
-        mainNav.classList.toggle('navOpen');
-        body.classList.toggle('noScroll');
-    });
-});
-</script>
-
-
-<style>
-.suggestion-prompt {
-    position: fixed;
-    top: 160px;
-    right: 30px;
-    z-index: 10000;
-    background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
-    border-radius: 25px;
-    padding: 15px 20px;
-    box-shadow: 0 8px 25px rgba(224, 194, 32, 0.3);
-    transform: translateX(100%) scale(0.8);
-    opacity: 0;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border: 2px solid rgba(255,255,255,0.4);
-    max-width: 280px;
-}
-
-.suggestion-prompt.show {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    animation: float 3s ease-in-out infinite;
-}
-
-.suggestion-close {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #dc3545;
-    border: 2px solid white;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.suggestion-close:hover {
-    background: #c82333;
-    transform: scale(1.1);
-}
-
-.suggestion-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #2c3e50 !important;
-    text-decoration: none !important;
-    font-weight: 600;
-    font-size: 14px;
-    white-space: nowrap;
-    transition: color 0.3s ease;
-}
-
-.suggestion-link:hover {
-    color: #1a252f !important;
-    text-decoration: none !important;
-}
-
-.suggestion-link i {
-    font-size: 16px;
-    animation: pulse 2s infinite;
-    color: #2c3e50;
-}
-
-@keyframes  float {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-5px) scale(1.02); }
-}
-
-@keyframes  pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-@media (max-width: 768px) {
-    .suggestion-prompt {
-        right: 10px;
-        top: 100px;
-        padding: 12px 16px;
-        max-width: 250px;
-    }
-    
-    .suggestion-close {
-        top: -6px;
-        right: -6px;
-        width: 20px;
-        height: 20px;
-        font-size: 10px;
-    }
-    
-    .suggestion-link {
-        font-size: 13px;
-    }
-    
-    .suggestion-link i {
-        font-size: 14px;
-    }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const suggestionPrompt = document.getElementById('suggestionPrompt');
-    let hasShownOnce = false;
-    let isCurrentlyVisible = false;
-    
-    console.log('Script de suggestion chargé');
-    
-    // Vérifier si on est sur la page de suggestions
-    const currentPath = window.location.pathname;
-    if (currentPath.includes('/suggestions') || currentPath.includes('/suggestion')) {
-        console.log('Sur la page de suggestions - aucun affichage du prompt');
-        return;
-    }
-
-    const suggestionPrompt = document.getElementById('suggestionPrompt');
-    console.log('Element suggestionPrompt:', suggestionPrompt);
-    
-    // Si l'élément n'existe pas (masqué côté serveur), on sort
-    if (!suggestionPrompt) {
-        console.log('Element suggestionPrompt non trouvé - probablement masqué côté serveur');
-        return;
-    }
-    
-    // Vérifier si la suggestion a été fermée dans cette session
-    if (localStorage.getItem('suggestionClosed') === 'true') {
-        console.log('Suggestion fermée précédemment - pas d\'affichage automatique');
-        return;
-    }
-    
-    if (suggestionPrompt) {
-        console.log('Element trouvé, ajout du listener de scroll...');
-        
-        // Fonction pour vérifier si on est au milieu de la page
-        function checkScrollPosition() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            
-            // Calculer si on est au milieu de la page (entre 40% et 60% du scroll)
-            const scrollPercentage = scrollTop / (documentHeight - windowHeight);
-            const isInMiddle = scrollPercentage >= 0.4 && scrollPercentage <= 0.8;
-            
-            console.log(`Scroll: ${Math.round(scrollPercentage * 100)}%`);
-            
-            if (isInMiddle && !isCurrentlyVisible) {
-                console.log('Au milieu de la page - affichage du message');
-                showSuggestionPrompt();
-            } else if (!isInMiddle && isCurrentlyVisible) {
-                console.log('Plus au milieu - masquage du message');
-                hideSuggestionPrompt();
-            }
-        }
-        
-        // Écouter le scroll avec throttling pour les performances
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    checkScrollPosition();
-                    ticking = false;
+                toggleBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('navOpen');
+                    body.classList.toggle('noScroll');
                 });
-                ticking = true;
-            }
-        });
-        
-        // Test après 2 secondes pour vérifier que ça fonctionne
-        setTimeout(() => {
-            console.log('Test d\'affichage immédiat');
-            showSuggestionPrompt();
-        }, 2000);
-        
-    } else {
-        console.error('Element suggestionPrompt non trouvé !');
-    }
-    
-    function showSuggestionPrompt() {
-        console.log('showSuggestionPrompt appelée');
-        
-        if (!suggestionPrompt || isCurrentlyVisible) {
-            return;
-        }
-        
-        isCurrentlyVisible = true;
-        suggestionPrompt.style.display = 'block';
-        console.log('Display mis à block');
-        
-        // Ajouter la classe 'show' après un petit délai pour l'animation
-        setTimeout(() => {
-            suggestionPrompt.classList.add('show');
-            console.log('Classe show ajoutée');
-        }, 100);
-    }
-    
-    function hideSuggestionPrompt() {
-        console.log('hideSuggestionPrompt appelée');
-        
-        if (!suggestionPrompt || !isCurrentlyVisible) {
-            return;
-        }
-        
-        suggestionPrompt.classList.remove('show');
-        console.log('Classe show retirée');
-        
-        // Masquer complètement après l'animation
-        setTimeout(() => {
-            suggestionPrompt.style.display = 'none';
-            isCurrentlyVisible = false;
-            console.log('Display mis à none');
-        }, 600);
-    }
-    
-    // Fonction de test globale
-    window.testSuggestion = function() {
-        console.log('Test manuel déclenché');
-        const element = document.getElementById('suggestionPrompt');
-        if (element) {
-            console.log('Element trouvé pour test manuel');
-            showSuggestionPrompt();
-        } else {
-            console.error('Element non trouvé pour test manuel');
-        }
-    };
-    
-    // Fonction pour fermer manuellement le message de suggestion
-    window.closeSuggestionPrompt = function() {
-        console.log('Fermeture manuelle du message de suggestion');
-        hideSuggestionPrompt();
-        
-        // Empêcher la réapparition pendant cette session
-        localStorage.setItem('suggestionClosed', 'true');
-        console.log('Suggestion fermée pour cette session');
-    };
-});
-</script>
-         
-         
-
-
-<style>
-/* ===== HERO SLIDER PLEINE LARGEUR ===== */
-.fate-hero {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    min-height: 500px;
-    max-height: 760px;
-    overflow: hidden;
-    background: #0a0a1e;
-}
-.fate-hero-slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.9s ease;
-    pointer-events: none;
-}
-.fate-hero-slide.active {
-    opacity: 1;
-    pointer-events: all;
-}
-.fate-hero-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 8s ease;
-}
-.fate-hero-slide.active img {
-    transform: scale(1.06);
-}
-.fate-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right,
-        rgba(5,5,20,0.88) 0%,
-        rgba(5,5,20,0.60) 45%,
-        rgba(5,5,20,0.10) 100%);
-    display: flex;
-    align-items: center;
-    padding: 0 80px 0 160px;
-}
-.fate-hero-content {
-    max-width: 640px;
-    color: #fff;
-}
-.fate-hero-overtitle {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    color: #FFC107;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
-}
-.fate-hero-slide.active .fate-hero-overtitle {
-    opacity: 1;
-    transform: translateY(0);
-}
-.fate-hero-h1 {
-    font-size: clamp(26px, 4vw, 52px);
-    font-weight: 900;
-    line-height: 1.15;
-    color: #fff;
-    margin-bottom: 14px;
-    text-shadow: 0 4px 24px rgba(0,0,0,0.5);
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(22px);
-    transition: opacity 0.65s ease 0.35s, transform 0.65s ease 0.35s;
-}
-.fate-hero-slide.active .fate-hero-h1 {
-    opacity: 1;
-    transform: translateY(0);
-}
-.fate-hero-sub {
-    font-size: 15px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.80);
-    margin-bottom: 30px;
-    max-width: 500px;
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.65s ease 0.5s, transform 0.65s ease 0.5s;
-}
-.fate-hero-slide.active .fate-hero-sub {
-    opacity: 1;
-    transform: translateY(0);
-}
-.fate-hero-actions {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.65s ease 0.65s, transform 0.65s ease 0.65s;
-}
-.fate-hero-slide.active .fate-hero-actions {
-    opacity: 1;
-    transform: translateY(0);
-}
-.fate-hero-btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #FFC107;
-    color: #0a0a1e;
-    font-size: 14px;
-    font-weight: 800;
-    padding: 13px 28px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 6px 24px rgba(255,193,7,0.45);
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-.fate-hero-btn-primary:hover {
-    background: #fff;
-    color: #0a0a1e;
-    text-decoration: none;
-    transform: scale(1.05);
-    box-shadow: 0 8px 32px rgba(255,255,255,0.3);
-}
-.fate-hero-btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(8px);
-    border: 1.5px solid rgba(255,255,255,0.4);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 13px 28px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s;
-}
-.fate-hero-btn-secondary:hover {
-    background: rgba(255,255,255,0.22);
-    color: #fff;
-    text-decoration: none;
-    transform: scale(1.04);
-}
-/* Flèches */
-.fate-hero-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    border-radius: 0;
-    color: rgba(255,255,255,0.75);
-    font-size: 36px;
-    font-weight: 300;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 30;
-    transition: color 0.25s, transform 0.25s;
-    user-select: none;
-    padding: 8px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-.fate-hero-arrow:hover {
-    color: #FFC107;
-    transform: translateY(-50%) scale(1.15);
-}
-.fate-hero-arrow-left  { left: 18px; }
-.fate-hero-arrow-right { right: 52px; }
-/* Dots */
-.fate-hero-dots {
-    position: absolute;
-    bottom: 28px;
-    left: 80px;
-    display: flex;
-    gap: 10px;
-    z-index: 30;
-}
-.fate-hero-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.38);
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    border: 1.5px solid rgba(255,255,255,0.5);
-}
-.fate-hero-dot.active {
-    background: #FFC107;
-    border-color: #FFC107;
-    transform: scale(1.35);
-}
-/* Réseaux sociaux flottants */
-.fate-hero-socials {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    z-index: 30;
-}
-.fate-hero-socials a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.3);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s;
-}
-.fate-hero-socials a:hover {
-    background: #FFC107;
-    color: #0a0a1e;
-    transform: scale(1.15);
-}
-/* Scroll indicator */
-.hero-scroll-hint {
-    position: absolute;
-    bottom: 24px;
-    right: 80px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255,255,255,0.5);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    z-index: 30;
-    animation: bounceY 1.8s ease-in-out infinite;
-}
-@keyframes bounceY {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
-}
-
-/* ===== SECTION DESCRIPTION + VIDEO ===== */
-.fate-about-strip {
-    background: #f8f9fb;
-    padding: 60px 0;
-}
-.fate-about-strip .container {
-    display: flex;
-    gap: 48px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.fate-about-text {
-    flex: 1 1 340px;
-}
-.fate-about-text .section-tag {
-    font-size: 12px;
-    font-weight: 700;
-    color: #FFC107;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    margin-bottom: 14px;
-    display: block;
-}
-.fate-about-text h2 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #1a1a2e;
-    line-height: 1.3;
-    margin-bottom: 16px;
-}
-.fate-about-text p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 24px;
-}
-.fate-about-video {
-    flex: 1 1 380px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 12px 48px rgba(0,0,0,0.14);
-    aspect-ratio: 16/9;
-}
-.fate-about-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
-</style>
-
-<!-- ========== HERO SLIDER PLEINE LARGEUR ========== -->
-<section class="fate-hero" id="fateHero">
-
-    <!-- Slide 1 -->
-    <div class="fate-hero-slide active">
-        <img src="assets/storage/actualites/June2025/routes_esclavage.png" alt="Des routes de l'esclavage à nos jours">
-        <div class="fate-hero-overlay">
-            <div class="fate-hero-content">
-                <span class="fate-hero-overtitle"><i class="far fa-calendar-alt"></i> &nbsp;Actualité · Mai 2025</span>
-                <h1 class="fate-hero-h1">Des routes de l'esclavage à nos jours</h1>
-                <p class="fate-hero-sub">Un projet pour mobiliser les habitants et acteurs éducatifs autour de la mémoire de l'esclavage, de 2024 à 2026.</p>
-                <div class="fate-hero-actions">
-                    <a class="fate-hero-btn-primary" href="https://forumassotousensemble.org/actualites/routes-de-l-esclavage-a-nos-jours-juin-2025" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                    <a class="fate-hero-btn-secondary" href="pages/adherer.html">Devenir bénévole</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="fate-hero-slide">
-        <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Projet d'eau et d'assainissement 2026">
-        <div class="fate-hero-overlay">
-            <div class="fate-hero-content">
-                <span class="fate-hero-overtitle"><i class="far fa-calendar-alt"></i> &nbsp;Projet · 2026</span>
-                <h1 class="fate-hero-h1">Projet d'eau et d'assainissement PK17-PK32 Douala</h1>
-                <p class="fate-hero-sub">Le FATE soutient l'accès à l'eau potable et l'assainissement dans les quartiers défavorisés de Douala, Cameroun.</p>
-                <div class="fate-hero-actions">
-                    <a class="fate-hero-btn-primary" href="pages/actualites.html">En savoir + <i class="fas fa-arrow-right"></i></a>
-                    <a class="fate-hero-btn-secondary" href="pages/soutenir.html">Nous soutenir</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="fate-hero-slide">
-        <img src="assets/storage/actualites/September2026/plantations_bananiers.png" alt="Plantation de bananiers plantains">
-        <div class="fate-hero-overlay">
-            <div class="fate-hero-content">
-                <span class="fate-hero-overtitle"><i class="far fa-calendar-alt"></i> &nbsp;Projet · 2026 – 2027</span>
-                <h1 class="fate-hero-h1">Plantation de bananiers plantains et de piments à Bihang</h1>
-                <p class="fate-hero-sub">Création d'une plantation agricole au Cameroun pour soutenir le développement économique local et la souveraineté alimentaire.</p>
-                <div class="fate-hero-actions">
-                    <a class="fate-hero-btn-primary" href="https://forumassotousensemble.org/actualites/plantation-bananiers-piments-bihang-2026-2027" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                    <a class="fate-hero-btn-secondary" href="pages/soutenir.html">Nous soutenir</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Flèches -->
-    <div class="fate-hero-arrow fate-hero-arrow-left" onclick="fateHeroSlide(-1)" aria-label="Précédent">&lt;</div>
-    <div class="fate-hero-arrow fate-hero-arrow-right" onclick="fateHeroSlide(1)" aria-label="Suivant">&gt;</div>
-
-    <!-- Dots -->
-    <div class="fate-hero-dots">
-        <div class="fate-hero-dot active" onclick="fateHeroGoTo(0)"></div>
-        <div class="fate-hero-dot" onclick="fateHeroGoTo(1)"></div>
-        <div class="fate-hero-dot" onclick="fateHeroGoTo(2)"></div>
-    </div>
-
-    <!-- Réseaux sociaux -->
-    <div class="fate-hero-socials">
-        <a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://x.com/FATEnsemble" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/forumassociatif_tousensemble" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@fatensemble" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="hero-scroll-hint">&#8595;&nbsp; Défiler</div>
-</section>
-
-<script>
-(function() {
-    var cur = 0;
-    var slides = document.querySelectorAll('#fateHero .fate-hero-slide');
-    var dots   = document.querySelectorAll('#fateHero .fate-hero-dot');
-    var timer;
-
-    function show(n) {
-        slides[cur].classList.remove('active');
-        dots[cur].classList.remove('active');
-        cur = (n + slides.length) % slides.length;
-        slides[cur].classList.add('active');
-        dots[cur].classList.add('active');
-    }
-    window.fateHeroSlide = function(d) { clearInterval(timer); show(cur + d); go(); };
-    window.fateHeroGoTo  = function(n) { clearInterval(timer); show(n); go(); };
-    function go() { timer = setInterval(function(){ show(cur + 1); }, 6000); }
-    go();
-})();
-</script>
-
-<!-- ========== DESCRIPTION + VIDÉO ========== -->
-<section class="fate-about-strip">
-    <div class="container">
-        <div class="fate-about-text">
-            <span class="section-tag">&#127758; &nbsp;Qui sommes-nous ?</span>
-            <h2>Forum Associatif<br>Tous Ensemble</h2>
-            <p>Fond&eacute; en avril 2001 par Roger Tonye Aguiar, le FATE est un collectif d&apos;associations lyonnaises engag&eacute;es pour la solidarit&eacute;, le vivre-ensemble et la valorisation du patrimoine africain. Association loi 1901 d&apos;int&eacute;r&ecirc;t g&eacute;n&eacute;ral, &eacute;ligible au m&eacute;c&eacute;nat, elle d&eacute;ploie ses actions localement et &agrave; l&apos;international.</p>
-            <a class="fate-hero-btn-primary" href="pages/fate.html" style="font-size:13px; padding:10px 22px;">D&eacute;couvrir la structure <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="fate-about-video">
-            <iframe
-                src="https://www.youtube.com/embed/oxOJTua3v7g"
-                title="Forum Associatif Tous Ensemble — Présentation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy">
-            </iframe>
-        </div>
-    </div>
-</section>
+            });
+        </script>
 
 
 
-        
 
-<section class="fun-facts fun-facts-1 mt-5 pt-70 pb-100">
-    <div class="container">
-        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="fun-facts-card">
-                        <div class="icone-key">
-                            <img src="assets/storage/keyfigures/June2023/AXyG7FzOnx4gR94F9fIu.png" alt="Associations">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const suggestionPrompt = document.getElementById('suggestionPrompt');
+                let hasShownOnce = false;
+                let isCurrentlyVisible = false;
+
+                console.log('Script de suggestion chargé');
+
+                // Vérifier si on est sur la page de suggestions
+                const currentPath = window.location.pathname;
+                if (currentPath.includes('/suggestions') || currentPath.includes('/suggestion')) {
+                    console.log('Sur la page de suggestions - aucun affichage du prompt');
+                    return;
+                }
+
+                const suggestionPrompt = document.getElementById('suggestionPrompt');
+                console.log('Element suggestionPrompt:', suggestionPrompt);
+
+                // Si l'élément n'existe pas (masqué côté serveur), on sort
+                if (!suggestionPrompt) {
+                    console.log('Element suggestionPrompt non trouvé - probablement masqué côté serveur');
+                    return;
+                }
+
+                // Vérifier si la suggestion a été fermée dans cette session
+                if (localStorage.getItem('suggestionClosed') === 'true') {
+                    console.log('Suggestion fermée précédemment - pas d\'affichage automatique');
+                    return;
+                }
+
+                if (suggestionPrompt) {
+                    console.log('Element trouvé, ajout du listener de scroll...');
+
+                    // Fonction pour vérifier si on est au milieu de la page
+                    function checkScrollPosition() {
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        const windowHeight = window.innerHeight;
+                        const documentHeight = document.documentElement.scrollHeight;
+
+                        // Calculer si on est au milieu de la page (entre 40% et 60% du scroll)
+                        const scrollPercentage = scrollTop / (documentHeight - windowHeight);
+                        const isInMiddle = scrollPercentage >= 0.4 && scrollPercentage <= 0.8;
+
+                        console.log(`Scroll: ${Math.round(scrollPercentage * 100)}%`);
+
+                        if (isInMiddle && !isCurrentlyVisible) {
+                            console.log('Au milieu de la page - affichage du message');
+                            showSuggestionPrompt();
+                        } else if (!isInMiddle && isCurrentlyVisible) {
+                            console.log('Plus au milieu - masquage du message');
+                            hideSuggestionPrompt();
+                        }
+                    }
+
+                    // Écouter le scroll avec throttling pour les performances
+                    let ticking = false;
+                    window.addEventListener('scroll', () => {
+                        if (!ticking) {
+                            requestAnimationFrame(() => {
+                                checkScrollPosition();
+                                ticking = false;
+                            });
+                            ticking = true;
+                        }
+                    });
+
+                    // Test après 2 secondes pour vérifier que ça fonctionne
+                    setTimeout(() => {
+                        console.log('Test d\'affichage immédiat');
+                        showSuggestionPrompt();
+                    }, 2000);
+
+                } else {
+                    console.error('Element suggestionPrompt non trouvé !');
+                }
+
+                function showSuggestionPrompt() {
+                    console.log('showSuggestionPrompt appelée');
+
+                    if (!suggestionPrompt || isCurrentlyVisible) {
+                        return;
+                    }
+
+                    isCurrentlyVisible = true;
+                    suggestionPrompt.style.display = 'block';
+                    console.log('Display mis à block');
+
+                    // Ajouter la classe 'show' après un petit délai pour l'animation
+                    setTimeout(() => {
+                        suggestionPrompt.classList.add('show');
+                        console.log('Classe show ajoutée');
+                    }, 100);
+                }
+
+                function hideSuggestionPrompt() {
+                    console.log('hideSuggestionPrompt appelée');
+
+                    if (!suggestionPrompt || !isCurrentlyVisible) {
+                        return;
+                    }
+
+                    suggestionPrompt.classList.remove('show');
+                    console.log('Classe show retirée');
+
+                    // Masquer complètement après l'animation
+                    setTimeout(() => {
+                        suggestionPrompt.style.display = 'none';
+                        isCurrentlyVisible = false;
+                        console.log('Display mis à none');
+                    }, 600);
+                }
+
+                // Fonction de test globale
+                window.testSuggestion = function () {
+                    console.log('Test manuel déclenché');
+                    const element = document.getElementById('suggestionPrompt');
+                    if (element) {
+                        console.log('Element trouvé pour test manuel');
+                        showSuggestionPrompt();
+                    } else {
+                        console.error('Element non trouvé pour test manuel');
+                    }
+                };
+
+                // Fonction pour fermer manuellement le message de suggestion
+                window.closeSuggestionPrompt = function () {
+                    console.log('Fermeture manuelle du message de suggestion');
+                    hideSuggestionPrompt();
+
+                    // Empêcher la réapparition pendant cette session
+                    localStorage.setItem('suggestionClosed', 'true');
+                    console.log('Suggestion fermée pour cette session');
+                };
+            });
+        </script>
+
+
+
+
+
+
+        <!-- ========== HERO SLIDER PLEINE LARGEUR ========== -->
+        <section class="fate-hero" id="fateHero">
+
+            <!-- Slide 1 -->
+            <div class="fate-hero-slide active">
+                <img src="assets/storage/actualites/June2025/routes_esclavage.png"
+                    alt="Des routes de l'esclavage à nos jours">
+                <div class="fate-hero-overlay">
+                    <div class="fate-hero-content">
+                        <span class="fate-hero-overtitle"><i class="far fa-calendar-alt"></i> &nbsp;Actualité · Mai
+                            2025</span>
+                        <h1 class="fate-hero-h1">Des routes de l'esclavage à nos jours</h1>
+                        <p class="fate-hero-sub">Un projet pour mobiliser les habitants et acteurs éducatifs autour de
+                            la mémoire de l'esclavage, de 2024 à 2026.</p>
+                        <div class="fate-hero-actions">
+                            <a class="fate-hero-btn-primary"
+                                href="https://forumassotousensemble.org/actualites/routes-de-l-esclavage-a-nos-jours-juin-2025"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                            <a class="fate-hero-btn-secondary" href="pages/adherer.html">Devenir bénévole</a>
                         </div>
-                        <div class="inner-text-">
-                            <h2>
-                                <span class="odometer" data-count="30">
-                                    00
-                                </span>
-                            </h2>
-                            <p>
-                                Associations
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="fate-hero-slide">
+                <img src="assets/storage/actualites/September2022/assainissement_douala.png"
+                    alt="Projet d'eau et d'assainissement 2026">
+                <div class="fate-hero-overlay">
+                    <div class="fate-hero-content">
+                        <span class="fate-hero-overtitle"><i class="far fa-calendar-alt"></i> &nbsp;Projet · 2026</span>
+                        <h1 class="fate-hero-h1">Projet d'eau et d'assainissement PK17-PK32 Douala</h1>
+                        <p class="fate-hero-sub">Le FATE soutient l'accès à l'eau potable et l'assainissement dans les
+                            quartiers défavorisés de Douala, Cameroun.</p>
+                        <div class="fate-hero-actions">
+                            <a class="fate-hero-btn-primary" href="pages/actualites.html">En savoir + <i
+                                    class="fas fa-arrow-right"></i></a>
+                            <a class="fate-hero-btn-secondary" href="pages/soutenir.html">Nous soutenir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="fate-hero-slide">
+                <img src="assets/storage/actualites/September2026/plantations_bananiers.png"
+                    alt="Plantation de bananiers plantains">
+                <div class="fate-hero-overlay">
+                    <div class="fate-hero-content">
+                        <span class="fate-hero-overtitle"><i class="far fa-calendar-alt"></i> &nbsp;Projet · 2026 –
+                            2027</span>
+                        <h1 class="fate-hero-h1">Plantation de bananiers plantains et de piments à Bihang</h1>
+                        <p class="fate-hero-sub">Création d'une plantation agricole au Cameroun pour soutenir le
+                            développement économique local et la souveraineté alimentaire.</p>
+                        <div class="fate-hero-actions">
+                            <a class="fate-hero-btn-primary"
+                                href="https://forumassotousensemble.org/actualites/plantation-bananiers-piments-bihang-2026-2027"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                            <a class="fate-hero-btn-secondary" href="pages/soutenir.html">Nous soutenir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flèches -->
+            <div class="fate-hero-arrow fate-hero-arrow-left" onclick="fateHeroSlide(-1)" aria-label="Précédent">&lt;
+            </div>
+            <div class="fate-hero-arrow fate-hero-arrow-right" onclick="fateHeroSlide(1)" aria-label="Suivant">&gt;
+            </div>
+
+            <!-- Dots -->
+            <div class="fate-hero-dots">
+                <div class="fate-hero-dot active" onclick="fateHeroGoTo(0)"></div>
+                <div class="fate-hero-dot" onclick="fateHeroGoTo(1)"></div>
+                <div class="fate-hero-dot" onclick="fateHeroGoTo(2)"></div>
+            </div>
+        </section>
+
+        <script>
+            (function () {
+                var cur = 0;
+                var slides = document.querySelectorAll('#fateHero .fate-hero-slide');
+                var dots = document.querySelectorAll('#fateHero .fate-hero-dot');
+                var timer;
+
+                function show(n) {
+                    slides[cur].classList.remove('active');
+                    dots[cur].classList.remove('active');
+                    cur = (n + slides.length) % slides.length;
+                    slides[cur].classList.add('active');
+                    dots[cur].classList.add('active');
+                }
+                window.fateHeroSlide = function (d) { clearInterval(timer); show(cur + d); go(); };
+                window.fateHeroGoTo = function (n) { clearInterval(timer); show(n); go(); };
+                function go() { timer = setInterval(function () { show(cur + 1); }, 6000); }
+                go();
+            })();
+        </script>
+
+        <!-- ========== DESCRIPTION + VIDÉO ========== -->
+        <section class="fate-about-strip">
+            <div class="container">
+                <div class="fate-about-text">
+                    <span class="section-tag">&#127758; &nbsp;Qui sommes-nous ?</span>
+                    <h2>Forum Associatif<br>Tous Ensemble</h2>
+                    <p>Fond&eacute; en avril 2001 par Roger Tonye Aguiar, le FATE est un collectif d&apos;associations
+                        lyonnaises engag&eacute;es pour la solidarit&eacute;, le vivre-ensemble et la valorisation du
+                        patrimoine africain. Association loi 1901 d&apos;int&eacute;r&ecirc;t g&eacute;n&eacute;ral,
+                        &eacute;ligible au m&eacute;c&eacute;nat, elle d&eacute;ploie ses actions localement et &agrave;
+                        l&apos;international.</p>
+                    <a class="fate-hero-btn-primary" href="pages/fate.html"
+                        style="font-size:13px; padding:10px 22px;">D&eacute;couvrir la structure <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="fate-about-video">
+                    <iframe src="https://www.youtube.com/embed/oxOJTua3v7g"
+                        title="Forum Associatif Tous Ensemble — Présentation"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="fun-facts fun-facts-1 mt-5 pt-70 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                        <div class="fun-facts-card">
+                            <div class="icone-key">
+                                <img src="assets/storage/keyfigures/June2023/AXyG7FzOnx4gR94F9fIu.png"
+                                    alt="Associations">
+                            </div>
+                            <div class="inner-text-">
+                                <h2>
+                                    <span class="odometer" data-count="30">
+                                        00
+                                    </span>
+                                </h2>
+                                <p>
+                                    Associations
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                        <div class="fun-facts-card">
+                            <div class="icone-key">
+                                <img src="assets/storage/keyfigures/June2023/Jv9xc3oxCoqUFL6jMCwy.png"
+                                    alt="Villes couvertes">
+                            </div>
+                            <div class="inner-text-">
+                                <h2>
+                                    <span class="odometer" data-count="16">
+                                        00
+                                    </span>
+                                </h2>
+                                <p>
+                                    Villes couvertes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                        <div class="fun-facts-card">
+                            <div class="icone-key">
+                                <img src="assets/storage/keyfigures/June2023/OjxLx7YH4gPg3u3tjq7r.png"
+                                    alt="Volontaires">
+                            </div>
+                            <div class="inner-text-">
+                                <h2>
+                                    <span class="odometer" data-count="35">
+                                        00
+                                    </span>
+                                </h2>
+                                <p>
+                                    Volontaires
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                        <div class="fun-facts-card">
+                            <div class="icone-key">
+                                <img src="assets/storage/keyfigures/June2023/Pf8FqgAKjLMJGDRRHVqN.png" alt="Projets">
+                            </div>
+                            <div class="inner-text-">
+                                <h2>
+                                    <span class="odometer" data-count="6">
+                                        00
+                                    </span>
+                                </h2>
+                                <p>
+                                    Projets
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="actu-strip-section">
+            <div class="actu-strip-title">
+                <h3>Actualit&eacute;s</h3>
+            </div>
+            <div class="actu-marquee-wrapper">
+                <div class="actu-marquee-track">
+                    <div class="actu-card">
+                        <img src="assets/storage/events/expositions/arta_sacra_2025/main.jpg" alt="Festival ARTA SACRA">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 11 ao&ucirc;t 2025</span>
+                            <p class="actu-card-title">Festival ARTA SACRA</p>
+                            <a class="actu-card-btn"
+                                href="https://forumassotousensemble.org/actualites/festival-arta-sacra"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/June2025/CAN2025.png" alt="CAN 2025">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
+                            <p class="actu-card-title">En route pour la Coupe d&apos;Afrique des Nations (CAN) 2025 !
                             </p>
+                            <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="fun-facts-card">
-                        <div class="icone-key">
-                            <img src="assets/storage/keyfigures/June2023/Jv9xc3oxCoqUFL6jMCwy.png" alt="Villes couvertes">
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/June2025/routes_esclavage.png"
+                            alt="Routes de l&apos;esclavage">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
+                            <p class="actu-card-title">Des routes de l&apos;esclavage &agrave; nos jours</p>
+                            <a class="actu-card-btn"
+                                href="https://forumassotousensemble.org/actualites/routes-de-l-esclavage-a-nos-jours-juin-2025"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
                         </div>
-                        <div class="inner-text-">
-                            <h2>
-                                <span class="odometer" data-count="16">
-                                    00
-                                </span>
-                            </h2>
-                            <p>
-                                Villes couvertes
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Douala">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Septembre 2022</span>
+                            <p class="actu-card-title">Eau et assainissement PK17-PK32 Douala</p>
+                            <a class="actu-card-btn" href="pages/actualites.html">En savoir + <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/September2026/plantations_bananiers.png"
+                            alt="Plantation bananiers">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2026 - 2027</span>
+                            <p class="actu-card-title">Plantation de bananiers plantains &agrave; Bihiang, Cameroun</p>
+                            <a class="actu-card-btn"
+                                href="https://forumassotousensemble.org/actualites/plantation-bananiers-piments-bihang-2026-2027"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="actu-card">
+                        <img src="assets/storage/events/expositions/arta_sacra_2025/main.jpg" alt="Festival ARTA SACRA">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 11 ao&ucirc;t 2025</span>
+                            <p class="actu-card-title">Festival ARTA SACRA</p>
+                            <a class="actu-card-btn"
+                                href="https://forumassotousensemble.org/actualites/festival-arta-sacra"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/June2025/CAN2025.png" alt="CAN 2025">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
+                            <p class="actu-card-title">En route pour la Coupe d&apos;Afrique des Nations (CAN) 2025 !
                             </p>
+                            <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/June2025/routes_esclavage.png"
+                            alt="Routes de l&apos;esclavage">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
+                            <p class="actu-card-title">Des routes de l&apos;esclavage &agrave; nos jours</p>
+                            <a class="actu-card-btn"
+                                href="https://forumassotousensemble.org/actualites/routes-de-l-esclavage-a-nos-jours-juin-2025"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Douala">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Septembre 2022</span>
+                            <p class="actu-card-title">Eau et assainissement PK17-PK32 Douala</p>
+                            <a class="actu-card-btn" href="pages/actualites.html">En savoir + <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="assets/storage/actualites/September2026/plantations_bananiers.png"
+                            alt="Plantation bananiers">
+                        <div class="actu-card-overlay">
+                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2026 - 2027</span>
+                            <p class="actu-card-title">Plantation de bananiers plantains &agrave; Bihiang, Cameroun</p>
+                            <a class="actu-card-btn"
+                                href="https://forumassotousensemble.org/actualites/plantation-bananiers-piments-bihang-2026-2027"
+                                target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="fun-facts-card">
-                        <div class="icone-key">
-                            <img src="assets/storage/keyfigures/June2023/OjxLx7YH4gPg3u3tjq7r.png" alt="Volontaires">
+            </div>
+            <div class="actu-strip-footer">
+                <a class="read-more-btn" href="pages/actualites.html">Voir toutes les actualit&eacute;s</a>
+            </div>
+        </section>
+
+
+
+        <section class="documentation ptb-70">
+            <div class="container">
+                <div class="default-section-title default-section-title-middle">
+                    <h3>
+                        Archives
+                    </h3>
+                </div>
+                <div class="section-content">
+                    <div class="content-list-document owl-carousel">
+                        <div class="service-card mlr-15 mb-30">
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg"
+                                            alt="Rapport d&#039;activité 2023">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="inner-text-">
-                            <h2>
-                                <span class="odometer" data-count="35">
-                                    00
-                                </span>
-                            </h2>
-                            <p>
-                                Volontaires
-                            </p>
+                        <div class="service-card mlr-15 mb-30">
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg"
+                                            alt="Ambassadeur du climat">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="fun-facts-card">
-                        <div class="icone-key">
-                            <img src="assets/storage/keyfigures/June2023/Pf8FqgAKjLMJGDRRHVqN.png" alt="Projets">
+                        <div class="service-card mlr-15 mb-30">
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg"
+                                            alt="Culture aux pieds des tours">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="inner-text-">
-                            <h2>
-                                <span class="odometer" data-count="6">
-                                    00
-                                </span>
-                            </h2>
-                            <p>
-                                Projets
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-    </div>
-</section>
-
-
-<style>
-.actu-strip-section { padding: 70px 0; background: #f0f4f8; overflow: hidden; }
-.actu-strip-title { text-align: center; margin-bottom: 40px; }
-.actu-strip-title h3 { font-size: 36px; font-weight: 800; color: #1a1a2e; display: inline-block; position: relative; }
-.actu-strip-title h3::after { content: \'\'; display: block; width: 60px; height: 4px; background: #FFC107; margin: 10px auto 0; border-radius: 2px; }
-.actu-marquee-wrapper { width: 100%; overflow: hidden; padding: 10px 0 20px; }
-.actu-marquee-track { display: flex; gap: 24px; animation: actuScroll 35s linear infinite; width: max-content; }
-.actu-marquee-track:hover { animation-play-state: paused; }
-@keyframes actuScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.actu-card { position: relative; width: 380px; height: 280px; border-radius: 16px; overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 32px rgba(0,0,0,0.18); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.actu-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,0.28); }
-.actu-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
-.actu-card:hover img { transform: scale(1.07); }
-.actu-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,30,0.92) 0%, rgba(10,10,30,0.4) 55%, rgba(10,10,30,0.0) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px 22px; }
-.actu-card-date { font-size: 12px; font-weight: 600; color: #FFC107; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
-.actu-card-date i { margin-right: 6px; }
-.actu-card-title { font-size: 17px; font-weight: 700; color: #fff; line-height: 1.4; margin-bottom: 16px; }
-.actu-card-btn { display: inline-flex; align-items: center; gap: 8px; background: #FFC107; color: #1a1a2e; font-size: 13px; font-weight: 700; padding: 8px 18px; border-radius: 50px; text-decoration: none; transition: background 0.3s, transform 0.2s; width: fit-content; }
-.actu-card-btn:hover { background: #fff; color: #1a1a2e; text-decoration: none; transform: scale(1.05); }
-.actu-strip-footer { text-align: center; margin-top: 40px; }
-</style>
-
-<section class="actu-strip-section">
-    <div class="actu-strip-title"><h3>Actualit&eacute;s</h3></div>
-    <div class="actu-marquee-wrapper">
-        <div class="actu-marquee-track">
-            <div class="actu-card">
-                <img src="assets/storage/events/expositions/arta_sacra_2025/main.jpg" alt="Festival ARTA SACRA">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 11 ao&ucirc;t 2025</span>
-                    <p class="actu-card-title">Festival ARTA SACRA</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/festival-arta-sacra" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/June2025/CAN2025.png" alt="CAN 2025">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
-                    <p class="actu-card-title">En route pour la Coupe d&apos;Afrique des Nations (CAN) 2025 !</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/June2025/routes_esclavage.png" alt="Routes de l&apos;esclavage">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
-                    <p class="actu-card-title">Des routes de l&apos;esclavage &agrave; nos jours</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/routes-de-l-esclavage-a-nos-jours-juin-2025" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Douala">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Septembre 2022</span>
-                    <p class="actu-card-title">Eau et assainissement PK17-PK32 Douala</p>
-                    <a class="actu-card-btn" href="pages/actualites.html">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/September2026/plantations_bananiers.png" alt="Plantation bananiers">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2026 - 2027</span>
-                    <p class="actu-card-title">Plantation de bananiers plantains &agrave; Bihiang, Cameroun</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/plantation-bananiers-piments-bihang-2026-2027" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <!-- Duplicate for seamless loop -->
-            <div class="actu-card">
-                <img src="assets/storage/events/expositions/arta_sacra_2025/main.jpg" alt="Festival ARTA SACRA">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 11 ao&ucirc;t 2025</span>
-                    <p class="actu-card-title">Festival ARTA SACRA</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/festival-arta-sacra" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/June2025/CAN2025.png" alt="CAN 2025">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
-                    <p class="actu-card-title">En route pour la Coupe d&apos;Afrique des Nations (CAN) 2025 !</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/June2025/routes_esclavage.png" alt="Routes de l&apos;esclavage">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 05 mai 2025</span>
-                    <p class="actu-card-title">Des routes de l&apos;esclavage &agrave; nos jours</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/routes-de-l-esclavage-a-nos-jours-juin-2025" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Douala">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Septembre 2022</span>
-                    <p class="actu-card-title">Eau et assainissement PK17-PK32 Douala</p>
-                    <a class="actu-card-btn" href="pages/actualites.html">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="actu-card">
-                <img src="assets/storage/actualites/September2026/plantations_bananiers.png" alt="Plantation bananiers">
-                <div class="actu-card-overlay">
-                    <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2026 - 2027</span>
-                    <p class="actu-card-title">Plantation de bananiers plantains &agrave; Bihiang, Cameroun</p>
-                    <a class="actu-card-btn" href="https://forumassotousensemble.org/actualites/plantation-bananiers-piments-bihang-2026-2027" target="_blank">En savoir + <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="actu-strip-footer">
-        <a class="read-more-btn" href="pages/actualites.html">Voir toutes les actualit&eacute;s</a>
-    </div>
-</section>
-
-
-
-<section class="documentation ptb-70">
-    <div class="container">
-        <div class="default-section-title default-section-title-middle">
-            <h3>
-                Archives
-            </h3>
-        </div>
-        <div class="section-content">
-            <div class="content-list-document owl-carousel">
-                                    <div class="service-card mlr-15 mb-30">
-                        <div class="document-card">
-                            <div class="rapport-card-img">
-                                <a href="pages/archives.html">
-                                    <img src="assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg" alt="Rapport d&#039;activité 2023">
-                                </a>
+                        <div class="service-card mlr-15 mb-30">
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
+                                            alt="AFRO VIBES">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                                    <div class="service-card mlr-15 mb-30">
-                        <div class="document-card">
-                            <div class="rapport-card-img">
-                                <a href="pages/archives.html">
-                                    <img src="assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg" alt="Ambassadeur du climat">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="service-card mlr-15 mb-30">
-                        <div class="document-card">
-                            <div class="rapport-card-img">
-                                <a href="pages/archives.html">
-                                    <img src="assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg" alt="Culture aux pieds des tours">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="service-card mlr-15 mb-30">
-                        <div class="document-card">
-                            <div class="rapport-card-img">
-                                <a href="pages/archives.html">
-                                    <img src="assets/storage/documentations/November2016/AFRO_VIBES_2.jpg" alt="AFRO VIBES">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-        </div>
+                </div>
 
-        <div class="content-btn-center">
-            <a class="read-more-btn" href="pages/archives.html">
-                Voir tout
+                <div class="content-btn-center">
+                    <a class="read-more-btn" href="pages/archives.html">
+                        Voir tout
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="events ptb-70">
+            <div class="container">
+                <div class="default-section-title default-section-title-middle">
+                    <h3>
+                        Actions
+                    </h3>
+                </div>
+                <div class="section-content">
+                    <div class="events-slider-area owl-carousel">
+                        <div class="homeActualiteContainer">
+                            <div class="blog-card homeActionsCardContainer">
+                                <div class="homeActionImageContainer blog-card-img">
+                                    <a
+                                        href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
+                                        <img class="homeActionImage"
+                                            src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg"
+                                            alt="Les jeunes recycleurs d&#039;ici et d&#039;ailleurs">
+                                    </a>
+                                </div>
+                                <div class="blog-card-text-area">
+                                    <div class="blog-date">
+                                        <ul>
+                                            <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a
+                                            href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
+                                            Les jeunes recycleurs d&#039;ici et d&#039;ailleurs
+                                        </a></h4>
+                                    <p class="cardDescription">Découvrez comment nos jeunes recycleurs contribuent à un
+                                        avenir plus durable grâce à leur créativité et détermination. Leur passion pour
+                                        l’environnement et leur travail acharné sont une source d’inspiration. Rejoignez
+                                        nous pour soutenir ces héros méconnus de la transition écologique.</p>
+                                    <a class="read-more-btn"
+                                        href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
+                                        En savoir +
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="homeActualiteContainer">
+                            <div class="blog-card homeActionsCardContainer">
+                                <div class="homeActionImageContainer blog-card-img">
+                                    <a
+                                        href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
+                                        <img class="homeActionImage"
+                                            src="assets/storage/events/May2024/routes_de_lesclavage_a_nos_jours.jpg"
+                                            alt="Des routes de l&#039;esclavage à nos jours">
+                                    </a>
+                                </div>
+                                <div class="blog-card-text-area">
+                                    <div class="blog-date">
+                                        <ul>
+                                            <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a
+                                            href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
+                                            Des routes de l&#039;esclavage à nos jours
+                                        </a></h4>
+                                    <p class="cardDescription">Découvrez le projet initié par FATE pour mobiliser les
+                                        habitants et acteurs éducatifs autour de la mémoire de l’esclavage. Explorez
+                                        l’impact économique, scientifique, culturel et sportif de la traite négrière.
+                                        Participez à la restauration de cette œuvre grâce à des outils pédagogiques
+                                        innovants. Projet en cours de 2024 à 2026 dans divers lieux internationaux</p>
+                                    <a class="read-more-btn"
+                                        href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
+                                        En savoir +
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="homeActualiteContainer">
+                            <div class="blog-card homeActionsCardContainer">
+                                <div class="homeActionImageContainer blog-card-img">
+                                    <a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
+                                        <img class="homeActionImage"
+                                            src="assets/storage/events/May2024/TROPIQUE_EN_FOLIES.jpg"
+                                            alt="FESTIVAL AFRO VIBES">
+                                    </a>
+                                </div>
+                                <div class="blog-card-text-area">
+                                    <div class="blog-date">
+                                        <ul>
+                                            <li><i class="far fa-calendar-alt"></i> 13 mai 2025</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
+                                            FESTIVAL AFRO VIBES
+                                        </a></h4>
+                                    <p class="cardDescription">Découvrez le festival Afro Vibes, une célébration
+                                        vibrante des cultures africaines et de la diaspora. Au programme : concerts,
+                                        danses traditionnelles et urbaines, gastronomie, artisanat, conférences et
+                                        animations pour tous les âges. Un événement festif et inclusif qui met à
+                                        l&#039;honneur la richesse et la diversité de l’héritage africain.
+
+                                    </p>
+                                    <a class="read-more-btn"
+                                        href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
+                                        En savoir +
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-btn-center">
+                        <a class="read-more-btn" href="pages/actions.html">
+                            Voir tout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div id="suggestionLink"
+            style="position:fixed; bottom:30px; right:30px; z-index:1000; opacity:0; visibility:hidden; transition:all 0.3s ease;">
+            <a href="pages/suggestions.html" class="btn btn-warning"
+                style="font-size:1.1em; padding: 15px 25px; border-radius:50px; color:#fff; background: linear-gradient(135deg, rgb(224, 194, 32), rgb(255, 212, 4)); text-decoration:none; box-shadow:0 6px 20px rgba(224,194,32,0.3); display:flex; align-items:center; gap:8px;">
+                <i class="fas fa-lightbulb"></i> Suggestions
             </a>
         </div>
-    </div>
-</section>
 
 
+        <section class="footer footerContainer">
+            <div class="container">
+                <div class="footer-content ptb-100">
+                    <div class="row">
 
-<section class="events ptb-70">
-    <div class="container">
-        <div class="default-section-title default-section-title-middle">
-            <h3>
-                Actions
-            </h3>
-        </div>
-        <div class="section-content">
-            <div class="events-slider-area owl-carousel">
-                                    <div class="homeActualiteContainer">
-                        <div class="blog-card homeActionsCardContainer">
-                            <div class="homeActionImageContainer blog-card-img">
-                                <a href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
-                                    <img class="homeActionImage" src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg" alt="Les jeunes recycleurs d&#039;ici et d&#039;ailleurs">
-                                </a>
-                            </div>
-                            <div class="blog-card-text-area">
-                                <div class="blog-date">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="footer-logo-area">
+
+                                <a href="index.html"><img src="assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
+                                        alt="image"></a>
+
+
+                                <p>
+                                    <strong>
+                                        Forum Associatif Tous Ensemble
+                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
+                                    le développement d&#039;initiatives citoyennes.
+                                </p>
+
+
+                                <div class="footer-social-area">
                                     <ul>
-                                                                                <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
+                                        <li>
+                                            <span>
+                                                Nous suivre:
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.facebook.com/profile.php?id=61558231605226"
+                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/"
+                                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://x.com/FATEnsemble" target="_blank"><i
+                                                    class="fab fa-twitter"></i></a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h"
+                                                target="_blank"><i class="fab fa-instagram"></i></a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.tiktok.com/@fatensemble" target="_blank"><i
+                                                    class="fab fa-tiktok"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
-                                <h4><a href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
-                                                                        Les jeunes recycleurs d&#039;ici et d&#039;ailleurs
-                                </a></h4>
-                                <p class="cardDescription">Découvrez comment nos jeunes recycleurs contribuent à un avenir plus durable grâce à leur créativité et détermination. Leur passion pour l’environnement et leur travail acharné sont une source d’inspiration. Rejoignez nous pour soutenir ces héros méconnus de la transition écologique.</p>
-                                <a class="read-more-btn" href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
-                                    En savoir +
-                                </a>
                             </div>
                         </div>
-                    </div>
-                                    <div class="homeActualiteContainer">
-                        <div class="blog-card homeActionsCardContainer">
-                            <div class="homeActionImageContainer blog-card-img">
-                                <a href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
-                                    <img class="homeActionImage" src="assets/storage/events/May2024/routes_de_lesclavage_a_nos_jours.jpg" alt="Des routes de l&#039;esclavage à nos jours">
-                                </a>
+
+
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="footer-links footer-quick-links">
+                                <h3>
+                                    Accès rapides
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-angle-right"></i>
+                                        <a href="pages/fate.html">
+                                            La structure
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-angle-right"></i>
+                                        <a href="pages/soutenir.html">
+                                            Nous soutenir
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-angle-right"></i>
+                                        <a href="pages/actions.html">
+                                            Nos actions
+                                        </a>
+                                    </li>
+
+                                </ul>
                             </div>
-                            <div class="blog-card-text-area">
-                                <div class="blog-date">
-                                    <ul>
-                                                                                <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
-                                    </ul>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="footer-links footer-contact">
+                                <h3>
+                                    Nous contacter
+                                </h3>
+
+
+                                <div class="footer-contact-card">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <h5>
+                                        Localisation:
+                                    </h5>
+                                    <p class="my-1 footerContactLink">
+                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
+                                            France</a> <br />
+                                    </p>
+                                    <p class="my-1 footerContactLink">
+                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
+                                    </p>
                                 </div>
-                                <h4><a href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
-                                                                        Des routes de l&#039;esclavage à nos jours
-                                </a></h4>
-                                <p class="cardDescription">Découvrez le projet initié par FATE pour mobiliser les habitants et acteurs éducatifs autour de la mémoire de l’esclavage. Explorez l’impact économique, scientifique, culturel et sportif de la traite négrière. Participez à la restauration de cette œuvre grâce à des outils pédagogiques innovants. Projet en cours de 2024 à 2026 dans divers lieux internationaux</p>
-                                <a class="read-more-btn" href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
-                                    En savoir +
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="homeActualiteContainer">
-                        <div class="blog-card homeActionsCardContainer">
-                            <div class="homeActionImageContainer blog-card-img">
-                                <a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
-                                    <img class="homeActionImage" src="assets/storage/events/May2024/TROPIQUE_EN_FOLIES.jpg" alt="FESTIVAL AFRO VIBES">
-                                </a>
-                            </div>
-                            <div class="blog-card-text-area">
-                                <div class="blog-date">
-                                    <ul>
-                                                                                <li><i class="far fa-calendar-alt"></i> 13 mai 2025</li>
-                                    </ul>
+
+
+                                <div class="footer-contact-card">
+                                    <i class="fas fa-envelope"></i>
+
+                                    <h5>Email:</h5>
+
+                                    <p class="my-1 footerContactLink">
+                                        <a
+                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
+                                    </p>
+                                    <p class="my-1 footerContactLink">
+                                        <a
+                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
+                                    </p>
                                 </div>
-                                <h4><a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
-                                                                        FESTIVAL AFRO VIBES
-                                </a></h4>
-                                <p class="cardDescription">Découvrez le festival Afro Vibes, une célébration vibrante des cultures africaines et de la diaspora. Au programme : concerts, danses traditionnelles et urbaines, gastronomie, artisanat, conférences et animations pour tous les âges. Un événement festif et inclusif qui met à l&#039;honneur la richesse et la diversité de l’héritage africain.
 
-</p>
-                                <a class="read-more-btn" href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
-                                    En savoir +
-                                </a>
+
+                                <div class="footer-contact-card">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <h5>
+                                        Par téléphone:
+                                    </h5>
+                                    <p class="my-1 footerContactLink">
+                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
+                                    </p>
+                                    <p class="my-1 footerContactLink">
+                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                            </div>
 
-            <div class="content-btn-center">
-                <a class="read-more-btn" href="pages/actions.html">
-                    Voir tout
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-        
 
-         
-         <div id="suggestionLink" style="position:fixed; bottom:30px; right:30px; z-index:1000; opacity:0; visibility:hidden; transition:all 0.3s ease;">
-             <a href="pages/suggestions.html" class="btn btn-warning" style="font-size:1.1em; padding: 15px 25px; border-radius:50px; color:#fff; background: linear-gradient(135deg, rgb(224, 194, 32), rgb(255, 212, 4)); text-decoration:none; box-shadow:0 6px 20px rgba(224,194,32,0.3); display:flex; align-items:center; gap:8px;">
-                 <i class="fas fa-lightbulb"></i> Suggestions
-             </a>
-         </div>
-
-         
-         <section class="footer footerContainer">
-    <div class="container">
-        <div class="footer-content ptb-100">
-            <div class="row">
-                
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="footer-logo-area">
-                        
-                        <a href="index.html"><img src="assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="image"></a>
-                        
-                        
-                        <p>
-                            <strong>
-                                Forum Associatif Tous Ensemble
-                            </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d&#039;initiatives citoyennes.
-                        </p>
-
-                        
-                        <div class="footer-social-area">
-                            <ul>
-                                <li>
-                                    <span>
-                                        Nous suivre:
-                                    </span>
-                                </li>
-                                
-                                                                <li>
-                                    <a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                
-                                                                <li>
-                                    <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                
-                                                                <li>
-                                    <a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                
-                                                                <li>
-                                    <a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </li>
-                                
-                                                                <li>
-                                    <a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a>
-                                </li>
-                                                            </ul>
-                        </div>
                     </div>
                 </div>
 
-                
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="footer-links footer-quick-links">
-                        <h3>
-                            Accès rapides
-                        </h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-angle-right"></i>
-                                <a href="pages/fate.html">
-                                    La structure
-                                </a>
-                            </li>
-                            <li>
-                                <i class="fas fa-angle-right"></i>
-                                <a href="pages/soutenir.html">
-                                    Nous soutenir
-                                </a>
-                            </li>
-                            <li>
-                                <i class="fas fa-angle-right"></i>
-                                <a href="pages/actions.html">
-                                    Nos actions
-                                </a>
-                            </li>
-                            
-                                                    </ul>
-                    </div>
+
+                <div class="copyright">
+                    <p class="m-0">
+                        <strong>Forum Associatif Tous Ensemble</strong>
+                        &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
+                        <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu"
+                            style="cursor: help;">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                    </p>
+
                 </div>
+            </div>
+        </section>
 
-                
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="footer-links footer-contact">
-                        <h3>
-                            Nous contacter
-                        </h3>
 
-                        
-                        <div class="footer-contact-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>
-                                Localisation:
-                            </h5>
-                                                            <p class="my-1 footerContactLink">
-                                    <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a> <br />
-                                </p>
-                                                            <p class="my-1 footerContactLink">
-                                    <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                </p>
-                                                    </div>
-
-                        
-                        <div class="footer-contact-card">
-                            <i class="fas fa-envelope"></i>
-                                                        
-                            <h5>Email:</h5>
-
-                                                        <p class="my-1 footerContactLink">
-                                <a href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                            </p>
-                                                        <p class="my-1 footerContactLink">
-                                <a href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                            </p>
-                                                    </div>
-
-                        
-                        <div class="footer-contact-card">
-                            <i class="fas fa-phone-alt"></i>
-                            <h5>
-                                Par téléphone:
-                            </h5>
-                                                            <p class="my-1 footerContactLink">
-                                    <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                </p>
-                                                            <p class="my-1 footerContactLink">
-                                    <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                </p>
-                                                    </div>
+        <div class="popup">
+            <div class="popup-content">
+                <button class="close-btn" id="popup-close"><i class="fas fa-times"></i></button>
+                <form>
+                    <div class="input-group search-box">
+                        <input type="text" class="form-control" placeholder="search">
+                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                     </div>
-                </div>
-
-                
+                </form>
             </div>
         </div>
 
-        
-        <div class="copyright">
-                        <p class="m-0">
-                <strong>Forum Associatif Tous Ensemble</strong>
-                &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
-                <span
-                    class="ms-1"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu"
-                    style="cursor: help;"
-                >
-                    <i class="fas fa-info-circle"></i>
-                </span>
-            </p>
 
+        <div class="go-top">
+            <i class="fas fa-chevron-up"></i>
         </div>
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+            });
+        </script>
+        <script src="assets/js/meanmenu.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/magnific-popup.min.js"></script>
+        <script src="assets/js/TweenMax.js"></script>
+        <script src="assets/js/nice-select.min.js"></script>
+        <script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/ajaxchimp.min.js"></script>
+        <script src="assets/js/owl.carousel2.thumbs.min.js"></script>
+        <script src="assets/js/appear.min.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+
+        <script>
+            $(window).bind("load", function () {
+                $("body").addClass("loaded")
+            })
+        </script>
+
+
     </div>
-</section>
 
 
-<div class="popup">
-    <div class="popup-content">
-        <button class="close-btn" id="popup-close"><i class="fas fa-times"></i></button>
-        <form>
-            <div class="input-group search-box">
-                <input type="text" class="form-control" placeholder="search">
-                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-<div class="go-top">
-    <i class="fas fa-chevron-up"></i>
-</div>
-
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-    });
-</script>
-<script src="assets/js/meanmenu.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/magnific-popup.min.js"></script>
-<script src="assets/js/TweenMax.js"></script>
-<script src="assets/js/nice-select.min.js"></script>
-<script src="assets/js/form-validator.min.js"></script>
-<script src="assets/js/contact-form-script.js"></script>
-<script src="assets/js/ajaxchimp.min.js"></script>
-<script src="assets/js/owl.carousel2.thumbs.min.js"></script>
-<script src="assets/js/appear.min.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/custom.js"></script>
-
-
-<script>
-    $(window).bind("load", function() {
-      $("body").addClass("loaded")
-    })
-</script>
-
-         
-             </div>
-
-    
     <script src="assets/js/jquery.min.js"></script>
 
-    
+
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
-    
-    
-    
 
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-    
+
+
+
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+
     <script src="assets/js/video.js"></script>
 
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Fonction pour gérer l'affichage des images
             const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
             let isImagesExpanded = false;
-            
+
             if (showMoreImagesBtn) {
                 showMoreImagesBtn.addEventListener('click', function () {
                     const allImages = document.querySelectorAll('.expositionImageContainer');
-                    
+
                     if (!isImagesExpanded) {
                         // Afficher plus d'images
                         let hiddenCount = 0;
-                        
+
                         allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' || 
-                                            (el.style.display === '' && index >= 9);
-                            
+                            const isHidden = el.style.display === 'none' ||
+                                (el.style.display === '' && index >= 9);
+
                             if (isHidden) {
                                 hiddenCount++;
-                                
+
                                 setTimeout(() => {
                                     el.style.display = 'block';
                                     el.style.opacity = '0';
                                     el.style.transform = 'translateY(20px)';
                                     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                                    
+
                                     setTimeout(() => {
                                         el.style.opacity = '1';
                                         el.style.transform = 'translateY(0)';
@@ -1548,23 +1155,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }, hiddenCount * 100);
                             }
                         });
-                        
+
                         this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
                         isImagesExpanded = true;
-                        
+
                     } else {
                         // Masquer les images supplémentaires
                         allImages.forEach((el, index) => {
                             if (index >= 9) {
                                 el.style.opacity = '0';
                                 el.style.transform = 'translateY(-20px)';
-                                
+
                                 setTimeout(() => {
                                     el.style.display = 'none';
                                 }, 300);
                             }
                         });
-                        
+
                         this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
                         isImagesExpanded = false;
                     }
@@ -1574,28 +1181,28 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fonction pour gérer l'affichage des vidéos
             const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
             let isVideosExpanded = false;
-            
+
             if (showMoreVideosBtn) {
                 showMoreVideosBtn.addEventListener('click', function () {
                     const allVideos = document.querySelectorAll('.expositionVideoContainer');
-                    
+
                     if (!isVideosExpanded) {
                         // Afficher plus de vidéos
                         let hiddenCount = 0;
-                        
+
                         allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' || 
-                                            (el.style.display === '' && index >= 6);
-                            
+                            const isHidden = el.style.display === 'none' ||
+                                (el.style.display === '' && index >= 6);
+
                             if (isHidden) {
                                 hiddenCount++;
-                                
+
                                 setTimeout(() => {
                                     el.style.display = 'block';
                                     el.style.opacity = '0';
                                     el.style.transform = 'translateY(20px)';
                                     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                                    
+
                                     setTimeout(() => {
                                         el.style.opacity = '1';
                                         el.style.transform = 'translateY(0)';
@@ -1603,23 +1210,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }, hiddenCount * 100);
                             }
                         });
-                        
+
                         this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
                         isVideosExpanded = true;
-                        
+
                     } else {
                         // Masquer les vidéos supplémentaires
                         allVideos.forEach((el, index) => {
                             if (index >= 6) {
                                 el.style.opacity = '0';
                                 el.style.transform = 'translateY(-20px)';
-                                
+
                                 setTimeout(() => {
                                     el.style.display = 'none';
                                 }, 300);
                             }
                         });
-                        
+
                         this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
                         isVideosExpanded = false;
                     }
@@ -1629,34 +1236,34 @@ document.addEventListener('DOMContentLoaded', () => {
             // Ancien code pour compatibilité (showMoreBtn)
             const showMoreBtn = document.getElementById('showMoreBtn');
             let isExpanded = false;
-            
+
             if (showMoreBtn) {
                 showMoreBtn.addEventListener('click', function () {
                     console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-                    
+
                     // Sélectionner toutes les images de la galerie
                     const allImages = document.querySelectorAll('.expositionImageContainer');
-                    
+
                     console.log('Nombre total d\'images:', allImages.length); // Debug
-                    
+
                     if (!isExpanded) {
                         // Afficher plus d'images
                         let hiddenCount = 0;
-                        
+
                         allImages.forEach((el, index) => {
                             // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' || 
-                                            (el.style.display === '' && index >= 9);
-                            
+                            const isHidden = el.style.display === 'none' ||
+                                (el.style.display === '' && index >= 9);
+
                             if (isHidden) {
                                 hiddenCount++;
-                                
+
                                 setTimeout(() => {
                                     el.style.display = 'block';
                                     el.style.opacity = '0';
                                     el.style.transform = 'translateY(20px)';
                                     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                                    
+
                                     // Déclencher l'animation après un court délai
                                     setTimeout(() => {
                                         el.style.opacity = '1';
@@ -1665,35 +1272,35 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }, hiddenCount * 100); // Délai progressif
                             }
                         });
-                        
+
                         // Changer le texte et l'icône du bouton
                         this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
                         isExpanded = true;
-                        
+
                     } else {
                         // Masquer les images supplémentaires
                         allImages.forEach((el, index) => {
                             if (index >= 9) {
                                 el.style.opacity = '0';
                                 el.style.transform = 'translateY(-20px)';
-                                
+
                                 setTimeout(() => {
                                     el.style.display = 'none';
                                 }, 300);
                             }
                         });
-                        
+
                         // Remettre le texte et l'icône originaux
                         this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
                         isExpanded = false;
-                        
+
                         // Faire défiler vers le titre de la galerie
                         const galerieTitle = document.querySelector('h3');
                         if (galerieTitle) {
                             galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
                     }
-                    
+
                     console.log('Nouvel état:', isExpanded); // Debug
                 });
             } else {
@@ -1707,7 +1314,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const scrollPosition = window.scrollY + window.innerHeight;
                     const documentHeight = document.documentElement.scrollHeight;
                     const scrollPercent = scrollPosition / documentHeight;
-                    
+
                     if (scrollPercent >= 0.5) { // Afficher à 50% du scroll
                         suggestionLink.style.opacity = '1';
                         suggestionLink.style.visibility = 'visible';
@@ -1716,7 +1323,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         suggestionLink.style.visibility = 'hidden';
                     }
                 }
-                
+
                 window.addEventListener('scroll', checkScroll);
                 window.addEventListener('resize', checkScroll);
                 checkScroll(); // Vérifier au chargement initial
@@ -1725,151 +1332,54 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 
 
-<!-- ========== POP-UP ACTUALITÉ DU MOMENT ========== -->
-<style>
-#fate-popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-}
-#fate-popup-overlay.visible {
-    opacity: 1;
-    pointer-events: all;
-}
-#fate-popup-box {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    max-width: 520px;
-    width: 90%;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.35);
-    transform: translateY(30px) scale(0.96);
-    transition: transform 0.4s ease;
-    position: relative;
-}
-#fate-popup-overlay.visible #fate-popup-box {
-    transform: translateY(0) scale(1);
-}
-#fate-popup-close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.5);
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    transition: background 0.2s;
-}
-#fate-popup-close:hover { background: rgba(0,0,0,0.8); }
-#fate-popup-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
-}
-#fate-popup-body {
-    padding: 24px 28px 28px;
-}
-#fate-popup-tag {
-    display: inline-block;
-    background: #FFC107;
-    color: #1a1a2e;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 4px 12px;
-    border-radius: 50px;
-    margin-bottom: 12px;
-}
-#fate-popup-title {
-    font-size: 22px;
-    font-weight: 800;
-    color: #1a1a2e;
-    line-height: 1.3;
-    margin-bottom: 10px;
-}
-#fate-popup-desc {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-#fate-popup-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #1a1a2e;
-    color: #FFC107;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s;
-}
-#fate-popup-btn:hover {
-    background: #FFC107;
-    color: #1a1a2e;
-    text-decoration: none;
-    transform: scale(1.03);
-}
-</style>
+    <!-- ========== POP-UP ACTUALITÉ DU MOMENT ========== -->
 
-<div id="fate-popup-overlay">
-    <div id="fate-popup-box">
-        <button id="fate-popup-close" onclick="closeFatePopup()" aria-label="Fermer">&#x2715;</button>
-        <img id="fate-popup-img" src="assets/storage/actualites/June2025/CAN2025.png" alt="En route pour la CAN 2025">
-        <div id="fate-popup-body">
-            <span id="fate-popup-tag">&#128241; Actualité du moment</span>
-            <h2 id="fate-popup-title">En route pour la CAN 2025 !</h2>
-            <p id="fate-popup-desc">Le FATE suit de près la Coupe d'Afrique des Nations 2025. Retrouvez toutes nos actualités et actions autour de cet événement continental majeur.</p>
-            <a id="fate-popup-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025" target="_blank">
-                Découvrir <i class="fas fa-arrow-right"></i>
-            </a>
+
+
+
+    <div id="fate-popup-overlay">
+        <div id="fate-popup-box">
+            <button id="fate-popup-close" onclick="closeFatePopup()" aria-label="Fermer">&#x2715;</button>
+            <img id="fate-popup-img" src="assets/storage/actualites/June2025/CAN2025.png"
+                alt="En route pour la CAN 2025">
+            <div id="fate-popup-body">
+                <span id="fate-popup-tag">&#128241; Actualité du moment</span>
+                <h2 id="fate-popup-title">En route pour la CAN 2025 !</h2>
+                <p id="fate-popup-desc">Le FATE suit de près la Coupe d'Afrique des Nations 2025. Retrouvez toutes nos
+                    actualités et actions autour de cet événement continental majeur.</p>
+                <a id="fate-popup-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025"
+                    target="_blank">
+                    Découvrir <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<script>
-(function() {
-    // N'afficher qu'une fois par session
-    if (sessionStorage.getItem('fatePopupSeen')) return;
-    setTimeout(function() {
-        var overlay = document.getElementById('fate-popup-overlay');
-        if (overlay) overlay.classList.add('visible');
-    }, 1800);
-})();
-function closeFatePopup() {
-    var overlay = document.getElementById('fate-popup-overlay');
-    if (overlay) {
-        overlay.classList.remove('visible');
-        setTimeout(function() { overlay.style.display = 'none'; }, 400);
-        sessionStorage.setItem('fatePopupSeen', '1');
-    }
-}
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeFatePopup();
-});
-document.getElementById('fate-popup-overlay').addEventListener('click', function(e) {
-    if (e.target === this) closeFatePopup();
-});
-</script>
-<!-- ========== FIN POP-UP ========== -->
+    <script>
+        (function () {
+            // N'afficher qu'une fois par session
+            if (sessionStorage.getItem('fatePopupSeen')) return;
+            setTimeout(function () {
+                var overlay = document.getElementById('fate-popup-overlay');
+                if (overlay) overlay.classList.add('visible');
+            }, 1800);
+        })();
+        function closeFatePopup() {
+            var overlay = document.getElementById('fate-popup-overlay');
+            if (overlay) {
+                overlay.classList.remove('visible');
+                setTimeout(function () { overlay.style.display = 'none'; }, 400);
+                sessionStorage.setItem('fatePopupSeen', '1');
+            }
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeFatePopup();
+        });
+        document.getElementById('fate-popup-overlay').addEventListener('click', function (e) {
+            if (e.target === this) closeFatePopup();
+        });
+    </script>
+    <!-- ========== FIN POP-UP ========== -->
 
 </body>
+
 </html>
