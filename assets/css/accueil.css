@@ -8,7 +8,7 @@
 .suggestion-prompt {
     position: fixed;
     top: 160px;
-    right: 30px;
+    right: 80px;
     z-index: 10000;
     background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
     border-radius: 25px;
@@ -415,12 +415,12 @@
    ========================================== */
 .fate-about-strip {
     background: #f8f9fb;
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .fate-about-strip .container {
     display: flex;
-    gap: 48px;
+    gap: 60px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -429,36 +429,58 @@
     flex: 1 1 340px;
 }
 
+/* Le badge jaune façon "pilule" */
 .fate-about-text .section-tag {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 193, 7, 0.15);
+    color: #cca300;
+    padding: 8px 16px;
+    border-radius: 50px;
     font-size: 12px;
-    font-weight: 700;
-    color: #FFC107;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    margin-bottom: 14px;
-    display: block;
-}
-
-.fate-about-text h2 {
-    font-size: 28px;
     font-weight: 800;
-    color: #1a1a2e;
-    line-height: 1.3;
-    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 193, 7, 0.3);
 }
 
+/* Titre principal modernisé */
+.fate-about-text h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #1a1a2e;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+/* Le texte "Tous Ensemble" en dégradé */
+.fate-about-text h2 span {
+    background: linear-gradient(135deg, rgb(224, 194, 32), rgb(255, 212, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Paragraphe avec effet de citation (bordure jaune à gauche) */
 .fate-about-text p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8;
     color: #555;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+    padding-left: 20px;
+    border-left: 4px solid #FFC107;
+    background: linear-gradient(90deg, rgba(255, 193, 7, 0.06) 0%, transparent 100%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0 8px 8px 0;
 }
 
 .fate-about-video {
     flex: 1 1 380px;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
     aspect-ratio: 16/9;
 }
 
@@ -467,6 +489,16 @@
     height: 100%;
     border: none;
     display: block;
+}
+
+@media (max-width: 768px) {
+    .fate-about-text h2 {
+        font-size: 28px;
+    }
+
+    .fate-about-strip .container {
+        gap: 40px;
+    }
 }
 
 /* ==========================================

@@ -13912,3 +13912,131 @@ li.hasSubmenu:hover .dropdownIcon {
   background-color: white !important;
   color: black !important;
 }
+
+/* ==========================================
+   BULLE DE SUGGESTION FLOTTANTE (Globale)
+   ========================================== */
+.suggestion-prompt {
+  position: fixed !important;
+  top: auto !important;
+  bottom: 75px !important;
+  right: 90px;
+  z-index: 10000;
+  background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
+  border-radius: 25px;
+  padding: 15px 20px;
+  box-shadow: 0 8px 25px rgba(224, 194, 32, 0.3);
+  transform: translateX(100%) scale(0.8);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  max-width: 280px;
+
+  /* === AJOUTS POUR EMPÊCHER L'ÉTIREMENT VERTICAL === */
+  height: fit-content !important;
+  min-height: 0 !important;
+}
+
+.suggestion-prompt.show {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+.suggestion-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #dc3545;
+  border: 2px solid white;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-close:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.suggestion-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2c3e50 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.suggestion-link:hover {
+  color: #1a252f !important;
+  text-decoration: none !important;
+}
+
+.suggestion-link i {
+  font-size: 16px;
+  animation: pulse 2s infinite;
+  color: #2c3e50;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .suggestion-prompt {
+    right: 20px;
+    top: auto;
+    /* Force l'annulation de tout éventuel "top" */
+    bottom: 20px;
+    /* Place la bulle en bas de l'écran sur mobile */
+    padding: 12px 16px;
+    max-width: 250px;
+  }
+
+  .suggestion-close {
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .suggestion-link {
+    font-size: 13px;
+  }
+
+  .suggestion-link i {
+    font-size: 14px;
+  }
+}
