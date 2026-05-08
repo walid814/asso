@@ -14040,3 +14040,29 @@ li.hasSubmenu:hover .dropdownIcon {
     font-size: 14px;
   }
 }
+
+/* ==========================================
+   EFFET HOVER JAUNE SUR LA NAVIGATION
+   ========================================== */
+
+/* Survol des liens principaux du menu et lien actif */
+.navItem .navLink:hover,
+.navItem .navLink.active {
+  color: #FFC107 !important;
+  /* Le fameux jaune */
+  transition: color 0.3s ease;
+}
+
+/* Survol du petit "+" des menus déroulants */
+.navItem .navLink:hover .dropdownIcon {
+  color: #FFC107 !important;
+  transition: color 0.3s ease;
+}
+
+/* Survol des liens à l'intérieur des sous-menus (Actualités, Partenaires...) */
+.submenuList .submenuItem .submenuLink:hover {
+  color: #FFC107 !important;
+  background-color: transparent;
+  /* Au cas où il y aurait un fond gris indésirable */
+  transition: color 0.3s ease;
+}
