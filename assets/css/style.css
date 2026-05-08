@@ -13871,13 +13871,14 @@ li.hasSubmenu:hover .dropdownIcon {
 .submenuList::before {
   content: '';
   position: absolute;
-  top: -20px;
-  /* Remonte la zone cliquable de 20px vers le lien */
+  top: -40px;
+  /* On remonte plus haut (40px au lieu de 20px) */
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 40px;
+  /* La hauteur du pont comble tout l'espace vide */
   background-color: transparent;
-  /* Totalement invisible */
+  /* Reste totalement invisible */
 }
 
 /* 1. Pour les liens principaux du menu (ACTUALITÉS, ACTIONS) */
