@@ -1,0 +1,26 @@
+/* Extracted from doc/Branding Kit & Moodboard - FATE.html to keep HTML free of CSS. */
+
+.blob-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        
+        /* Animation pour simuler le slider de droite à gauche */
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .slide-animate {
+            animation: slideInRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+/* Classes generated from former inline style attributes. */
+
+.html-style-56cac34b {
+    background-color: #111827;
+}

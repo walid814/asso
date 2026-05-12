@@ -1,0 +1,439 @@
+/* Extracted from pages/fate.html to keep HTML free of CSS. */
+
+/* ============================================================
+           FATE ABOUT PAGE — NEW PREMIUM DA
+        ============================================================ */
+        :root {
+            --y: #EAB308;
+            --dk: #111827;
+            --bg-light: #F8F9FA;
+            --wh: #FFFFFF;
+            --gr: #6B7280;
+        }
+
+        /* ── HERO ──────────────────────────────────────────────── */
+        .fate-page-hero {
+            background-color: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1010px) {
+            .fate-page-hero {
+                margin-top: 70px;
+            }
+        }
+
+        /* Motif points en fond */
+        .fate-page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Cercle jaune décoratif en haut à droite (identique à actions/actualités) */
+        .fate-page-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 340px;
+            height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .fate-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        @media (max-width: 900px) {
+            .fate-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+                padding: 0 24px;
+            }
+        }
+
+        .fate-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .fate-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+
+        .fate-hero-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .fate-page-hero h1 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            font-size: clamp(40px, 5.5vw, 72px) !important;
+            /* ⬅️ Retour à 72px pour avoir la même hauteur de fond */
+            color: var(--wh) !important;
+            line-height: 1.0 !important;
+            margin: 0 0 20px !important;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .fate-page-hero h1 em {
+            color: var(--y);
+            font-style: normal;
+            display: block;
+            white-space: nowrap;
+            /* ⬅️ Sécurité absolue pour empêcher les retours à la ligne */
+        }
+
+        /* Ajout de la description manquante qui donne la bonne hauteur */
+        .fate-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255, 255, 255, .55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+
+        .fate-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255, 255, 255, .35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+        }
+
+        .fate-hero-rule {
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, .07);
+            margin-top: 52px;
+        }
+
+        /* ── BADGE DROITE ── */
+        .fate-hero-badge {
+            flex-shrink: 0;
+            background: var(--y);
+            border-radius: 18px;
+            padding: 28px 38px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            min-width: 180px;
+        }
+
+        .fate-hero-badge-years {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .fate-hero-badge-sep {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, .3);
+            line-height: 1;
+            margin: 2px 0;
+        }
+
+        .fate-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0, 0, 0, .55);
+            margin: 10px 0 0;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 900px) {
+            .fate-hero-badge {
+                display: none;
+            }
+        }
+
+        .fate-breadcrumb a {
+            color: rgba(255, 255, 255, .35);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .fate-breadcrumb a:hover {
+            color: var(--y);
+        }
+
+        .fate-breadcrumb .chevron {
+            color: var(--y);
+            font-size: 9px;
+        }
+
+        /* ── SECTION À PROPOS ───────────────────────────────────── */
+        .about-modern {
+            padding: 100px 0;
+            background: var(--wh);
+        }
+
+        .about-modern-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        @media (max-width: 768px) {
+            .about-modern-wrap {
+                padding: 0 20px;
+            }
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-visual img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-visual::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background: var(--y);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .about-content h2 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 34px !important;
+            font-weight: 800 !important;
+            color: var(--dk) !important;
+            margin-bottom: 30px !important;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--gr);
+            margin-bottom: 20px;
+        }
+
+        .about-highlight {
+            border-left: 4px solid var(--y);
+            padding-left: 24px;
+            margin: 35px 0;
+            font-style: italic;
+            font-size: 18px;
+            color: var(--dk);
+            font-weight: 500;
+        }
+
+        /* ── MISSIONS & VALEURS ─────────────────────────────────── */
+        .values-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .value-card {
+            background: var(--wh);
+            padding: 45px 35px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--y);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-card i {
+            font-size: 40px;
+            color: var(--y);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .value-card h3 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 22px !important;
+            font-weight: 700 !important;
+            margin-bottom: 20px !important;
+        }
+
+        .value-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--gr);
+            margin: 0;
+        }
+
+        .value-card ul {
+            padding-left: 0;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .value-card ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--gr);
+        }
+
+        .value-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--y);
+            font-weight: bold;
+        }
+
+        /* ── TEAM SECTION ───────────────────────────────────────── */
+        .team-section {
+            padding: 100px 0;
+            background: var(--wh);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .team-card {
+            background: var(--wh);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-img-wrap {
+            height: 320px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .team-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-info h4 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 800 !important;
+            margin-bottom: 5px !important;
+            color: var(--dk);
+        }
+
+        .team-info p {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--y);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+/* Classes generated from former inline style attributes. */
+
+.html-style-cb4d08ad {
+    background: rgba(0,0,0,0.05); color: #333;
+}
+
+.html-style-6978104e {
+    font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin-top: 10px;
+}

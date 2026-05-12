@@ -1,0 +1,387 @@
+/* Extracted from pages/archives.html to keep HTML free of CSS. */
+
+:root {
+            --y: #EAB308;
+            --dk: #111827;
+            --bg: #F0EBE0;
+            --wh: #ffffff;
+            --gr: #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ===== HERO ===== */
+        .arch-hero {
+            background: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .arch-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+
+        .arch-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .arch-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .arch-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+
+        .arch-hero-text { flex: 1; min-width: 0; }
+
+        .arch-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            margin: 0;
+        }
+
+        .arch-hero-breadcrumb a {
+            color: rgba(255,255,255,.35);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .arch-hero-breadcrumb a:hover { color: var(--y); }
+
+        .arch-hero-breadcrumb .chevron {
+            color: var(--y);
+            font-size: 9px;
+        }
+
+        .arch-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(40px, 5.5vw, 72px);
+            font-weight: 900;
+            color: var(--wh);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.0;
+            margin: 0 0 20px;
+        }
+
+        .arch-hero-title em {
+            font-style: normal;
+            color: var(--y);
+            display: block;
+        }
+
+        .arch-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+
+        .arch-hero-right {
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .arch-hero-badge {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--y);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .arch-hero-badge::after {
+            content: '';
+            position: absolute;
+            inset: -18px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(234, 179, 8, 0.25);
+        }
+
+        .arch-hero-badge-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+        }
+
+        .arch-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        /* ===== MAIN ===== */
+        .arch-main {
+            background: var(--bg);
+            padding: 60px 0 100px;
+        }
+
+        .arch-wrap {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== FILTERS ===== */
+        .arch-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 44px;
+            justify-content: center;
+        }
+
+        .arch-filter-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            border: 2px solid var(--bdr);
+            background: var(--wh);
+            color: var(--gr);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .arch-filter-btn:hover {
+            border-color: var(--dk);
+            color: var(--dk);
+        }
+
+        .arch-filter-btn.active {
+            background: var(--dk);
+            border-color: var(--dk);
+            color: var(--wh);
+        }
+
+        .arch-filter-btn.active-y {
+            background: var(--y);
+            border-color: var(--y);
+            color: var(--dk);
+        }
+
+        /* ===== GALLERY GRID ===== */
+        .arch-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .arch-card-wrap {
+            display: block;
+        }
+
+        .arch-card-wrap.hidden {
+            display: none;
+        }
+
+        .arch-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--wh);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .arch-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+        }
+
+        .arch-card-img {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            background: #ddd8cf;
+        }
+
+        .arch-card-img img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+            transition: transform 0.4s ease;
+        }
+
+        .arch-card:hover .arch-card-img img {
+            transform: scale(1.06);
+        }
+
+        .arch-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(17, 24, 39, 0.65);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.28s ease;
+        }
+
+        .arch-card:hover .arch-card-overlay {
+            opacity: 1;
+        }
+
+        .arch-card-zoom {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--y);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dk);
+            font-size: 18px;
+        }
+
+        .arch-card-overlay-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--wh);
+            text-align: center;
+            padding: 0 12px;
+            line-height: 1.4;
+        }
+
+        .arch-card-footer {
+            padding: 10px 12px;
+        }
+
+        .arch-card-cat {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gr);
+        }
+
+        .arch-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--dk);
+            margin-top: 3px;
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1060px) {
+            .arch-hero-inner {
+                padding: 0 20px 52px;
+            }
+
+            .arch-wrap {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .arch-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .arch-hero-badge {
+                width: 110px;
+                height: 110px;
+            }
+
+            .arch-hero-badge-num {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .arch-hero {
+                margin-top: 70px;
+            }
+
+            .arch-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 16px 40px;
+                gap: 24px;
+            }
+
+            .arch-hero-right {
+                align-self: flex-end;
+            }
+
+            .arch-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .arch-wrap {
+                padding: 0 16px;
+            }
+
+            .arch-main {
+                padding: 40px 0 80px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .arch-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+/* Classes generated from former inline style attributes. */
+
+.html-style-ef476341 {
+    cursor: help;
+}

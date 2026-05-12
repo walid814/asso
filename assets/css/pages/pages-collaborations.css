@@ -1,0 +1,545 @@
+/* Extracted from pages/collaborations.html to keep HTML free of CSS. */
+
+/* ============================================================
+           COLLABORATIONS PAGE — FATE BRANDING DESIGN
+           Palette : #EAB308 (jaune) · #111827 (noir) · #F4EFE6 (beige)
+        ============================================================ */
+
+        :root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F4EFE6;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ── HERO ──────────────────────────────────────────────── */
+        .collabs-hero {
+            background-color: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1010px) {
+            .collabs-hero { margin-top: 70px; }
+        }
+
+        .collabs-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .collabs-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 340px;
+            height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .collabs-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        @media (max-width: 900px) {
+            .collabs-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+                padding: 0 24px;
+            }
+        }
+
+        .collabs-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .collabs-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+
+        .collabs-hero-text { flex: 1; min-width: 0; }
+
+        .collabs-hero h1 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            font-size: clamp(40px, 5.5vw, 72px) !important;
+            color: var(--wh) !important;
+            line-height: 1.0 !important;
+            margin: 0 0 20px !important;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .collabs-hero h1 em {
+            color: var(--y);
+            font-style: normal;
+            display: block;
+        }
+
+        .collabs-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+
+        .collabs-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+        }
+
+        .collabs-breadcrumb a {
+            color: rgba(255,255,255,.35);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .collabs-breadcrumb a:hover { color: var(--y); }
+        .collabs-breadcrumb .chevron { color: var(--y); font-size: 9px; }
+
+        /* ── BADGE DROITE ── */
+        .collabs-hero-badge {
+            flex-shrink: 0;
+            background: var(--y);
+            border-radius: 18px;
+            padding: 28px 38px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            min-width: 180px;
+        }
+
+        .collabs-hero-badge-years {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .collabs-hero-badge-sep {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0,0,0,.3);
+            line-height: 1;
+            margin: 2px 0;
+        }
+
+        .collabs-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0,0,0,.55);
+            margin: 10px 0 0;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 900px) {
+            .collabs-hero-badge { display: none; }
+        }
+
+        .collabs-hero-rule {
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,.07);
+            margin-top: 52px;
+        }
+
+        /* ── MAIN ──────────────────────────────────────────────── */
+        .collabs-main {
+            background: #F0EBE0;
+            padding: 72px 0 100px;
+        }
+
+        .collabs-main-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        @media (max-width: 768px) {
+            .collabs-main-wrap { padding: 0 20px; }
+        }
+
+        /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────── */
+        .fate-timeline {
+            width: 100% !important;
+            align-self: stretch !important;
+            margin-bottom: 36px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 4px 0 20px;
+        }
+
+        .fate-timeline::-webkit-scrollbar { display: none; }
+
+        .fate-timeline-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 16px 0;
+            gap: 0;
+            width: 100%;
+        }
+
+        .fate-tl-line {
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            right: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--y) 0%, rgba(234,179,8,.25) 100%);
+            transform: translateY(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .fate-tl-year {
+            position: relative;
+            z-index: 1;
+            min-width: 76px;
+            height: 44px;
+            padding: 0 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFFFFF;
+            border: 2px solid #E5E7EB;
+            border-radius: 100px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #6B7280;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: border-color .2s, color .2s, transform .2s, box-shadow .2s, background .2s;
+            white-space: nowrap;
+            touch-action: manipulation;
+        }
+
+        .fate-tl-year:hover:not(.active) {
+            border-color: var(--y);
+            color: var(--dk);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(234,179,8,.22);
+        }
+
+        .fate-tl-year.active {
+            background: var(--y);
+            border-color: var(--y);
+            color: var(--dk);
+            font-size: 14px;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 18px rgba(234,179,8,.4);
+        }
+
+        /* ── PANELS ───────────────────────────────────────────────── */
+        .fate-panels-viewport {
+            position: relative;
+            overflow: hidden;
+            width: 100% !important;
+            align-self: stretch !important;
+        }
+
+        .fate-year-panel {
+            display: none;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        .fate-year-panel.active {
+            display: block;
+            animation: panelSlideIn 260ms cubic-bezier(.25,.46,.45,.94) forwards;
+        }
+
+        @keyframes panelSlideIn {
+            from { opacity: 0; transform: translateX(var(--panel-slide-from, 32px)); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ── EN-TÊTE DE PANEL ─────────────────────────────────────── */
+        .fate-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--y);
+        }
+
+        .fate-panel-title {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 20px !important;
+            font-weight: 800 !important;
+            color: var(--dk) !important;
+            margin: 0 !important;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .fate-panel-title span { color: var(--y); }
+
+        /* ── CARTES ───────────────────────────────────────────────── */
+        .actionCardContainer {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            padding: 0 !important;
+            margin-top: 14px !important;
+            width: 100% !important;
+            background: transparent !important;
+            border-radius: 0 !important;
+            overflow: visible !important;
+            box-shadow: none !important;
+            flex-wrap: unset !important;
+            justify-content: unset !important;
+            align-items: unset !important;
+        }
+
+        .actionCardContainer > a {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: block !important;
+            background: #FFFFFF !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(0,0,0,.06) !important;
+            border-left: 4px solid transparent !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,.055) !important;
+            overflow: hidden !important;
+            position: relative;
+            cursor: pointer;
+            transition: transform .22s ease, box-shadow .22s ease, border-left-color .18s ease !important;
+        }
+
+        .actionCardContainer > a:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 28px rgba(0,0,0,.11) !important;
+            border-left-color: var(--y) !important;
+            text-decoration: none !important;
+        }
+
+        .actionCard {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: stretch !important;
+            width: 100% !important;
+            height: 148px !important;
+            min-height: unset !important;
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            gap: 0 !important;
+            overflow: hidden !important;
+            transition: none !important;
+        }
+
+        .actionCard .actionImgContainer {
+            width: 220px !important;
+            min-width: 220px !important;
+            height: 100% !important;
+            flex-shrink: 0 !important;
+            overflow: hidden !important;
+            background: var(--bg) !important;
+            border-radius: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .actionCard .actionImgContainer .actionImage {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border-radius: 0 !important;
+            transition: transform .5s cubic-bezier(.25,.46,.45,.94) !important;
+            display: block;
+        }
+
+        .actionCardContainer > a:hover .actionImage {
+            transform: scale(1.07) !important;
+        }
+
+        .actionCard .actionInfo {
+            flex: 1 !important;
+            padding: 20px 58px 20px 22px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            position: relative;
+            min-width: 0;
+        }
+
+        .actionCard .actionInfo::after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) translateX(-8px);
+            color: var(--y);
+            font-size: 17px;
+            opacity: 0;
+            transition: opacity .2s ease, transform .22s ease;
+        }
+
+        .actionCardContainer > a:hover .actionCard .actionInfo::after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .actionCard .actionInfo .actionTag {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 10px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.6px !important;
+            color: var(--y) !important;
+            margin-bottom: 8px !important;
+            background: rgba(234,179,8,.1) !important;
+            padding: 3px 9px !important;
+            border-radius: 100px !important;
+        }
+
+        .actionCard .actionInfo .actionTitle {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 15.5px !important;
+            font-weight: 700 !important;
+            color: var(--dk) !important;
+            margin: 0 0 7px !important;
+            line-height: 1.36 !important;
+            display: block !important;
+        }
+
+        .actionCardContainer > a:hover .actionTitle {
+            color: #0d1321 !important;
+        }
+
+        .actionCard .actionInfo .actionDescription {
+            font-family: 'Open Sans', sans-serif !important;
+            font-size: 13px !important;
+            line-height: 1.62 !important;
+            color: var(--gr) !important;
+            font-weight: 400 !important;
+            margin: 0 !important;
+            display: -webkit-box !important;
+            -webkit-box-orient: vertical !important;
+            -webkit-line-clamp: 2 !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        /* ── VOIR PLUS ────────────────────────────────────────────── */
+        .voirPlusButton {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            background: var(--y) !important;
+            color: var(--dk) !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12.5px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.9px !important;
+            padding: 11px 26px !important;
+            border-radius: 100px !important;
+            text-decoration: none !important;
+            border: none !important;
+            margin: 14px 0 36px !important;
+            transition: background .2s, transform .2s, box-shadow .2s !important;
+        }
+
+        .voirPlusButton:hover {
+            background: #ca9a00 !important;
+            color: var(--dk) !important;
+            text-decoration: none !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 18px rgba(234,179,8,.35) !important;
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────────────────── */
+        @media (max-width: 640px) {
+            .actionCard {
+                flex-direction: column !important;
+                height: auto !important;
+            }
+
+            .actionCard .actionImgContainer {
+                width: 100% !important;
+                min-width: unset !important;
+                height: 180px !important;
+            }
+
+            .actionCard .actionInfo {
+                padding: 16px 18px 18px !important;
+            }
+
+            .actionCard .actionInfo::after { display: none; }
+
+            .collabs-hero { padding: 56px 0 44px; }
+            .collabs-main { padding: 52px 0 70px; }
+        }
+
+/* Classes generated from former inline style attributes. */
+
+.html-style-fe98ace8 {
+    position:fixed;bottom:30px;right:30px;z-index:9500;opacity:0;visibility:hidden;transition:all .3s ease;
+}
+
+.html-style-d0fa4fb2 {
+    font-size:1em;padding:14px 22px;border-radius:50px;color:#111827;background:linear-gradient(135deg,#EAB308,#F5C800);text-decoration:none;box-shadow:0 6px 20px rgba(234,179,8,.35);display:flex;align-items:center;gap:8px;font-weight:700;font-family:'Montserrat',sans-serif;
+}
+
+.html-style-2b1cb433 {
+    cursor:help;
+}

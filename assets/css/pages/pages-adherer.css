@@ -1,0 +1,347 @@
+/* Extracted from pages/adherer.html to keep HTML free of CSS. */
+
+:root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F0EBE0;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ── HERO ── */
+        .adh-hero {
+            background: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (max-width: 1010px) { .adh-hero { margin-top: 70px; } }
+
+        .adh-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .adh-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 340px; height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .adh-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px 64px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .adh-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+        .adh-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+        .adh-hero-text { flex: 1; min-width: 0; }
+
+        .adh-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(40px, 5.5vw, 72px);
+            font-weight: 900;
+            color: var(--wh);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.0;
+            margin: 0 0 20px;
+        }
+        .adh-hero-title em {
+            font-style: normal;
+            color: var(--y);
+            display: block;
+        }
+        .adh-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+        .adh-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            margin: 0;
+        }
+        .adh-hero-breadcrumb a { color: rgba(255,255,255,.35); text-decoration: none; transition: color .2s; }
+        .adh-hero-breadcrumb a:hover { color: var(--y); }
+        .adh-hero-breadcrumb .chevron { color: var(--y); font-size: 9px; }
+
+        @media (max-width: 640px) {
+            .adh-hero-inner { padding: 0 24px 48px; }
+            .adh-hero-vbar { margin-right: 18px; }
+        }
+
+        /* ── PAGE BODY ── */
+        .adh-body { background: var(--bg); padding: 72px 0 80px; }
+
+        .adh-inner { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+        @media (max-width: 580px) { .adh-inner { padding: 0 24px; } }
+
+        /* ── INTRO ── */
+        .adh-intro {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .adh-intro h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0 0 16px;
+        }
+        .adh-intro h2 em { font-style: normal; color: var(--y); }
+        .adh-intro p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: var(--gr);
+            line-height: 1.75;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        /* ── JOIN BUTTON ── */
+        .adh-join-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--dk);
+            color: var(--wh);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--dk);
+            border-radius: 8px;
+            padding: 0 36px;
+            height: 52px;
+            cursor: pointer;
+            transition: background .2s, color .2s, transform .15s;
+        }
+        .adh-join-btn:hover {
+            background: var(--y);
+            color: var(--dk);
+            border-color: var(--y);
+            transform: translateY(-1px);
+        }
+        .adh-join-btn i { font-size: 16px; }
+
+        /* ── JOIN FORM ── */
+        .adh-form-wrap {
+            background: var(--wh);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 2px 20px rgba(17,24,39,.08);
+            margin-top: 28px;
+            display: none;
+        }
+        @media (max-width: 640px) { .adh-form-wrap { padding: 32px 24px; } }
+
+        .adh-form-wrap.open { display: block; }
+
+        .adh-form-wrap h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dk);
+            margin: 0 0 28px;
+        }
+
+        .adh-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+        .adh-field label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dk);
+        }
+        .adh-field label span { color: var(--y); }
+        .adh-field input,
+        .adh-field textarea {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: var(--dk);
+            background: #FAFAFA;
+            border: 1.5px solid var(--bdr);
+            border-radius: 8px;
+            padding: 0 16px;
+            height: 48px;
+            width: 100%;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .adh-field textarea {
+            height: auto;
+            padding: 14px 16px;
+            resize: vertical;
+        }
+        .adh-field input:focus,
+        .adh-field textarea:focus {
+            border-color: var(--y);
+            box-shadow: 0 0 0 3px rgba(234,179,8,.15);
+            background: var(--wh);
+        }
+
+        .adh-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 640px) { .adh-form-row { grid-template-columns: 1fr; } }
+
+        .adh-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--y);
+            color: var(--dk);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            padding: 0 36px;
+            height: 52px;
+            cursor: pointer;
+            transition: opacity .2s, transform .15s;
+            margin-top: 8px;
+        }
+        .adh-submit:hover { opacity: .88; transform: translateY(-1px); }
+
+        .adh-loading {
+            display: none;
+            justify-content: center;
+            padding: 16px 0;
+        }
+
+        /* ── SEPARATOR ── */
+        .adh-separator {
+            border: none;
+            border-top: 1.5px solid var(--bdr);
+            margin: 72px 0 56px;
+        }
+
+        /* ── WHY CARDS ── */
+        .adh-why-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            text-align: center;
+            margin: 0 0 40px;
+        }
+        .adh-why-title em { font-style: normal; color: var(--y); }
+
+        .adh-cards-grid {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 900px) { .adh-cards-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 580px) { .adh-cards-grid { grid-template-columns: 1fr; padding: 0 24px; } }
+
+        .adh-why-card {
+            background: var(--wh);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(17,24,39,.07);
+            display: flex;
+            flex-direction: column;
+        }
+        .adh-why-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .adh-why-card-body {
+            padding: 28px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .adh-why-card-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--dk);
+            margin: 0 0 12px;
+            line-height: 1.35;
+        }
+        .adh-why-card-accent {
+            width: 32px;
+            height: 3px;
+            background: var(--y);
+            border-radius: 2px;
+            margin-bottom: 16px;
+        }
+        .adh-why-card-body p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: var(--gr);
+            line-height: 1.72;
+            margin: 0;
+            flex: 1;
+        }
+
+/* Classes generated from former inline style attributes. */
+
+.html-style-fef37959 {
+    margin-top: 0;
+}
+
+.html-style-3d1b6852 {
+    max-width:1180px; margin: 0 auto; padding: 0 48px; text-align: center; margin-bottom: 40px;
+}
+
+.html-style-58946e52 {
+    cursor: help;
+}
