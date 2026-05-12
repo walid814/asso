@@ -230,11 +230,11 @@
 }
 
 /* ==========================================
-   2. SECTION QUI SOMMES NOUS (PREMIUM - BLANC)
+   2. SECTION QUI SOMMES NOUS
    ========================================== */
 .fate-about-strip {
     padding: 100px 0;
-    background: #ffffff;
+    background: #F0EBE0;
     position: relative;
     overflow: hidden;
 }
@@ -242,91 +242,131 @@
 .fate-about-strip::before {
     content: '';
     position: absolute;
-    top: -150px;
-    right: -100px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 193, 7, 0.08) 0%, transparent 60%);
+    bottom: -80px;
+    left: -80px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.10) 0%, transparent 65%);
     pointer-events: none;
 }
 
 .fate-about-wrapper {
     display: flex;
-    gap: 70px;
+    gap: 80px;
     align-items: center;
-    flex-wrap: wrap;
     position: relative;
     z-index: 2;
 }
 
 .fate-about-text {
-    flex: 1 1 450px;
+    flex: 1 1 420px;
+    min-width: 0;
 }
 
-.fate-about-text .section-tag {
+.about-eyebrow {
     display: inline-flex;
     align-items: center;
-    background: rgba(255, 193, 7, 0.15);
-    color: #d97706;
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-size: 12px;
+    gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 24px;
+    color: #EAB308;
+    margin-bottom: 18px;
 }
+
+.about-eyebrow i { font-size: 13px; }
 
 .fate-about-text h2 {
-    font-size: clamp(32px, 4vw, 46px);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(34px, 4vw, 54px);
     font-weight: 900;
     color: #111827;
-    line-height: 1.15;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    margin: 0 0 24px;
+}
+
+.fate-about-text h2 em {
+    font-style: normal;
+    color: #EAB308;
+    display: block;
+}
+
+.about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 28px;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.fate-about-text h2 span {
-    background: linear-gradient(135deg, #EAB308, #F59E0B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+.about-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #111827;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
 }
 
-.about-highlight-box {
-    padding-left: 24px;
-    border-left: 4px solid #FFC107;
-    background: linear-gradient(90deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0) 100%);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 0 12px 12px 0;
+.about-chip i { color: #EAB308; font-size: 11px; }
+
+.about-body {
     margin-bottom: 36px;
 }
 
-.about-highlight-box p {
-    font-size: 16px;
+.about-body p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
     line-height: 1.8;
     color: #4b5563;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-.about-highlight-box p:last-child {
-    margin-bottom: 0;
-}
+.about-body p:last-child { margin-bottom: 0; }
 
-.about-highlight-box strong {
+.about-body strong { color: #111827; font-weight: 700; }
+
+.about-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #EAB308;
     color: #111827;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    padding: 0 28px;
+    height: 48px;
+    text-decoration: none;
+    transition: opacity .2s, transform .15s;
+    cursor: pointer;
+}
+
+.about-cta:hover {
+    opacity: .88;
+    transform: translateY(-1px);
+    color: #111827;
+    text-decoration: none;
 }
 
 .fate-about-video {
-    flex: 1 1 500px;
+    flex: 1 1 480px;
     position: relative;
 }
 
 .fate-about-video-inner {
-    border-radius: 24px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.13);
     aspect-ratio: 16/9;
     position: relative;
     z-index: 2;
@@ -340,22 +380,84 @@
     display: block;
 }
 
+/* ── VIDEO POSTER (thumbnail + play button) ── */
+.video-poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.video-poster:hover img {
+    transform: scale(1.04);
+}
+
+.video-play-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 24, 39, 0.30);
+    transition: background .25s;
+}
+
+.video-poster:hover .video-play-btn {
+    background: rgba(17, 24, 39, 0.48);
+}
+
+.video-play-circle {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #EAB308;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 28px rgba(234, 179, 8, 0.45);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.video-play-circle i {
+    font-size: 26px;
+    padding-left: 4px;
+}
+
+.video-poster:hover .video-play-circle {
+    transform: scale(1.10);
+    box-shadow: 0 12px 36px rgba(234, 179, 8, 0.55);
+}
+
 .video-backdrop-shape {
     position: absolute;
-    top: 24px;
-    right: -24px;
-    bottom: -24px;
-    left: 24px;
-    border-radius: 24px;
-    background: #FFC107;
-    opacity: 0.15;
+    top: 20px;
+    right: -20px;
+    bottom: -20px;
+    left: 20px;
+    border-radius: 20px;
+    background: #EAB308;
+    opacity: 0.22;
     z-index: 1;
 }
 
 @media (max-width: 992px) {
-    .video-backdrop-shape {
-        display: none;
-    }
+    .fate-about-wrapper { flex-direction: column; gap: 48px; }
+    .video-backdrop-shape { display: none; }
+}
+
+@media (max-width: 640px) {
+    .fate-about-strip { padding: 72px 0; }
+    .fate-about-text h2 { letter-spacing: -1px; }
 }
 
 /* ==========================================

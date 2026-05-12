@@ -304,30 +304,48 @@
             <div class="container">
                 <div class="fate-about-wrapper">
                     <div class="fate-about-text">
-                        <span class="section-tag">&#127758; &nbsp;Qui sommes-nous ?</span>
-                        <h2>Forum Associatif<br><span>Tous Ensemble</span></h2>
-                        <div class="about-highlight-box">
+                        <span class="about-eyebrow">
+                            <i class="fas fa-users"></i> Qui sommes-nous ?
+                        </span>
+                        <h2>Forum Associatif<em>Tous Ensemble</em></h2>
+                        <div class="about-chips">
+                            <span class="about-chip"><i class="fas fa-calendar-check"></i> Fondé en 2001</span>
+                            <span class="about-chip"><i class="fas fa-balance-scale"></i> Association Loi 1901</span>
+                            <span class="about-chip"><i class="fas fa-map-marker-alt"></i> Lyon &amp; International</span>
+                        </div>
+                        <div class="about-body">
                             <p>Fondé en avril 2001 par Roger Tonye Aguiar, le <strong>FATE</strong> est un collectif
                                 d'associations lyonnaises engagées pour la solidarité, le vivre-ensemble et la
                                 valorisation du patrimoine africain.</p>
                             <p>Association loi 1901 d'intérêt général, éligible au mécénat, elle déploie ses actions
                                 localement et à l'international.</p>
                         </div>
-                        <a class="fate-hero-btn-primary" href="pages/fate.html"
-                            style="font-size:14px; padding:12px 28px; margin-top: 10px;">
+                        <a class="about-cta" href="pages/fate.html">
                             Découvrir la structure <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                     <div class="fate-about-video">
                         <div class="video-backdrop-shape"></div>
-                        <div class="fate-about-video-inner">
-                            <iframe src="https://www.youtube.com/embed/oxOJTua3v7g"
-                                title="Forum Associatif Tous Ensemble — Présentation"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy">
-                            </iframe>
+                        <div class="fate-about-video-inner" id="aboutVideoWrap">
+                            <div class="video-poster" id="aboutVideoPoster" onclick="launchAboutVideo()" role="button" tabindex="0" aria-label="Lancer la vidéo de présentation du FATE" onkeydown="if(event.key==='Enter'||event.key===' ')launchAboutVideo()">
+                                <img src="https://forumassotousensemble.org/storage/banners/June2023/thumbnail.png"
+                                    alt="Roger Tonye Aguiar — Fondateur du Forum Associatif Tous Ensemble"
+                                    loading="lazy">
+                                <div class="video-play-btn">
+                                    <span class="video-play-circle">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <script>
+                        function launchAboutVideo() {
+                            const wrap = document.getElementById('aboutVideoWrap');
+                            wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/oxOJTua3v7g?autoplay=1" title="Forum Associatif Tous Ensemble — Présentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                        }
+                    </script>
                 </div>
             </div>
         </section>
