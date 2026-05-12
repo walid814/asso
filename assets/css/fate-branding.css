@@ -5,7 +5,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,7 +25,8 @@ h1, h2, h3, h4, h5, h6 {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    background: #ffffff !important; /* Changé en blanc selon demande */
+    background: #ffffff !important;
+    /* Changé en blanc selon demande */
     z-index: 9999 !important;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
@@ -48,10 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.02);
 }
 
-/* Masquer les drapeaux moches du header */
-#languageContainer {
-    display: none !important;
-}
+
 
 /* Navigation - Espacement et Typographie */
 .mainNav {
@@ -71,7 +74,8 @@ h1, h2, h3, h4, h5, h6 {
 .headerWrapper .navLinkStrong,
 .headerWrapper .navLink,
 .mainNav .navLinkStrong {
-    color: #111827 !important; /* Texte sombre sur fond blanc */
+    color: #111827 !important;
+    /* Texte sombre sur fond blanc */
     font-family: 'Montserrat', sans-serif !important;
     font-size: 13.5px !important;
     font-weight: 600 !important;
@@ -221,7 +225,8 @@ a[href*="soutenir"].buttonNav:hover {
 
 /* ======= COMPENSATION HEADER FIXE & VIDE BLANC ======= */
 .conteneur-banniere {
-    padding-top: 0 !important; /* Suppression du vide blanc */
+    padding-top: 0 !important;
+    /* Suppression du vide blanc */
 }
 
 .fate-hero {
@@ -253,9 +258,10 @@ a[href*="soutenir"].buttonNav:hover {
         padding: 0 20px !important;
         height: 70px !important;
     }
-    
+
     .mainNav {
-        display: none; /* Masqué par défaut sur mobile, géré par JS */
+        display: none;
+        /* Masqué par défaut sur mobile, géré par JS */
         position: fixed;
         top: 70px;
         left: 0;
@@ -271,7 +277,7 @@ a[href*="soutenir"].buttonNav:hover {
     .mainNav.navOpen {
         display: flex !important;
     }
-    
+
     .mainNav .navList {
         flex-direction: column;
         align-items: flex-start;
@@ -284,11 +290,17 @@ a[href*="soutenir"].buttonNav:hover {
     }
 }
 
+/* Fin du @media (max-width: 1010px) */
+
+.lang-option .flag-icon {
+    font-size: 18px;
+}
+
 /* ======= SUGGESTION PROMPT ======= */
 .suggestion-prompt {
     position: fixed;
-    bottom: 15px;
-    left: 15px;
+    bottom: 130px;
+    right: 20px;
     z-index: 10000;
     background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
     border-radius: 25px;
@@ -337,106 +349,81 @@ a[href*="soutenir"].buttonNav:hover {
     white-space: nowrap;
 }
 
-/* ======= HERO SLIDER ======= */
-.fate-hero {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    min-height: 500px;
-    max-height: 760px;
-    overflow: hidden;
-    background: #0a0a1e;
+/* ==========================================
+   WIDGET LANGUE FLOTTANT
+   ========================================== */
+.go-top {
+    bottom: 75px !important; /* On remonte le go-top pour faire de la place */
 }
 
-.fate-hero-slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.9s ease;
-    pointer-events: none;
-}
-
-.fate-hero-slide.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.fate-hero-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.fate-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
-    display: flex;
-    align-items: center;
-    padding: 0 80px 0 160px;
-}
-
-.fate-hero-content {
-    max-width: 640px;
-    color: #fff;
-}
-
-.fate-hero-h1 {
-    font-size: clamp(26px, 4vw, 52px);
-    font-weight: 900;
-    margin-bottom: 14px;
-    text-transform: uppercase;
-}
-
-/* ======= ACTUALITES SECTION ======= */
-.actu-strip-section {
-    padding: 70px 0;
-    background: #f0f4f8;
-    overflow: hidden;
-}
-
-.actu-marquee-track {
-    display: flex;
-    gap: 24px;
-    animation: actuScroll 35s linear infinite;
-    width: max-content;
-}
-
-.actu-card {
-    position: relative;
-    width: 380px;
-    height: 280px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-}
-
-@keyframes actuScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* ======= POP-UP ======= */
-#fate-popup-overlay {
+.lang-floating-widget {
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 20000;
-    display: none;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+.lang-floating-btn {
+    width: 50px;
+    height: 40px;
+    border-radius: 5px; /* Carré comme le go-top */
+    background: #ffffff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(5px);
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
 }
 
-#fate-popup-overlay.visible {
+.lang-floating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 10px 2px rgba(7, 7, 7, 0.1);
+}
+
+.lang-floating-menu {
+    position: absolute;
+    bottom: 55px;
+    right: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 10px;
     display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 
-#fate-popup-box {
-    background: #fff;
-    border-radius: 20px;
-    max-width: 500px;
-    overflow: hidden;
-    position: relative;
+.lang-floating-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #111827;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.lang-option:hover {
+    background: #f8f9fb;
+    color: #FFC107;
+    text-decoration: none;
 }

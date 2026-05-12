@@ -11,8 +11,8 @@
 .fate-hero {
     position: relative;
     width: 100%;
-    min-height: 500px;
-    max-height: 760px;
+    height: 100vh;
+    min-height: 600px;
     overflow: hidden;
     background: #0a0a1e;
 }
@@ -46,7 +46,8 @@
 .fate-hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 10, 30, 0.35);
+    background: transparent;
+    /* Sans filtre sombre selon demande */
     z-index: 1;
     display: flex;
     align-items: center;
@@ -228,13 +229,12 @@
     transform: scale(1.35);
 }
 
-
 /* ==========================================
-   2. SECTION DESCRIPTION + VIDEO (CLAIR)
+   2. SECTION QUI SOMMES NOUS (PREMIUM - DARK)
    ========================================== */
 .fate-about-strip {
-    background: #ffffff;
-    padding: 120px 0;
+    padding: 100px 0;
+    background: #0a0a1e;
     position: relative;
     overflow: hidden;
 }
@@ -266,8 +266,8 @@
 .fate-about-text .section-tag {
     display: inline-flex;
     align-items: center;
-    background: rgba(255, 193, 7, 0.15);
-    color: #d97706;
+    background: rgba(255, 193, 7, 0.1);
+    color: #FFC107;
     padding: 8px 18px;
     border-radius: 50px;
     font-size: 12px;
@@ -280,7 +280,7 @@
 .fate-about-text h2 {
     font-size: clamp(32px, 4vw, 46px);
     font-weight: 900;
-    color: #111827;
+    color: #ffffff;
     line-height: 1.15;
     margin-bottom: 28px;
     font-family: 'Montserrat', sans-serif;
@@ -296,7 +296,7 @@
 .about-highlight-box {
     padding-left: 24px;
     border-left: 4px solid #FFC107;
-    background: linear-gradient(90deg, rgba(255, 193, 7, 0.08) 0%, rgba(255, 193, 7, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0) 100%);
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 0 12px 12px 0;
@@ -306,7 +306,7 @@
 .about-highlight-box p {
     font-size: 16px;
     line-height: 1.8;
-    color: #4b5563;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 12px;
 }
 
@@ -315,7 +315,7 @@
 }
 
 .about-highlight-box strong {
-    color: #111827;
+    color: #FFC107;
 }
 
 .fate-about-video {
@@ -522,7 +522,7 @@
     line-height: 1.7;
 }
 
-/* Grille asymétrique d'origine */
+/* Grille asymétrique restaurée et corrigée */
 .projets-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -558,7 +558,8 @@
 
 .projet-card-wide {
     grid-column: span 2;
-    height: 260px;
+    height: 420px;
+    /* Corrigé de 260px à 420px pour éviter l'espace vide avec la carte sm adjacente */
 }
 
 .projet-card-std {
@@ -862,88 +863,7 @@
     box-shadow: 0 8px 25px rgba(26, 26, 46, 0.2);
 }
 
-/* ==========================================
-   WIDGET LANGUE FLOTTANT
-   ========================================== */
-.go-top {
-    bottom: 75px !important; /* On remonte le go-top pour faire de la place */
-}
 
-.lang-floating-widget {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    z-index: 999;
-}
-
-.lang-floating-btn {
-    width: 50px;
-    height: 40px;
-    border-radius: 5px; /* Carré comme le go-top */
-    background: #ffffff;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 0;
-}
-
-.lang-floating-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 3px 10px 2px rgba(7, 7, 7, 0.1);
-}
-
-.lang-floating-menu {
-    position: absolute;
-    bottom: 55px;
-    right: 0;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    min-width: 150px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
-}
-
-.lang-floating-menu.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.lang-option {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    color: #111827;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: background 0.2s;
-}
-
-.lang-option:hover {
-    background: #f8f9fb;
-    color: #FFC107;
-    text-decoration: none;
-}
-
-.lang-option .flag-icon {
-    font-size: 18px;
-}
 
 /* ==========================================
    6. SECTION ARCHIVES ET ACTIONS (CLAIR)
