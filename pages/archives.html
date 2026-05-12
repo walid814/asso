@@ -4,31 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-    <title>Archives | Forum Associatif Tous Assemble</title>
-
-    <meta name="viewport" content="width=device-width">
-
-
+    <title>Archives | Forum Associatif Tous Ensemble</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
     <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta property="og:description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-
-
-
-    <meta name="description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-    <meta name="keywords" content="Forum, Associatif, tous ensemble, assocaition, france" />
+    <meta name="description" content="Crée en avril 2001, le Forum Associatif Tous Ensemble est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="keywords" content="Forum, Associatif, tous ensemble, association, france, archives" />
     <meta name="robots" content="index, follow" />
-    <meta name="DC.title" content="Archives | Forum Associatif Tous Assemble" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@fate" />
-    <meta name="twitter:creator" content="@fate" />
     <meta property="og:url" content="https://fatetousensemble.org/" />
-    <meta property="og:title" content="Archives | Forum Associatif Tous Assemble" />
-
+    <meta property="og:title" content="Archives | Forum Associatif Tous Ensemble" />
+    <meta property="og:description" content="Crée en avril 2001, le Forum Associatif Tous Ensemble est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="twitter:card" content="summary" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -44,23 +30,343 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/fate-branding.css">
-
-
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
-
-
     <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --y: #EAB308;
+            --dk: #111827;
+            --bg: #F0EBE0;
+            --wh: #ffffff;
+            --gr: #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ===== HERO ===== */
+        .arch-hero {
+            background: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .arch-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+
+        .arch-hero-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 40px 64px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .arch-hero-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex: 1;
+        }
+
+        .arch-hero-vbar {
+            width: 4px;
+            height: 80px;
+            background: var(--y);
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .arch-hero-breadcrumb {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--y);
+            margin-bottom: 10px;
+        }
+
+        .arch-hero-breadcrumb a {
+            color: rgba(255,255,255,0.45);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .arch-hero-breadcrumb a:hover { color: var(--y); }
+
+        .arch-hero-breadcrumb span { margin: 0 8px; color: rgba(255,255,255,0.25); }
+
+        .arch-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(32px, 4.5vw, 54px);
+            font-weight: 900;
+            color: var(--wh);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.05;
+            margin: 0;
+        }
+
+        .arch-hero-title em {
+            font-style: normal;
+            color: var(--y);
+        }
+
+        .arch-hero-right {
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .arch-hero-badge {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--y);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .arch-hero-badge::after {
+            content: '';
+            position: absolute;
+            inset: -18px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(234,179,8,0.25);
+        }
+
+        .arch-hero-badge-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+        }
+
+        .arch-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        /* ===== MAIN ===== */
+        .arch-main {
+            background: var(--bg);
+            padding: 60px 0 100px;
+        }
+
+        .arch-wrap {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== FILTERS ===== */
+        .arch-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 44px;
+            justify-content: center;
+        }
+
+        .arch-filter-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            border: 2px solid var(--bdr);
+            background: var(--wh);
+            color: var(--gr);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .arch-filter-btn:hover {
+            border-color: var(--dk);
+            color: var(--dk);
+        }
+
+        .arch-filter-btn.active {
+            background: var(--dk);
+            border-color: var(--dk);
+            color: var(--wh);
+        }
+
+        .arch-filter-btn.active-y {
+            background: var(--y);
+            border-color: var(--y);
+            color: var(--dk);
+        }
+
+        /* ===== GALLERY GRID ===== */
+        .arch-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .arch-card-wrap {
+            display: block;
+        }
+
+        .arch-card-wrap.hidden {
+            display: none;
+        }
+
+        .arch-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--wh);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .arch-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+        }
+
+        .arch-card-img {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            background: #ddd8cf;
+        }
+
+        .arch-card-img img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+            transition: transform 0.4s ease;
+        }
+
+        .arch-card:hover .arch-card-img img {
+            transform: scale(1.06);
+        }
+
+        .arch-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(17,24,39,0.65);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.28s ease;
+        }
+
+        .arch-card:hover .arch-card-overlay {
+            opacity: 1;
+        }
+
+        .arch-card-zoom {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--y);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dk);
+            font-size: 18px;
+        }
+
+        .arch-card-overlay-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--wh);
+            text-align: center;
+            padding: 0 12px;
+            line-height: 1.4;
+        }
+
+        .arch-card-footer {
+            padding: 10px 12px;
+        }
+
+        .arch-card-cat {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gr);
+        }
+
+        .arch-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--dk);
+            margin-top: 3px;
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1060px) {
+            .arch-hero-inner { padding: 0 20px 52px; }
+            .arch-wrap { padding: 0 20px; }
+        }
+
+        @media (max-width: 900px) {
+            .arch-grid { grid-template-columns: repeat(3, 1fr); }
+            .arch-hero-badge { width: 110px; height: 110px; }
+            .arch-hero-badge-num { font-size: 34px; }
+        }
+
+        @media (max-width: 600px) {
+            .arch-hero { margin-top: 70px; }
+            .arch-hero-inner { flex-direction: column; align-items: flex-start; padding: 0 16px 40px; gap: 24px; }
+            .arch-hero-right { align-self: flex-end; }
+            .arch-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .arch-wrap { padding: 0 16px; }
+            .arch-main { padding: 40px 0 80px; }
+        }
+
+        @media (max-width: 380px) {
+            .arch-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
-<body class=about-us-page>
-
+<body class="about-us-page">
 
     <div class="conteneur-banniere">
 
-
-
-
-
+        <!-- HEADER -->
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
                 <a href="../index.html" class="logoLink">
@@ -70,109 +376,71 @@
 
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
 
-
-
-
-
-
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
 
                 <ul class="navList">
-
-                    <li class="navItem ">
-                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink
-                                         ">
-                            FATE
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink">FATE</a>
                     </li>
 
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">
-                                ACTUALITÉS
-                                <span class="dropdownIcon">+</span>
+                                ACTUALITÉS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
-                                    class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
-                                    pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
-                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
-                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
-                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a
-                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
-                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
-
 
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
-                                ACTIONS
-                                <span class="dropdownIcon">+</span>
+                                ACTIONS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList">
-                            <li class="submenuItem">
-                                <a href="../pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
                         </ul>
                     </li>
 
                     <li class="navItem selectedTab">
-                        <a href="../pages/archives.html" class="navLinkStrong activeNav">
-                            ARCHIVES
-                        </a>
+                        <a href="../pages/archives.html" class="navLinkStrong activeNav">ARCHIVES</a>
                     </li>
 
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
-                                PARTENAIRES
-                                <span class="dropdownIcon">+</span>
+                                PARTENAIRES <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
-                                    class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
-                                    class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
-                                    class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
 
-                    <li class="navItem ">
-                        <a href="../pages/contact.html" class="navLinkStrong navLink
-                                         ">
-                            CONTACTS
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
                     </li>
 
                     <li class="navItem">
@@ -185,7 +453,6 @@
             </nav>
         </header>
 
-
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
@@ -193,7 +460,6 @@
                 const body = document.body;
                 const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
 
-                // Mobile toggle
                 if (toggleBtn) {
                     toggleBtn.addEventListener('click', () => {
                         mainNav.classList.toggle('navOpen');
@@ -201,10 +467,8 @@
                     });
                 }
 
-                // Fermer le menu mobile quand on clique sur un lien
                 navLinks.forEach(link => {
                     link.addEventListener('click', (e) => {
-                        // Ne pas fermer si on clique sur un toggle de sous-menu
                         if (!e.target.closest('.navToggleLink')) {
                             mainNav.classList.remove('navOpen');
                             body.classList.remove('noScroll');
@@ -212,653 +476,646 @@
                     });
                 });
 
-                // Gestion des sous-menus uniquement sur mobile
                 const toggleLinks = document.querySelectorAll('.navToggleLink');
                 toggleLinks.forEach(toggle => {
                     toggle.addEventListener('click', (e) => {
-                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
                         if (window.innerWidth < 992) {
                             e.preventDefault();
                             const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) {
-                                parentLi.classList.toggle('submenuOpen');
-                            }
+                            if (parentLi) parentLi.classList.toggle('submenuOpen');
                         }
                     });
                 });
             });
         </script>
 
-
-
-
-
-
-
-        <section class="uni-banner opacityLow" style="background-image: url('storage/background/img_archives.jpg');">
-            <div class="container">
-                <div class="uni-banner-text-area">
-                    <h1>
-                        Archives
-                    </h1>
-                    <ul>
-                        <li>
-                            <a href="../index.html">
-                                Accueil
-                            </a>
-                        </li>
-                        <li>
+        <!-- HERO -->
+        <section class="arch-hero">
+            <div class="arch-hero-inner">
+                <div class="arch-hero-left">
+                    <div class="arch-hero-vbar"></div>
+                    <div>
+                        <p class="arch-hero-breadcrumb">
+                            <a href="../index.html">Accueil</a>
+                            <span>/</span>
                             Archives
-                        </li>
-                    </ul>
+                        </p>
+                        <h1 class="arch-hero-title">Nos <em>Archives</em></h1>
+                    </div>
+                </div>
+                <div class="arch-hero-right">
+                    <div class="arch-hero-badge">
+                        <span class="arch-hero-badge-num">26</span>
+                        <span class="arch-hero-badge-label">documents<br>archivés</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- GALLERY -->
+        <section class="arch-main">
+            <div class="arch-wrap">
 
-        <section class="documentation-list pt-70 pb-100">
-            <div class="container">
-                <div class="row">
+                <!-- FILTERS -->
+                <div class="arch-filters" role="group" aria-label="Filtrer par catégorie">
+                    <button class="arch-filter-btn active" data-filter="all">Tous</button>
+                    <button class="arch-filter-btn" data-filter="rapports">Rapports &amp; Documents</button>
+                    <button class="arch-filter-btn" data-filter="mindchangers">MINDCHANGERS</button>
+                    <button class="arch-filter-btn" data-filter="lettres">Lettres de soutien</button>
+                    <button class="arch-filter-btn" data-filter="evenements">Événements</button>
+                </div>
 
+                <!-- GRID -->
+                <div class="arch-grid" id="arch-grid">
 
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <!-- === RAPPORTS & DOCUMENTS === -->
+                    <div class="arch-card-wrap" data-cat="rapports">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg"
-                                    target="_blank" class="doc-popup" title="Rapport d&#039;activité 2023">
+                                   data-lightbox="rapports" data-title="Rapport d'activité 2023">
                                     <img src="../assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg"
-                                        alt="Rapport d&#039;activité 2023">
+                                         alt="Rapport d'activité 2023" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Rapport d'activité 2023</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Rapports &amp; Documents</div>
+                                <div class="arch-card-title">Rapport d'activité 2023</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="rapports">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg"
-                                    target="_blank" class="doc-popup" title="Ambassadeur du climat">
+                                   data-lightbox="rapports" data-title="Ambassadeur du climat">
                                     <img src="../assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg"
-                                        alt="Ambassadeur du climat">
+                                         alt="Ambassadeur du climat" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Ambassadeur du climat</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Rapports &amp; Documents</div>
+                                <div class="arch-card-title">Ambassadeur du climat</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="rapports">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg"
-                                    target="_blank" class="doc-popup" title="Culture aux pieds des tours">
+                                   data-lightbox="rapports" data-title="Culture aux pieds des tours">
                                     <img src="../assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg"
-                                        alt="Culture aux pieds des tours">
+                                         alt="Culture aux pieds des tours" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Culture aux pieds des tours</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Rapports &amp; Documents</div>
+                                <div class="arch-card-title">Culture aux pieds des tours</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/November2016/AFRO_VIBES_2.jpg" target="_blank"
-                                    class="doc-popup" title="AFRO VIBES">
-                                    <img src="../assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
-                                        alt="AFRO VIBES">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/Gy5dOdwPg4ygOgCNZXda.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/Gy5dOdwPg4ygOgCNZXda.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/HdmD47Q2OD7VzulCHQd7.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/HdmD47Q2OD7VzulCHQd7.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/AvtcX84mq6w7EjvgUFBM.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/AvtcX84mq6w7EjvgUFBM.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/nfYicWxj07QzkyNMqsBS.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/nfYicWxj07QzkyNMqsBS.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/IhznuzR1SsTvbkqG8gmr.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/IhznuzR1SsTvbkqG8gmr.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/NaodbQUWU8XUC4NdVfEW.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/NaodbQUWU8XUC4NdVfEW.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2024/N0PqMDyLJB5yQIyQN1bJ.png"
-                                    target="_blank" class="doc-popup" title="Exposition MINDCHANGERS">
-                                    <img src="../assets/storage/documentations/July2024/N0PqMDyLJB5yQIyQN1bJ.png"
-                                        alt="Exposition MINDCHANGERS">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="rapports">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/April2025/OAjx8zXYcsWoztpFkvLb.jpg"
-                                    target="_blank" class="doc-popup" title="#C&#039;estNotreHistoire">
+                                   data-lightbox="rapports" data-title="#C'estNotreHistoire">
                                     <img src="../assets/storage/documentations/April2025/OAjx8zXYcsWoztpFkvLb.jpg"
-                                        alt="#C&#039;estNotreHistoire">
+                                         alt="#C'estNotreHistoire" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">#C'estNotreHistoire</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Rapports &amp; Documents</div>
+                                <div class="arch-card-title">#C'estNotreHistoire</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/November2016/Flyer_Dibango_1.png"
-                                    target="_blank" class="doc-popup" title="Manu Dibango">
-                                    <img src="../assets/storage//documentations/November2016/Flyer_Dibango_1.png"
-                                        alt="Manu Dibango">
+                    <!-- === MINDCHANGERS === -->
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/Gy5dOdwPg4ygOgCNZXda.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/Gy5dOdwPg4ygOgCNZXda.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/HdmD47Q2OD7VzulCHQd7.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/HdmD47Q2OD7VzulCHQd7.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/AvtcX84mq6w7EjvgUFBM.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/AvtcX84mq6w7EjvgUFBM.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/nfYicWxj07QzkyNMqsBS.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/nfYicWxj07QzkyNMqsBS.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/IhznuzR1SsTvbkqG8gmr.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/IhznuzR1SsTvbkqG8gmr.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/NaodbQUWU8XUC4NdVfEW.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/NaodbQUWU8XUC4NdVfEW.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
+                            </div>
+                        </div>
+                    </div>
 
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="mindchangers">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2024/N0PqMDyLJB5yQIyQN1bJ.png"
+                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    <img src="../assets/storage/documentations/July2024/N0PqMDyLJB5yQIyQN1bJ.png"
+                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">MINDCHANGERS</div>
+                                <div class="arch-card-title">Exposition MINDCHANGERS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === LETTRES DE SOUTIEN === -->
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/soutien_sylvie_guillaume.jpg"
-                                    target="_blank" class="doc-popup" title="Soutien Sylvie Guillaume">
+                                   data-lightbox="lettres" data-title="Lettre de soutien — Sylvie Guillaume">
                                     <img src="../assets/storage/documentations/lettres/soutien_sylvie_guillaume.jpg"
-                                        alt="Soutien Sylvie Guillaume">
+                                         alt="Soutien Sylvie Guillaume" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Sylvie Guillaume</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Sylvie Guillaume</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/Lettre_de_soutien_Serge_LETCHIMY.jpg"
-                                    target="_blank" class="doc-popup" title="Serge Letchimy">
+                                   data-lightbox="lettres" data-title="Lettre de soutien — Serge Letchimy">
                                     <img src="../assets/storage/documentations/lettres/Lettre_de_soutien_Serge_LETCHIMY.jpg"
-                                        alt="Serge Letchimy">
+                                         alt="Serge Letchimy" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Serge Letchimy</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Serge Letchimy</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/Lettre_de_soutien_Jacques_MARTIAL.jpg"
-                                    target="_blank" class="doc-popup" title="Jacques Martial">
+                                   data-lightbox="lettres" data-title="Lettre de soutien — Jacques Martial">
                                     <img src="../assets/storage/documentations/lettres/Lettre_de_soutien_Jacques_MARTIAL.jpg"
-                                        alt="Jacques Martial">
+                                         alt="Jacques Martial" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Jacques Martial</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Jacques Martial</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/Lettre_de_Soutien_FATE.jpg"
-                                    target="_blank" class="doc-popup" title="Soutien Festival Afro Vibes	">
+                                   data-lightbox="lettres" data-title="Lettre de soutien — Festival Afro Vibes">
                                     <img src="../assets/storage/documentations/lettres/Lettre_de_Soutien_FATE.jpg"
-                                        alt="Soutien Festival Afro Vibes	">
+                                         alt="Soutien Festival Afro Vibes" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Soutien Festival Afro Vibes</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Soutien Festival Afro Vibes</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/lettre de_soutien_Mme_LANGEVIN.jpg"
-                                    target="_blank" class="doc-popup" title="Madame Langevin">
+                                   data-lightbox="lettres" data-title="Lettre de soutien — Mme Langevin">
                                     <img src="../assets/storage/documentations/lettres/lettre de_soutien_Mme_LANGEVIN.jpg"
-                                        alt="Madame Langevin">
+                                         alt="Madame Langevin" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Madame Langevin</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Madame Langevin</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks1.jpg"
-                                    target="_blank" class="doc-popup" title="Barbara Hendricks 1">
+                                   data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 1">
                                     <img src="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks1.jpg"
-                                        alt="Barbara Hendricks 1">
+                                         alt="Barbara Hendricks 1" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Barbara Hendricks — 1</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Barbara Hendricks — 1</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks2.jpg"
-                                    target="_blank" class="doc-popup" title="Barbara Hendricks 2">
+                                   data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 2">
                                     <img src="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks2.jpg"
-                                        alt="Barbara Hendricks 2">
+                                         alt="Barbara Hendricks 2" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Barbara Hendricks — 2</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Barbara Hendricks — 2</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="lettres">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks3.jpg"
-                                    target="_blank" class="doc-popup" title="Barbara Hendricks 3">
+                                   data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 3">
                                     <img src="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks3.jpg"
-                                        alt="Barbara Hendricks 3">
+                                         alt="Barbara Hendricks 3" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Barbara Hendricks — 3</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Lettre de soutien</div>
+                                <div class="arch-card-title">Barbara Hendricks — 3</div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- === ÉVÉNEMENTS === -->
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
+                                   data-lightbox="evenements" data-title="AFRO VIBES">
+                                    <img src="../assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
+                                         alt="AFRO VIBES" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">AFRO VIBES</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">AFRO VIBES</div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/November2016/Flyer_Dibango_1.png"
+                                   data-lightbox="evenements" data-title="Manu Dibango">
+                                    <img src="../assets/storage/documentations/November2016/Flyer_Dibango_1.png"
+                                         alt="Manu Dibango" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Manu Dibango</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">Manu Dibango</div>
+                            </div>
+                        </div>
+                    </div>
 
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/affiche_appel_benevole.jpg"
-                                    target="_blank" class="doc-popup" title="Appel à bénévoles">
+                                   data-lightbox="evenements" data-title="Appel à bénévoles">
                                     <img src="../assets/storage/documentations/July2019/affiche_appel_benevole.jpg"
-                                        alt="Appel à bénévoles">
+                                         alt="Appel à bénévoles" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Appel à bénévoles</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">Appel à bénévoles</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
-                                <a href="../assets/storage/documentations/July2019/projection_debat.jpg" target="_blank"
-                                    class="doc-popup" title="Projection débat">
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
+                                <a href="../assets/storage/documentations/July2019/projection_debat.jpg"
+                                   data-lightbox="evenements" data-title="Projection débat">
                                     <img src="../assets/storage/documentations/July2019/projection_debat.jpg"
-                                        alt="Projection débat">
+                                         alt="Projection débat" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Projection débat</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">Projection débat</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/October2019/campagne_ramassage_dechets.jpg"
-                                    target="_blank" class="doc-popup"
-                                    title="Campagne de sensibilisation et de ramassage des déchets">
+                                   data-lightbox="evenements" data-title="Campagne de sensibilisation et ramassage des déchets">
                                     <img src="../assets/storage/documentations/October2019/campagne_ramassage_dechets.jpg"
-                                        alt="Campagne de sensibilisation et de ramassage des déchets">
+                                         alt="Campagne de sensibilisation et de ramassage des déchets" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Campagne ramassage déchets</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">Campagne de sensibilisation et ramassage des déchets</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/roll_up_ambassadeurs_climat.jpg"
-                                    target="_blank" class="doc-popup" title="Les Ambassadeurs du climat">
+                                   data-lightbox="evenements" data-title="Les Ambassadeurs du climat">
                                     <img src="../assets/storage/documentations/July2019/roll_up_ambassadeurs_climat.jpg"
-                                        alt="Les Ambassadeurs du climat">
+                                         alt="Les Ambassadeurs du climat" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Les Ambassadeurs du climat</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">Les Ambassadeurs du climat</div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="document-card">
-
-
-                            <div class="rapport-card-img">
+                    <div class="arch-card-wrap" data-cat="evenements">
+                        <div class="arch-card">
+                            <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/recycleurs_nord_sud.jpg"
-                                    target="_blank" class="doc-popup" title="Les recycleurs entre nord et sud">
+                                   data-lightbox="evenements" data-title="Les recycleurs entre nord et sud">
                                     <img src="../assets/storage/documentations/July2019/recycleurs_nord_sud.jpg"
-                                        alt="Les recycleurs entre nord et sud">
+                                         alt="Les recycleurs entre nord et sud" loading="lazy" decoding="async">
+                                    <div class="arch-card-overlay">
+                                        <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
+                                        <span class="arch-card-overlay-title">Les recycleurs entre nord et sud</span>
+                                    </div>
                                 </a>
+                            </div>
+                            <div class="arch-card-footer">
+                                <div class="arch-card-cat">Événements</div>
+                                <div class="arch-card-title">Les recycleurs entre nord et sud</div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-
-
-
-
-
+        <!-- FOOTER -->
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
                     <div class="row">
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
-                                <a href="../index.html"><img
-                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
-                                        alt="image"></a>
-
-
+                                <a href="../index.html"><img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE"></a>
                                 <p>
-                                    <strong>
-                                        Forum Associatif Tous Ensemble
-                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
-                                    le développement d&#039;initiatives citoyennes.
+                                    <strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.
                                 </p>
-
-
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.facebook.com/profile.php?id=61558231605226
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/ target="
-                                                _blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://x.com/FATEnsemble target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.tiktok.com/@fatensemble target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre:</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/fate.html">
-                                            La structure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
                                 </ul>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation:</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
                                     <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                                    </p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a></p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone:</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
 
                 <div class="copyright">
                     <p class="m-0">
@@ -870,29 +1127,11 @@
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
 
-
-        <div class="popup">
-            <div class="popup-content">
-                <button class="close-btn" id="popup-close"><i class="fas fa-times"></i></button>
-                <form>
-                    <div class="input-group search-box">
-                        <input type="text" class="form-control" placeholder="search">
-                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-        <div class="go-top">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-
+        <div class="go-top"><i class="fas fa-chevron-up"></i></div>
 
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>
@@ -915,223 +1154,28 @@
         <script src="../assets/js/appear.min.js"></script>
         <script src="../assets/js/odometer.min.js"></script>
         <script src="../assets/js/custom.js"></script>
-
-
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
-        </script>
-
+        <script>$(window).bind("load", function () { $("body").addClass("loaded"); });</script>
 
     </div>
 
-
-    <script src="../assets/js/jquery.min.js"></script>
-
-
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
-
-
-
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
-    <script src="../assets/js/video.js"></script>
-
-
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour gérer l'affichage des images
-            const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
-            let isImagesExpanded = false;
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.arch-filter-btn');
+            const cardWraps = document.querySelectorAll('.arch-card-wrap');
 
-            if (showMoreImagesBtn) {
-                showMoreImagesBtn.addEventListener('click', function () {
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    if (!isImagesExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
-                        isImagesExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
-                        isImagesExpanded = false;
-                    }
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    cardWraps.forEach(card => {
+                        card.classList.toggle('hidden', filter !== 'all' && card.dataset.cat !== filter);
+                    });
                 });
-            }
-
-            // Fonction pour gérer l'affichage des vidéos
-            const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
-            let isVideosExpanded = false;
-
-            if (showMoreVideosBtn) {
-                showMoreVideosBtn.addEventListener('click', function () {
-                    const allVideos = document.querySelectorAll('.expositionVideoContainer');
-
-                    if (!isVideosExpanded) {
-                        // Afficher plus de vidéos
-                        let hiddenCount = 0;
-
-                        allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 6);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
-                        isVideosExpanded = true;
-
-                    } else {
-                        // Masquer les vidéos supplémentaires
-                        allVideos.forEach((el, index) => {
-                            if (index >= 6) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
-                        isVideosExpanded = false;
-                    }
-                });
-            }
-
-            // Ancien code pour compatibilité (showMoreBtn)
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            let isExpanded = false;
-
-            if (showMoreBtn) {
-                showMoreBtn.addEventListener('click', function () {
-                    console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-
-                    // Sélectionner toutes les images de la galerie
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    console.log('Nombre total d\'images:', allImages.length); // Debug
-
-                    if (!isExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    // Déclencher l'animation après un court délai
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100); // Délai progressif
-                            }
-                        });
-
-                        // Changer le texte et l'icône du bouton
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
-                        isExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        // Remettre le texte et l'icône originaux
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
-                        isExpanded = false;
-
-                        // Faire défiler vers le titre de la galerie
-                        const galerieTitle = document.querySelector('h3');
-                        if (galerieTitle) {
-                            galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-
-                    console.log('Nouvel état:', isExpanded); // Debug
-                });
-            } else {
-                console.log('Bouton showMoreBtn non trouvé'); // Debug
-            }
-
+            });
         });
     </script>
     <script src="../assets/js/suggestion.js"></script>
