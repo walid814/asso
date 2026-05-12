@@ -1,0 +1,647 @@
+/* ==========================================================================
+   CSS SPECIFIQUE A LA PAGE D'ACCUEIL (accueil.css)
+   ========================================================================== */
+
+
+/* ==========================================
+   2. HERO SLIDER PLEINE LARGEUR
+   ========================================== */
+.fate-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 500px;
+    max-height: 760px;
+    overflow: hidden;
+    background: #0a0a1e;
+}
+
+.fate-hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+}
+
+.fate-hero-slide.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.fate-hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 8s ease;
+}
+
+.fate-hero-slide.active img {
+    transform: scale(1.06);
+}
+
+.fate-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(5, 5, 20, 0.88) 0%,
+            rgba(5, 5, 20, 0.60) 45%,
+            rgba(5, 5, 20, 0.10) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 80px 0 160px;
+}
+
+.fate-hero-content {
+    max-width: 640px;
+    color: #fff;
+}
+
+.fate-hero-overtitle {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFC107;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.fate-hero-slide.active .fate-hero-overtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fate-hero-h1 {
+    font-size: clamp(26px, 4vw, 52px);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 14px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease 0.35s, transform 0.65s ease 0.35s;
+}
+
+.fate-hero-slide.active .fate-hero-h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fate-hero-sub {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.80);
+    margin-bottom: 30px;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s ease 0.5s, transform 0.65s ease 0.5s;
+}
+
+.fate-hero-slide.active .fate-hero-sub {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fate-hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s ease 0.65s, transform 0.65s ease 0.65s;
+}
+
+.fate-hero-slide.active .fate-hero-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fate-hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFC107;
+    color: #0a0a1e;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(255, 193, 7, 0.45);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.fate-hero-btn-primary:hover {
+    background: #fff;
+    color: #0a0a1e;
+    text-decoration: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+}
+
+.fate-hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.fate-hero-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.04);
+}
+
+.fate-hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    border-radius: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 30;
+    transition: color 0.25s, transform 0.25s;
+    user-select: none;
+    padding: 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.fate-hero-arrow:hover {
+    color: #FFC107;
+    transform: translateY(-50%) scale(1.15);
+}
+
+.fate-hero-arrow-left {
+    left: 18px;
+}
+
+.fate-hero-arrow-right {
+    right: 52px;
+}
+
+.fate-hero-dots {
+    position: absolute;
+    bottom: 28px;
+    left: 80px;
+    display: flex;
+    gap: 10px;
+    z-index: 30;
+}
+
+.fate-hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.38);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.fate-hero-dot.active {
+    background: #FFC107;
+    border-color: #FFC107;
+    transform: scale(1.35);
+}
+
+.fate-hero-socials {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 30;
+}
+
+.fate-hero-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.fate-hero-socials a:hover {
+    background: #FFC107;
+    color: #0a0a1e;
+    transform: scale(1.15);
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 24px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 30;
+    animation: bounceY 1.8s ease-in-out infinite;
+}
+
+@keyframes bounceY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* ==========================================
+   3. SECTION DESCRIPTION + VIDEO
+   ========================================== */
+.fate-about-strip {
+    background: #f8f9fb;
+    padding: 80px 0;
+}
+
+.fate-about-strip .container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fate-about-text {
+    flex: 1 1 340px;
+}
+
+/* Le badge jaune façon "pilule" */
+.fate-about-text .section-tag {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 193, 7, 0.15);
+    color: #cca300;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+/* Titre principal modernisé */
+.fate-about-text h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #1a1a2e;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+/* Le texte "Tous Ensemble" en dégradé */
+.fate-about-text h2 span {
+    background: linear-gradient(135deg, rgb(224, 194, 32), rgb(255, 212, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Paragraphe avec effet de citation (bordure jaune à gauche) */
+.fate-about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 32px;
+    padding-left: 20px;
+    border-left: 4px solid #FFC107;
+    background: linear-gradient(90deg, rgba(255, 193, 7, 0.06) 0%, transparent 100%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.fate-about-video {
+    flex: 1 1 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 16/9;
+}
+
+.fate-about-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .fate-about-text h2 {
+        font-size: 28px;
+    }
+
+    .fate-about-strip .container {
+        gap: 40px;
+    }
+}
+
+/* ==========================================
+   4. CARROUSEL ACTUALITES (MARQUEE)
+   ========================================== */
+.actu-strip-section {
+    padding: 70px 0;
+    background: #f0f4f8;
+    overflow: hidden;
+}
+
+.actu-strip-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.actu-strip-title h3 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a1a2e;
+    display: inline-block;
+    position: relative;
+}
+
+.actu-strip-title h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #FFC107;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.actu-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0 20px;
+}
+
+.actu-marquee-track {
+    display: flex;
+    gap: 24px;
+    animation: actuScroll 35s linear infinite;
+    width: max-content;
+}
+
+.actu-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes actuScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.actu-card {
+    position: relative;
+    width: 380px;
+    height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actu-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+}
+
+.actu-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.actu-card:hover img {
+    transform: scale(1.07);
+}
+
+.actu-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 10, 30, 0.92) 0%, rgba(10, 10, 30, 0.4) 55%, rgba(10, 10, 30, 0.0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 22px;
+}
+
+.actu-card-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFC107;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.actu-card-date i {
+    margin-right: 6px;
+}
+
+.actu-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.actu-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFC107;
+    color: #1a1a2e;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    width: fit-content;
+}
+
+.actu-card-btn:hover {
+    background: #fff;
+    color: #1a1a2e;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.actu-strip-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   5. POP-UP ACTUALITE DU MOMENT
+   ========================================== */
+#fate-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+#fate-popup-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fate-popup-box {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 520px;
+    width: 90%;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    transform: translateY(30px) scale(0.96);
+    transition: transform 0.4s ease;
+    position: relative;
+}
+
+#fate-popup-overlay.visible #fate-popup-box {
+    transform: translateY(0) scale(1);
+}
+
+#fate-popup-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+#fate-popup-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#fate-popup-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+#fate-popup-body {
+    padding: 24px 28px 28px;
+}
+
+#fate-popup-tag {
+    display: inline-block;
+    background: #FFC107;
+    color: #1a1a2e;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+#fate-popup-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+#fate-popup-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#fate-popup-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a2e;
+    color: #FFC107;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#fate-popup-btn:hover {
+    background: #FFC107;
+    color: #1a1a2e;
+    text-decoration: none;
+    transform: scale(1.03);
+}
