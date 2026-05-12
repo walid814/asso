@@ -4,31 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-    <title>Adhérer | Forum Associatif Tous Assemble</title>
-
-    <meta name="viewport" content="width=device-width">
-
-
+    <title>Adhérer | Forum Associatif Tous Ensemble</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
     <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta property="og:description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-
-
-
-    <meta name="description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-    <meta name="keywords" content="Forum, Associatif, tous ensemble, assocaition, france" />
+    <meta property="og:description" content="Crée en avril 2001, le &quot;Forum Associatif Tous Ensemble&quot; est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="description" content="Crée en avril 2001, le &quot;Forum Associatif Tous Ensemble&quot; est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="keywords" content="Forum, Associatif, tous ensemble, association, france, adherer, rejoindre" />
     <meta name="robots" content="index, follow" />
-    <meta name="DC.title" content="Adhérer | Forum Associatif Tous Assemble" />
+    <meta name="DC.title" content="Adhérer | Forum Associatif Tous Ensemble" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@fate" />
-    <meta name="twitter:creator" content="@fate" />
     <meta property="og:url" content="https://fatetousensemble.org/" />
-    <meta property="og:title" content="Adhérer | Forum Associatif Tous Assemble" />
-
+    <meta property="og:title" content="Adhérer | Forum Associatif Tous Ensemble" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -45,21 +33,349 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/fate-branding.css">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
 
+    <style>
+        :root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F0EBE0;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+        /* ── HERO ── */
+        .adh-hero {
+            background: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (max-width: 1010px) { .adh-hero { margin-top: 70px; } }
+
+        .adh-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .adh-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 340px; height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .adh-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px 64px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .adh-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+        .adh-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+        .adh-hero-text { flex: 1; min-width: 0; }
+
+        .adh-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(40px, 5.5vw, 72px);
+            font-weight: 900;
+            color: var(--wh);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.0;
+            margin: 0 0 20px;
+        }
+        .adh-hero-title em {
+            font-style: normal;
+            color: var(--y);
+            display: block;
+        }
+        .adh-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+        .adh-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            margin: 0;
+        }
+        .adh-hero-breadcrumb a { color: rgba(255,255,255,.35); text-decoration: none; transition: color .2s; }
+        .adh-hero-breadcrumb a:hover { color: var(--y); }
+        .adh-hero-breadcrumb .chevron { color: var(--y); font-size: 9px; }
+
+        @media (max-width: 640px) {
+            .adh-hero-inner { padding: 0 24px 48px; }
+            .adh-hero-vbar { margin-right: 18px; }
+        }
+
+        /* ── PAGE BODY ── */
+        .adh-body { background: var(--bg); padding: 72px 0 80px; }
+
+        .adh-inner { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+        @media (max-width: 580px) { .adh-inner { padding: 0 24px; } }
+
+        /* ── INTRO ── */
+        .adh-intro {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .adh-intro h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0 0 16px;
+        }
+        .adh-intro h2 em { font-style: normal; color: var(--y); }
+        .adh-intro p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: var(--gr);
+            line-height: 1.75;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        /* ── JOIN BUTTON ── */
+        .adh-join-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--dk);
+            color: var(--wh);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--dk);
+            border-radius: 8px;
+            padding: 0 36px;
+            height: 52px;
+            cursor: pointer;
+            transition: background .2s, color .2s, transform .15s;
+        }
+        .adh-join-btn:hover {
+            background: var(--y);
+            color: var(--dk);
+            border-color: var(--y);
+            transform: translateY(-1px);
+        }
+        .adh-join-btn i { font-size: 16px; }
+
+        /* ── JOIN FORM ── */
+        .adh-form-wrap {
+            background: var(--wh);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 2px 20px rgba(17,24,39,.08);
+            margin-top: 28px;
+            display: none;
+        }
+        @media (max-width: 640px) { .adh-form-wrap { padding: 32px 24px; } }
+
+        .adh-form-wrap.open { display: block; }
+
+        .adh-form-wrap h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dk);
+            margin: 0 0 28px;
+        }
+
+        .adh-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+        .adh-field label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dk);
+        }
+        .adh-field label span { color: var(--y); }
+        .adh-field input,
+        .adh-field textarea {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: var(--dk);
+            background: #FAFAFA;
+            border: 1.5px solid var(--bdr);
+            border-radius: 8px;
+            padding: 0 16px;
+            height: 48px;
+            width: 100%;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .adh-field textarea {
+            height: auto;
+            padding: 14px 16px;
+            resize: vertical;
+        }
+        .adh-field input:focus,
+        .adh-field textarea:focus {
+            border-color: var(--y);
+            box-shadow: 0 0 0 3px rgba(234,179,8,.15);
+            background: var(--wh);
+        }
+
+        .adh-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 640px) { .adh-form-row { grid-template-columns: 1fr; } }
+
+        .adh-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--y);
+            color: var(--dk);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            padding: 0 36px;
+            height: 52px;
+            cursor: pointer;
+            transition: opacity .2s, transform .15s;
+            margin-top: 8px;
+        }
+        .adh-submit:hover { opacity: .88; transform: translateY(-1px); }
+
+        .adh-loading {
+            display: none;
+            justify-content: center;
+            padding: 16px 0;
+        }
+
+        /* ── SEPARATOR ── */
+        .adh-separator {
+            border: none;
+            border-top: 1.5px solid var(--bdr);
+            margin: 72px 0 56px;
+        }
+
+        /* ── WHY CARDS ── */
+        .adh-why-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            text-align: center;
+            margin: 0 0 40px;
+        }
+        .adh-why-title em { font-style: normal; color: var(--y); }
+
+        .adh-cards-grid {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 900px) { .adh-cards-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 580px) { .adh-cards-grid { grid-template-columns: 1fr; padding: 0 24px; } }
+
+        .adh-why-card {
+            background: var(--wh);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(17,24,39,.07);
+            display: flex;
+            flex-direction: column;
+        }
+        .adh-why-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .adh-why-card-body {
+            padding: 28px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .adh-why-card-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--dk);
+            margin: 0 0 12px;
+            line-height: 1.35;
+        }
+        .adh-why-card-accent {
+            width: 32px;
+            height: 3px;
+            background: var(--y);
+            border-radius: 2px;
+            margin-bottom: 16px;
+        }
+        .adh-why-card-body p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: var(--gr);
+            line-height: 1.72;
+            margin: 0;
+            flex: 1;
+        }
+    </style>
 </head>
 
-<body class=about-us-page>
-
-
+<body class="about-us-page">
     <div class="conteneur-banniere">
-
-
-
-
 
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
@@ -67,145 +383,68 @@
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
             </div>
-
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
-
-
-
-
-
 
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
-
-        <ul class="navList">
-                                        
-                                    <li class="navItem ">
-                        <a href="../pages/fate.html"
-                           class="navLinkStrong strongerNav
-                                         ">
-                            FATE
-                        </a>
+                <ul class="navList">
+                    <li class="navItem">
+                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink">FATE</a>
                     </li>
-
-                    <li class=" navItem hasSubmenu">
+                    <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">
-                                ACTUALITÉS
-                                <span class="dropdownIcon">+</span>
+                                ACTUALITÉS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
-                        <ul class="submenuList ">
-                            <li class="submenuItem">
-                                <a href="../pages/festival-arta-sacra.html" class="submenuLink">
-                                    Festival ARTA SACRA
-                                </a>
-                            </li>
+                        <ul class="submenuList">
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/can-juin-2025.html" class="submenuLink">
-                                    En route pour la CAN 2025
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">
-                                    Le FATE bientôt vingt cinq ans 2001 - 2026
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">
-                                    Des routes de l&#039;esclavages à nos jours
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">
-                                    Eau et assainissement PK17-PK32 Douala
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
-                                    class="submenuLink">
-                                    Création d&#039;une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
-
-
-                    <li class=" navItem hasSubmenu">
+                    <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
-                                ACTIONS
-                                <span class="dropdownIcon">+</span>
+                                ACTIONS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList">
-                            <li class="submenuItem">
-                                <a href="../pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
                         </ul>
                     </li>
-
-                    <li class="navItem ">
-                        <a href="../pages/archives.html" class="navLinkStrong navLink
-                                         ">
-                            ARCHIVES
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a>
                     </li>
-
-                    <li class=" navItem hasSubmenu">
+                    <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
-                                PARTENAIRES
-                                <span class="dropdownIcon">+</span>
+                                PARTENAIRES <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem">
-                                <a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">
-                                    Institutionnels
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/partenaires.html#sectionPrives" class="submenuLink">
-                                    Privés
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">
-                                    Associatifs
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
-
-                    <li class="navItem ">
-                        <a href="../pages/contact.html" class="navLinkStrong navLink
-                                         ">
-                            CONTACTS
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
                     </li>
-
                     <li class="navItem">
                         <a href="../pages/soutenir.html" class="buttonNav">Soutenir</a>
                     </li>
@@ -216,587 +455,250 @@
             </nav>
         </header>
 
-
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
                 const mainNav = document.getElementById('mainNav');
                 const body = document.body;
                 const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
-
-    toggleBtn.addEventListener('click', () => {
-        mainNav.classList.toggle('navOpen');
-        body.classList.toggle('noScroll');
-    });
-});
-</script>
-
-
-<style>
-.suggestion-prompt {
-    position: fixed;
-    top: 160px;
-    right: 30px;
-    z-index: 10000;
-    background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
-    border-radius: 25px;
-    padding: 15px 20px;
-    box-shadow: 0 8px 25px rgba(224, 194, 32, 0.3);
-    transform: translateX(100%) scale(0.8);
-    opacity: 0;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border: 2px solid rgba(255,255,255,0.4);
-    max-width: 280px;
-}
-
-.suggestion-prompt.show {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    animation: float 3s ease-in-out infinite;
-}
-
-.suggestion-close {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #dc3545;
-    border: 2px solid white;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.suggestion-close:hover {
-    background: #c82333;
-    transform: scale(1.1);
-}
-
-.suggestion-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #2c3e50 !important;
-    text-decoration: none !important;
-    font-weight: 600;
-    font-size: 14px;
-    white-space: nowrap;
-    transition: color 0.3s ease;
-}
-
-.suggestion-link:hover {
-    color: #1a252f !important;
-    text-decoration: none !important;
-}
-
-.suggestion-link i {
-    font-size: 16px;
-    animation: pulse 2s infinite;
-    color: #2c3e50;
-}
-
-@keyframes  float {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-5px) scale(1.02); }
-}
-
-@keyframes  pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-@media (max-width: 768px) {
-    .suggestion-prompt {
-        right: 10px;
-        top: 100px;
-        padding: 12px 16px;
-        max-width: 250px;
-    }
-    
-    .suggestion-close {
-        top: -6px;
-        right: -6px;
-        width: 20px;
-        height: 20px;
-        font-size: 10px;
-    }
-    
-    .suggestion-link {
-        font-size: 13px;
-    }
-    
-    .suggestion-link i {
-        font-size: 14px;
-    }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const suggestionPrompt = document.getElementById('suggestionPrompt');
-    let hasShownOnce = false;
-    let isCurrentlyVisible = false;
-    
-    console.log('Script de suggestion chargé');
-    
-    // Vérifier si on est sur la page de suggestions
-    const currentPath = window.location.pathname;
-    if (currentPath.includes('/suggestions') || currentPath.includes('/suggestion')) {
-        console.log('Sur la page de suggestions - aucun affichage du prompt');
-        return;
-    }
-
-    console.log('Element suggestionPrompt:', suggestionPrompt);
-    
-    // Si l'élément n'existe pas (masqué côté serveur), on sort
-    if (!suggestionPrompt) {
-        console.log('Element suggestionPrompt non trouvé - probablement masqué côté serveur');
-        return;
-    }
-    
-    // Vérifier si la suggestion a été fermée dans cette session
-    if (localStorage.getItem('suggestionClosed') === 'true') {
-        console.log('Suggestion fermée précédemment - pas d\'affichage automatique');
-        return;
-    }
-    
-    if (suggestionPrompt) {
-        console.log('Element trouvé, ajout du listener de scroll...');
-        
-        // Fonction pour vérifier si on est au milieu de la page
-        function checkScrollPosition() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            
-            // Calculer si on est au milieu de la page (entre 40% et 60% du scroll)
-            const scrollPercentage = scrollTop / (documentHeight - windowHeight);
-            const isInMiddle = scrollPercentage >= 0.4 && scrollPercentage <= 0.8;
-            
-            console.log(`Scroll: ${Math.round(scrollPercentage * 100)}%`);
-            
-            if (isInMiddle && !isCurrentlyVisible) {
-                console.log('Au milieu de la page - affichage du message');
-                showSuggestionPrompt();
-            } else if (!isInMiddle && isCurrentlyVisible) {
-                console.log('Plus au milieu - masquage du message');
-                hideSuggestionPrompt();
-            }
-        }
-        
-        // Écouter le scroll avec throttling pour les performances
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    checkScrollPosition();
-                    ticking = false;
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        mainNav.classList.toggle('navOpen');
+                        body.classList.toggle('noScroll');
+                    });
+                }
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        if (!e.target.closest('.navToggleLink')) {
+                            mainNav.classList.remove('navOpen');
+                            body.classList.remove('noScroll');
+                        }
+                    });
                 });
-                ticking = true;
-            }
-        });
-        
-        // Test après 2 secondes pour vérifier que ça fonctionne
-        setTimeout(() => {
-            console.log('Test d\'affichage immédiat');
-            showSuggestionPrompt();
-        }, 2000);
-        
-    } else {
-        console.error('Element suggestionPrompt non trouvé !');
-    }
-    
-    function showSuggestionPrompt() {
-        console.log('showSuggestionPrompt appelée');
-        
-        if (!suggestionPrompt || isCurrentlyVisible) {
-            return;
-        }
-        
-        isCurrentlyVisible = true;
-        suggestionPrompt.style.display = 'block';
-        console.log('Display mis à block');
-        
-        // Ajouter la classe 'show' après un petit délai pour l'animation
-        setTimeout(() => {
-            suggestionPrompt.classList.add('show');
-            console.log('Classe show ajoutée');
-        }, 100);
-    }
-    
-    function hideSuggestionPrompt() {
-        console.log('hideSuggestionPrompt appelée');
-        
-        if (!suggestionPrompt || !isCurrentlyVisible) {
-            return;
-        }
-        
-        suggestionPrompt.classList.remove('show');
-        console.log('Classe show retirée');
-        
-        // Masquer complètement après l'animation
-        setTimeout(() => {
-            suggestionPrompt.style.display = 'none';
-            isCurrentlyVisible = false;
-            console.log('Display mis à none');
-        }, 600);
-    }
-    
-    // Fonction de test globale
-    window.testSuggestion = function() {
-        console.log('Test manuel déclenché');
-        const element = document.getElementById('suggestionPrompt');
-        if (element) {
-            console.log('Element trouvé pour test manuel');
-            showSuggestionPrompt();
-        } else {
-            console.error('Element non trouvé pour test manuel');
-        }
-    };
-    
-    // Fonction pour fermer manuellement le message de suggestion
-    window.closeSuggestionPrompt = function() {
-        console.log('Fermeture manuelle du message de suggestion');
-        hideSuggestionPrompt();
-        
-        // Empêcher la réapparition pendant cette session
-        localStorage.setItem('suggestionClosed', 'true');
-        console.log('Suggestion fermée pour cette session');
-    };
-});
-</script>
-         
-         
+                const toggleLinks = document.querySelectorAll('.navToggleLink');
+                toggleLinks.forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        if (window.innerWidth < 992) {
+                            e.preventDefault();
+                            const parentLi = toggle.closest('.hasSubmenu');
+                            if (parentLi) parentLi.classList.toggle('submenuOpen');
+                        }
+                    });
+                });
+            });
+        </script>
 
-        <section class="uni-banner opacityLow" style="background-image: url('/storage/adherer/mains.jpg');">
-            <div class="container">
-                <div class="uni-banner-text-area">
-                    <h1>
-                        Adhérer
-                    </h1>
-                    <ul>
-                        <li>
-                            <a href="../index.html">
-                                Accueil
-                            </a>
-                        </li>
-                        <li>
-                            Adhérer
-                        </li>
-                    </ul>
+        <!-- HERO -->
+        <section class="adh-hero">
+            <div class="adh-hero-inner">
+                <div class="adh-hero-left">
+                    <div class="adh-hero-vbar"></div>
+                    <div class="adh-hero-text">
+                        <h1 class="adh-hero-title">Nous <em>Rejoindre</em></h1>
+                        <p class="adh-hero-desc">Rejoignez une communauté engagée, apportez vos idées et participez activement aux projets solidaires et culturels du FATE.</p>
+                        <nav class="adh-hero-breadcrumb" aria-label="fil d'ariane">
+                            <a href="../index.html">Accueil</a>
+                            <i class="fas fa-chevron-right chevron"></i>
+                            <span>Adhérer</span>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- PAGE BODY -->
+        <div class="adh-body">
+            <div id="formInfoSupportContainer" class="formInfoContainer d-flex flex-column justify-content-center align-items-center"></div>
 
-        <div id="formInfoSupportContainer"
-            class="formInfoContainer d-flex flex-column justify-content-center align-items-center ">
-        </div>
-
-
-        <section class="documentation-list pt-70 pb-100">
-            <div class="container adhererContainer">
-                <div class="adhererDescriptionContainer d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="mainAdhererDescription">
-                        Rejoignez le mouvement F.A.T.E. et devenez acteur du changement!
-                    </h1>
-                    <p class="adhererSubDescription">
-                        En adhérant à notre association, vous soutenez nos actions solidaires, participez à nos projets
-                        culturels et éducatifs, et intégrez une communauté engagée en France et à l&#039;international.
-                    </p>
-                </div>
-
-                <div class="joinFateContainer">
-                    <button class="buttonJoinFATE">
-                        Rejoindre le F.A.T.E
+            <!-- Intro + Form toggle -->
+            <div class="adh-inner">
+                <div class="adh-intro">
+                    <h2>Rejoignez le mouvement <em>F.A.T.E.</em></h2>
+                    <p>En adhérant à notre association, vous soutenez nos actions solidaires, participez à nos projets culturels et éducatifs, et intégrez une communauté engagée en France et à l'international.</p>
+                    <button class="adh-join-btn" id="joinToggleBtn" aria-expanded="false" aria-controls="joinFormContainer">
+                        <i class="fas fa-user-plus"></i>
+                        Rejoindre le F.A.T.E.
                     </button>
                 </div>
 
-
-                <div id="divParentFormJoin">
-                    <div id="loadingOverlay" style="display: none;">
-                        <div class="chargement">
-                            <div class="spinner"></div>
-                        </div>
+                <div class="adh-form-wrap" id="joinFormContainer">
+                    <div class="adh-loading" id="loadingOverlay">
+                        <div class="chargement"><div class="spinner"></div></div>
                     </div>
 
-                    <div id="joinFormContainer" style="display: none;">
-                        <form id="joinForm" class="mt-4" method="POST" action="https://forumassotousensemble.org/join">
-                            <input type="hidden" name="_token" value="5D2mfDxeKXaqjYzfvgngSU4I8fML0UShTnXKKn0e">
-                            <div>
-                                <label for="name">Nom:</label>
-                                <input type="text" id="name" name="name" required />
+                    <h3>Formulaire d'adhésion</h3>
+                    <form id="joinForm" method="POST" action="https://forumassotousensemble.org/join">
+                        <input type="hidden" name="_token" value="5D2mfDxeKXaqjYzfvgngSU4I8fML0UShTnXKKn0e">
+
+                        <div class="adh-form-row">
+                            <div class="adh-field">
+                                <label for="name">Nom <span>*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom" required>
                             </div>
-                            <div>
-                                <label for="email">Email*:</label>
-                                <input type="email" id="email" name="email" required />
+                            <div class="adh-field">
+                                <label for="email">Email <span>*</span></label>
+                                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
                             </div>
-                            <div>
-                                <label for="phoneNumber">Téléphone:</label>
-                                <input type="tel" id="phoneNumber" name="phone_number"
-                                    pattern="^(\+33|0)[1-9](\d{2}){4}$" placeholder="+33 6 12 34 56 78" />
-                            </div>
-                            <div>
-                                <label for="message">Motivation*:</label>
-                                <textarea id="message" name="user_message" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" id="sendApplicationBtn">Envoyer le message</button>
-                        </form>
+                        </div>
+
+                        <div class="adh-field">
+                            <label for="phoneNumber">Téléphone</label>
+                            <input type="tel" id="phoneNumber" name="phone_number" pattern="^(\+33|0)[1-9](\d{2}){4}$" placeholder="+33 6 12 34 56 78">
+                        </div>
+
+                        <div class="adh-field">
+                            <label for="message">Motivation <span>*</span></label>
+                            <textarea id="message" name="user_message" rows="4" placeholder="Pourquoi souhaitez-vous rejoindre le FATE ?" required></textarea>
+                        </div>
+
+                        <button type="submit" id="sendApplicationBtn" class="adh-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma candidature
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Why join cards -->
+            <div class="adh-inner" style="margin-top: 0;">
+                <hr class="adh-separator">
+            </div>
+
+            <div style="max-width:1180px; margin: 0 auto; padding: 0 48px; text-align: center; margin-bottom: 40px;">
+                <h2 class="adh-why-title">Pourquoi nous <em>rejoindre&nbsp;?</em></h2>
+            </div>
+
+            <div class="adh-cards-grid">
+                <div class="adh-why-card">
+                    <img class="adh-why-card-img"
+                        src="https://cdn.pixabay.com/photo/2019/10/06/10/03/team-4529717_1280.jpg"
+                        alt="Rejoindre une communauté engagée"
+                        loading="lazy">
+                    <div class="adh-why-card-body">
+                        <h3>Rejoindre une communauté engagée</h3>
+                        <div class="adh-why-card-accent"></div>
+                        <p>F.A.T.E. rassemble des personnes et des associations autour de valeurs communes : solidarité, partage et ouverture. En nous rejoignant, vous faites partie d'un réseau actif en France et à l'international, prêt à agir ensemble pour un monde plus juste.</p>
                     </div>
                 </div>
 
+                <div class="adh-why-card">
+                    <img class="adh-why-card-img"
+                        src="https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg"
+                        alt="Donner de la force à vos idées"
+                        loading="lazy">
+                    <div class="adh-why-card-body">
+                        <h3>Donner de la force à vos idées</h3>
+                        <div class="adh-why-card-accent"></div>
+                        <p>Vous avez un projet, une cause, une envie d'agir ? F.A.T.E. vous offre un cadre pour le faire vivre : événements, ateliers, actions culturelles ou éducatives. Ensemble, nous donnons plus d'écho et d'impact à chaque initiative.</p>
+                    </div>
+                </div>
 
-                <div class="horizontalLine"></div>
-
-                <div class="joinFateCardsContainer d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="whyJoinUsTitle">
-                        Pourquoi nous rejoindre?
-                    </h1>
-
-                    <div class="joinFateCards d-flex justify-content-center align-items-center">
-                        <div class="joinCard d-flex justify-content-flex-start align-items-center flex-column">
-                            <div class="imgContainer">
-                                <img class="imgCard"
-                                    src="https://cdn.pixabay.com/photo/2019/10/06/10/03/team-4529717_1280.jpg"
-                                    alt="Rejoindre une communauté engagée">
-                            </div>
-                            <div class="horizontalLine"></div>
-                            <h1 class="cardTitle">Rejoindre une communauté engagée</h1>
-                            <p class="joinCardDescription">
-                                F.A.T.E. rassemble des personnes et des associations autour de valeurs communes :
-                                solidarité, partage et ouverture. En nous rejoignant, vous faites partie d’un réseau
-                                actif en France et à l’international, prêt à agir ensemble pour un monde plus juste.
-                            </p>
-                        </div>
-                        <div class="joinCard d-flex justify-content-flex-start align-items-center flex-column">
-                            <div class="imgContainer">
-                                <img class="imgCard"
-                                    src="https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg"
-                                    alt="Donner de la force à vos idées">
-                            </div>
-                            <div class="horizontalLine"></div>
-                            <h1 class="cardTitle">Donner de la force à vos idées</h1>
-                            <p class="joinCardDescription">
-                                Vous avez un projet, une cause, une envie d’agir ? F.A.T.E. vous offre un cadre pour le
-                                faire vivre : événements, ateliers, actions culturelles ou éducatives. Ensemble, nous
-                                donnons plus d’écho et d’impact à chaque initiative.
-                            </p>
-                        </div>
-                        <div class="joinCard d-flex justify-content-flex-start align-items-center flex-column">
-                            <div class="imgContainer">
-                                <img class="imgCard"
-                                    src="https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg"
-                                    alt="Apprendre, partager, évoluer">
-                            </div>
-                            <div class="horizontalLine"></div>
-                            <h1 class="cardTitle">Apprendre, partager, évoluer</h1>
-                            <p class="joinCardDescription">
-                                Faire partie de F.A.T.E., c’est aussi l’occasion d’échanger des savoirs, de se former,
-                                et de grandir aux côtés d’autres membres passionnés. Chaque engagement est une richesse
-                                : la vôtre peut faire toute la différence.
-                            </p>
-                        </div>
+                <div class="adh-why-card">
+                    <img class="adh-why-card-img"
+                        src="https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg"
+                        alt="Apprendre, partager, évoluer"
+                        loading="lazy">
+                    <div class="adh-why-card-body">
+                        <h3>Apprendre, partager, évoluer</h3>
+                        <div class="adh-why-card-accent"></div>
+                        <p>Faire partie de F.A.T.E., c'est aussi l'occasion d'échanger des savoirs, de se former, et de grandir aux côtés d'autres membres passionnés. Chaque engagement est une richesse : la vôtre peut faire toute la différence.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
+        </div><!-- /adh-body -->
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                const joinBtn = document.querySelector('.buttonJoinFATE');
+                const joinBtn = document.getElementById('joinToggleBtn');
                 const formContainer = document.getElementById('joinFormContainer');
                 const form = document.getElementById('joinForm');
                 const loadingOverlay = document.getElementById('loadingOverlay');
 
                 joinBtn.addEventListener('click', () => {
-                    const isVisible = formContainer.style.display === 'block';
-                    formContainer.style.display = isVisible ? 'none' : 'block';
+                    const isOpen = formContainer.classList.contains('open');
+                    formContainer.classList.toggle('open');
+                    joinBtn.setAttribute('aria-expanded', !isOpen);
+                    if (!isOpen) {
+                        formContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
                 });
 
                 form.addEventListener('submit', () => {
                     if (!form.checkValidity()) return;
                     setTimeout(() => {
-                        loadingOverlay.style.display = 'block';
+                        loadingOverlay.style.display = 'flex';
                     }, 50);
                 });
             });
         </script>
 
-
-
-
-
-
+        <!-- FOOTER -->
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
                     <div class="row">
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
-                                <a href="../index.html"><img
-                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
-                                        alt="image"></a>
-
-
-                                <p>
-                                    <strong>
-                                        Forum Associatif Tous Ensemble
-                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
-                                    le développement d&#039;initiatives citoyennes.
-                                </p>
-
-
+                                <a href="../index.html"><img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="image"></a>
+                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d&#039;initiatives citoyennes.</p>
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.facebook.com/profile.php?id=61558231605226
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/ target="
-                                                _blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://x.com/FATEnsemble target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.tiktok.com/@fatensemble target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre:</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/fate.html">
-                                            La structure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
                                 </ul>
                             </div>
                         </div>
-
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation:</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
                                     <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                                    </p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a></p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone:</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
-
                 <div class="copyright">
                     <p class="m-0">
-                        <strong>Forum Associatif Tous Ensemble</strong>
-                        &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
-                        <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu"
-                            style="cursor: help;">
+                        <strong>Forum Associatif Tous Ensemble</strong> &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
+                        <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu" style="cursor: help;">
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
-
 
         <div class="popup">
             <div class="popup-content">
@@ -810,11 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
 
-
-        <div class="go-top">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-
+        <div class="go-top"><i class="fas fa-chevron-up"></i></div>
 
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>
@@ -838,225 +736,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <script src="../assets/js/odometer.min.js"></script>
         <script src="../assets/js/custom.js"></script>
         <script src="../assets/js/image-fallback.js" defer></script>
-
-
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
-        </script>
-
+        <script>$(window).bind("load", function () { $("body").addClass("loaded") })</script>
 
     </div>
 
-
     <script src="../assets/js/jquery.min.js"></script>
-
-
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-
-
-
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
     <script src="../assets/js/video.js"></script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour gérer l'affichage des images
-            const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
-            let isImagesExpanded = false;
-
-            if (showMoreImagesBtn) {
-                showMoreImagesBtn.addEventListener('click', function () {
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    if (!isImagesExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
-                        isImagesExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
-                        isImagesExpanded = false;
-                    }
-                });
-            }
-
-            // Fonction pour gérer l'affichage des vidéos
-            const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
-            let isVideosExpanded = false;
-
-            if (showMoreVideosBtn) {
-                showMoreVideosBtn.addEventListener('click', function () {
-                    const allVideos = document.querySelectorAll('.expositionVideoContainer');
-
-                    if (!isVideosExpanded) {
-                        // Afficher plus de vidéos
-                        let hiddenCount = 0;
-
-                        allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 6);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
-                        isVideosExpanded = true;
-
-                    } else {
-                        // Masquer les vidéos supplémentaires
-                        allVideos.forEach((el, index) => {
-                            if (index >= 6) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
-                        isVideosExpanded = false;
-                    }
-                });
-            }
-
-            // Ancien code pour compatibilité (showMoreBtn)
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            let isExpanded = false;
-
-            if (showMoreBtn) {
-                showMoreBtn.addEventListener('click', function () {
-                    console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-
-                    // Sélectionner toutes les images de la galerie
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    console.log('Nombre total d\'images:', allImages.length); // Debug
-
-                    if (!isExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    // Déclencher l'animation après un court délai
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100); // Délai progressif
-                            }
-                        });
-
-                        // Changer le texte et l'icône du bouton
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
-                        isExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        // Remettre le texte et l'icône originaux
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
-                        isExpanded = false;
-
-                        // Faire défiler vers le titre de la galerie
-                        const galerieTitle = document.querySelector('h3');
-                        if (galerieTitle) {
-                            galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-
-                    console.log('Nouvel état:', isExpanded); // Debug
-                });
-            } else {
-                console.log('Bouton showMoreBtn non trouvé'); // Debug
-            }
-
-        });
-    </script>
     <script src="../assets/js/language-selector.js"></script>
     <script src="../assets/js/suggestion.js"></script>
 </body>

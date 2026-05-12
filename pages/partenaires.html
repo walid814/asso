@@ -4,31 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-    <title>Partenaires | Forum Associatif Tous Assemble</title>
-
-    <meta name="viewport" content="width=device-width">
-
-
-    <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
-    <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta property="og:description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-
-
-
-    <meta name="description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-    <meta name="keywords" content="Forum, Associatif, tous ensemble, assocaition, france" />
+    <title>Partenaires | Forum Associatif Tous Ensemble (FATE)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Découvrez les partenaires institutionnels, privés et associatifs du Forum Associatif Tous Ensemble (FATE) — une coalition engagée pour le vivre-ensemble à Lyon et à l'international." />
+    <meta name="keywords" content="FATE, partenaires, institutionnels, associatifs, Lyon, association" />
     <meta name="robots" content="index, follow" />
-    <meta name="DC.title" content="Partenaires | Forum Associatif Tous Assemble" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@fate" />
-    <meta name="twitter:creator" content="@fate" />
-    <meta property="og:url" content="https://fatetousensemble.org/" />
-    <meta property="og:title" content="Partenaires | Forum Associatif Tous Assemble" />
-
+    <meta name="author" content="Forum Associatif Tous Ensemble (FATE)" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -45,35 +26,404 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/fate-branding.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
 
+    <style>
+        /* ============================================================
+           PARTENAIRES PAGE — FATE BRANDING DESIGN
+           Palette : #EAB308 (jaune) · #111827 (noir) · #F0EBE0 (beige)
+        ============================================================ */
 
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+        :root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F0EBE0;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ── HERO ──────────────────────────────────────────────── */
+        .pt-hero {
+            background: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (max-width: 1010px) { .pt-hero { margin-top: 70px; } }
+
+        .pt-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .pt-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 340px; height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .pt-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px 64px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pt-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .pt-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+
+        .pt-hero-text { flex: 1; min-width: 0; }
+
+        .pt-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            margin: 0;
+        }
+
+        .pt-hero-breadcrumb a {
+            color: rgba(255,255,255,.35);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .pt-hero-breadcrumb a:hover { color: var(--y); }
+
+        .pt-hero-breadcrumb .chevron {
+            color: var(--y);
+            font-size: 9px;
+        }
+
+        .pt-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(40px, 5.5vw, 72px);
+            font-weight: 900;
+            color: var(--wh);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.0;
+            margin: 0 0 20px;
+        }
+
+        .pt-hero-title em {
+            font-style: normal;
+            color: var(--y);
+            display: block;
+        }
+
+        .pt-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+
+        .pt-hero-badge {
+            flex-shrink: 0;
+            width: 138px;
+            height: 138px;
+            border-radius: 50%;
+            background: var(--y);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .pt-hero-badge::after {
+            content: '';
+            position: absolute;
+            inset: -16px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(234,179,8,.28);
+        }
+
+        .pt-hero-badge-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 46px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+        }
+
+        .pt-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        /* ── MAIN ──────────────────────────────────────────────── */
+        .pt-main {
+            background: var(--bg);
+            padding: 60px 0 100px;
+        }
+
+        .pt-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* ── FILTRES ───────────────────────────────────────────── */
+        .pt-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 44px;
+            justify-content: center;
+        }
+
+        .pt-filter-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 11px 24px;
+            min-height: 44px;
+            border-radius: 100px;
+            border: 2px solid var(--bdr);
+            background: var(--wh);
+            color: var(--gr);
+            cursor: pointer;
+            transition: border-color .22s, color .22s, background .22s, box-shadow .22s;
+            touch-action: manipulation;
+        }
+
+        .pt-filter-btn:hover:not(.active) {
+            border-color: var(--dk);
+            color: var(--dk);
+        }
+
+        .pt-filter-btn.active {
+            background: var(--dk);
+            border-color: var(--dk);
+            color: var(--wh);
+            box-shadow: 0 4px 14px rgba(17,24,39,.18);
+        }
+
+        /* ── GRILLE PARTENAIRES ─────────────────────────────────── */
+        .pt-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .pt-card-wrap { display: block; }
+        .pt-card-wrap.hidden { display: none; }
+
+        .pt-card {
+            background: var(--wh);
+            border-radius: 14px;
+            border: 1px solid rgba(0,0,0,.06);
+            box-shadow: 0 2px 10px rgba(0,0,0,.055);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .2s ease;
+            cursor: pointer;
+        }
+
+        .pt-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,.12);
+            border-color: var(--y);
+        }
+
+        /* Logo */
+        .pt-card-logo {
+            background: #F7F4EF;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 24px;
+            flex-shrink: 0;
+            border-bottom: 1px solid rgba(0,0,0,.05);
+        }
+
+        .pt-card-logo img {
+            max-height: 72px;
+            max-width: 170px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Corps */
+        .pt-card-body {
+            padding: 16px 18px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pt-card-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dk);
+            margin: 0 0 8px;
+            line-height: 1.35;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .pt-card-ext {
+            color: var(--y);
+            font-size: 11px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+
+        .pt-card:hover .pt-card-ext { opacity: 1; }
+
+        .pt-card-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            line-height: 1.65;
+            color: var(--gr);
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        /* ── SECTION HEADER (for deep link anchors) ─────────────── */
+        .pt-section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--y);
+        }
+
+        .pt-section-title {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 800 !important;
+            color: var(--dk) !important;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin: 0 !important;
+        }
+
+        .pt-section-title span { color: var(--y); }
+
+        .pt-section-count {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            background: rgba(234,179,8,.15);
+            color: var(--dk);
+            padding: 3px 10px;
+            border-radius: 100px;
+        }
+
+        .pt-category-block {
+            margin-bottom: 48px;
+        }
+
+        /* ── RESPONSIVE ────────────────────────────────────────── */
+        @media (max-width: 1060px) {
+            .pt-wrap { padding: 0 24px; }
+            .pt-hero-inner { padding: 0 24px 52px; }
+        }
+
+        @media (max-width: 900px) {
+            .pt-grid { grid-template-columns: repeat(2, 1fr); }
+            .pt-hero-badge { width: 110px; height: 110px; }
+            .pt-hero-badge-num { font-size: 36px; }
+        }
+
+        @media (max-width: 600px) {
+            .pt-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 18px 40px;
+                gap: 24px;
+            }
+            .pt-hero-badge { align-self: flex-end; }
+            .pt-main { padding: 40px 0 72px; }
+            .pt-wrap { padding: 0 16px; }
+            .pt-grid { gap: 12px; }
+        }
+
+        @media (max-width: 420px) {
+            .pt-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
-<body class=partenaires-page>
-
-
+<body class="about-us-page">
     <div class="conteneur-banniere">
 
-
-
-
-
+        <!-- ══ HEADER / NAV ════════════════════════════════════ -->
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
                 <a href="../index.html" class="logoLink">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
             </div>
-
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
-
-
-
-
-
 
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
@@ -81,99 +431,65 @@
                 </a>
 
                 <ul class="navList">
-
-                    <li class="navItem ">
-                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink
-                                         ">
-                            FATE
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/fate.html" class="navLinkStrong navLink">FATE</a>
                     </li>
 
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">
-                                ACTUALITÉS
-                                <span class="dropdownIcon">+</span>
+                                ACTUALITÉS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
-                                    class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
-                                    pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
-                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001&nbsp;- 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
-                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
-                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a
-                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
-                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
                         </ul>
-                    </li>
-
-
-                    <li class=" navItem hasSubmenu">
-                        <div class="navLinkWrapper">
-                            <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
-                                ACTIONS
-                                <span class="dropdownIcon">+</span>
-                            </a>
-                        </div>
-
-                        <ul class="submenuList">
-                            <li class="submenuItem">
-                                <a href="../pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
-                            </li>
-                            <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="navItem ">
-                        <a href="../pages/archives.html" class="navLinkStrong navLink
-                                         ">
-                            ARCHIVES
-                        </a>
                     </li>
 
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
-                            <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
-                                PARTENAIRES
-                                <span class="dropdownIcon">+</span>
+                            <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
+                                ACTIONS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-                        <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
-                                    class="submenuLink">Institutionnels</a></li>
+                        <ul class="submenuList">
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
-                                    class="submenuLink">Privés</a></li>
-                            <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
-                                    class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
                         </ul>
                     </li>
 
-                    <li class="navItem ">
-                        <a href="../pages/contact.html" class="navLinkStrong navLink
-                                         ">
-                            CONTACTS
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a>
+                    </li>
+
+                    <li class="navItem hasSubmenu selectedTab">
+                        <div class="navLinkWrapper">
+                            <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink activeNav">
+                                PARTENAIRES <span class="dropdownIcon">+</span>
+                            </a>
+                        </div>
+                        <ul class="submenuList partenairesSubmenuPush">
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
+                            <div class="horizontalLine"></div>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
                     </li>
 
                     <li class="navItem">
@@ -186,26 +502,20 @@
             </nav>
         </header>
 
-
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav = document.getElementById('mainNav');
-                const body = document.body;
-                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
+                const mainNav   = document.getElementById('mainNav');
+                const body      = document.body;
+                const navLinks  = document.querySelectorAll('.navLink, .navLinkStrong');
 
-                // Mobile toggle
-                if (toggleBtn) {
-                    toggleBtn.addEventListener('click', () => {
-                        mainNav.classList.toggle('navOpen');
-                        body.classList.toggle('noScroll');
-                    });
-                }
+                toggleBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('navOpen');
+                    body.classList.toggle('noScroll');
+                });
 
-                // Fermer le menu mobile quand on clique sur un lien
                 navLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        // Ne pas fermer si on clique sur un toggle de sous-menu
+                    link.addEventListener('click', e => {
                         if (!e.target.closest('.navToggleLink')) {
                             mainNav.classList.remove('navOpen');
                             body.classList.remove('noScroll');
@@ -213,889 +523,494 @@
                     });
                 });
 
-                // Gestion des sous-menus uniquement sur mobile
-                const toggleLinks = document.querySelectorAll('.navToggleLink');
-                toggleLinks.forEach(toggle => {
-                    toggle.addEventListener('click', (e) => {
-                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
+                document.querySelectorAll('.navToggleLink').forEach(toggle => {
+                    toggle.addEventListener('click', e => {
                         if (window.innerWidth < 992) {
                             e.preventDefault();
                             const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) {
-                                parentLi.classList.toggle('submenuOpen');
-                            }
+                            if (parentLi) parentLi.classList.toggle('submenuOpen');
                         }
                     });
                 });
             });
         </script>
 
+        <!-- ══ HERO ════════════════════════════════════════════ -->
+        <section class="pt-hero">
+            <div class="pt-hero-inner">
+                <div class="pt-hero-left">
+                    <div class="pt-hero-vbar" aria-hidden="true"></div>
+                    <div class="pt-hero-text">
+                        <h1 class="pt-hero-title">Nos<em>Partenaires</em></h1>
+                        <p class="pt-hero-desc">Institutionnels, privés ou associatifs — découvrez les 33 organisations qui accompagnent le FATE dans ses missions culturelles, éducatives et solidaires à Lyon et à l'international.</p>
+                        <nav class="pt-hero-breadcrumb" aria-label="Breadcrumb">
+                            <a href="../index.html">Accueil</a>
+                            <i class="fas fa-chevron-right chevron"></i>
+                            <span>Partenaires</span>
+                        </nav>
+                    </div>
+                </div>
+                <div class="pt-hero-badge" aria-label="33 partenaires">
+                    <span class="pt-hero-badge-num">33</span>
+                    <span class="pt-hero-badge-label">partenaires</span>
+                </div>
+            </div>
+        </section>
 
+        <!-- ══ CONTENT ══════════════════════════════════════════ -->
+        <section class="pt-main">
+            <div class="pt-wrap">
 
+                <!-- FILTRES -->
+                <div class="pt-filters" role="group" aria-label="Filtrer par catégorie">
+                    <button class="pt-filter-btn active" data-filter="all" type="button">Tous</button>
+                    <button class="pt-filter-btn" data-filter="institutionnels" type="button">Institutionnels</button>
+                    <button class="pt-filter-btn" data-filter="prives" type="button">Privés</button>
+                    <button class="pt-filter-btn" data-filter="associatifs" type="button">Associatifs</button>
+                </div>
 
+                <!-- ── INSTITUTIONNELS ── -->
+                <div class="pt-category-block" id="sectionInstitutionnels">
+                    <div class="pt-section-header">
+                        <h2 class="pt-section-title">Partenaires <span>Institutionnels</span></h2>
+                        <span class="pt-section-count">9</span>
+                    </div>
+                    <div class="pt-grid">
 
-
-
-
-        <section class="uni-banner opacityLow"
-            style="background-image: url('storage/background/img_partenaires.jpg'); text-align:center;">
-            <div class="container">
-                <div class="uni-banner-text-area">
-                    <h1>
-                        Partenaires
-                    </h1>
-                    <ul>
-                        <li>
-                            <a href="../index.html">
-                                Accueil
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://european-union.europa.eu/index_fr" target="_blank" rel="noopener" class="pt-card" aria-label="L'Union Européenne — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.massif-central.eu/production/wp-content/uploads/2015/10/DrapeauUE-rvbmention-1.jpg" alt="Logo Union Européenne" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">L'Union Européenne <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Organisation politique et économique unique regroupant 27 États membres pour promouvoir la paix, le bien-être économique, la mobilité des citoyens et les droits humains.</p>
+                                </div>
                             </a>
-                        </li>
-                        <li>
-                            Partenaires
-                        </li>
-                    </ul>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://anct.gouv.fr" target="_blank" rel="noopener" class="pt-card" aria-label="ANCT — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.meurthe-et-moselle.gouv.fr/var/ide_site/storage/images/actualites/anct-une-nouvelle-agence-au-service-des-collectivites-locales/167892-2-fre-FR/ANCT-une-nouvelle-agence-au-service-des-collectivites-locales_large.jpg" alt="Logo ANCT" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">ANCT <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Agence Nationale de Cohésion des Territoires : représente l'engagement de la République vis-à-vis de l'ensemble des territoires, alliant proximité, écoute et action effective.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://www.culture.gouv.fr/fr/regions/drac-auvergne-rhone-alpes" target="_blank" rel="noopener" class="pt-card" aria-label="DRAC — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.culture.gouv.fr/var/culture/storage/images/_aliases/metadata/0/6/8/3/5523860-1-fre-FR/d1b6f5843774-PREFETE_region_Auvergne_Rhone_Alpes_RVB.jpg" alt="Logo DRAC Auvergne-Rhône-Alpes" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">DRAC <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Direction Régionale des Affaires Culturelles : accompagne les acteurs culturels dans tous les territoires et défend l'accessibilité à la culture comme un droit fondamental.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://www.ac-lyon.fr" target="_blank" rel="noopener" class="pt-card" aria-label="L'Académie de Lyon — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.ac-lyon.fr/sites/ac_lyon/files/site_logo/2020-12/logo_90.jpg" alt="Logo Académie de Lyon" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">L'Académie de Lyon <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Circonscription de l'Éducation nationale couvrant le Rhône, la Loire et l'Ain. Elle pilote les politiques éducatives nationales et garantit l'accès à un enseignement de qualité.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://www.grandlyon.com" target="_blank" rel="noopener" class="pt-card" aria-label="Métropole Grand Lyon — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.grandlyon.com/_assets/a181c6b9e3ca3150a672e87580994929/Images/logo-metropole-lyon.svg" alt="Logo Métropole Grand Lyon" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Métropole Grand Lyon <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Collectivité territoriale regroupant Lyon et 58 communes voisines, en charge de l'aménagement urbain, la mobilité, l'environnement et le développement économique.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://vaulx-en-velin.net" target="_blank" rel="noopener" class="pt-card" aria-label="Vaulx-en-Velin — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://vaulx-en-velin.net/wp-content/themes/vaulx-en-velin/assets/img/logo_vaulx_en_velin.svg" alt="Logo Ville de Vaulx-en-Velin" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Vaulx-en-Velin <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Commune dynamique de la métropole de Lyon, reconnue pour ses initiatives en matière de renouvellement urbain, de cohésion sociale et de développement culturel.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://www.lyon.fr" target="_blank" rel="noopener" class="pt-card" aria-label="Ville de Lyon — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://territoiresdevenementssportifs.com/wp-content/uploads/2021/07/VDL-logo_RVB.jpg" alt="Logo Ville de Lyon" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Ville de Lyon <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Administration municipale pilotant les politiques locales en matière de culture, mobilité, urbanisme, environnement et solidarité pour les Lyonnais.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://anct.gouv.fr/programmes-dispositifs/politique-de-la-ville/dispositifs/cites-educatives" target="_blank" rel="noopener" class="pt-card" aria-label="Les Cités éducatives de Vaulx-en-Velin — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.labo-cites.org/sites/default/files/2022-03/Capture%20d'écran%202022-03-31%20à%2012.05.59.png" alt="Logo Cités éducatives" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Cités éducatives de Vaulx-en-Velin <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Dispositif national coordonnant l'action éducative sur les territoires prioritaires, rassemblant écoles, associations, institutions et collectivités locales.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="institutionnels">
+                            <a href="https://za.ambafrance.org/Institut-francais-d-Afrique-du-Sud-IFAS" target="_blank" rel="noopener" class="pt-card" aria-label="Institut Français d'Afrique du Sud — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://za.ambafrance.org/IMG/arton905.png?1726037389" alt="Logo Institut Français d'Afrique du Sud" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Institut Français d'Afrique du Sud <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Centre culturel et éducatif promouvant la culture française et rapprochant la France et l'Afrique du Sud à travers des cours, expositions et projets locaux.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
+
+                <!-- ── PRIVÉS ── -->
+                <div class="pt-category-block" id="sectionPrives">
+                    <div class="pt-section-header">
+                        <h2 class="pt-section-title">Partenaires <span>Privés</span></h2>
+                        <span class="pt-section-count">11</span>
+                    </div>
+                    <div class="pt-grid">
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.lmhabitat.fr/home.html" target="_blank" rel="noopener" class="pt-card" aria-label="Lyon Métropole Habitat — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://levillagedesrecruteurs.fr/wp-content/uploads/gravity_forms/19-bf0649d5b725f4f2783391d3505e4d13/2023/10/Logo_LMH_horizontal_cartouche_blanc.jpg" alt="Logo Lyon Métropole Habitat" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Lyon Métropole Habitat <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Principal bailleur social public de la métropole lyonnaise, engagé pour le logement social de qualité et la mixité sociale.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.alliadehabitat.com" target="_blank" rel="noopener" class="pt-card" aria-label="Alliade Habitat — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.alliadehabitat.com/wp-content/uploads/2020/10/logo-alliade-habitat.svg" alt="Logo Alliade Habitat" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Alliade Habitat <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Acteur majeur du logement social en Auvergne-Rhône-Alpes, appartenant au groupe Action Logement, proposant des solutions accessibles et accompagnant les territoires.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.pizzorno.com/pizzorno-environnement-3.html" target="_blank" rel="noopener" class="pt-card" aria-label="Pizzorno Environnement — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/a3/Pizzornologo.jpg/640px-Pizzornologo.jpg" alt="Logo Pizzorno Environnement" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Pizzorno Environnement <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Entreprise spécialisée dans la collecte, le traitement et la valorisation des déchets, engagée pour une gestion durable des ressources en France et à l'international.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.vinci.com" target="_blank" rel="noopener" class="pt-card" aria-label="VINCI — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://marque-voiture.com/wp-content/uploads/2018/05/Logo-Vinci.png" alt="Logo VINCI" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">VINCI <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Acteur mondial des concessions, de la construction et des services, présent dans plus de 100 pays et engagé dans le mécénat social et éducatif.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.groupe-sncf.com/fr" target="_blank" rel="noopener" class="pt-card" aria-label="La Fondation SNCF — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://fonda.asso.fr/sites/default/files/inline-images/logo%20sncf.jpg" alt="Logo Fondation SNCF" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">La Fondation SNCF <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Mécénat du groupe SNCF, engagé depuis plus de 25 ans pour accompagner des projets associatifs en éducation, culture, environnement et inclusion sociale.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.pathe.fr" target="_blank" rel="noopener" class="pt-card" aria-label="Pathé — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f8/Path%C3%A9_Logo.svg/2560px-Path%C3%A9_Logo.svg.png" alt="Logo Pathé" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Pathé <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Entreprise de cinéma française fondée en 1896, exploitant certaines des plus grandes salles en Europe et soutenant les projets culturels et artistiques innovants.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.zeus-securite.fr" target="_blank" rel="noopener" class="pt-card" aria-label="Zeus Sécurité — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.zeus-securite.fr/themes/themefd21156/images/logo.png" alt="Logo Zeus Sécurité" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Zeus Sécurité <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Prestataire de sécurité privée offrant des services de surveillance, gardiennage, contrôle d'accès et gestion de risque avec un personnel hautement qualifié.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://www.iscom.fr" target="_blank" rel="noopener" class="pt-card" aria-label="ISCOM — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.iscom.fr/sites/default/files/2024-09/ISCOM_Noir-cote-cote-InCommWeTrust%202.png" alt="Logo ISCOM" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">ISCOM <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">École supérieure spécialisée dans les métiers de la communication, du marketing et des relations publiques, avec des formations professionnalisantes reconnues.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://canuts.ent.auvergnerhonealpes.fr" target="_blank" rel="noopener" class="pt-card" aria-label="Lycée Canut — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://canuts.ent.auvergnerhonealpes.fr/images/portails/logo_region.svg" alt="Logo Lycée Canut" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Lycée Canut <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Établissement d'enseignement secondaire et professionnel situé à Vaulx-en-Velin, proposant des formations générales, technologiques et professionnelles.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="https://magenta.ent.auvergnerhonealpes.fr" target="_blank" rel="noopener" class="pt-card" aria-label="Lycée Magenta — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://canuts.ent.auvergnerhonealpes.fr/images/portails/logo_region.svg" alt="Logo Lycée Magenta" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Lycée Magenta <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Établissement d'enseignement secondaire situé à Villeurbanne, favorisant l'ouverture culturelle, la citoyenneté et le développement de compétences professionnelles.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="prives">
+                            <a href="#" class="pt-card" aria-label="Services Minutes">
+                                <div class="pt-card-logo">
+                                    <img src="../assets/storage/partenaires/servicesMinutes.png" alt="Logo Services Minutes" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Services Minutes <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc"></p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ── ASSOCIATIFS ── -->
+                <div class="pt-category-block" id="sectionAssociatif">
+                    <div class="pt-section-header">
+                        <h2 class="pt-section-title">Partenaires <span>Associatifs</span></h2>
+                        <span class="pt-section-count">13</span>
+                    </div>
+                    <div class="pt-grid">
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://www.resacoop.org" target="_blank" rel="noopener" class="pt-card" aria-label="RESACOOP — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://www.resacoop.org/wp-content/uploads/sites/20/2018/11/RESACOOP_logoHeader.png" alt="Logo RESACOOP" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">RESACOOP <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Réseau régional Auvergne-Rhône-Alpes d'appui à la coopération internationale, accompagnant collectivités, associations et entreprises dans leurs projets de solidarité.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://forim.net" target="_blank" rel="noopener" class="pt-card" aria-label="FORIM — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://forim.net/wp-content/uploads/forim_logo.png" alt="Logo FORIM" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">FORIM <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Réseau national fédérant des organisations issues des migrations et engagées dans des actions de solidarité internationale.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://cosim-ara.fr" target="_blank" rel="noopener" class="pt-card" aria-label="COSIM ARA — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://cosim-ara.fr/images/2024/02/23/logocosim01.png" alt="Logo COSIM ARA" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">COSIM ARA <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Réseau associatif rassemblant des organisations des diasporas africaines, asiatiques et caribéennes en Auvergne-Rhône-Alpes, favorisant l'inclusion et la citoyenneté.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://www.ol.fr/fr/eaglefootballgroup/groupe-responsable/ol-fondation" target="_blank" rel="noopener" class="pt-card" aria-label="OL Fondation — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://grep.asso.fr/wp-content/uploads/OL.jpg" alt="Logo OL Fondation" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">OL Fondation <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Branche solidaire de l'Olympique Lyonnais, œuvrant pour l'égalité des chances, l'éducation, l'inclusion sociale et le développement durable à Lyon et sa métropole.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://www.bullukian.com" target="_blank" rel="noopener" class="pt-card" aria-label="Fondation Bullukian — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx6aglyWnH4fyyW3ej4D2udbWUXMrQPhB8dg&s" alt="Logo Fondation Bullukian" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Fondation Bullukian <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Organisme dédié à la promotion de l'art contemporain, organisant expositions, résidences et événements culturels pour rapprocher artistes et public.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://radiosalam.com/" target="_blank" rel="noopener" class="pt-card" aria-label="Radio Salam — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://myradioendirect.fr/public/uploads/radio_img/radio-salam/fb_cover.jpg" alt="Logo Radio Salam" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Radio Salam <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Radio privée reconnue pour sa proximité avec la communauté, diffusant des programmes riches en diversité culturelle et contribuant activement à nos initiatives.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/association-lila-sadji/" target="_blank" rel="noopener" class="pt-card" aria-label="Lila Sadji — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="../assets/storage/partenaires/lila_sadji.png" alt="Logo Lila Sadji" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Lila Sadji <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Association dédiée à la promotion de la culture orientale et au renforcement de l'entente sociale, à travers musique, danse, cuisine et ateliers de bien-être.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/lyon-outre-mer/" target="_blank" rel="noopener" class="pt-card" aria-label="Lyon Outre Mer — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="../assets/storage/partenaires/lyon_outre_mer.jpg" alt="Logo Lyon Outre Mer" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Lyon Outre Mer <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Association œuvrant au maintien des liens de solidarité entre les territoires d'Outre-Mer et la Métropole, promouvant activités culturelles et sportives.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/les-voisins-solidaires/" target="_blank" rel="noopener" class="pt-card" aria-label="Voisins Solidaires — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://vaulx-en-velin.net/wp-content/uploads/2019/06/logo-les-voisins-solidaires.png" alt="Logo Voisins Solidaires" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Voisins Solidaires <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Association organisant des événements pour le vivre-ensemble, la participation civique et le lien entre habitants, en collaboration avec les acteurs du territoire vaudais.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/les-voisins-solidaires/" target="_blank" rel="noopener" class="pt-card" aria-label="AMAFI — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="../assets/storage/partenaires/amafi.jpg" alt="Logo AMAFI" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">AMAFI <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Association développant des relations d'amitié et de convivialité à travers des manifestations culturelles, soirées rencontres, débats et sorties culturelles.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/batir-ensemble/" target="_blank" rel="noopener" class="pt-card" aria-label="Bâtir Ensemble — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="../assets/storage/partenaires/batir_ensemble.jpg" alt="Logo Bâtir Ensemble" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Bâtir Ensemble <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Association menant des actions solidaires auprès des familles et personnes isolées, organisant des soirées festives pour le vivre-ensemble et le lien intergénérationnel.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://memoire-esclavage.org" target="_blank" rel="noopener" class="pt-card" aria-label="Fondation pour la mémoire de l'esclavage — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://fems.asso.fr/wp-content/uploads/2024/12/logoFondation-pour-la-memoire-de-lesclavage.png" alt="Logo Fondation Mémoire de l'Esclavage" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">Mémoire de l'Esclavage <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc">Institution nationale transmettant l'histoire de l'esclavage, développant des actions éducatives, culturelles et scientifiques pour sensibiliser le public et lutter contre les discriminations.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-card-wrap" data-cat="associatifs">
+                            <a href="https://lodysseefinale.org" target="_blank" rel="noopener" class="pt-card" aria-label="L'Odyssée Finale — ouvre dans un nouvel onglet">
+                                <div class="pt-card-logo">
+                                    <img src="https://lodysseefinale.org/assets/images/logo1.png" alt="Logo L'Odyssée Finale" loading="lazy">
+                                </div>
+                                <div class="pt-card-body">
+                                    <p class="pt-card-name">L'Odyssée Finale <i class="fas fa-external-link-alt pt-card-ext"></i></p>
+                                    <p class="pt-card-desc"></p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
-
-        <section class="partenairesContainer" style="text-align:center;">
-            <div class="category-section section-fade-in visible" id="sectionInstitutionnels"
-                style="display:flex; flex-direction:column; align-items:center;">
-                <div class="sectionContainer" style="width:100%; max-width:900px;">
-                    <h1 class="sectionTitle">
-                        Nos partenaires institutionnels
-                        <span class="partners-count">9</span>
-                    </h1>
-                    <p class="sectionSubTitle">
-                        Ils nous accompagnent dans nos missions publiques et soutiennent nos projets à l&#039;échelle
-                        locale, nationale et européenne.
-                    </p>
-                </div>
-
-
-                <div class="partners-grid" style="justify-content:center;">
-
-                    <a href="https://european-union.europa.eu/index_fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.massif-central.eu/production/wp-content/uploads/2015/10/DrapeauUE-rvbmention-1.jpg"
-                                    alt="L&#039;Union Européenne" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    L&#039;Union Européenne
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une organisation politique et économique unique au
-                                    monde, regroupant 27 États membres qui travaillent ensemble pour promouvoir la paix,
-                                    le bien-être économique, la mobilité des citoyens, le développement durable et les
-                                    droits humains.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://anct.gouv.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.meurthe-et-moselle.gouv.fr/var/ide_site/storage/images/actualites/anct-une-nouvelle-agence-au-service-des-collectivites-locales/167892-2-fre-FR/ANCT-une-nouvelle-agence-au-service-des-collectivites-locales_large.jpg"
-                                    alt="ANCT" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    ANCT
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">Représente avec fierté l’engagement de la République
-                                    vis-à-vis de l’ensemble des territoires, alliant proximité, écoute et action
-                                    effective. Grâce à son implication et à ses compétences, elle réalise une France
-                                    plus équitable, solidaire et unie.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.culture.gouv.fr/fr/regions/drac-auvergne-rhone-alpes" target="_blank"
-                        class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.culture.gouv.fr/var/culture/storage/images/_aliases/metadata/0/6/8/3/5523860-1-fre-FR/d1b6f5843774-PREFETE_region_Auvergne_Rhone_Alpes_RVB.jpg"
-                                    alt="DRAC" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    DRAC
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">l&#039;incarnation de l&#039;implication de l&#039;État
-                                    dans la culture et le patrimoine en accompagnant avec passion et rigueur les acteurs
-                                    culturels dans tous les territoires. Avec son travail, elle favorise la diversité
-                                    artistique et défend l&#039;accessibilité à la culture sous toutes ses formes comme
-                                    un droit fondamental pour tous.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.ac-lyon.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.ac-lyon.fr/sites/ac_lyon/files/site_logo/2020-12/logo_90.jpg"
-                                    alt="L&#039;Académie de Lyon" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    L&#039;Académie de Lyon
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une circonscription de l’Éducation nationale couvrant
-                                    les départements du Rhône, de la Loire et de l’Ain. Elle pilote l’organisation et le
-                                    fonctionnement des écoles, collèges et lycées, ainsi que la mise en œuvre des
-                                    politiques éducatives nationales à l’échelle régionale. Son rôle est central pour
-                                    garantir l’accès à l’éducation et la qualité de l’enseignement.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.grandlyon.com" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.grandlyon.com/_assets/a181c6b9e3ca3150a672e87580994929/Images/logo-metropole-lyon.svg"
-                                    alt="Métropole Grand Lyon" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Métropole Grand Lyon
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une collectivité territoriale qui regroupe Lyon et 58
-                                    communes voisines. Elle est chargée de nombreuses compétences comme l’aménagement
-                                    urbain, la mobilité, l’environnement, le logement et le développement économique,
-                                    afin d’améliorer le cadre de vie de ses habitants.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://vaulx-en-velin.net" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://vaulx-en-velin.net/wp-content/themes/vaulx-en-velin/assets/img/logo_vaulx_en_velin.svg"
-                                    alt="Vaulx-en-Velin" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Vaulx-en-Velin
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une commune dynamique de la métropole de Lyon,
-                                    reconnue pour ses initiatives en matière de renouvellement urbain, de cohésion
-                                    sociale et de développement culturel, avec une attention particulière portée aux
-                                    quartiers populaires.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.lyon.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://territoiresdevenementssportifs.com/wp-content/uploads/2021/07/VDL-logo_RVB.jpg"
-                                    alt="Ville de Lyon" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Ville de Lyon
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est l’administration municipale qui pilote les politiques
-                                    locales dans des domaines variés comme la culture, la mobilité, l’urbanisme,
-                                    l’environnement et la solidarité. Elle œuvre pour améliorer le quotidien des
-                                    Lyonnais et renforcer l’attractivité de la ville.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://anct.gouv.fr/programmes-dispositifs/politique-de-la-ville/dispositifs/cites-educatives"
-                        target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.labo-cites.org/sites/default/files/2022-03/Capture%20d’écran%202022-03-31%20à%2012.05.59.png"
-                                    alt="Les Cités éducatives de Vaulx-en-Velin" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Les Cités éducatives de Vaulx-en-Velin
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">sont un dispositif national destiné à coordonner l’action
-                                    éducative sur les territoires prioritaires. Elles rassemblent les établissements
-                                    scolaires, les associations, les institutions et les collectivités locales afin de
-                                    renforcer la réussite éducative, l’accompagnement des jeunes et la cohésion sociale
-                                    dans les quartiers.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://za.ambafrance.org/Institut-francais-d-Afrique-du-Sud-IFAS" target="_blank"
-                        class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://za.ambafrance.org/IMG/arton905.png?1726037389"
-                                    alt="Institut Français d&#039;Afrique du Sud" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Institut Français d&#039;Afrique du Sud
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est définitivement un centre culturel et éducatif qui
-                                    vise à promouvoir la culture française et à rapprocher les deux pays. Il propose
-                                    certains cours et expositions sur l’art, la culture, la langue, des événements de
-                                    sensibilisation et de partage; tout en finançant également des projets locaux.Il
-                                    joue un rôle important dans l’éducation et la diplomatie culturelle entre la France
-                                    et l’Afrique du Sud.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="category-section section-fade-in" id="sectionPrives"
-                style="display:flex; flex-direction:column; align-items:center;">
-                <div class="sectionContainer" style="width:100%; max-width:900px;">
-                    <h1 class="sectionTitle">
-                        Nos partenaires privés
-                        <span class="partners-count">11</span>
-                    </h1>
-                    <p class="sectionSubTitle">
-                        Engagés à nos côtés, ils soutiennent nos actions à travers des coopérations stratégiques et des
-                        mécénats porteurs de sens.
-                    </p>
-                </div>
-
-
-                <div class="partners-grid" style="justify-content:center;">
-
-                    <a href="https://www.lmhabitat.fr/home.html" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://levillagedesrecruteurs.fr/wp-content/uploads/gravity_forms/19-bf0649d5b725f4f2783391d3505e4d13/2023/10/Logo_LMH_horizontal_cartouche_blanc.jpg"
-                                    alt="Lyon Métropole Habitat" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Lyon Métropole Habitat
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est le principal bailleur social public de la métropole
-                                    lyonnaise. Il gère un important parc de logements, développe des projets de
-                                    construction et de réhabilitation, et s’engage pour le logement social de qualité et
-                                    la mixité sociale.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.alliadehabitat.com" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.alliadehabitat.com/wp-content/uploads/2020/10/logo-alliade-habitat.svg"
-                                    alt="Alliade Habitat" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Alliade Habitat
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un acteur majeur du logement social en
-                                    Auvergne-Rhône-Alpes, appartenant au groupe Action Logement. Il propose des
-                                    solutions de logement accessibles et accompagne les collectivités et les entreprises
-                                    dans leurs projets de développement territorial.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.pizzorno.com/pizzorno-environnement-3.html" target="_blank"
-                        class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/a3/Pizzornologo.jpg/640px-Pizzornologo.jpg"
-                                    alt="Pizzorno Environnement" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Pizzorno Environnement
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une entreprise privée spécialisée dans la collecte,
-                                    le traitement et la valorisation des déchets. Elle intervient en France et à
-                                    l’international, et s’engage pour une gestion durable des ressources et
-                                    l’amélioration de la propreté urbaines.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.vinci.com" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://marque-voiture.com/wp-content/uploads/2018/05/Logo-Vinci.png"
-                                    alt="VINCI" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    VINCI
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un acteur majeur mondial des métiers des concessions,
-                                    de la construction et des services associés. Présent dans plus de 100 pays, le
-                                    groupe intervient dans la conception, le financement, la construction et
-                                    l’exploitation d’infrastructures qui contribuent à l’aménagement du territoire et à
-                                    l’amélioration du cadre de vie. VINCI mène également des actions de mécénat et de
-                                    partenariat, notamment dans le domaine social et éducatif.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.groupe-sncf.com/fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://fonda.asso.fr/sites/default/files/inline-images/logo%20sncf.jpg"
-                                    alt="La fondation SNCF" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    La fondation SNCF
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est le mécénat du groupe SNCF, engagé depuis plus de 25
-                                    ans pour accompagner des projets associatifs à impact social. Elle soutient des
-                                    initiatives partout en France dans les domaines de l’éducation, de la culture, de
-                                    l’environnement et de l’inclusion, avec une attention particulière portée à
-                                    l’égalité des chances et au vivre-ensemble.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.pathe.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f8/Pathé_Logo.svg/2560px-Pathé_Logo.svg.png"
-                                    alt="Pathé" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Pathé
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une entreprise de cinéma française. Fondée en 1896,
-                                    l’entreprise exploite certaines des plus grandes salles de cinéma en Europe. Pathé
-                                    se consacre à la culture et à l’art cinématographique et propose une large palette
-                                    de films. Pathé dispose des salles de cinéma les plus modernes et soutient les
-                                    projets les plus innovants, qu’il s’agisse d’administration ou simplement de louer
-                                    des salles pour des films.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.zeus-securite.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.zeus-securite.fr/themes/themefd21156/images/logo.png"
-                                    alt="Zeus Sécurité" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Zeus Sécurité
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une compagnie offrant des prestations dans le domaine
-                                    de la sécurité privée. Ses services sont conçus pour répondre aux besoins variés des
-                                    clients dans le secteur de la sécurité de leurs biens et de leur personne. Elle
-                                    dispose d’un personnel hautement qualifié et bénéficie de la technologie de pointe
-                                    pour offrir des prestations de surveillance, de gardiennage, de contrôle d’accès aux
-                                    spécialistes de gestion de risque.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.iscom.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.iscom.fr/sites/default/files/2024-09/ISCOM_Noir-cote-cote-InCommWeTrust%202.png"
-                                    alt="ISCOM" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    ISCOM
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une école supérieure spécialisée dans les métiers de
-                                    la communication, du marketing et des relations publiques. Elle propose des
-                                    formations professionnalisantes permettant aux étudiants d’acquérir des compétences
-                                    pointues en stratégie de communication, création de contenu, événementiel et gestion
-                                    de l’image. L’établissement s’appuie sur des intervenants issus du monde
-                                    professionnel et des partenariats avec des entreprises pour offrir une formation en
-                                    phase avec les exigences du marché.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://canuts.ent.auvergnerhonealpes.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://canuts.ent.auvergnerhonealpes.fr/images/portails/logo_region.svg"
-                                    alt="Lycée Canut" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Lycée Canut
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un établissement d’enseignement secondaire et
-                                    professionnel situé à Vaulx-en-Velin. Il propose des formations générales,
-                                    technologiques et professionnelles, préparant les élèves aux diplômes du
-                                    baccalauréat ainsi qu’à l’insertion professionnelle ou à la poursuite d’études
-                                    supérieures. L’établissement met l’accent sur l’accompagnement des élèves, la
-                                    réussite scolaire et l’ouverture vers le monde professionnel grâce à des
-                                    partenariats avec des entreprises et des acteurs locaux.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://magenta.ent.auvergnerhonealpes.fr" target="_blank" class="partner-card">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://canuts.ent.auvergnerhonealpes.fr/images/portails/logo_region.svg"
-                                    alt="Lycée Magenta" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Lycée Magenta
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un établissement d’enseignement secondaire situé à
-                                    Villeurbanne. Il propose des formations générales, technologiques et
-                                    professionnelles adaptées aux besoins des élèves et aux évolutions du marché du
-                                    travail. L’établissement veille à accompagner chaque élève dans son parcours
-                                    scolaire et professionnel, en favorisant l’ouverture culturelle, la citoyenneté et
-                                    le développement de compétences en lien avec le tissu économique local.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- TODO walid: logo + url à fournir par l'asso pour Services Minutes (carte partenaire incomplète) -->
-                    <a href="" target="_blank" class="partner-card" aria-disabled="true">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="../assets/storage/partenaires/servicesMinutes.png" alt="Services Minutes" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Services Minutes
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description"></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="category-section section-fade-in" id="sectionAssociatif"
-                style="display:flex; flex-direction:column; align-items:center;">
-                <div class="sectionContainer" style="width:100%; max-width:900px;">
-                    <h1 class="sectionTitle">
-                        Nos partenaires associatifs
-                        <span class="partners-count">13</span>
-                    </h1>
-                    <p class="sectionSubTitle">
-                        Ensemble, nous développons des actions solidaires et participatives, au plus près des besoins
-                        exprimés par les habitants.
-                    </p>
-                </div>
-
-
-                <div class="partners-grid" style="justify-content:center;">
-
-                    <a href="https://www.resacoop.org" target="_blank" class="partner-card animate-delay-1">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://www.resacoop.org/wp-content/uploads/sites/20/2018/11/RESACOOP_logoHeader.png"
-                                    alt="RESACOOP" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    RESACOOP
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est le réseau régional Auvergne-Rhône-Alpes d’appui à la
-                                    coopération internationale. Il accompagne les collectivités, associations et
-                                    entreprises dans leurs projets de solidarité à l’international, en proposant des
-                                    outils, des formations et des mises en réseau.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://forim.net" target="_blank" class="partner-card animate-delay-2">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://forim.net/wp-content/uploads/forim_logo.png" alt="FORIM" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    FORIM
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un réseau national qui fédère des organisations
-                                    issues des migrations engagées dans des actions de solidarité internationale.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://cosim-ara.fr" target="_blank" class="partner-card animate-delay-3">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://cosim-ara.fr/images/2024/02/23/logocosim01.png" alt="COSIM ARA" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    COSIM ARA
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un réseau associatif qui rassemble des organisations
-                                    issues des diasporas africaines, asiatiques et caribéennes en Auvergne-Rhône-Alpes.
-                                    Il accompagne les porteurs de projets solidaires et favorise l’inclusion et la
-                                    citoyenneté.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.ol.fr/fr/eaglefootballgroup/groupe-responsable/ol-fondation" target="_blank"
-                        class="partner-card animate-delay-4">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://grep.asso.fr/wp-content/uploads/OL.jpg" alt="OL Fondation" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    OL Fondation
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est la branche solidaire de l’Olympique Lyonnais. Depuis
-                                    toujours, elle travaille pour l’égalité des chances, l’éducation, l’inclusion
-                                    sociale et le développement durable. Elle agit à Lyon et dans sa métropole en
-                                    partenariat avec les associations locales, les établissements scolaires et les
-                                    acteurs de la société civile.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.bullukian.com" target="_blank" class="partner-card animate-delay-5">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx6aglyWnH4fyyW3ej4D2udbWUXMrQPhB8dg&amp;s"
-                                    alt="Fondation Bullukian" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Fondation Bullukian
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un organisme dédié à l’a promotion de l’art
-                                    contemporain Elle est engagée dans des projets artistiques, culturels et sociaux
-                                    afin de pousser des talents du moment , tout en poursuivant l’idée de faciliter la
-                                    discussion entre les artistes et le public, puisque la richesse du paysage culturel
-                                    du pays Elle organise expos, résidences et événements de culture pour promouvoir la
-                                    préférence envers l’art auprès de la population.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://radiosalam.com/" target="_blank" class="partner-card animate-delay-6">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://myradioendirect.fr/public/uploads/radio_img/radio-salam/fb_cover.jpg"
-                                    alt="Radio Salam" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Radio Salam
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est un partenaire essentiel qui accompagne notre projet
-                                    avec sérieux et engagement. Cette radio privée, reconnue pour sa proximité avec la
-                                    communauté, diffuse des programmes riches en diversité culturelle et en valeurs de
-                                    partage. Grâce à sa passion pour l’écoute et le dialogue, Radio Salam contribue
-                                    activement à faire rayonner nos initiatives. Nous sommes heureux de collaborer avec
-                                    une équipe aussi dévouée et professionnelle.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/association-lila-sadji/"
-                        target="_blank" class="partner-card animate-delay-1">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="../assets/storage/partenaires/lila_sadji.png" alt="Lila Sadji" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Lila Sadji
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une association dédiée à la promotion de la culture
-                                    orientale et au renforcement de l’entente entre toutes les composantes de la
-                                    société. Ses activités couvrent la musique, la danse, la cuisine, la couture et la
-                                    mode. Elle organise également des ateliers de bien-être, de broderie et de chant,
-                                    ainsi que des événements et des soirées orientales.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/lyon-outre-mer/"
-                        target="_blank" class="partner-card animate-delay-2">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="../assets/storage/partenaires/lyon_outre_mer.jpg" alt="Lyon Outre Mer" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Lyon Outre Mer
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une association qui œuvre au maintien des liens de
-                                    solidarité entre les départements et territoires d’Outre-Mer et la Métropole. Elle
-                                    promeut les activités culturelles et sportives des personnes originaires des D.O.M.
-                                    et les accompagne dans leurs démarches d’insertion professionnelle et sociale.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/les-voisins-solidaires/"
-                        target="_blank" class="partner-card animate-delay-3">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://vaulx-en-velin.net/wp-content/uploads/2019/06/logo-les-voisins-solidaires.png"
-                                    alt="Voisins Solidaires" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Voisins Solidaires
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une association qui organise des événements et des
-                                    actions en faveur du vivre ensemble, de la participation civique et du lien entre
-                                    les habitants. Elle identifie les besoins des habitants et accompagne les porteurs
-                                    de projets, afin de favoriser leur implication dans la vie du quartier en
-                                    collaboration avec l’ensemble des acteurs du territoire vaudais.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/les-voisins-solidaires/"
-                        target="_blank" class="partner-card animate-delay-4">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="../assets/storage/partenaires/amafi.jpg" alt="AMAFI" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    AMAFI
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une association qui développe des relations d’amitié
-                                    et de convivialité à travers des manifestations culturelles, des soirées rencontres,
-                                    des débats à thèmes et des sorties culturelles.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://vaulx-en-velin.net/sortir/vie-associative/annuaire-des-associations/batir-ensemble/"
-                        target="_blank" class="partner-card animate-delay-5">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="../assets/storage/partenaires/batir_ensemble.jpg" alt="Bâtir Ensemble" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Bâtir Ensemble
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">est une association qui mène des actions solidaires
-                                    auprès des familles et des personnes isolées, principalement dans le sud de la
-                                    commune et sur le quartier de la Balme. Elle organise également des soirées festives
-                                    pour favoriser le vivre ensemble et le lien intergénérationnel.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://memoire-esclavage.org" target="_blank" class="partner-card animate-delay-6">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://fems.asso.fr/wp-content/uploads/2024/12/logoFondation-pour-la-memoire-de-lesclavage.png"
-                                    alt="Mémoire esclavage" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    Mémoire esclavage
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description">(Fondation pour la mémoire esclavage) est une institution
-                                    nationale ayant pour mission de transmettre l’histoire de l’esclavage, de ses
-                                    abolitions et de leurs héritages. Elle développe des actions éducatives, culturelles
-                                    et scientifiques pour sensibiliser le public à cette mémoire partagée, lutter contre
-                                    les discriminations et valoriser les apports des sociétés issues de l’esclavage à la
-                                    République.</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://lodysseefinale.org" target="_blank" class="partner-card animate-delay-1">
-                        <div class="partner-content">
-                            <div class="partner-logo">
-                                <img src="https://lodysseefinale.org/assets/images/logo1.png"
-                                    alt="L&#039;odyssée final" />
-                            </div>
-
-                            <div class="partner-info">
-                                <h3 class="partner-name">
-                                    L&#039;odyssée final
-                                    <i class="fas fa-external-link-alt external-link-icon"></i>
-                                </h3>
-                                <p class="partner-description"></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Afficher la page une fois tout chargé
-                document.body.classList.add('loaded');
-
-                // Animation des cartes au scroll
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-
-                const observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            if (entry.target.classList.contains('section-fade-in')) {
-                                entry.target.classList.add('visible');
-
-                                // Animer les cartes de cette section
-                                const cards = entry.target.querySelectorAll('.partner-card');
-                                cards.forEach((card, index) => {
-                                    setTimeout(() => {
-                                        card.classList.add('animate-in');
-                                    }, index * 150);
-                                });
-                            }
-                        }
-                    });
-                }, observerOptions);
-
-                // Observer toutes les sections
-                document.querySelectorAll('.section-fade-in').forEach(section => {
-                    observer.observe(section);
-                });
-
-                // Navigation par ancres avec scroll fluide
-                document.querySelectorAll('.category-nav a').forEach(link => {
-                    link.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetSection = document.querySelector(targetId);
-
-                        if (targetSection) {
-                            targetSection.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-
-                            // Mettre à jour le lien actif
-                            document.querySelectorAll('.category-nav a').forEach(l => l.classList.remove('active'));
-                            this.classList.add('active');
-                        }
-                    });
-                });
-
-                // Mise à jour de la navigation au scroll
-                const sections = document.querySelectorAll('.category-section');
-                const navLinks = document.querySelectorAll('.category-nav a');
-
-                window.addEventListener('scroll', function () {
-                    let current = '';
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop;
-                        const sectionHeight = section.clientHeight;
-                        if (window.scrollY >= (sectionTop - 200)) {
-                            current = section.getAttribute('id');
-                        }
-                    });
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + current) {
-                            link.classList.add('active');
-                        }
-                    });
-                });
-
-                // Effet parallaxe léger sur la bannière
-                window.addEventListener('scroll', function () {
-                    const banner = document.querySelector('.uni-banner');
-                    const scrolled = window.pageYOffset;
-                    if (banner) {
-                        banner.style.transform = `translateY(${scrolled * 0.3}px)`;
-                    }
-                });
-
-                console.log('Animations de la page partenaires initialisées');
-            });
-        </script>
-
-
-
-
-
-
+        <!-- ══ FLOATING SUGGESTION ════════════════════════════════ -->
+        <div id="suggestionLink"
+            style="position:fixed;bottom:30px;right:30px;z-index:9500;opacity:0;visibility:hidden;transition:all .3s ease;">
+            <a href="../pages/suggestions.html"
+                style="font-size:1em;padding:14px 22px;border-radius:50px;color:#111827;background:linear-gradient(135deg,#EAB308,#F5C800);text-decoration:none;box-shadow:0 6px 20px rgba(234,179,8,.35);display:flex;align-items:center;gap:8px;font-weight:700;font-family:'Montserrat',sans-serif;">
+                <i class="fas fa-lightbulb"></i> Suggestions
+            </a>
+        </div>
+
+        <!-- ══ FOOTER ════════════════════════════════════════════ -->
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
@@ -1103,423 +1018,153 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
-                                <a href="../index.html"><img
-                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
-                                        alt="image"></a>
-
-
-                                <p>
-                                    <strong>
-                                        Forum Associatif Tous Ensemble
-                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
-                                    le développement d&#039;initiatives citoyennes.
-                                </p>
-
-
+                                <a href="../index.html">
+                                    <img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE">
+                                </a>
+                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.</p>
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.facebook.com/profile.php?id=61558231605226
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/ target="
-                                                _blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://x.com/FATEnsemble target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.tiktok.com/@fatensemble target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre :</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/fate.html">
-                                            La structure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
                                 </ul>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation :</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
-                                    <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                                    </p>
+                                    <h5>Email :</h5>
+                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a></p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com">art.afrovibes@gmail.com</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone :</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
                                 </div>
                             </div>
                         </div>
 
-
                     </div>
                 </div>
-
 
                 <div class="copyright">
                     <p class="m-0">
                         <strong>Forum Associatif Tous Ensemble</strong>
-                        &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
+                        &copy; 2023&nbsp;– 2026. Tous droits réservés par l'équipe FATE.
                         <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top"
                             title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu"
-                            style="cursor: help;">
+                            style="cursor:help;">
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
 
+        <div class="go-top"><i class="fas fa-chevron-up"></i></div>
 
-        <div class="popup">
-            <div class="popup-content">
-                <button class="close-btn" id="popup-close"><i class="fas fa-times"></i></button>
-                <form>
-                    <div class="input-group search-box">
-                        <input type="text" class="form-control" placeholder="search">
-                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-        <div class="go-top">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-
-
-        <script src="../assets/js/jquery.min.js"></script>
-        <script src="../assets/js/jquery-ui.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-            });
-        </script>
-        <script src="../assets/js/meanmenu.js"></script>
-        <script src="../assets/js/owl.carousel.min.js"></script>
-        <script src="../assets/js/magnific-popup.min.js"></script>
-        <script src="../assets/js/TweenMax.js"></script>
-        <script src="../assets/js/nice-select.min.js"></script>
-        <script src="../assets/js/form-validator.min.js"></script>
-        <script src="../assets/js/contact-form-script.js"></script>
-        <script src="../assets/js/ajaxchimp.min.js"></script>
-        <script src="../assets/js/owl.carousel2.thumbs.min.js"></script>
-        <script src="../assets/js/appear.min.js"></script>
-        <script src="../assets/js/odometer.min.js"></script>
-        <script src="../assets/js/custom.js"></script>
-        <script src="../assets/js/image-fallback.js" defer></script>
-
-
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
-        </script>
-
-
-    </div>
-
+    </div><!-- /.conteneur-banniere -->
 
     <script src="../assets/js/jquery.min.js"></script>
-
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+        });
+    </script>
+    <script src="../assets/js/meanmenu.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="../assets/js/TweenMax.js"></script>
+    <script src="../assets/js/nice-select.min.js"></script>
+    <script src="../assets/js/form-validator.min.js"></script>
+    <script src="../assets/js/contact-form-script.js"></script>
+    <script src="../assets/js/ajaxchimp.min.js"></script>
+    <script src="../assets/js/appear.min.js"></script>
+    <script src="../assets/js/odometer.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>$(window).bind("load", function () { $("body").addClass("loaded"); });</script>
 
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-
-
-
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
-    <script src="../assets/js/video.js"></script>
-
+    <script src="../assets/js/image-fallback.js" defer></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour gérer l'affichage des images
-            const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
-            let isImagesExpanded = false;
+        (function () {
+            const FILTER_MAP = {
+                sectionInstitutionnels: 'institutionnels',
+                sectionPrives:          'prives',
+                sectionAssociatif:      'associatifs'
+            };
 
-            if (showMoreImagesBtn) {
-                showMoreImagesBtn.addEventListener('click', function () {
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
+            function applyFilter(filter) {
+                const btns  = document.querySelectorAll('.pt-filter-btn');
+                const cards = document.querySelectorAll('.pt-card-wrap');
+                const blocks = document.querySelectorAll('.pt-category-block');
 
-                    if (!isImagesExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
+                btns.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
 
-                        allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
+                cards.forEach(card => {
+                    card.classList.toggle('hidden', filter !== 'all' && card.dataset.cat !== filter);
+                });
 
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
-                        isImagesExpanded = true;
-
+                blocks.forEach(block => {
+                    if (filter === 'all') {
+                        block.style.display = '';
                     } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
-                        isImagesExpanded = false;
+                        const hasVisible = block.querySelector(`.pt-card-wrap[data-cat="${filter}"]`);
+                        block.style.display = hasVisible ? '' : 'none';
                     }
                 });
             }
 
-            // Fonction pour gérer l'affichage des vidéos
-            const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
-            let isVideosExpanded = false;
-
-            if (showMoreVideosBtn) {
-                showMoreVideosBtn.addEventListener('click', function () {
-                    const allVideos = document.querySelectorAll('.expositionVideoContainer');
-
-                    if (!isVideosExpanded) {
-                        // Afficher plus de vidéos
-                        let hiddenCount = 0;
-
-                        allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 6);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
-                        isVideosExpanded = true;
-
-                    } else {
-                        // Masquer les vidéos supplémentaires
-                        allVideos.forEach((el, index) => {
-                            if (index >= 6) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
-                        isVideosExpanded = false;
-                    }
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.pt-filter-btn').forEach(btn => {
+                    btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
                 });
-            }
 
-            // Ancien code pour compatibilité (showMoreBtn)
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            let isExpanded = false;
-
-            if (showMoreBtn) {
-                showMoreBtn.addEventListener('click', function () {
-                    console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-
-                    // Sélectionner toutes les images de la galerie
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    console.log('Nombre total d\'images:', allImages.length); // Debug
-
-                    if (!isExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    // Déclencher l'animation après un court délai
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100); // Délai progressif
-                            }
-                        });
-
-                        // Changer le texte et l'icône du bouton
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
-                        isExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        // Remettre le texte et l'icône originaux
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
-                        isExpanded = false;
-
-                        // Faire défiler vers le titre de la galerie
-                        const galerieTitle = document.querySelector('h3');
-                        if (galerieTitle) {
-                            galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-
-                    console.log('Nouvel état:', isExpanded); // Debug
-                });
-            } else {
-                console.log('Bouton showMoreBtn non trouvé'); // Debug
-            }
-
-        });
+                /* Deep-link : #sectionInstitutionnels → active le bon filtre */
+                const hash = window.location.hash.replace('#', '');
+                if (FILTER_MAP[hash]) {
+                    applyFilter(FILTER_MAP[hash]);
+                    const target = document.getElementById(hash);
+                    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+                }
+            });
+        })();
     </script>
     <script src="../assets/js/language-selector.js"></script>
     <script src="../assets/js/suggestion.js"></script>
+
 </body>
 
 </html>

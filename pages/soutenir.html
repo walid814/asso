@@ -4,31 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-    <title>Nous soutenir | Forum Associatif Tous Assemble</title>
-
-    <meta name="viewport" content="width=device-width">
-
-
+    <title>Nous soutenir | Forum Associatif Tous Ensemble</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
     <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta property="og:description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-
-
-
-    <meta name="description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-    <meta name="keywords" content="Forum, Associatif, tous ensemble, assocaition, france" />
+    <meta property="og:description" content="Crée en avril 2001, le &quot;Forum Associatif Tous Ensemble&quot; est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="description" content="Crée en avril 2001, le &quot;Forum Associatif Tous Ensemble&quot; est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="keywords" content="Forum, Associatif, tous ensemble, association, france, soutenir, don" />
     <meta name="robots" content="index, follow" />
-    <meta name="DC.title" content="Nous soutenir | Forum Associatif Tous Assemble" />
+    <meta name="DC.title" content="Nous soutenir | Forum Associatif Tous Ensemble" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@fate" />
-    <meta name="twitter:creator" content="@fate" />
     <meta property="og:url" content="https://fatetousensemble.org/" />
-    <meta property="og:title" content="Nous soutenir | Forum Associatif Tous Assemble" />
-
+    <meta property="og:title" content="Nous soutenir | Forum Associatif Tous Ensemble" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -45,21 +33,367 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/fate-branding.css">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
 
+    <style>
+        :root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F0EBE0;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+        /* ── HERO ── */
+        .sou-hero {
+            background: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (max-width: 1010px) { .sou-hero { margin-top: 70px; } }
+
+        .sou-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .sou-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 340px; height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .sou-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px 64px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .sou-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+        .sou-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+        .sou-hero-text { flex: 1; min-width: 0; }
+
+        .sou-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(40px, 5.5vw, 72px);
+            font-weight: 900;
+            color: var(--wh);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.0;
+            margin: 0 0 20px;
+        }
+        .sou-hero-title em {
+            font-style: normal;
+            color: var(--y);
+            display: block;
+        }
+        .sou-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+        .sou-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            margin: 0;
+        }
+        .sou-hero-breadcrumb a { color: rgba(255,255,255,.35); text-decoration: none; transition: color .2s; }
+        .sou-hero-breadcrumb a:hover { color: var(--y); }
+        .sou-hero-breadcrumb .chevron { color: var(--y); font-size: 9px; }
+
+        @media (max-width: 640px) {
+            .sou-hero-inner { padding: 0 24px 48px; }
+            .sou-hero-vbar { margin-right: 18px; }
+        }
+
+        /* ── PAGE BODY ── */
+        .sou-body { background: var(--bg); padding: 72px 0 80px; }
+
+        .sou-inner { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+        @media (max-width: 580px) { .sou-inner { padding: 0 24px; } }
+
+        /* ── SECTION HEADER ── */
+        .sou-section-head {
+            margin-bottom: 32px;
+        }
+        .sou-section-head h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dk);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0 0 8px;
+        }
+        .sou-section-head h2 em { font-style: normal; color: var(--y); }
+        .sou-section-head p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: var(--gr);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .sou-separator {
+            border: none;
+            border-top: 1.5px solid var(--bdr);
+            margin: 64px 0;
+        }
+
+        /* ── DON BLOCK ── */
+        .sou-don-block {
+            background: var(--wh);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 2px 20px rgba(17,24,39,.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+            margin-bottom: 0;
+        }
+        @media (max-width: 640px) { .sou-don-block { padding: 32px 24px; } }
+
+        .sou-don-icon {
+            width: 72px; height: 72px;
+            border-radius: 50%;
+            background: var(--dk);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sou-don-icon i { color: var(--y); font-size: 28px; }
+
+        .sou-don-block h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dk);
+            margin: 0;
+        }
+        .sou-don-block p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: var(--gr);
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0;
+        }
+
+        /* PayPal native button container */
+        .sou-paypal-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .pp-4HU6HS4VCSPPA {
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            min-width: 180px;
+            padding: 0 2rem;
+            height: 52px;
+            font-weight: 800;
+            background-color: var(--y);
+            color: var(--dk);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: opacity .2s, transform .15s;
+        }
+        .pp-4HU6HS4VCSPPA:hover { opacity: .88; transform: translateY(-1px); }
+        .sou-paypal-sub {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            color: var(--gr);
+        }
+
+        /* ── SHARE BLOCK ── */
+        .sou-share-block {
+            background: var(--wh);
+            border-radius: 16px;
+            padding: 40px 48px;
+            box-shadow: 0 2px 20px rgba(17,24,39,.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+        }
+        @media (max-width: 640px) { .sou-share-block { padding: 32px 24px; } }
+
+        .sou-share-block h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dk);
+            margin: 0;
+        }
+        .sou-share-block p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: var(--gr);
+            margin: 0;
+            max-width: 440px;
+            line-height: 1.7;
+        }
+        .sou-share-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .sou-share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            border-radius: 8px;
+            padding: 0 28px;
+            height: 48px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity .2s, transform .15s;
+        }
+        .sou-share-btn:hover { opacity: .88; transform: translateY(-1px); text-decoration: none; }
+        .sou-share-btn.twitter { background: #000; color: #fff; }
+        .sou-share-btn.facebook { background: #1877F2; color: #fff; }
+
+        /* ── PARTNERSHIP FORM ── */
+        .sou-form-block {
+            background: var(--wh);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 2px 20px rgba(17,24,39,.08);
+        }
+        @media (max-width: 640px) { .sou-form-block { padding: 32px 24px; } }
+
+        .sou-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 640px) { .sou-form-row { grid-template-columns: 1fr; } }
+
+        .sou-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+        .sou-field label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dk);
+        }
+        .sou-field label span { color: var(--y); }
+        .sou-field input,
+        .sou-field textarea {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: var(--dk);
+            background: #FAFAFA;
+            border: 1.5px solid var(--bdr);
+            border-radius: 8px;
+            padding: 0 16px;
+            height: 48px;
+            width: 100%;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .sou-field textarea {
+            height: auto;
+            padding: 14px 16px;
+            resize: vertical;
+        }
+        .sou-field input:focus,
+        .sou-field textarea:focus {
+            border-color: var(--y);
+            box-shadow: 0 0 0 3px rgba(234,179,8,.15);
+            background: var(--wh);
+        }
+        .sou-field input.inputContainerError,
+        .sou-field textarea.inputContainerError {
+            border-color: #EF4444;
+            box-shadow: 0 0 0 3px rgba(239,68,68,.12);
+        }
+
+        .sou-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--y);
+            color: var(--dk);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            padding: 0 36px;
+            height: 52px;
+            cursor: pointer;
+            transition: opacity .2s, transform .15s;
+            margin-top: 8px;
+        }
+        .sou-submit:hover { opacity: .88; transform: translateY(-1px); }
+        .sou-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+    </style>
 </head>
 
-<body class=about-us-page>
-
-
+<body class="about-us-page">
     <div class="conteneur-banniere">
-
-
-
-
 
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
@@ -67,115 +401,68 @@
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
             </div>
-
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
-
-
-
-
-
 
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
-
                 <ul class="navList">
-
-                    <li class="navItem ">
-                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink
-                                         ">
-                            FATE
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink">FATE</a>
                     </li>
-
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">
-                                ACTUALITÉS
-                                <span class="dropdownIcon">+</span>
+                                ACTUALITÉS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
-                                    class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
-                                    pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
-                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
-                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
-                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a
-                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
-                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
-
-
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
-                                ACTIONS
-                                <span class="dropdownIcon">+</span>
+                                ACTIONS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList">
-                            <li class="submenuItem">
-                                <a href="../pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
                         </ul>
                     </li>
-
-                    <li class="navItem ">
-                        <a href="../pages/archives.html" class="navLinkStrong navLink
-                                         ">
-                            ARCHIVES
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a>
                     </li>
-
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
-                                PARTENAIRES
-                                <span class="dropdownIcon">+</span>
+                                PARTENAIRES <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
-                                    class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
-                                    class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
-                                    class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
-
-                    <li class="navItem ">
-                        <a href="../pages/contact.html" class="navLinkStrong navLink
-                                         ">
-                            CONTACTS
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
                     </li>
-
                     <li class="navItem">
                         <a href="../pages/soutenir.html" class="buttonNav activeNav">Soutenir</a>
                     </li>
@@ -186,270 +473,164 @@
             </nav>
         </header>
 
-
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
                 const mainNav = document.getElementById('mainNav');
                 const body = document.body;
                 const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
-
-                // Mobile toggle
                 if (toggleBtn) {
                     toggleBtn.addEventListener('click', () => {
                         mainNav.classList.toggle('navOpen');
                         body.classList.toggle('noScroll');
                     });
                 }
-
-                // Fermer le menu mobile quand on clique sur un lien
                 navLinks.forEach(link => {
                     link.addEventListener('click', (e) => {
-                        // Ne pas fermer si on clique sur un toggle de sous-menu
                         if (!e.target.closest('.navToggleLink')) {
                             mainNav.classList.remove('navOpen');
                             body.classList.remove('noScroll');
                         }
                     });
                 });
-
-                // Gestion des sous-menus uniquement sur mobile
                 const toggleLinks = document.querySelectorAll('.navToggleLink');
                 toggleLinks.forEach(toggle => {
                     toggle.addEventListener('click', (e) => {
-                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
                         if (window.innerWidth < 992) {
                             e.preventDefault();
                             const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) {
-                                parentLi.classList.toggle('submenuOpen');
-                            }
+                            if (parentLi) parentLi.classList.toggle('submenuOpen');
                         }
                     });
                 });
             });
         </script>
 
-
-
-
-        <style>
-            .pp-4HU6HS4VCSPPA {
-                text-align: center;
-                border: none;
-                border-radius: 0.25rem;
-                min-width: 11.625rem;
-                padding: 0 2rem;
-                height: 2.625rem;
-                font-weight: bold;
-                background-color: #FFD140;
-                color: #000000;
-                font-family: "Helvetica Neue", Arial, sans-serif;
-                font-size: 1rem;
-                line-height: 1.25rem;
-                cursor: pointer;
-            }
-        </style>
-
-
-        <section class="uni-banner">
-            <div class="container">
-                <div class="uni-banner-text-area">
-                    <h1>
-                        Nous soutenir
-                    </h1>
-                    <ul>
-                        <li>
-                            <a href="../index.html">
-                                Accueil
-                            </a>
-                        </li>
-                        <li>
-                            Nous soutenir
-                        </li>
-                    </ul>
+        <!-- HERO -->
+        <section class="sou-hero">
+            <div class="sou-hero-inner">
+                <div class="sou-hero-left">
+                    <div class="sou-hero-vbar"></div>
+                    <div class="sou-hero-text">
+                        <h1 class="sou-hero-title">Nous <em>Soutenir</em></h1>
+                        <p class="sou-hero-desc">Votre soutien est essentiel pour que le FATE continue de porter ses actions solidaires et culturelles en France et à l'international.</p>
+                        <nav class="sou-hero-breadcrumb" aria-label="fil d'ariane">
+                            <a href="../index.html">Accueil</a>
+                            <i class="fas fa-chevron-right chevron"></i>
+                            <span>Nous soutenir</span>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- PAGE BODY -->
+        <div class="sou-body">
+            <div id="formInfoSupportContainer" class="formInfoContainer d-flex flex-column justify-content-center align-items-center"></div>
 
-        <div id="formInfoSupportContainer"
-            class="formInfoContainer d-flex flex-column justify-content-center align-items-center ">
-        </div>
+            <div class="sou-inner">
 
-
-        <section class="support-us-content pt-70 pb-100">
-            <div class="mainSupportContainer">
-
-
-                <div class="supportSectionTitle">
-                    <h3>
-                        Comment nous soutenir
-                    </h3>
+                <!-- DON -->
+                <div class="sou-section-head">
+                    <h2>Nous faire <em>un don</em></h2>
+                    <p>Chaque contribution, quelle que soit sa taille, nous aide à financer nos projets et à soutenir nos bénéficiaires.</p>
                 </div>
 
-
-                <div class="section-content text-center">
-                    <p class="supportSubDescription">
-                        Vous pouvez nous soutenir de différentes façons : dons financiers, bénévolat, partenariats, ou
-                        en partageant notre mission.
-                    </p>
+                <div class="sou-don-block">
+                    <div class="sou-don-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Faire un don sécurisé</h3>
+                    <p>Votre don est traité via PayPal, une plateforme de paiement sécurisée. Chaque euro compte pour financer nos actions solidaires.</p>
+                    <div class="sou-paypal-wrap">
+                        <form action="https://www.paypal.com/ncp/payment/4HU6HS4VCSPPA" method="post" target="_blank">
+                            <input class="pp-4HU6HS4VCSPPA" type="submit" value="Faire un don" />
+                        </form>
+                        <span class="sou-paypal-sub">Paiement sécurisé par <strong>PayPal</strong></span>
+                    </div>
                 </div>
 
+                <hr class="sou-separator">
 
-                <div class="supportContainer mt-5 d-flex justify-content-center align-content-center flex-column">
-                    <h1 class="sectionTitle">
-                        Nous faire un don
-                    </h1>
+                <!-- PARTAGER -->
+                <div class="sou-section-head">
+                    <h2>Partager notre <em>mission</em></h2>
+                    <p>Aidez-nous à toucher plus de personnes en partageant le FATE sur vos réseaux sociaux.</p>
+                </div>
 
+                <div class="sou-share-block">
+                    <div class="sou-don-icon" style="background: var(--y);"><i class="fas fa-share-alt" style="color: var(--dk);"></i></div>
+                    <h3>Faites passer le mot</h3>
+                    <p>Chaque partage amplifie notre voix et nous aide à fédérer de nouveaux soutiens autour de nos projets.</p>
+                    <div class="sou-share-btns">
+                        <a class="sou-share-btn twitter" href="https://twitter.com/intent/tweet?text=Je+soutiens+FATE%21+%23FATE" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i> Twitter / X
+                        </a>
+                        <a class="sou-share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fforumassotousensemble.org" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </div>
+                </div>
 
-                    <form class="paypalButtonContainer" action="https://www.paypal.com/ncp/payment/4HU6HS4VCSPPA"
-                        method="post" target="_blank"
-                        style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                        <input class="pp-4HU6HS4VCSPPA paypalButtonText" type="submit" value="Faire un don" />
-                        <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-                        <section style="font-size: 0.75rem;"> Optimisé par <img
-                                src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg"
-                                alt="paypal" style="height:0.875rem;vertical-align:middle;" /></section>
+                <hr class="sou-separator">
+
+                <!-- PARTENARIAT -->
+                <div class="sou-section-head">
+                    <h2>Demande de <em>partenariat</em></h2>
+                    <p>Vous représentez une entreprise ou une association ? Contactez-nous pour explorer une collaboration.</p>
+                </div>
+
+                <div class="sou-form-block">
+                    <form id="contactForm" method="POST" action="https://forumassotousensemble.org/partenariat">
+                        <input type="hidden" name="_token" value="9llX8qFV1px1dMbo0ctlgogczZ3ToOBrbSnX1thz">
+
+                        <div class="sou-form-row">
+                            <div class="sou-field">
+                                <label for="nomRef">Nom <span>*</span></label>
+                                <input id="nomRef" type="text" name="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="sou-field">
+                                <label for="emailRef">Email <span>*</span></label>
+                                <input id="emailRef" type="email" name="email" placeholder="votre@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="sou-form-row">
+                            <div class="sou-field">
+                                <label for="phoneRef">Téléphone</label>
+                                <input id="phoneRef" type="text" name="phone_number" placeholder="+33 6 12 34 56 78">
+                            </div>
+                            <div class="sou-field">
+                                <label for="entrepriseRef">Entreprise / Association <span>*</span></label>
+                                <input id="entrepriseRef" type="text" name="msg_subject" placeholder="Nom de votre structure" required>
+                            </div>
+                        </div>
+
+                        <div class="sou-field">
+                            <label for="messageRef">Message <span>*</span></label>
+                            <textarea id="messageRef" name="message" placeholder="Décrivez votre projet de partenariat…" rows="5" required></textarea>
+                        </div>
+
+                        <button id="buttonSubmit" type="button" onclick="submitForm()" class="sou-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer la demande
+                        </button>
                     </form>
-
-
-                    <div class="supportContainer">
-                        <h1 class="sectionTitle">
-                            Partager notre mission
-                        </h1>
-
-                        <div class="supportShareContainer d-flex justify-content-center align-content-center">
-
-
-                            <div class="supportShareTwitter">
-                                <a class="supportShareButton twitter"
-                                    href="https://twitter.com/intent/tweet?text=Je+soutiens+FATE%21+%23FATE"
-                                    target="_blank">
-                                    Partager sur Twitter/X
-                                </a>
-                            </div>
-
-
-                            <div class="supportShareFacebook">
-                                <a class="supportShareButton facebook"
-                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fforumassotousensemble.org"
-                                    target="_blank" rel="noopener noreferrer">
-                                    Partager sur Facebook
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="horizontalLine"></div>
-
-
-                    <div class="supportContainer">
-                        <h1 class="sectionTitle">
-                            Demande de partenariat
-                        </h1>
-
-                        <div class="supportPartnerContainer">
-                            <div class="section-content">
-                                <div class="row">
-                                    <div class="col-lg-12 d-flex justify-content-center align-items-center">
-                                        <div class="contact-form-text-area col-lg-10">
-
-
-                                            <form id="contactForm" method="POST"
-                                                action="https://forumassotousensemble.org/partenariat">
-                                                <input type="hidden" name="_token"
-                                                    value="9llX8qFV1px1dMbo0ctlgogczZ3ToOBrbSnX1thz">
-                                                <div class="row align-items-center">
-
-
-                                                    <div class="col-md-6 col-sm-6 col-12">
-                                                        <div class="form-group">
-                                                            <input id="nomRef" type="text" class="form-control"
-                                                                name="name" placeholder="Nom" required>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-6 col-sm-6 col-12">
-                                                        <div class="form-group">
-                                                            <input id="emailRef" type="email" name="email"
-                                                                class="form-control" placeholder="Email*" required>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-6 col-sm-6 col-12">
-                                                        <div class="form-group">
-                                                            <input type="text" name="phone_number" class="form-control"
-                                                                placeholder="Téléphone">
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-6 col-sm-6 col-12">
-                                                        <div class="form-group">
-                                                            <input id="entrepriseRef" type="text" name="msg_subject"
-                                                                class="form-control"
-                                                                placeholder="Entreprise/Association*" required>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-12 col-sm-12 col-12">
-                                                        <div class="form-group">
-                                                            <textarea id="messageRef" name="message"
-                                                                class="form-control" placeholder="Votre Message..*"
-                                                                cols="30" rows="5" required></textarea>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-12 col-sm-12 col-12">
-                                                        <button id="buttonSubmit" onclick="submitForm()"
-                                                            class="default-button" type="button">
-                                                            <span>
-                                                                Envoyer le message
-                                                            </span>
-                                                        </button>
-                                                    </div>
-
-                                                </div>
-                                            </form>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
-        </section>
 
+            </div>
+        </div><!-- /sou-body -->
 
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                paypal.HostedButtons({
-                    hostedButtonId: "5BTFHGRP52WX6",
-                }).render("#paypal-container-5BTFHGRP52WX6")
-
                 const form = document.getElementById("contactForm");
                 const button = document.getElementById("buttonSubmit");
 
-                // affiche un chargement sur le bouton lors de l’envoi
                 const chargement = () => {
                     if (button) {
                         button.disabled = true;
-                        button.innerHTML = `
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    Envoi en cours...
-                `;
+                        button.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Envoi en cours...`;
                     }
-                }
+                };
 
-                // validation et soumission du formulaire
                 const submitForm = () => {
                     const requiredFields = [
                         document.getElementById("nomRef"),
@@ -457,9 +638,7 @@
                         document.getElementById("entrepriseRef"),
                         document.getElementById("messageRef")
                     ];
-
                     let errorDetected = false;
-
                     requiredFields.forEach(field => {
                         if (field.value.trim() === "") {
                             field.classList.add("inputContainerError");
@@ -468,200 +647,89 @@
                             field.classList.remove("inputContainerError");
                         }
                     });
-
                     if (errorDetected) {
-                        setTimeout(() => {
-                            requiredFields.forEach(field => field.classList.remove("inputContainerError"));
-                        }, 1000);
+                        setTimeout(() => { requiredFields.forEach(f => f.classList.remove("inputContainerError")); }, 1000);
                         return;
                     }
-
                     chargement();
                     form.submit();
-                }
+                };
 
-                // interception de la touche entrée pour valider le formulaire
                 if (form) {
                     form.addEventListener("keydown", event => {
-                        if (event.key === "Enter") {
-                            event.preventDefault();
-                            submitForm();
-                        }
+                        if (event.key === "Enter") { event.preventDefault(); submitForm(); }
                     });
                 }
-
-                // expose la fonction globalement
                 window.submitForm = submitForm;
             });
         </script>
 
-
-
-
-
-
+        <!-- FOOTER -->
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
                     <div class="row">
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
-                                <a href="../index.html"><img
-                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
-                                        alt="image"></a>
-
-
-                                <p>
-                                    <strong>
-                                        Forum Associatif Tous Ensemble
-                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
-                                    le développement d&#039;initiatives citoyennes.
-                                </p>
-
-
+                                <a href="../index.html"><img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="image"></a>
+                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d&#039;initiatives citoyennes.</p>
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.facebook.com/profile.php?id=61558231605226
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/ target="
-                                                _blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://x.com/FATEnsemble target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.tiktok.com/@fatensemble target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre:</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/fate.html">
-                                            La structure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
                                 </ul>
                             </div>
                         </div>
-
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation:</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
                                     <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                                    </p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a></p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone:</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
-
                 <div class="copyright">
                     <p class="m-0">
-                        <strong>Forum Associatif Tous Ensemble</strong>
-                        &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
-                        <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu"
-                            style="cursor: help;">
+                        <strong>Forum Associatif Tous Ensemble</strong> &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
+                        <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu" style="cursor: help;">
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
-
 
         <div class="popup">
             <div class="popup-content">
@@ -675,11 +743,7 @@
             </div>
         </div>
 
-
-        <div class="go-top">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-
+        <div class="go-top"><i class="fas fa-chevron-up"></i></div>
 
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>
@@ -703,229 +767,18 @@
         <script src="../assets/js/odometer.min.js"></script>
         <script src="../assets/js/custom.js"></script>
         <script src="../assets/js/image-fallback.js" defer></script>
-
-
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
-        </script>
-
+        <script>$(window).bind("load", function () { $("body").addClass("loaded") })</script>
 
     </div>
 
-
     <script src="../assets/js/jquery.min.js"></script>
-
-
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-
-
-
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
     <script src="../assets/js/video.js"></script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour gérer l'affichage des images
-            const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
-            let isImagesExpanded = false;
-
-            if (showMoreImagesBtn) {
-                showMoreImagesBtn.addEventListener('click', function () {
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    if (!isImagesExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
-                        isImagesExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
-                        isImagesExpanded = false;
-                    }
-                });
-            }
-
-            // Fonction pour gérer l'affichage des vidéos
-            const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
-            let isVideosExpanded = false;
-
-            if (showMoreVideosBtn) {
-                showMoreVideosBtn.addEventListener('click', function () {
-                    const allVideos = document.querySelectorAll('.expositionVideoContainer');
-
-                    if (!isVideosExpanded) {
-                        // Afficher plus de vidéos
-                        let hiddenCount = 0;
-
-                        allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 6);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
-                        isVideosExpanded = true;
-
-                    } else {
-                        // Masquer les vidéos supplémentaires
-                        allVideos.forEach((el, index) => {
-                            if (index >= 6) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
-                        isVideosExpanded = false;
-                    }
-                });
-            }
-
-            // Ancien code pour compatibilité (showMoreBtn)
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            let isExpanded = false;
-
-            if (showMoreBtn) {
-                showMoreBtn.addEventListener('click', function () {
-                    console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-
-                    // Sélectionner toutes les images de la galerie
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    console.log('Nombre total d\'images:', allImages.length); // Debug
-
-                    if (!isExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    // Déclencher l'animation après un court délai
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100); // Délai progressif
-                            }
-                        });
-
-                        // Changer le texte et l'icône du bouton
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
-                        isExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        // Remettre le texte et l'icône originaux
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
-                        isExpanded = false;
-
-                        // Faire défiler vers le titre de la galerie
-                        const galerieTitle = document.querySelector('h3');
-                        if (galerieTitle) {
-                            galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-
-                    console.log('Nouvel état:', isExpanded); // Debug
-                });
-            } else {
-                console.log('Bouton showMoreBtn non trouvé'); // Debug
-            }
-
-            // Script pour afficher le lien suggestion au 3/4 de la page
-        });
-    </script>
     <script src="../assets/js/language-selector.js"></script>
     <script src="../assets/js/suggestion.js"></script>
-
 </body>
 
 </html>
