@@ -276,7 +276,9 @@
     margin-bottom: 18px;
 }
 
-.about-eyebrow i { font-size: 13px; }
+.about-eyebrow i {
+    font-size: 13px;
+}
 
 .fate-about-text h2 {
     font-family: 'Montserrat', sans-serif;
@@ -314,7 +316,10 @@
     border-radius: 50px;
 }
 
-.about-chip i { color: #EAB308; font-size: 11px; }
+.about-chip i {
+    color: #EAB308;
+    font-size: 11px;
+}
 
 .about-body {
     margin-bottom: 36px;
@@ -328,9 +333,14 @@
     margin-bottom: 14px;
 }
 
-.about-body p:last-child { margin-bottom: 0; }
+.about-body p:last-child {
+    margin-bottom: 0;
+}
 
-.about-body strong { color: #111827; font-weight: 700; }
+.about-body strong {
+    color: #111827;
+    font-weight: 700;
+}
 
 .about-cta {
     display: inline-flex;
@@ -451,13 +461,24 @@
 }
 
 @media (max-width: 992px) {
-    .fate-about-wrapper { flex-direction: column; gap: 48px; }
-    .video-backdrop-shape { display: none; }
+    .fate-about-wrapper {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .video-backdrop-shape {
+        display: none;
+    }
 }
 
 @media (max-width: 640px) {
-    .fate-about-strip { padding: 72px 0; }
-    .fate-about-text h2 { letter-spacing: -1px; }
+    .fate-about-strip {
+        padding: 72px 0;
+    }
+
+    .fate-about-text h2 {
+        letter-spacing: -1px;
+    }
 }
 
 /* ==========================================
@@ -575,7 +596,8 @@
    ========================================== */
 .projets-section {
     padding: 100px 0;
-    background: #ffffff;
+    background: #F0EBE0;
+    /* <-- Nouvelle couleur ici */
     position: relative;
     overflow: hidden;
 }
@@ -1059,7 +1081,8 @@
 }
 
 .events {
-    background: #ffffff;
+    background: #F0EBE0 !important;
+    /* <-- Nouvelle couleur avec !important */
     position: relative;
     padding: 80px 0;
 }
