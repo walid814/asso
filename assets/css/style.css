@@ -14066,3 +14066,14 @@ li.hasSubmenu:hover .dropdownIcon {
   /* Au cas où il y aurait un fond gris indésirable */
   transition: color 0.3s ease;
 }
+
+/* Masquer la barre supérieure de Google Translate */
+.goog-te-banner-frame.skiptranslate,
+.skiptranslate.goog-te-gadget {
+  display: none !important;
+}
+
+/* Empêcher Google de décaler le body vers le bas */
+body {
+  top: 0px !important;
+}

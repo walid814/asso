@@ -441,3 +441,29 @@ a[href*="soutenir"].buttonNav:hover {
     color: #FFC107;
     text-decoration: none;
 }
+
+/* ======= GOOGLE TRANSLATE CLEANUP ======= */
+.goog-te-banner-frame, 
+.goog-te-balloon-frame, 
+#goog-gt-tt, 
+.goog-te-balloon-frame.skiptranslate, 
+.goog-te-spinner-pos {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+.skiptranslate {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
