@@ -470,3 +470,90 @@ body {
     background-color: transparent !important;
     box-shadow: none !important;
 }
+
+/* ============================================================
+   ALIGNEMENT ET UNIFORMISATION DES BOUTONS FLOTTANTS (INVERSÉ)
+============================================================ */
+
+/* 1. Conteneur du bouton de langue - MAINTENANT EN BAS */
+.lang-floating-widget {
+    position: fixed !important;
+    bottom: 25px !important;
+    /* Position la plus basse */
+    right: 25px !important;
+    z-index: 9999 !important;
+}
+
+/* 2. Style commun pour les deux boutons (Langue et Go-top) */
+.lang-floating-btn,
+.go-top {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #F0EBE0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+/* Position fixe pour le bouton retour en haut - MAINTENANT AU-DESSUS */
+.go-top {
+    position: fixed !important;
+    bottom: 90px !important;
+    /* Position supérieure */
+    right: 25px !important;
+    margin: 0 !important;
+}
+
+/* 3. Effet de survol (Hover) JAUNE pour les deux boutons */
+.lang-floating-btn:hover,
+.go-top:hover {
+    background-color: #EAB308 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-3px);
+}
+
+/* Ajustement de l'icône de la flèche */
+.go-top i {
+    color: #111827 !important;
+    font-size: 18px !important;
+}
+
+.go-top:hover i {
+    color: #FFFFFF !important;
+}
+
+/* 4. Le menu de sélection de la langue (Beige et élégant) */
+.lang-floating-menu {
+    background-color: #F0EBE0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    bottom: 60px !important;
+    /* S'ouvre au-dessus du bouton de langue */
+    right: 0 !important;
+    overflow: hidden;
+}
+
+.lang-option {
+    color: #111827 !important;
+    padding: 12px 20px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s !important;
+}
+
+.lang-option:hover {
+    background-color: #EAB308 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
