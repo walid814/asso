@@ -557,3 +557,10 @@ body {
     color: #FFFFFF !important;
     text-decoration: none !important;
 }
+
+/* Style pour les nouveaux drapeaux */
+.fi {
+    font-size: 20px !important;
+    /* Taille du drapeau */
+    border-radius: 2px !important;
+}
