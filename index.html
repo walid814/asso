@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-
     <title>Forum Associatif Tous Ensemble (FATE) — Association loi 1901 | Lyon</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- SEO -->
     <meta name="description"
         content="Le Forum Associatif Tous Ensemble (FATE) est une association loi 1901 basée à Lyon, engagée pour la solidarité, le vivre-ensemble et la valorisation du patrimoine africain depuis 2001." />
     <meta name="keywords"
@@ -19,7 +17,6 @@
     <meta name="author" content="Forum Associatif Tous Ensemble (FATE)" />
     <link rel="canonical" href="https://forumassotousensemble.org/" />
 
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content="https://forumassotousensemble.org/" />
@@ -29,7 +26,6 @@
     <meta property="og:image" content="https://forumassotousensemble.org/assets/images/logoHeader.png" />
     <meta property="og:site_name" content="Forum Associatif Tous Ensemble" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@FATEnsemble" />
     <meta name="twitter:creator" content="@FATEnsemble" />
@@ -37,8 +33,6 @@
     <meta name="twitter:description"
         content="Association loi 1901 basée à Lyon, engagée pour la solidarité et la valorisation du patrimoine africain depuis 2001." />
     <meta name="twitter:image" content="https://forumassotousensemble.org/assets/images/logoHeader.png" />
-
-
 
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -56,13 +50,7 @@
     <link rel="stylesheet" href="assets/css/fate-branding.css">
     <link rel="stylesheet" href="assets/css/accueil.css">
 
-
-
-
-
     <link href="assets/images/logoHeader.png" rel="icon" type="image/png">
-
-
 </head>
 
 <body>
@@ -77,7 +65,6 @@
             </div>
 
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
-
 
             <nav class="mainNav" id="mainNav">
                 <a href="index.html" class="logoLink desktopOnly">
@@ -189,6 +176,7 @@
                 const body = document.body;
                 const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
 
+<<<<<<< Updated upstream
     toggleBtn.addEventListener('click', () => {
         mainNav.classList.toggle('navOpen');
         body.classList.toggle('noScroll');
@@ -743,9 +731,42 @@ document.addEventListener('DOMContentLoaded', () => {
 </style>
 
         <!-- ========== HERO SLIDER PLEINE LARGEUR ========== -->
+=======
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        mainNav.classList.toggle('navOpen');
+                        body.classList.toggle('noScroll');
+                    });
+                }
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        if (!e.target.closest('.navToggleLink')) {
+                            mainNav.classList.remove('navOpen');
+                            body.classList.remove('noScroll');
+                        }
+                    });
+                });
+
+                const toggleLinks = document.querySelectorAll('.navToggleLink');
+                toggleLinks.forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        if (window.innerWidth < 992) {
+                            e.preventDefault();
+                            const parentLi = toggle.closest('.hasSubmenu');
+                            if (parentLi) {
+                                parentLi.classList.toggle('submenuOpen');
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+
+
+>>>>>>> Stashed changes
         <section class="fate-hero" id="fateHero">
 
-            <!-- Slide 1 -->
             <div class="fate-hero-slide active">
                 <img src="assets/storage/events/expositions/arta_sacra_2025/image copy.png" alt="Festival ARTA SACRA">
                 <div class="fate-hero-overlay">
@@ -764,7 +785,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
 
-            <!-- Slide 2 -->
             <div class="fate-hero-slide">
                 <img src="assets/storage/actualites/Anniversaire25/fate_25_ans.png" alt="Les 25 ans du FATE 2001-2026">
                 <div class="fate-hero-overlay">
@@ -783,7 +803,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
 
-            <!-- Slide 3 -->
             <div class="fate-hero-slide">
                 <img src="assets/storage/actualites/June2025/image.png" alt="Des routes de l'esclavage à nos jours">
                 <div class="fate-hero-overlay">
@@ -803,13 +822,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
 
-            <!-- Flèches -->
             <div class="fate-hero-arrow fate-hero-arrow-left" onclick="fateHeroSlide(-1)" aria-label="Précédent">&lt;
             </div>
             <div class="fate-hero-arrow fate-hero-arrow-right" onclick="fateHeroSlide(1)" aria-label="Suivant">&gt;
             </div>
 
-            <!-- Dots -->
             <div class="fate-hero-dots">
                 <div class="fate-hero-dot active" onclick="fateHeroGoTo(0)"></div>
                 <div class="fate-hero-dot" onclick="fateHeroGoTo(1)"></div>
@@ -838,35 +855,39 @@ document.addEventListener('DOMContentLoaded', () => {
             })();
         </script>
 
-        <!-- ========== DESCRIPTION + VIDÉO ========== -->
         <section class="fate-about-strip">
             <div class="container">
-                <div class="fate-about-text">
-                    <span class="section-tag">&#127758; &nbsp;Qui sommes-nous ?</span>
-                    <h2>Forum Associatif<br><span>Tous Ensemble</span></h2>
-                    <p>Fondé en avril 2001 par Roger Tonye Aguiar, le FATE est un collectif d'associations lyonnaises
-                        engagées pour la solidarité, le vivre-ensemble et la valorisation du patrimoine africain.
-                        Association loi 1901 d'intérêt général, éligible au mécénat, elle déploie ses actions localement
-                        et à l'international.</p>
-                    <a class="fate-hero-btn-primary" href="pages/fate.html" style="font-size:13px; padding:10px 22px;">
-                        Découvrir la structure <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="fate-about-video">
-                    <iframe src="https://www.youtube.com/embed/oxOJTua3v7g"
-                        title="Forum Associatif Tous Ensemble — Présentation"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen loading="lazy">
-                    </iframe>
+                <div class="fate-about-wrapper">
+                    <div class="fate-about-text">
+                        <span class="section-tag">&#127758; &nbsp;Qui sommes-nous ?</span>
+                        <h2>Forum Associatif<br><span>Tous Ensemble</span></h2>
+                        <div class="about-highlight-box">
+                            <p>Fondé en avril 2001 par Roger Tonye Aguiar, le <strong>FATE</strong> est un collectif
+                                d'associations lyonnaises engagées pour la solidarité, le vivre-ensemble et la
+                                valorisation du patrimoine africain.</p>
+                            <p>Association loi 1901 d'intérêt général, éligible au mécénat, elle déploie ses actions
+                                localement et à l'international.</p>
+                        </div>
+                        <a class="fate-hero-btn-primary" href="pages/fate.html"
+                            style="font-size:14px; padding:12px 28px; margin-top: 10px;">
+                            Découvrir la structure <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="fate-about-video">
+                        <div class="video-backdrop-shape"></div>
+                        <div class="fate-about-video-inner">
+                            <iframe src="https://www.youtube.com/embed/oxOJTua3v7g"
+                                title="Forum Associatif Tous Ensemble — Présentation"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-
-
-
-        <section class="fun-facts fun-facts-1 mt-5 pt-70 pb-100">
+        <section class="fun-facts-1 pt-100 pb-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -875,16 +896,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <img src="assets/storage/keyfigures/June2023/AXyG7FzOnx4gR94F9fIu.png"
                                     alt="Associations">
                             </div>
-                            <div class="inner-text-">
-                                <h2>
-                                    <span class="odometer" data-count="30">
-                                        00
-                                    </span>
-                                </h2>
-                                <p>
-                                    Associations
-                                </p>
-                            </div>
+                            <h2><span class="odometer" data-count="30">00</span></h2>
+                            <p>Associations</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -893,16 +906,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <img src="assets/storage/keyfigures/June2023/Jv9xc3oxCoqUFL6jMCwy.png"
                                     alt="Villes couvertes">
                             </div>
-                            <div class="inner-text-">
-                                <h2>
-                                    <span class="odometer" data-count="16">
-                                        00
-                                    </span>
-                                </h2>
-                                <p>
-                                    Villes couvertes
-                                </p>
-                            </div>
+                            <h2><span class="odometer" data-count="16">00</span></h2>
+                            <p>Villes couvertes</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -911,16 +916,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <img src="assets/storage/keyfigures/June2023/OjxLx7YH4gPg3u3tjq7r.png"
                                     alt="Volontaires">
                             </div>
-                            <div class="inner-text-">
-                                <h2>
-                                    <span class="odometer" data-count="35">
-                                        00
-                                    </span>
-                                </h2>
-                                <p>
-                                    Volontaires
-                                </p>
-                            </div>
+                            <h2><span class="odometer" data-count="35">00</span></h2>
+                            <p>Volontaires</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -928,115 +925,85 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="icone-key">
                                 <img src="assets/storage/keyfigures/June2023/Pf8FqgAKjLMJGDRRHVqN.png" alt="Projets">
                             </div>
-                            <div class="inner-text-">
-                                <h2>
-                                    <span class="odometer" data-count="6">
-                                        00
-                                    </span>
-                                </h2>
-                                <p>
-                                    Projets
-                                </p>
-                            </div>
+                            <h2><span class="odometer" data-count="6">00</span></h2>
+                            <p>Projets</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="projets-section" id="projetsSection">
+            <div class="container">
+                <div class="projets-header">
+                    <div class="projets-label">
+                        <i class="fas fa-layer-group"></i> &nbsp;Nos projets
+                    </div>
+                    <h2>Initiatives &amp; <span>Actions terrain</span></h2>
+                    <p>Des projets concrets menés localement et à l'international pour la solidarité et la culture.</p>
+                </div>
 
-
-
-        <section class="actu-strip-section">
-            <div class="actu-strip-title">
-                <h3>Projets</h3>
-            </div>
-            <div class="actu-marquee-wrapper">
-                <div class="actu-marquee-track">
-                    <div class="actu-card">
-                        <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Douala">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Septembre 2022</span>
-                            <p class="actu-card-title">Eau et assainissement PK17-PK32 Douala</p>
-                            <a class="actu-card-btn" href="pages/assainissement-d-eau-douala-septembre-2026.html">En savoir + <i
-                                    class="fas fa-arrow-right"></i></a>
+                <div class="projets-grid">
+                    <div class="projet-card projet-card-hero"
+                        onclick="window.location.href='pages/pied-des-tours-juin-2025.html'">
+                        <img src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg"
+                            alt="Culture aux pieds des tours">
+                        <div class="projet-card-overlay">
+                            <span class="projet-card-tag"><i class="far fa-calendar-alt"></i> Juin 2025</span>
+                            <h3 class="projet-card-title">Culture aux pieds des tours</h3>
+                            <p class="projet-card-desc">Un projet culturel et artistique au cœur des quartiers
+                                populaires de Lyon, impliquant les jeunes dans des activités de recyclage et de
+                                création.</p>
+                            <span class="projet-card-link">En savoir + <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
-                    <div class="actu-card">
+
+                    <div class="projet-card projet-card-sm"
+                        onclick="window.location.href='pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html'">
+                        <img src="assets/storage/actualites/June2025/routes_esclavage.png" alt="Routes de l'esclavage">
+                        <div class="projet-card-overlay">
+                            <span class="projet-card-tag"><i class="far fa-calendar-alt"></i> 2024 – 2026</span>
+                            <h3 class="projet-card-title">Des routes de l'esclavage à nos jours</h3>
+                            <p class="projet-card-desc">Mobilisation des habitants et acteurs éducatifs autour de la
+                                mémoire de l'esclavage et de son impact sociétal et économique.</p>
+                            <span class="projet-card-link">En savoir + <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="projet-card projet-card-sm"
+                        onclick="window.location.href='pages/assainissement-d-eau-douala-septembre-2026.html'">
+                        <img src="assets/storage/actualites/September2022/assainissement_douala.png"
+                            alt="Eau et assainissement Douala">
+                        <div class="projet-card-overlay">
+                            <span class="projet-card-tag"><i class="far fa-calendar-alt"></i> 2022 – 2026</span>
+                            <h3 class="projet-card-title">Eau &amp; assainissement à Douala</h3>
+                            <p class="projet-card-desc">Amélioration de l'accès à l'eau potable et à l'assainissement
+                                pour les populations du quartier PK17-PK32 au Cameroun.</p>
+                            <span class="projet-card-link">En savoir + <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="projet-card projet-card-wide"
+                        onclick="window.location.href='pages/plantation-bananiers-piments-bihang-2026-2027.html'">
                         <img src="assets/storage/actualites/September2026/plantations_bananiers.png"
                             alt="Plantation bananiers">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2026 - 2027</span>
-                            <p class="actu-card-title">Plantation de bananiers plantains &agrave; Bihiang, Cameroun</p>
-                            <a class="actu-card-btn"
-                                href="pages/plantation-bananiers-piments-bihang-2026-2027.html">En savoir + <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="actu-card">
-                        <img src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg" alt="Culture aux pieds des tours">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Juin 2025</span>
-                            <p class="actu-card-title">Culture aux pieds des tours</p>
-                            <a class="actu-card-btn" href="pages/pied-des-tours-juin-2025.html">En savoir + <i
-                                    class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="actu-card">
-                        <img src="assets/storage/actualites/June2025/routes_esclavage.png"
-                            alt="Routes de l&apos;esclavage">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2024 - 2026</span>
-                            <p class="actu-card-title">Des routes de l&apos;esclavage &agrave; nos jours</p>
-                            <a class="actu-card-btn"
-                                href="pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html">En savoir + <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="actu-card">
-                        <img src="assets/storage/actualites/September2022/assainissement_douala.png" alt="Douala">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Septembre 2022</span>
-                            <p class="actu-card-title">Eau et assainissement PK17-PK32 Douala</p>
-                            <a class="actu-card-btn" href="pages/assainissement-d-eau-douala-septembre-2026.html">En savoir + <i
-                                    class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="actu-card">
-                        <img src="assets/storage/actualites/September2026/plantations_bananiers.png"
-                            alt="Plantation bananiers">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2026 - 2027</span>
-                            <p class="actu-card-title">Plantation de bananiers plantains &agrave; Bihiang, Cameroun</p>
-                            <a class="actu-card-btn"
-                                href="pages/plantation-bananiers-piments-bihang-2026-2027.html">En savoir + <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="actu-card">
-                        <img src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg" alt="Culture aux pieds des tours">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> Juin 2025</span>
-                            <p class="actu-card-title">Culture aux pieds des tours</p>
-                            <a class="actu-card-btn" href="pages/pied-des-tours-juin-2025.html">En savoir + <i
-                                    class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="actu-card">
-                        <img src="assets/storage/actualites/June2025/routes_esclavage.png"
-                            alt="Routes de l&apos;esclavage">
-                        <div class="actu-card-overlay">
-                            <span class="actu-card-date"><i class="far fa-calendar-alt"></i> 2024 - 2026</span>
-                            <p class="actu-card-title">Des routes de l&apos;esclavage &agrave; nos jours</p>
-                            <a class="actu-card-btn"
-                                href="pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html">En savoir + <i class="fas fa-arrow-right"></i></a>
+                        <div class="projet-card-overlay">
+                            <span class="projet-card-tag"><i class="far fa-calendar-alt"></i> 2026 – 2027</span>
+                            <h3 class="projet-card-title">Plantation de bananiers à Bihiang</h3>
+                            <p class="projet-card-desc">Création d'une plantation agricole durable de bananiers
+                                plantains et de piments pour soutenir l'économie locale.</p>
+                            <span class="projet-card-link">En savoir + <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="actu-strip-footer">
-                <a class="read-more-btn" href="pages/actions.html">Voir tous les projets</a>
+
+                <div class="projets-footer">
+                    <a class="read-more-btn-dark" href="pages/actions.html">
+                        Voir tous les projets &nbsp;<i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </section>
-
 
 
         <section class="documentation ptb-70">
@@ -1047,8 +1014,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </h3>
                 </div>
                 <div class="section-content">
-                    <div class="content-list-document owl-carousel">
-                        <div class="service-card mlr-15 mb-30">
+                    <div class="archives-marquee-wrapper">
+                        <div class="archives-marquee-track">
                             <div class="document-card">
                                 <div class="rapport-card-img">
                                     <a href="pages/archives.html">
@@ -1057,8 +1024,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="service-card mlr-15 mb-30">
                             <div class="document-card">
                                 <div class="rapport-card-img">
                                     <a href="pages/archives.html">
@@ -1067,8 +1032,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="service-card mlr-15 mb-30">
                             <div class="document-card">
                                 <div class="rapport-card-img">
                                     <a href="pages/archives.html">
@@ -1077,8 +1040,38 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="service-card mlr-15 mb-30">
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
+                                            alt="AFRO VIBES">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg"
+                                            alt="Rapport d&#039;activité 2023">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg"
+                                            alt="Ambassadeur du climat">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="document-card">
+                                <div class="rapport-card-img">
+                                    <a href="pages/archives.html">
+                                        <img src="assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg"
+                                            alt="Culture aux pieds des tours">
+                                    </a>
+                                </div>
+                            </div>
                             <div class="document-card">
                                 <div class="rapport-card-img">
                                     <a href="pages/archives.html">
@@ -1100,7 +1093,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </section>
 
 
-
         <section class="events ptb-70">
             <div class="container">
                 <div class="default-section-title default-section-title-middle">
@@ -1109,100 +1101,90 @@ document.addEventListener('DOMContentLoaded', () => {
                     </h3>
                 </div>
                 <div class="section-content">
-                    <div class="events-slider-area owl-carousel">
-                        <div class="homeActualiteContainer">
-                            <div class="blog-card homeActionsCardContainer">
-                                <div class="homeActionImageContainer blog-card-img">
-                                    <a
-                                        href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
-                                        <img class="homeActionImage"
-                                            src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg"
-                                            alt="Les jeunes recycleurs d&#039;ici et d&#039;ailleurs">
-                                    </a>
+                    <div class="actions-grid">
+                        <div class="blog-card homeActionsCardContainer">
+                            <div class="homeActionImageContainer blog-card-img">
+                                <a
+                                    href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
+                                    <img class="homeActionImage"
+                                        src="assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg"
+                                        alt="Les jeunes recycleurs d&#039;ici et d&#039;ailleurs">
+                                </a>
+                            </div>
+                            <div class="blog-card-text-area">
+                                <div class="blog-date">
+                                    <ul>
+                                        <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
+                                    </ul>
                                 </div>
-                                <div class="blog-card-text-area">
-                                    <div class="blog-date">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a
-                                            href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
-                                            Les jeunes recycleurs d&#039;ici et d&#039;ailleurs
-                                        </a></h4>
-                                    <p class="cardDescription">Découvrez comment nos jeunes recycleurs contribuent à un
-                                        avenir plus durable grâce à leur créativité et détermination. Leur passion pour
-                                        l’environnement et leur travail acharné sont une source d’inspiration. Rejoignez
-                                        nous pour soutenir ces héros méconnus de la transition écologique.</p>
-                                    <a class="read-more-btn"
+                                <h4><a
                                         href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
-                                        En savoir +
-                                    </a>
-                                </div>
+                                        Les jeunes recycleurs d&#039;ici et d&#039;ailleurs
+                                    </a></h4>
+                                <p class="cardDescription">Découvrez comment nos jeunes recycleurs contribuent à un
+                                    avenir plus durable grâce à leur créativité et détermination. Leur passion pour
+                                    l’environnement et leur travail acharné sont une source d’inspiration.</p>
+                                <a class="read-more-link"
+                                    href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
+                                    En savoir + <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="homeActualiteContainer">
-                            <div class="blog-card homeActionsCardContainer">
-                                <div class="homeActionImageContainer blog-card-img">
-                                    <a
-                                        href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
-                                        <img class="homeActionImage"
-                                            src="assets/storage/events/May2024/routes_de_lesclavage_a_nos_jours.jpg"
-                                            alt="Des routes de l&#039;esclavage à nos jours">
-                                    </a>
-                                </div>
-                                <div class="blog-card-text-area">
-                                    <div class="blog-date">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a
-                                            href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
-                                            Des routes de l&#039;esclavage à nos jours
-                                        </a></h4>
-                                    <p class="cardDescription">Découvrez le projet initié par FATE pour mobiliser les
-                                        habitants et acteurs éducatifs autour de la mémoire de l’esclavage. Explorez
-                                        l’impact économique, scientifique, culturel et sportif de la traite négrière.
-                                        Participez à la restauration de cette œuvre grâce à des outils pédagogiques
-                                        innovants. Projet en cours de 2024 à 2026 dans divers lieux internationaux</p>
-                                    <a class="read-more-btn"
-                                        href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
-                                        En savoir +
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="homeActualiteContainer">
-                            <div class="blog-card homeActionsCardContainer">
-                                <div class="homeActionImageContainer blog-card-img">
-                                    <a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
-                                        <img class="homeActionImage"
-                                            src="assets/storage/events/May2024/TROPIQUE_EN_FOLIES.jpg"
-                                            alt="FESTIVAL AFRO VIBES">
-                                    </a>
-                                </div>
-                                <div class="blog-card-text-area">
-                                    <div class="blog-date">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> 13 mai 2025</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
-                                            FESTIVAL AFRO VIBES
-                                        </a></h4>
-                                    <p class="cardDescription">Découvrez le festival Afro Vibes, une célébration
-                                        vibrante des cultures africaines et de la diaspora. Au programme : concerts,
-                                        danses traditionnelles et urbaines, gastronomie, artisanat, conférences et
-                                        animations pour tous les âges. Un événement festif et inclusif qui met à
-                                        l&#039;honneur la richesse et la diversité de l’héritage africain.
 
-                                    </p>
-                                    <a class="read-more-btn"
-                                        href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
-                                        En savoir +
-                                    </a>
+                        <div class="blog-card homeActionsCardContainer">
+                            <div class="homeActionImageContainer blog-card-img">
+                                <a
+                                    href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
+                                    <img class="homeActionImage"
+                                        src="assets/storage/events/May2024/routes_de_lesclavage_a_nos_jours.jpg"
+                                        alt="Des routes de l&#039;esclavage à nos jours">
+                                </a>
+                            </div>
+                            <div class="blog-card-text-area">
+                                <div class="blog-date">
+                                    <ul>
+                                        <li><i class="far fa-calendar-alt"></i> 02 mai 2024</li>
+                                    </ul>
                                 </div>
+                                <h4><a
+                                        href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
+                                        Des routes de l&#039;esclavage à nos jours
+                                    </a></h4>
+                                <p class="cardDescription">Découvrez le projet initié par FATE pour mobiliser les
+                                    habitants et acteurs éducatifs autour de la mémoire de l’esclavage. Explorez
+                                    l’impact économique, scientifique, culturel et sportif de la traite négrière.</p>
+                                <a class="read-more-link"
+                                    href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
+                                    En savoir + <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card homeActionsCardContainer">
+                            <div class="homeActionImageContainer blog-card-img">
+                                <a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
+                                    <img class="homeActionImage"
+                                        src="assets/storage/events/May2024/TROPIQUE_EN_FOLIES.jpg"
+                                        alt="FESTIVAL AFRO VIBES">
+                                </a>
+                            </div>
+                            <div class="blog-card-text-area">
+                                <div class="blog-date">
+                                    <ul>
+                                        <li><i class="far fa-calendar-alt"></i> 13 mai 2025</li>
+                                    </ul>
+                                </div>
+                                <h4><a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
+                                        FESTIVAL AFRO VIBES
+                                    </a></h4>
+                                <p class="cardDescription">Découvrez le festival Afro Vibes, une célébration
+                                    vibrante des cultures africaines et de la diaspora. Au programme : concerts,
+                                    danses traditionnelles et urbaines, artisanat, et animations. Un événement festif et
+                                    inclusif.</p>
+                                <a class="read-more-link"
+                                    href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
+                                    En savoir + <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1216,10 +1198,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </section>
 
-
-
-
-
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
@@ -1227,144 +1205,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
                                 <a href="index.html"><img src="assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
                                         alt="image"></a>
-
-
                                 <p>
                                     <strong>
                                         Forum Associatif Tous Ensemble
                                     </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
                                     le développement d&#039;initiatives citoyennes.
                                 </p>
-
-
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.facebook.com/profile.php?id=61558231605226"
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/"
-                                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://x.com/FATEnsemble" target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h"
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.tiktok.com/@fatensemble" target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre:</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226"
+                                                target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/"
+                                                target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h"
+                                                target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i
+                                                    class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="pages/fate.html">
-                                            La structure
-                                        </a>
+                                    <li><i class="fas fa-angle-right"></i><a href="pages/fate.html">La structure</a>
                                     </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
+                                    <li><i class="fas fa-angle-right"></i><a href="pages/soutenir.html">Nous
+                                            soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="pages/actions.html">Nos actions</a>
                                     </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
                                 </ul>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation:</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos,
+                                            69120 Vaulx-En-Velin, France</a> <br /></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot,
+                                            69007 Lyon, France</a> <br /></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
                                     <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
+                                    <p class="my-1 footerContactLink"><a
                                             href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
                                     </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
+                                    <p class="my-1 footerContactLink"><a
                                             href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
                                     </p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone:</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11
+                                            26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34
+                                            96</a></p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
 
                 <div class="copyright">
                     <p class="m-0">
@@ -1376,7 +1289,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
@@ -1394,11 +1306,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
 
-
         <div class="go-top">
             <i class="fas fa-chevron-up"></i>
         </div>
-
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
@@ -1423,63 +1333,40 @@ document.addEventListener('DOMContentLoaded', () => {
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/image-fallback.js" defer></script>
 
-
         <script>
             $(window).bind("load", function () {
                 $("body").addClass("loaded")
             })
         </script>
-
-
     </div>
-
 
     <script src="assets/js/jquery.min.js"></script>
-
-
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-
-
-
-
     <script
         src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
     <script src="assets/js/video.js"></script>
 
-
-
-
-    <!-- ========== POP-UP ACTUALITÉ DU MOMENT ========== -->
-
-
-
-
     <div id="fate-popup-overlay">
-        <div id="fate-popup-box">
+        <div id="fate-popup-box" class="popup-cop1-style">
             <button id="fate-popup-close" onclick="closeFatePopup()" aria-label="Fermer">&#x2715;</button>
-            <img id="fate-popup-img" src="assets/storage/actualites/June2025/CAN2025.png"
-                alt="En route pour la CAN 2025">
-            <div id="fate-popup-body">
-                <span id="fate-popup-tag">&#128241; Actualité du moment</span>
-                <h2 id="fate-popup-title">En route pour la CAN 2025 !</h2>
-                <p id="fate-popup-desc">Le FATE suit de près la Coupe d'Afrique des Nations 2025. Retrouvez toutes nos
-                    actualités et actions autour de cet événement continental majeur.</p>
-                <a id="fate-popup-btn" href="https://forumassotousensemble.org/actualites/can-juin-2025"
-                    target="_blank">
-                    Découvrir <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="popup-cop1-icon">
+                <i class="fas fa-hand-holding-heart"></i>
             </div>
+            <div class="popup-cop1-white-strip">
+                <h3>Vous êtes à un clic de changer la donne pour nos projets !</h3>
+            </div>
+            <p class="popup-cop1-desc">
+                Faites un geste pour soutenir le FATE et contribuer au développement de nos actions de solidarité, de vivre-ensemble et de partage.
+            </p>
+            <a class="popup-cop1-btn" href="pages/soutenir.html">FAIRE UN DON / ADHÉRER</a>
         </div>
     </div>
+
+    <script src="assets/js/language-selector.js"></script>
     <script>
             (function () {
-                // N'afficher qu'une fois par session
                 if (sessionStorage.getItem('fatePopupSeen')) return;
                 setTimeout(function () {
                     var overlay = document.getElementById('fate-popup-overlay');
@@ -1500,8 +1387,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('fate-popup-overlay').addEventListener('click', function (e) {
             if (e.target === this) closeFatePopup();
         });
+
     </script>
-    <!-- ========== FIN POP-UP ========== -->
     <script src="assets/js/suggestion.js"></script>
 </body>
 

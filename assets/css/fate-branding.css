@@ -287,8 +287,8 @@ a[href*="soutenir"].buttonNav:hover {
 /* ======= SUGGESTION PROMPT ======= */
 .suggestion-prompt {
     position: fixed;
-    top: 160px;
-    right: 30px;
+    bottom: 15px;
+    left: 15px;
     z-index: 10000;
     background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
     border-radius: 25px;
