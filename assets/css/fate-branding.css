@@ -20,13 +20,14 @@ h6 {
 }
 
 /* ======= HEADER PREMIUM (BLANC) ======= */
+/* ======= HEADER PREMIUM ======= */
 .headerWrapper {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    background: #ffffff !important;
-    /* Changé en blanc selon demande */
+    background: #F0EBE0 !important;
+    /* <-- Nouvelle couleur beige ici */
     z-index: 9999 !important;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
@@ -123,8 +124,10 @@ h6 {
 }
 
 /* Sous-menus (Dropdown) épurés */
+/* Sous-menus (Dropdown) épurés */
 .submenuList {
-    background: #ffffff !important;
+    background: #F0EBE0 !important;
+    /* <-- Nouvelle couleur beige ici */
     border: 1px solid rgba(0, 0, 0, 0.06) !important;
     border-radius: 12px !important;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
@@ -261,13 +264,13 @@ a[href*="soutenir"].buttonNav:hover {
 
     .mainNav {
         display: none;
-        /* Masqué par défaut sur mobile, géré par JS */
         position: fixed;
         top: 70px;
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: #ffffff !important;
+        background: #F0EBE0 !important;
+        /* <-- Nouvelle couleur beige ici */
         flex-direction: column;
         padding: 40px 20px;
         z-index: 9998;
@@ -443,10 +446,10 @@ a[href*="soutenir"].buttonNav:hover {
 }
 
 /* ======= GOOGLE TRANSLATE CLEANUP ======= */
-.goog-te-banner-frame, 
-.goog-te-balloon-frame, 
-#goog-gt-tt, 
-.goog-te-balloon-frame.skiptranslate, 
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame.skiptranslate,
 .goog-te-spinner-pos {
     display: none !important;
 }
@@ -466,4 +469,4 @@ body {
 .goog-text-highlight {
     background-color: transparent !important;
     box-shadow: none !important;
-}
+}
