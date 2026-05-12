@@ -58,14 +58,34 @@
             overflow: hidden;
         }
 
-        @media (max-width: 1010px) { .fate-page-hero { margin-top: 70px; } }
+        @media (max-width: 1010px) {
+            .fate-page-hero {
+                margin-top: 70px;
+            }
+        }
 
+        /* Motif points en fond */
         .fate-page-hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background-image: radial-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px);
             background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Cercle jaune décoratif en haut à droite (identique à actions/actualités) */
+        .fate-page-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 340px;
+            height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
             pointer-events: none;
             z-index: 0;
         }
@@ -117,6 +137,7 @@
             font-family: 'Montserrat', sans-serif !important;
             font-weight: 900 !important;
             font-size: clamp(40px, 5.5vw, 72px) !important;
+            /* ⬅️ Retour à 72px pour avoir la même hauteur de fond */
             color: var(--wh) !important;
             line-height: 1.0 !important;
             margin: 0 0 20px !important;
@@ -124,9 +145,22 @@
             letter-spacing: -2px;
         }
 
-        .fate-page-hero h1 span {
+        .fate-page-hero h1 em {
             color: var(--y);
+            font-style: normal;
             display: block;
+            white-space: nowrap;
+            /* ⬅️ Sécurité absolue pour empêcher les retours à la ligne */
+        }
+
+        /* Ajout de la description manquante qui donne la bonne hauteur */
+        .fate-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255, 255, 255, .55);
+            max-width: 500px;
+            margin: 0 0 24px;
         }
 
         .fate-breadcrumb {
@@ -145,13 +179,87 @@
             margin-top: 52px;
         }
 
-        .fate-breadcrumb a { color: inherit; text-decoration: none; transition: color 0.3s; }
-        .fate-breadcrumb a:hover { color: var(--y); }
+        /* ── BADGE DROITE ── */
+        .fate-hero-badge {
+            flex-shrink: 0;
+            background: var(--y);
+            border-radius: 18px;
+            padding: 28px 38px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            min-width: 180px;
+        }
+
+        .fate-hero-badge-years {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .fate-hero-badge-sep {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, .3);
+            line-height: 1;
+            margin: 2px 0;
+        }
+
+        .fate-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0, 0, 0, .55);
+            margin: 10px 0 0;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 900px) {
+            .fate-hero-badge {
+                display: none;
+            }
+        }
+
+        .fate-breadcrumb a {
+            color: rgba(255, 255, 255, .35);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .fate-breadcrumb a:hover {
+            color: var(--y);
+        }
+
+        .fate-breadcrumb .chevron {
+            color: var(--y);
+            font-size: 9px;
+        }
 
         /* ── SECTION À PROPOS ───────────────────────────────────── */
         .about-modern {
             padding: 100px 0;
             background: var(--wh);
+        }
+
+        .about-modern-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        @media (max-width: 768px) {
+            .about-modern-wrap {
+                padding: 0 20px;
+            }
         }
 
         .about-grid {
@@ -161,7 +269,12 @@
             align-items: center;
         }
 
-        @media (max-width: 992px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
 
         .about-visual {
             position: relative;
@@ -221,7 +334,7 @@
             background: var(--wh);
             padding: 45px 35px;
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             height: 100%;
             border-bottom: 4px solid transparent;
@@ -230,7 +343,7 @@
         .value-card:hover {
             transform: translateY(-10px);
             border-bottom-color: var(--y);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .value-card i {
@@ -305,14 +418,14 @@
             background: var(--wh);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             text-align: center;
         }
 
         .team-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .team-img-wrap {
@@ -328,7 +441,9 @@
             transition: transform 0.5s ease;
         }
 
-        .team-card:hover img { transform: scale(1.08); }
+        .team-card:hover img {
+            transform: scale(1.08);
+        }
 
         .team-info {
             padding: 25px;
@@ -356,64 +471,101 @@
 <body class="about-us-page">
 
     <div class="conteneur-banniere">
-        <!-- ══ HEADER ══ -->
+        <!-- ══ HEADER / NAV ══════════════════════════════════════ -->
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
                 <a href="../index.html" class="logoLink">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
             </div>
+
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
+
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
+
                 <ul class="navList">
-                    <li class="navItem activeNav"><a href="../pages/fate.html" class="navLinkStrong activeNav">FATE</a></li>
+                    <li class="navItem selectedTab">
+                        <a href="../pages/fate.html" class="navLinkStrong navLink activeNav">FATE</a>
+                    </li>
+
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
-                            <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">ACTUALITÉS <span class="dropdownIcon">+</span></a>
+                            <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">
+                                ACTUALITÉS <span class="dropdownIcon">+</span>
+                            </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
+                                    class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
+                                    pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
+                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001&nbsp;- 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
+                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
+                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a
+                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
+                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
+                                    Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
+
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
-                            <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">ACTIONS <span class="dropdownIcon">+</span></a>
+                            <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
+                                ACTIONS <span class="dropdownIcon">+</span>
+                            </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a>
+                            </li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos
+                                    collaborations</a></li>
                         </ul>
                     </li>
-                    <li class="navItem"><a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a></li>
+
+                    <li class="navItem">
+                        <a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a>
+                    </li>
+
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
-                            <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">PARTENAIRES <span class="dropdownIcon">+</span></a>
+                            <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
+                                PARTENAIRES <span class="dropdownIcon">+</span>
+                            </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
+                                    class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
+                                    class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
+                                    class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
-                    <li class="navItem"><a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a></li>
-                    <li class="navItem"><a href="../pages/soutenir.html" class="buttonNav">Soutenir</a></li>
-                    <li class="navItem"><a href="../pages/adherer.html" class="btn-adherer-noir buttonNav">Adhérer</a></li>
+
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/soutenir.html" class="buttonNav">Soutenir</a>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/adherer.html" class="btn-adherer-noir buttonNav">Adhérer</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -424,7 +576,10 @@
                 <div class="fate-hero-left">
                     <div class="fate-hero-vbar"></div>
                     <div class="fate-hero-text">
-                        <h1>Le FATE<span>Qui sommes-nous ?</span></h1>
+                        <h1>Le FATE<em>Notre histoire</em></h1>
+                        <p class="fate-hero-desc">Découvrez l'histoire, les missions et l'équipe du Forum Associatif
+                            Tous Ensemble (FATE), collectif engagé pour la solidarité et la culture à Lyon depuis 2001.
+                        </p>
                         <nav class="fate-breadcrumb">
                             <a href="../index.html">Accueil</a>
                             <i class="fas fa-chevron-right chevron"></i>
@@ -432,35 +587,51 @@
                         </nav>
                     </div>
                 </div>
+
+                <div class="fate-hero-badge" aria-hidden="true">
+                    <span class="fate-hero-badge-years">2001</span>
+                    <span class="fate-hero-badge-sep">—</span>
+                    <span class="fate-hero-badge-years">2026</span>
+                    <p class="fate-hero-badge-label">25 ans d'engagement</p>
+                </div>
             </div>
             <div class="fate-hero-rule"></div>
         </section>
 
         <!-- ══ À PROPOS ══ -->
         <section class="about-modern">
-            <div class="container">
+            <div class="about-modern-wrap">
                 <div class="about-grid">
                     <div class="about-visual">
                         <img src="../assets/storage/aboutus-pages/June2023/RPZhLSLkSQZ32S8xMTCW.png" alt="FATE Lyon">
                     </div>
                     <div class="about-content">
                         <h2>Une plateforme fédératrice au cœur de Lyon</h2>
-                        <p>Fondé en avril 2001, le Forum Associatif Tous Ensemble (F.A.T.E) est un collectif né d’une volonté de valoriser la contribution de l’Afrique au patrimoine culturel mondial.</p>
+                        <p>Fondé en avril 2001, le Forum Associatif Tous Ensemble (F.A.T.E) est un collectif né d’une
+                            volonté de valoriser la contribution de l’Afrique au patrimoine culturel mondial.</p>
                         <div class="about-highlight">
-                            "Mettre en place une plateforme fédérant les associations africaines et les amis de l'Afrique pour un meilleur vivre-ensemble."
+                            "Mettre en place une plateforme fédérant les associations africaines et les amis de
+                            l'Afrique pour un meilleur vivre-ensemble."
                         </div>
-                        <p>À l'initiative de Roger Tonye Aguiar, ce collectif rassemble aujourd'hui des associations et des citoyens engagés pour la solidarité, l'éducation à la citoyenneté et la lutte contre les discriminations.</p>
+                        <p>À l'initiative de Roger Tonye Aguiar, ce collectif rassemble aujourd'hui des associations et
+                            des citoyens engagés pour la solidarité, l'éducation à la citoyenneté et la lutte contre les
+                            discriminations.</p>
                     </div>
                 </div>
 
                 <div class="about-grid mt-5 pt-5">
                     <div class="about-content order-2 order-lg-1">
                         <h2>Un engagement local et international</h2>
-                        <p>Au fil de son évolution, le FATE s'est impliqué sur des enjeux majeurs : éducation artistique, sensibilisation au développement durable, et promotion des relations Nord-Sud.</p>
-                        <p>Aujourd'hui, nous rassemblons des personnes de tous horizons (afro-descendants et amis de l'Afrique) pour promouvoir les valeurs de partage et d'entraide à travers des projets de co-développement concrets.</p>
+                        <p>Au fil de son évolution, le FATE s'est impliqué sur des enjeux majeurs : éducation
+                            artistique, sensibilisation au développement durable, et promotion des relations Nord-Sud.
+                        </p>
+                        <p>Aujourd'hui, nous rassemblons des personnes de tous horizons (afro-descendants et amis de
+                            l'Afrique) pour promouvoir les valeurs de partage et d'entraide à travers des projets de
+                            co-développement concrets.</p>
                     </div>
                     <div class="about-visual order-1 order-lg-2">
-                        <img src="../assets/storage/aboutus-pages/June2023/dgCTL16muHzInnCVMhAC.png" alt="Engagement FATE">
+                        <img src="../assets/storage/aboutus-pages/June2023/dgCTL16muHzInnCVMhAC.png"
+                            alt="Engagement FATE">
                     </div>
                 </div>
             </div>
@@ -486,14 +657,17 @@
                         <div class="value-card">
                             <i class="fas fa-eye"></i>
                             <h3>Notre Vision</h3>
-                            <p>Créer une société inclusive, juste et égalitaire où la diversité est valorisée. Nous visons à transformer les préjugés en dialogue pour une meilleure compréhension mutuelle.</p>
+                            <p>Créer une société inclusive, juste et égalitaire où la diversité est valorisée. Nous
+                                visons à transformer les préjugés en dialogue pour une meilleure compréhension mutuelle.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="value-card">
                             <i class="fas fa-heart"></i>
                             <h3>Nos Valeurs</h3>
-                            <p>Solidarité, partage et respect sont les piliers qui guident chacune de nos actions, qu'elles soient menées localement à Lyon ou lors de nos missions internationales.</p>
+                            <p>Solidarité, partage et respect sont les piliers qui guident chacune de nos actions,
+                                qu'elles soient menées localement à Lyon ou lors de nos missions internationales.</p>
                         </div>
                     </div>
                 </div>
@@ -504,8 +678,9 @@
         <section class="team-section">
             <div class="container text-center">
                 <span class="fate-hero-tag" style="background: rgba(0,0,0,0.05); color: #333;">L'Équipe du FATE</span>
-                <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin-top: 10px;">Les visages de <span>l'engagement</span></h2>
-                
+                <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin-top: 10px;">
+                    Les visages de <span>l'engagement</span></h2>
+
                 <div class="team-grid">
                     <!-- Youssoufa BLONDY -->
                     <div class="team-card">
@@ -578,8 +753,12 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="footer-logo-area">
-                                <a href="../index.html"><img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE"></a>
-                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.</p>
+                                <a href="../index.html"><img
+                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
+                                        alt="Logo FATE"></a>
+                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le
+                                    vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.
+                                </p>
                                 <div class="footer-social-area">
                                     <ul>
                                         <li><span>Suivez-nous :</span></li>
@@ -595,10 +774,14 @@
                             <div class="footer-links">
                                 <h3>Accès rapides</h3>
                                 <ul>
-                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/fate.html">La structure</a></li>
-                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/actions.html">Nos actions</a></li>
-                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/archives.html">Archives</a></li>
-                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/contact.html">Contact</a></li>
+                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/fate.html">La structure</a>
+                                    </li>
+                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/actions.html">Nos
+                                            actions</a></li>
+                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/archives.html">Archives</a>
+                                    </li>
+                                    <li><i class="fas fa-angle-right"></i> <a href="../pages/contact.html">Contact</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -613,7 +796,9 @@
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
                                     <h5>Email :</h5>
-                                    <p><a href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a></p>
+                                    <p><a
+                                            href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
