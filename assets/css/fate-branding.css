@@ -298,10 +298,10 @@ a[href*="soutenir"].buttonNav:hover {
 
 /* ======= SUGGESTION PROMPT ======= */
 .suggestion-prompt {
-    position: fixed;
-    bottom: 130px;
-    right: 20px;
-    z-index: 10000;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 100px !important;
+    z-index: 10000 !important;
     background: linear-gradient(135deg, rgb(224, 194, 32) 0%, rgb(255, 212, 4) 100%);
     border-radius: 25px;
     padding: 15px 20px;
@@ -309,14 +309,26 @@ a[href*="soutenir"].buttonNav:hover {
     transform: translateX(100%) scale(0.8);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border: 2px solid rgba(255,255,255,0.4);
+    border: 2px solid rgba(255, 255, 255, 0.4);
     max-width: 280px;
 }
 
 .suggestion-prompt.show {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    animation: float 3s ease-in-out infinite;
+    transform: translateX(0) scale(1) !important;
+    opacity: 1 !important;
+    animation: suggestionFloat 3s ease-in-out infinite;
+}
+
+@keyframes suggestionFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .suggestion-close {
@@ -335,7 +347,7 @@ a[href*="soutenir"].buttonNav:hover {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .suggestion-link {
@@ -353,7 +365,8 @@ a[href*="soutenir"].buttonNav:hover {
    WIDGET LANGUE FLOTTANT
    ========================================== */
 .go-top {
-    bottom: 75px !important; /* On remonte le go-top pour faire de la place */
+    bottom: 75px !important;
+    /* On remonte le go-top pour faire de la place */
 }
 
 .lang-floating-widget {
@@ -366,7 +379,8 @@ a[href*="soutenir"].buttonNav:hover {
 .lang-floating-btn {
     width: 50px;
     height: 40px;
-    border-radius: 5px; /* Carré comme le go-top */
+    border-radius: 5px;
+    /* Carré comme le go-top */
     background: #ffffff;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     border: none;
@@ -390,7 +404,7 @@ a[href*="soutenir"].buttonNav:hover {
     right: 0;
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: flex;
     flex-direction: column;
