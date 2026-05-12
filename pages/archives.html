@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
     <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta name="description" content="Crée en avril 2001, le Forum Associatif Tous Ensemble est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="description"
+        content="Crée en avril 2001, le Forum Associatif Tous Ensemble est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
     <meta name="keywords" content="Forum, Associatif, tous ensemble, association, france, archives" />
     <meta name="robots" content="index, follow" />
     <meta property="og:url" content="https://fatetousensemble.org/" />
     <meta property="og:title" content="Archives | Forum Associatif Tous Ensemble" />
-    <meta property="og:description" content="Crée en avril 2001, le Forum Associatif Tous Ensemble est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta property="og:description"
+        content="Crée en avril 2001, le Forum Associatif Tous Ensemble est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
     <meta name="twitter:card" content="summary" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
@@ -56,7 +58,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
             background-size: 28px 28px;
             pointer-events: none;
         }
@@ -99,14 +101,19 @@
         }
 
         .arch-hero-breadcrumb a {
-            color: rgba(255,255,255,0.45);
+            color: rgba(255, 255, 255, 0.45);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .arch-hero-breadcrumb a:hover { color: var(--y); }
+        .arch-hero-breadcrumb a:hover {
+            color: var(--y);
+        }
 
-        .arch-hero-breadcrumb span { margin: 0 8px; color: rgba(255,255,255,0.25); }
+        .arch-hero-breadcrumb span {
+            margin: 0 8px;
+            color: rgba(255, 255, 255, 0.25);
+        }
 
         .arch-hero-title {
             font-family: 'Montserrat', sans-serif;
@@ -146,7 +153,7 @@
             position: absolute;
             inset: -18px;
             border-radius: 50%;
-            border: 1.5px solid rgba(234,179,8,0.25);
+            border: 1.5px solid rgba(234, 179, 8, 0.25);
         }
 
         .arch-hero-badge-num {
@@ -242,13 +249,13 @@
             border-radius: 10px;
             overflow: hidden;
             background: var(--wh);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
             transition: transform 0.28s ease, box-shadow 0.28s ease;
         }
 
         .arch-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
         }
 
         .arch-card-img {
@@ -273,7 +280,7 @@
         .arch-card-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(17,24,39,0.65);
+            background: rgba(17, 24, 39, 0.65);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -337,27 +344,64 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1060px) {
-            .arch-hero-inner { padding: 0 20px 52px; }
-            .arch-wrap { padding: 0 20px; }
+            .arch-hero-inner {
+                padding: 0 20px 52px;
+            }
+
+            .arch-wrap {
+                padding: 0 20px;
+            }
         }
 
         @media (max-width: 900px) {
-            .arch-grid { grid-template-columns: repeat(3, 1fr); }
-            .arch-hero-badge { width: 110px; height: 110px; }
-            .arch-hero-badge-num { font-size: 34px; }
+            .arch-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .arch-hero-badge {
+                width: 110px;
+                height: 110px;
+            }
+
+            .arch-hero-badge-num {
+                font-size: 34px;
+            }
         }
 
         @media (max-width: 600px) {
-            .arch-hero { margin-top: 70px; }
-            .arch-hero-inner { flex-direction: column; align-items: flex-start; padding: 0 16px 40px; gap: 24px; }
-            .arch-hero-right { align-self: flex-end; }
-            .arch-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-            .arch-wrap { padding: 0 16px; }
-            .arch-main { padding: 40px 0 80px; }
+            .arch-hero {
+                margin-top: 70px;
+            }
+
+            .arch-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 16px 40px;
+                gap: 24px;
+            }
+
+            .arch-hero-right {
+                align-self: flex-end;
+            }
+
+            .arch-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .arch-wrap {
+                padding: 0 16px;
+            }
+
+            .arch-main {
+                padding: 40px 0 80px;
+            }
         }
 
         @media (max-width: 380px) {
-            .arch-grid { grid-template-columns: 1fr; }
+            .arch-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -393,17 +437,25 @@
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
+                                    class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
+                                    pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
+                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
+                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
+                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a
+                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
+                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
+                                    Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
 
@@ -414,9 +466,11 @@
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a>
+                            </li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos
+                                    collaborations</a></li>
                         </ul>
                     </li>
 
@@ -431,11 +485,14 @@
                             </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
+                                    class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
+                                    class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
+                                    class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
 
@@ -533,9 +590,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg"
-                                   data-lightbox="rapports" data-title="Rapport d'activité 2023">
+                                    data-lightbox="rapports" data-title="Rapport d'activité 2023">
                                     <img src="../assets/storage/documentations/February2024/OAjx8zXYcsWoztpFkvLb.jpg"
-                                         alt="Rapport d'activité 2023" loading="lazy" decoding="async">
+                                        alt="Rapport d'activité 2023" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Rapport d'activité 2023</span>
@@ -553,9 +610,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg"
-                                   data-lightbox="rapports" data-title="Ambassadeur du climat">
+                                    data-lightbox="rapports" data-title="Ambassadeur du climat">
                                     <img src="../assets/storage/documentations/June2024/MJgw5yUAyeEBcrKwgCEi.jpg"
-                                         alt="Ambassadeur du climat" loading="lazy" decoding="async">
+                                        alt="Ambassadeur du climat" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Ambassadeur du climat</span>
@@ -573,9 +630,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg"
-                                   data-lightbox="rapports" data-title="Culture aux pieds des tours">
+                                    data-lightbox="rapports" data-title="Culture aux pieds des tours">
                                     <img src="../assets/storage/documentations/June2024/s4Uv0Px2RLrzubpY2ht0.jpg"
-                                         alt="Culture aux pieds des tours" loading="lazy" decoding="async">
+                                        alt="Culture aux pieds des tours" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Culture aux pieds des tours</span>
@@ -593,9 +650,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/April2025/OAjx8zXYcsWoztpFkvLb.jpg"
-                                   data-lightbox="rapports" data-title="#C'estNotreHistoire">
+                                    data-lightbox="rapports" data-title="#C'estNotreHistoire">
                                     <img src="../assets/storage/documentations/April2025/OAjx8zXYcsWoztpFkvLb.jpg"
-                                         alt="#C'estNotreHistoire" loading="lazy" decoding="async">
+                                        alt="#C'estNotreHistoire" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">#C'estNotreHistoire</span>
@@ -614,9 +671,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/Gy5dOdwPg4ygOgCNZXda.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/Gy5dOdwPg4ygOgCNZXda.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -634,9 +691,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/HdmD47Q2OD7VzulCHQd7.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/HdmD47Q2OD7VzulCHQd7.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -654,9 +711,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/AvtcX84mq6w7EjvgUFBM.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/AvtcX84mq6w7EjvgUFBM.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -674,9 +731,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/nfYicWxj07QzkyNMqsBS.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/nfYicWxj07QzkyNMqsBS.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -694,9 +751,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/IhznuzR1SsTvbkqG8gmr.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/IhznuzR1SsTvbkqG8gmr.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -714,9 +771,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/NaodbQUWU8XUC4NdVfEW.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/NaodbQUWU8XUC4NdVfEW.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -734,9 +791,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2024/N0PqMDyLJB5yQIyQN1bJ.png"
-                                   data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
+                                    data-lightbox="mindchangers" data-title="Exposition MINDCHANGERS">
                                     <img src="../assets/storage/documentations/July2024/N0PqMDyLJB5yQIyQN1bJ.png"
-                                         alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
+                                        alt="Exposition MINDCHANGERS" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Exposition MINDCHANGERS</span>
@@ -755,9 +812,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/soutien_sylvie_guillaume.jpg"
-                                   data-lightbox="lettres" data-title="Lettre de soutien — Sylvie Guillaume">
+                                    data-lightbox="lettres" data-title="Lettre de soutien — Sylvie Guillaume">
                                     <img src="../assets/storage/documentations/lettres/soutien_sylvie_guillaume.jpg"
-                                         alt="Soutien Sylvie Guillaume" loading="lazy" decoding="async">
+                                        alt="Soutien Sylvie Guillaume" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Sylvie Guillaume</span>
@@ -775,9 +832,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/Lettre_de_soutien_Serge_LETCHIMY.jpg"
-                                   data-lightbox="lettres" data-title="Lettre de soutien — Serge Letchimy">
+                                    data-lightbox="lettres" data-title="Lettre de soutien — Serge Letchimy">
                                     <img src="../assets/storage/documentations/lettres/Lettre_de_soutien_Serge_LETCHIMY.jpg"
-                                         alt="Serge Letchimy" loading="lazy" decoding="async">
+                                        alt="Serge Letchimy" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Serge Letchimy</span>
@@ -795,9 +852,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/Lettre_de_soutien_Jacques_MARTIAL.jpg"
-                                   data-lightbox="lettres" data-title="Lettre de soutien — Jacques Martial">
+                                    data-lightbox="lettres" data-title="Lettre de soutien — Jacques Martial">
                                     <img src="../assets/storage/documentations/lettres/Lettre_de_soutien_Jacques_MARTIAL.jpg"
-                                         alt="Jacques Martial" loading="lazy" decoding="async">
+                                        alt="Jacques Martial" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Jacques Martial</span>
@@ -815,9 +872,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/Lettre_de_Soutien_FATE.jpg"
-                                   data-lightbox="lettres" data-title="Lettre de soutien — Festival Afro Vibes">
+                                    data-lightbox="lettres" data-title="Lettre de soutien — Festival Afro Vibes">
                                     <img src="../assets/storage/documentations/lettres/Lettre_de_Soutien_FATE.jpg"
-                                         alt="Soutien Festival Afro Vibes" loading="lazy" decoding="async">
+                                        alt="Soutien Festival Afro Vibes" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Soutien Festival Afro Vibes</span>
@@ -835,9 +892,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/lettre de_soutien_Mme_LANGEVIN.jpg"
-                                   data-lightbox="lettres" data-title="Lettre de soutien — Mme Langevin">
+                                    data-lightbox="lettres" data-title="Lettre de soutien — Mme Langevin">
                                     <img src="../assets/storage/documentations/lettres/lettre de_soutien_Mme_LANGEVIN.jpg"
-                                         alt="Madame Langevin" loading="lazy" decoding="async">
+                                        alt="Madame Langevin" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Madame Langevin</span>
@@ -855,9 +912,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks1.jpg"
-                                   data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 1">
+                                    data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 1">
                                     <img src="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks1.jpg"
-                                         alt="Barbara Hendricks 1" loading="lazy" decoding="async">
+                                        alt="Barbara Hendricks 1" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Barbara Hendricks — 1</span>
@@ -875,9 +932,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks2.jpg"
-                                   data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 2">
+                                    data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 2">
                                     <img src="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks2.jpg"
-                                         alt="Barbara Hendricks 2" loading="lazy" decoding="async">
+                                        alt="Barbara Hendricks 2" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Barbara Hendricks — 2</span>
@@ -895,9 +952,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks3.jpg"
-                                   data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 3">
+                                    data-lightbox="lettres" data-title="Colloque Barbara Hendricks — Dossier 3">
                                     <img src="../assets/storage/documentations/lettres/DossierRВduitcolloqueBarbaraHendricks3.jpg"
-                                         alt="Barbara Hendricks 3" loading="lazy" decoding="async">
+                                        alt="Barbara Hendricks 3" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Barbara Hendricks — 3</span>
@@ -916,9 +973,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
-                                   data-lightbox="evenements" data-title="AFRO VIBES">
+                                    data-lightbox="evenements" data-title="AFRO VIBES">
                                     <img src="../assets/storage/documentations/November2016/AFRO_VIBES_2.jpg"
-                                         alt="AFRO VIBES" loading="lazy" decoding="async">
+                                        alt="AFRO VIBES" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">AFRO VIBES</span>
@@ -936,9 +993,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/November2016/Flyer_Dibango_1.png"
-                                   data-lightbox="evenements" data-title="Manu Dibango">
+                                    data-lightbox="evenements" data-title="Manu Dibango">
                                     <img src="../assets/storage/documentations/November2016/Flyer_Dibango_1.png"
-                                         alt="Manu Dibango" loading="lazy" decoding="async">
+                                        alt="Manu Dibango" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Manu Dibango</span>
@@ -956,9 +1013,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/affiche_appel_benevole.jpg"
-                                   data-lightbox="evenements" data-title="Appel à bénévoles">
+                                    data-lightbox="evenements" data-title="Appel à bénévoles">
                                     <img src="../assets/storage/documentations/July2019/affiche_appel_benevole.jpg"
-                                         alt="Appel à bénévoles" loading="lazy" decoding="async">
+                                        alt="Appel à bénévoles" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Appel à bénévoles</span>
@@ -976,9 +1033,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/projection_debat.jpg"
-                                   data-lightbox="evenements" data-title="Projection débat">
+                                    data-lightbox="evenements" data-title="Projection débat">
                                     <img src="../assets/storage/documentations/July2019/projection_debat.jpg"
-                                         alt="Projection débat" loading="lazy" decoding="async">
+                                        alt="Projection débat" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Projection débat</span>
@@ -996,9 +1053,11 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/October2019/campagne_ramassage_dechets.jpg"
-                                   data-lightbox="evenements" data-title="Campagne de sensibilisation et ramassage des déchets">
+                                    data-lightbox="evenements"
+                                    data-title="Campagne de sensibilisation et ramassage des déchets">
                                     <img src="../assets/storage/documentations/October2019/campagne_ramassage_dechets.jpg"
-                                         alt="Campagne de sensibilisation et de ramassage des déchets" loading="lazy" decoding="async">
+                                        alt="Campagne de sensibilisation et de ramassage des déchets" loading="lazy"
+                                        decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Campagne ramassage déchets</span>
@@ -1016,9 +1075,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/roll_up_ambassadeurs_climat.jpg"
-                                   data-lightbox="evenements" data-title="Les Ambassadeurs du climat">
+                                    data-lightbox="evenements" data-title="Les Ambassadeurs du climat">
                                     <img src="../assets/storage/documentations/July2019/roll_up_ambassadeurs_climat.jpg"
-                                         alt="Les Ambassadeurs du climat" loading="lazy" decoding="async">
+                                        alt="Les Ambassadeurs du climat" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Les Ambassadeurs du climat</span>
@@ -1036,9 +1095,9 @@
                         <div class="arch-card">
                             <div class="arch-card-img">
                                 <a href="../assets/storage/documentations/July2019/recycleurs_nord_sud.jpg"
-                                   data-lightbox="evenements" data-title="Les recycleurs entre nord et sud">
+                                    data-lightbox="evenements" data-title="Les recycleurs entre nord et sud">
                                     <img src="../assets/storage/documentations/July2019/recycleurs_nord_sud.jpg"
-                                         alt="Les recycleurs entre nord et sud" loading="lazy" decoding="async">
+                                        alt="Les recycleurs entre nord et sud" loading="lazy" decoding="async">
                                     <div class="arch-card-overlay">
                                         <div class="arch-card-zoom"><i class="fas fa-search-plus"></i></div>
                                         <span class="arch-card-overlay-title">Les recycleurs entre nord et sud</span>
@@ -1063,18 +1122,26 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-                                <a href="../index.html"><img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE"></a>
+                                <a href="../index.html"><img
+                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
+                                        alt="Logo FATE"></a>
                                 <p>
-                                    <strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.
+                                    <strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le
+                                    vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.
                                 </p>
                                 <div class="footer-social-area">
                                     <ul>
                                         <li><span>Nous suivre:</span></li>
-                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226"
+                                                target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/"
+                                                target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h"
+                                                target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i
+                                                    class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1084,9 +1151,12 @@
                             <div class="footer-links footer-quick-links">
                                 <h3>Accès rapides</h3>
                                 <ul>
-                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
-                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
-                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a>
+                                    </li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous
+                                            soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos
+                                            actions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1097,20 +1167,28 @@
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
                                     <h5>Localisation:</h5>
-                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
-                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos,
+                                            69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot,
+                                            69007 Lyon, France</a></p>
                                 </div>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
                                     <h5>Email:</h5>
-                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a></p>
-                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a></p>
+                                    <p class="my-1 footerContactLink"><a
+                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
+                                    </p>
+                                    <p class="my-1 footerContactLink"><a
+                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
+                                    </p>
                                 </div>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
                                     <h5>Par téléphone:</h5>
-                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
-                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a>
+                                    </p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,8 @@
     <title>Nos Actions | Forum Associatif Tous Ensemble (FATE)</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Découvrez les actions menées par F.A.T.E. au fil des années : projets solidaires, événements culturels, campagnes de sensibilisation et missions éducatives en France et à l'international." />
+    <meta name="description"
+        content="Découvrez les actions menées par F.A.T.E. au fil des années : projets solidaires, événements culturels, campagnes de sensibilisation et missions éducatives en France et à l'international." />
     <meta name="keywords" content="FATE, actions, solidarité, culture africaine, Lyon, association" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Forum Associatif Tous Ensemble (FATE)" />
@@ -30,7 +31,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
@@ -60,7 +63,9 @@
         }
 
         @media (max-width: 1010px) {
-            .actions-hero { margin-top: 70px; }
+            .actions-hero {
+                margin-top: 70px;
+            }
         }
 
         /* motif points discret en fond */
@@ -68,7 +73,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px);
             background-size: 28px 28px;
             pointer-events: none;
             z-index: 0;
@@ -154,7 +159,7 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 15px;
             line-height: 1.78;
-            color: rgba(255,255,255,.55);
+            color: rgba(255, 255, 255, .55);
             max-width: 500px;
             margin: 0 0 24px;
         }
@@ -163,18 +168,20 @@
             display: flex;
             align-items: center;
             gap: 9px;
-            color: rgba(255,255,255,.35);
+            color: rgba(255, 255, 255, .35);
             font-family: 'Open Sans', sans-serif;
             font-size: 12.5px;
         }
 
         .actions-breadcrumb a {
-            color: rgba(255,255,255,.35);
+            color: rgba(255, 255, 255, .35);
             text-decoration: none;
             transition: color .2s;
         }
 
-        .actions-breadcrumb a:hover { color: var(--y); }
+        .actions-breadcrumb a:hover {
+            color: var(--y);
+        }
 
         .actions-breadcrumb .chevron {
             color: var(--y);
@@ -208,7 +215,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 22px;
             font-weight: 300;
-            color: rgba(0,0,0,.3);
+            color: rgba(0, 0, 0, .3);
             line-height: 1;
             margin: 2px 0;
         }
@@ -219,20 +226,22 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: rgba(0,0,0,.55);
+            color: rgba(0, 0, 0, .55);
             margin: 10px 0 0;
             text-align: center;
             white-space: nowrap;
         }
 
         @media (max-width: 900px) {
-            .actions-hero-badge { display: none; }
+            .actions-hero-badge {
+                display: none;
+            }
         }
 
         .actions-hero-rule {
             width: 100%;
             height: 1px;
-            background: rgba(255,255,255,.07);
+            background: rgba(255, 255, 255, .07);
             margin-top: 52px;
         }
 
@@ -249,7 +258,9 @@
         }
 
         @media (max-width: 768px) {
-            .actions-main-wrap { padding: 0 20px; }
+            .actions-main-wrap {
+                padding: 0 20px;
+            }
         }
 
 
@@ -263,7 +274,10 @@
             -ms-overflow-style: none;
             padding: 4px 0 20px;
         }
-        .fate-timeline::-webkit-scrollbar { display: none; }
+
+        .fate-timeline::-webkit-scrollbar {
+            display: none;
+        }
 
         .fate-timeline-track {
             display: flex;
@@ -282,7 +296,7 @@
             left: 40px;
             right: 40px;
             height: 2px;
-            background: linear-gradient(to right, var(--y) 0%, rgba(234,179,8,.25) 100%);
+            background: linear-gradient(to right, var(--y) 0%, rgba(234, 179, 8, .25) 100%);
             transform: translateY(-50%);
             z-index: 0;
             pointer-events: none;
@@ -315,7 +329,7 @@
             border-color: var(--y);
             color: var(--dk);
             transform: translateY(-2px);
-            box-shadow: 0 4px 14px rgba(234,179,8,.22);
+            box-shadow: 0 4px 14px rgba(234, 179, 8, .22);
         }
 
         .fate-tl-year.active {
@@ -324,14 +338,15 @@
             color: var(--dk);
             font-size: 14px;
             transform: translateY(-3px);
-            box-shadow: 0 5px 18px rgba(234,179,8,.4);
+            box-shadow: 0 5px 18px rgba(234, 179, 8, .4);
         }
 
         /* ── PANELS ───────────────────────────────────────────────── */
         .fate-panels-viewport {
             position: relative;
             overflow: hidden;
-            width: 100% !important; /* parent a align-items:center → force la largeur complète */
+            width: 100% !important;
+            /* parent a align-items:center → force la largeur complète */
             align-self: stretch !important;
         }
 
@@ -343,7 +358,7 @@
 
         .fate-year-panel.active {
             display: block;
-            animation: panelSlideIn 260ms cubic-bezier(.25,.46,.45,.94) forwards;
+            animation: panelSlideIn 260ms cubic-bezier(.25, .46, .45, .94) forwards;
         }
 
         @keyframes panelSlideIn {
@@ -351,6 +366,7 @@
                 opacity: 0;
                 transform: translateX(var(--panel-slide-from, 32px));
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -396,9 +412,11 @@
         .actionCardContainer {
             display: flex !important;
             flex-direction: column !important;
-            gap: 10px !important;           /* espace entre objets */
+            gap: 10px !important;
+            /* espace entre objets */
             padding: 0 !important;
-            margin-top: 14px !important;    /* espace entre la barre d'année et la 1re carte */
+            margin-top: 14px !important;
+            /* espace entre la barre d'année et la 1re carte */
             width: 100% !important;
             background: transparent !important;
             border-radius: 0 !important;
@@ -414,15 +432,15 @@
         }
 
         /* ── LIEN ENVELOPPE = la carte elle-même ──────────────────── */
-        .actionCardContainer > a {
+        .actionCardContainer>a {
             text-decoration: none !important;
             color: inherit !important;
             display: block !important;
             background: #FFFFFF !important;
             border-radius: 12px !important;
-            border: 1px solid rgba(0,0,0,.06) !important;
+            border: 1px solid rgba(0, 0, 0, .06) !important;
             border-left: 4px solid transparent !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,.055) !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .055) !important;
             overflow: hidden !important;
             position: relative;
             cursor: pointer;
@@ -433,9 +451,9 @@
                 border-left-color .18s ease !important;
         }
 
-        .actionCardContainer > a:hover {
+        .actionCardContainer>a:hover {
             transform: translateY(-3px) !important;
-            box-shadow: 0 8px 28px rgba(0,0,0,.11) !important;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .11) !important;
             border-left-color: var(--y) !important;
             text-decoration: none !important;
         }
@@ -478,11 +496,11 @@
             height: 100% !important;
             object-fit: cover !important;
             border-radius: 0 !important;
-            transition: transform .5s cubic-bezier(.25,.46,.45,.94) !important;
+            transition: transform .5s cubic-bezier(.25, .46, .45, .94) !important;
             display: block;
         }
 
-        .actionCardContainer > a:hover .actionImage {
+        .actionCardContainer>a:hover .actionImage {
             transform: scale(1.07) !important;
         }
 
@@ -511,7 +529,7 @@
             transition: opacity .2s ease, transform .22s ease;
         }
 
-        .actionCardContainer > a:hover .actionCard .actionInfo::after {
+        .actionCardContainer>a:hover .actionCard .actionInfo::after {
             opacity: 1;
             transform: translateY(-50%) translateX(0);
         }
@@ -526,7 +544,7 @@
             letter-spacing: 1.6px !important;
             color: var(--y) !important;
             margin-bottom: 8px !important;
-            background: rgba(234,179,8,.1) !important;
+            background: rgba(234, 179, 8, .1) !important;
             padding: 3px 9px !important;
             border-radius: 100px !important;
         }
@@ -544,7 +562,7 @@
         }
 
         /* légère mise en valeur du titre au hover */
-        .actionCardContainer > a:hover .actionTitle {
+        .actionCardContainer>a:hover .actionTitle {
             color: #0d1321 !important;
         }
 
@@ -590,7 +608,7 @@
             color: var(--dk) !important;
             text-decoration: none !important;
             transform: translateY(-2px) !important;
-            box-shadow: 0 6px 18px rgba(234,179,8,.35) !important;
+            box-shadow: 0 6px 18px rgba(234, 179, 8, .35) !important;
         }
 
 
@@ -600,17 +618,28 @@
                 flex-direction: column !important;
                 height: auto !important;
             }
+
             .actionCard .actionImgContainer {
                 width: 100% !important;
                 min-width: unset !important;
                 height: 180px !important;
             }
+
             .actionCard .actionInfo {
                 padding: 16px 18px 18px !important;
             }
-            .actionCard .actionInfo::after { display: none; }
-            .actions-hero { padding: 56px 0 44px; }
-            .actions-main { padding: 52px 0 70px; }
+
+            .actionCard .actionInfo::after {
+                display: none;
+            }
+
+            .actions-hero {
+                padding: 56px 0 44px;
+            }
+
+            .actions-main {
+                padding: 52px 0 70px;
+            }
         }
     </style>
 </head>
@@ -645,17 +674,25 @@
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
+                                    class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
+                                    pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001&nbsp;- 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
+                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001&nbsp;- 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
+                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
+                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a
+                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
+                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
+                                    Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
 
@@ -666,9 +703,11 @@
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a>
+                            </li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos
+                                    collaborations</a></li>
                         </ul>
                     </li>
 
@@ -683,11 +722,14 @@
                             </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
+                                    class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
+                                    class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
+                                    class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
 
@@ -709,8 +751,8 @@
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav  = document.getElementById('mainNav');
-                const body     = document.body;
+                const mainNav = document.getElementById('mainNav');
+                const body = document.body;
                 const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
 
                 toggleBtn.addEventListener('click', () => {
@@ -738,7 +780,9 @@
                     <div class="actions-hero-vbar"></div>
                     <div class="actions-hero-text">
                         <h1>Nos<em>Actions</em></h1>
-                        <p class="actions-hero-desc">Découvrez les actions menées par F.A.T.E. au fil des années&nbsp;: projets solidaires, événements culturels, campagnes de sensibilisation et missions éducatives en France et à l'international.</p>
+                        <p class="actions-hero-desc">Découvrez les actions menées par F.A.T.E. au fil des années&nbsp;:
+                            projets solidaires, événements culturels, campagnes de sensibilisation et missions
+                            éducatives en France et à l'international.</p>
                         <nav class="actions-breadcrumb" aria-label="Breadcrumb">
                             <a href="../index.html">Accueil</a>
                             <i class="fas fa-chevron-right chevron"></i>
@@ -776,7 +820,8 @@
                         <button class="fate-tl-year" data-year="2022" aria-pressed="false" type="button">2022</button>
                         <button class="fate-tl-year" data-year="2023" aria-pressed="false" type="button">2023</button>
                         <button class="fate-tl-year" data-year="2024" aria-pressed="false" type="button">2024</button>
-                        <button class="fate-tl-year active" data-year="2025" aria-pressed="true" type="button">2025</button>
+                        <button class="fate-tl-year active" data-year="2025" aria-pressed="true"
+                            type="button">2025</button>
                     </div>
                 </nav>
 
@@ -792,18 +837,23 @@
                             <a href="https://forumassotousensemble.org/actions/des-routes-de-l-esclavage-a-nos-jours">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/May2024/routes_de_lesclavage_a_nos_jours.jpg" class="actionImage" alt="Des routes de l'esclavage à nos jours">
+                                        <img src="../assets/storage/events/May2024/routes_de_lesclavage_a_nos_jours.jpg"
+                                            class="actionImage" alt="Des routes de l'esclavage à nos jours">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Des routes de l'esclavage à nos jours</p>
-                                        <p class="actionDescription">Projet pour mobiliser les habitants et acteurs éducatifs autour de la mémoire de l'esclavage. Explorez l'impact économique, scientifique, culturel et sportif de la traite négrière. Projet en cours de 2024 à 2026 dans divers lieux internationaux.</p>
+                                        <p class="actionDescription">Projet pour mobiliser les habitants et acteurs
+                                            éducatifs autour de la mémoire de l'esclavage. Explorez l'impact économique,
+                                            scientifique, culturel et sportif de la traite négrière. Projet en cours de
+                                            2024 à 2026 dans divers lieux internationaux.</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="https://forumassotousensemble.org/actions/Culture%20aux%20pieds%20des%20tours">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/actualites/June2025/pieds_des_tours.png" class="actionImage" alt="Culture aux pieds des tours">
+                                        <img src="../assets/storage/actualites/June2025/pieds_des_tours.png"
+                                            class="actionImage" alt="Culture aux pieds des tours">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Culture aux pieds des tours</p>
@@ -823,36 +873,47 @@
                             <h2 class="fate-panel-title">Actions en <span>2024</span></h2>
                         </div>
                         <div class="actionCardContainer">
-                            <a href="https://forumassotousensemble.org/actions/cultures-aux-pieds-des-tours-et-live-d-ete">
+                            <a
+                                href="https://forumassotousensemble.org/actions/cultures-aux-pieds-des-tours-et-live-d-ete">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/May2024/pieds_des_tours.jpg" class="actionImage" alt="Culture au pieds des tours">
+                                        <img src="../assets/storage/events/May2024/pieds_des_tours.jpg"
+                                            class="actionImage" alt="Culture au pieds des tours">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Culture au pieds des tours</p>
-                                        <p class="actionDescription">Activités estivales à Vaulx-en-Velin : ateliers artistiques et sportifs gratuits en pieds d'immeubles — bachata, salsa, capoeira, graffiti, basketball, boxe. Un projet collaboratif porté par le FATE pour les habitants des quartiers prioritaires.</p>
+                                        <p class="actionDescription">Activités estivales à Vaulx-en-Velin : ateliers
+                                            artistiques et sportifs gratuits en pieds d'immeubles — bachata, salsa,
+                                            capoeira, graffiti, basketball, boxe. Un projet collaboratif porté par le
+                                            FATE pour les habitants des quartiers prioritaires.</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="https://forumassotousensemble.org/actions/quartiers-propres-et-salubres-2023">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/April2023/quartier_propres_et_salubres.jpg" class="actionImage" alt="Quartiers propres et salubres">
+                                        <img src="../assets/storage/events/April2023/quartier_propres_et_salubres.jpg"
+                                            class="actionImage" alt="Quartiers propres et salubres">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Quartiers propres et salubres</p>
-                                        <p class="actionDescription">Campagne de propreté urbaine : nettoyage collectif, ateliers de sensibilisation et implication des habitants pour renforcer le respect de l'espace public et améliorer le cadre de vie dans les zones prioritaires.</p>
+                                        <p class="actionDescription">Campagne de propreté urbaine : nettoyage collectif,
+                                            ateliers de sensibilisation et implication des habitants pour renforcer le
+                                            respect de l'espace public et améliorer le cadre de vie dans les zones
+                                            prioritaires.</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="https://forumassotousensemble.org/actions/fete-de-la-musique-2024">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/Unknown/fete_de_la_musique.jpg" class="actionImage" alt="Fête de la musique 2024">
+                                        <img src="../assets/storage/events/Unknown/fete_de_la_musique.jpg"
+                                            class="actionImage" alt="Fête de la musique 2024">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Fête de la musique 2024</p>
-                                        <p class="actionDescription">Concerts gratuits, diversité artistique et ambiance festive au cœur de la ville&nbsp;!</p>
+                                        <p class="actionDescription">Concerts gratuits, diversité artistique et ambiance
+                                            festive au cœur de la ville&nbsp;!</p>
                                     </div>
                                 </div>
                             </a>
@@ -868,35 +929,44 @@
                             <h2 class="fate-panel-title">Actions en <span>2023</span></h2>
                         </div>
                         <div class="actionCardContainer">
-                            <a href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
+                            <a
+                                href="https://forumassotousensemble.org/actions/les-jeunes-recycleurs-d-ici-et-d-ailleurs">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg" class="actionImage" alt="Les jeunes recycleurs d'ici et d'ailleurs">
+                                        <img src="../assets/storage/events/expositions/cultures_pieds_tours_2025/jeunes_ici_ailleurs_0.jpg"
+                                            class="actionImage" alt="Les jeunes recycleurs d'ici et d'ailleurs">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Les jeunes recycleurs d'ici et d'ailleurs</p>
-                                        <p class="actionDescription">Comment nos jeunes recycleurs contribuent à un avenir plus durable grâce à leur créativité et détermination. Une source d'inspiration pour la transition écologique.</p>
+                                        <p class="actionDescription">Comment nos jeunes recycleurs contribuent à un
+                                            avenir plus durable grâce à leur créativité et détermination. Une source
+                                            d'inspiration pour la transition écologique.</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="https://forumassotousensemble.org/actions/renovation-ecole-logbaba">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/Unknown/renovation_ecole_logbaba.png" class="actionImage" alt="Rénovation de l'école de Logbaba">
+                                        <img src="../assets/storage/events/Unknown/renovation_ecole_logbaba.png"
+                                            class="actionImage" alt="Rénovation de l'école de Logbaba">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Rénovation de l'école de Logbaba</p>
-                                        <p class="actionDescription">Projet éducatif et humanitaire pour offrir de meilleures conditions aux élèves de l'école de Logbaba.</p>
+                                        <p class="actionDescription">Projet éducatif et humanitaire pour offrir de
+                                            meilleures conditions aux élèves de l'école de Logbaba.</p>
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://forumassotousensemble.org/actions/Cr%C3%A9ation%20d%27une%20plantation%20d%27ananas%20%C3%A0%20BONEPOUPA%20Octobre%202022%20%C3%A0%20Avril%202024">
+                            <a
+                                href="https://forumassotousensemble.org/actions/Cr%C3%A9ation%20d%27une%20plantation%20d%27ananas%20%C3%A0%20BONEPOUPA%20Octobre%202022%20%C3%A0%20Avril%202024">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/actualites/Unknown/plantations_ananas.png" class="actionImage" alt="Plantation d'ananas à BONEPOUPA">
+                                        <img src="../assets/storage/actualites/Unknown/plantations_ananas.png"
+                                            class="actionImage" alt="Plantation d'ananas à BONEPOUPA">
                                     </div>
                                     <div class="actionInfo">
-                                        <p class="actionTitle">Création d'une plantation d'ananas à BONEPOUPA (Oct. 2022 – Avr. 2024)</p>
+                                        <p class="actionTitle">Création d'une plantation d'ananas à BONEPOUPA (Oct. 2022
+                                            – Avr. 2024)</p>
                                         <p class="actionDescription"></p>
                                     </div>
                                 </div>
@@ -913,14 +983,17 @@
                             <h2 class="fate-panel-title">Actions en <span>2022</span></h2>
                         </div>
                         <div class="actionCardContainer">
-                            <a href="https://forumassotousensemble.org/actions/exposition-etoiles-afrique-mars-mai-2022">
+                            <a
+                                href="https://forumassotousensemble.org/actions/exposition-etoiles-afrique-mars-mai-2022">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/March2022/Les_etoiles_dafrique.jpg" class="actionImage" alt="Les étoiles d'Afrique">
+                                        <img src="../assets/storage/events/March2022/Les_etoiles_dafrique.jpg"
+                                            class="actionImage" alt="Les étoiles d'Afrique">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Les étoiles d'Afrique</p>
-                                        <p class="actionDescription">Exposition artistique et culturelle célébrant les talents et l'héritage de la diaspora africaine.</p>
+                                        <p class="actionDescription">Exposition artistique et culturelle célébrant les
+                                            talents et l'héritage de la diaspora africaine.</p>
                                     </div>
                                 </div>
                             </a>
@@ -939,11 +1012,14 @@
                             <a href="https://forumassotousensemble.org/actions/inauguration-stele-nelson-mandela-2021">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/December2021/inauguration_stele_mandela.jpg" class="actionImage" alt="Inauguration de la stèle Nelson Mandela">
+                                        <img src="../assets/storage/events/December2021/inauguration_stele_mandela.jpg"
+                                            class="actionImage" alt="Inauguration de la stèle Nelson Mandela">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Inauguration de la stèle Nelson Mandela</p>
-                                        <p class="actionDescription">Inauguration de la stèle dédiée à Nelson Mandela à Vaulx-en-Velin, en mémoire de son héritage et de son combat pour la paix.</p>
+                                        <p class="actionDescription">Inauguration de la stèle dédiée à Nelson Mandela à
+                                            Vaulx-en-Velin, en mémoire de son héritage et de son combat pour la paix.
+                                        </p>
                                     </div>
                                 </div>
                             </a>
@@ -962,7 +1038,8 @@
                             <a href="https://forumassotousensemble.org/actions/Ambassadeurs%20du%20climat%202%0D%0A">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/expositions/ambassadeurs_du_climat/climat-main2.png" class="actionImage" alt="Ambassadeurs du climat">
+                                        <img src="../assets/storage/events/expositions/ambassadeurs_du_climat/climat-main2.png"
+                                            class="actionImage" alt="Ambassadeurs du climat">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Ambassadeurs du climat</p>
@@ -973,18 +1050,22 @@
                             <a href="https://forumassotousensemble.org/actions/atelier-recyclage-mai-2024">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/May2024/atelier_recyclage.jpg" class="actionImage" alt="Ateliers Recyclage">
+                                        <img src="../assets/storage/events/May2024/atelier_recyclage.jpg"
+                                            class="actionImage" alt="Ateliers Recyclage">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Ateliers Recyclage</p>
-                                        <p class="actionDescription">Atelier écologique pour apprendre les bases du recyclage et donner une seconde vie aux matériaux. Une activité ludique, créative et engagée pour toute la famille&nbsp;!</p>
+                                        <p class="actionDescription">Atelier écologique pour apprendre les bases du
+                                            recyclage et donner une seconde vie aux matériaux. Une activité ludique,
+                                            créative et engagée pour toute la famille&nbsp;!</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="https://forumassotousensemble.org/actions/Ambassadeurs%20du%20climat">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/expositions/ambassadeurs_du_climat/climat-main.png" class="actionImage" alt="Ambassadeurs du climat">
+                                        <img src="../assets/storage/events/expositions/ambassadeurs_du_climat/climat-main.png"
+                                            class="actionImage" alt="Ambassadeurs du climat">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Ambassadeurs du climat</p>
@@ -1007,11 +1088,14 @@
                             <a href="https://forumassotousensemble.org/actions/exposition-100-ans-mandela">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/May2024/exposition_100_ans_Mandela.jpg" class="actionImage" alt="Mandela à Jamais">
+                                        <img src="../assets/storage/events/May2024/exposition_100_ans_Mandela.jpg"
+                                            class="actionImage" alt="Mandela à Jamais">
                                     </div>
                                     <div class="actionInfo">
-                                        <p class="actionTitle">Exposition «&nbsp;MANDELA À JAMAIS&nbsp;» — Centenaire 1918–2018</p>
-                                        <p class="actionDescription">L'héritage de Nelson Mandela à travers une exposition immersive mêlant histoire, culture et engagement.</p>
+                                        <p class="actionTitle">Exposition «&nbsp;MANDELA À JAMAIS&nbsp;» — Centenaire
+                                            1918–2018</p>
+                                        <p class="actionDescription">L'héritage de Nelson Mandela à travers une
+                                            exposition immersive mêlant histoire, culture et engagement.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1030,7 +1114,8 @@
                             <a href="https://forumassotousensemble.org/actions/Festival%20AFROVIBES%202016">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/expositions/festival_afrovibes_2016/main.jpg" class="actionImage" alt="Festival AFROVIBES 2016">
+                                        <img src="../assets/storage/events/expositions/festival_afrovibes_2016/main.jpg"
+                                            class="actionImage" alt="Festival AFROVIBES 2016">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Festival AFROVIBES</p>
@@ -1053,11 +1138,14 @@
                             <a href="https://forumassotousensemble.org/actions/Festival%20Afro%20Vibes">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/May2024/TROPIQUE_EN_FOLIES.jpg" class="actionImage" alt="Festival Afro Vibes">
+                                        <img src="../assets/storage/events/May2024/TROPIQUE_EN_FOLIES.jpg"
+                                            class="actionImage" alt="Festival Afro Vibes">
                                     </div>
                                     <div class="actionInfo">
                                         <p class="actionTitle">Festival Afro Vibes</p>
-                                        <p class="actionDescription">Célébration vibrante des cultures africaines et de la diaspora : concerts, danses traditionnelles et urbaines, gastronomie, artisanat, conférences et animations pour tous les âges.</p>
+                                        <p class="actionDescription">Célébration vibrante des cultures africaines et de
+                                            la diaspora : concerts, danses traditionnelles et urbaines, gastronomie,
+                                            artisanat, conférences et animations pour tous les âges.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1073,13 +1161,16 @@
                             <h2 class="fate-panel-title">Actions en <span>2006</span></h2>
                         </div>
                         <div class="actionCardContainer">
-                            <a href="https://forumassotousensemble.org/actions/Bisso%20Besse%20-%20Festival%20des%20Cultures%20Afro%20et%20m%C3%A9tiss%C3%A9es%20de%20Lyon">
+                            <a
+                                href="https://forumassotousensemble.org/actions/Bisso%20Besse%20-%20Festival%20des%20Cultures%20Afro%20et%20m%C3%A9tiss%C3%A9es%20de%20Lyon">
                                 <div class="actionCard">
                                     <div class="actionImgContainer">
-                                        <img src="../assets/storage/events/expositions/festival_afrivibes_2006/bisso-bisse.png" class="actionImage" alt="Bisso Besse">
+                                        <img src="../assets/storage/events/expositions/festival_afrivibes_2006/bisso-bisse.png"
+                                            class="actionImage" alt="Bisso Besse">
                                     </div>
                                     <div class="actionInfo">
-                                        <p class="actionTitle">Bisso Besse — Festival des Cultures Afro et métissées de Lyon</p>
+                                        <p class="actionTitle">Bisso Besse — Festival des Cultures Afro et métissées de
+                                            Lyon</p>
                                         <p class="actionDescription"></p>
                                     </div>
                                 </div>
@@ -1097,9 +1188,10 @@
 
 
         <!-- ══ FLOATING SUGGESTION ════════════════════════════════ -->
-        <div id="suggestionLink" style="position:fixed;bottom:30px;right:30px;z-index:9500;opacity:0;visibility:hidden;transition:all .3s ease;">
+        <div id="suggestionLink"
+            style="position:fixed;bottom:30px;right:30px;z-index:9500;opacity:0;visibility:hidden;transition:all .3s ease;">
             <a href="../pages/suggestions.html"
-               style="font-size:1em;padding:14px 22px;border-radius:50px;color:#111827;background:linear-gradient(135deg,#EAB308,#F5C800);text-decoration:none;box-shadow:0 6px 20px rgba(234,179,8,.35);display:flex;align-items:center;gap:8px;font-weight:700;font-family:'Montserrat',sans-serif;">
+                style="font-size:1em;padding:14px 22px;border-radius:50px;color:#111827;background:linear-gradient(135deg,#EAB308,#F5C800);text-decoration:none;box-shadow:0 6px 20px rgba(234,179,8,.35);display:flex;align-items:center;gap:8px;font-weight:700;font-family:'Montserrat',sans-serif;">
                 <i class="fas fa-lightbulb"></i> Suggestions
             </a>
         </div>
@@ -1114,17 +1206,25 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
                                 <a href="../index.html">
-                                    <img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE">
+                                    <img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
+                                        alt="Logo FATE">
                                 </a>
-                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.</p>
+                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le
+                                    vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.
+                                </p>
                                 <div class="footer-social-area">
                                     <ul>
                                         <li><span>Nous suivre :</span></li>
-                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226"
+                                                target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/"
+                                                target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h"
+                                                target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i
+                                                    class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1134,9 +1234,12 @@
                             <div class="footer-links footer-quick-links">
                                 <h3>Accès rapides</h3>
                                 <ul>
-                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
-                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
-                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a>
+                                    </li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous
+                                            soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos
+                                            actions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1147,20 +1250,27 @@
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
                                     <h5>Localisation :</h5>
-                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
-                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos,
+                                            69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot,
+                                            69007 Lyon, France</a></p>
                                 </div>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
                                     <h5>Email :</h5>
-                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a></p>
-                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com">art.afrovibes@gmail.com</a></p>
+                                    <p class="my-1 footerContactLink"><a
+                                            href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a>
+                                    </p>
+                                    <p class="my-1 footerContactLink"><a
+                                            href="mailto:art.afrovibes@gmail.com">art.afrovibes@gmail.com</a></p>
                                 </div>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
                                     <h5>Par téléphone :</h5>
-                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
-                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a>
+                                    </p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1200,10 +1310,15 @@
 
     </div><!-- /.conteneur-banniere -->
 
-    <!-- ══ SCRIPTS ════════════════════════════════════════════════ -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+        });
+    </script>
     <script src="../assets/js/meanmenu.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/magnific-popup.min.js"></script>
@@ -1216,66 +1331,81 @@
     <script src="../assets/js/appear.min.js"></script>
     <script src="../assets/js/odometer.min.js"></script>
     <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/main.js"></script>
+
+
+    <script>
+        $(window).bind("load", function () {
+            $("body").addClass("loaded")
+        })
+    </script>
+
+
+    </div>
+
+
+    <script src="../assets/js/jquery.min.js"></script>
+
+
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
     <script>
-        /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────────
-           Ordre : du plus récent (index 0) au plus ancien (index N)
-           Naviguer vers un index plus grand = aller dans le passé = slide gauche
-           Naviguer vers un index plus petit = aller vers le présent = slide droite
-        ──────────────────────────────────────────────────────────── */
-        (function () {
-            const YEARS = [2006, 2014, 2016, 2018, 2019, 2021, 2022, 2023, 2024, 2025];
-            let activeYear = 2025;
+            /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────────
+               Ordre : du plus récent (index 0) au plus ancien (index N)
+               Naviguer vers un index plus grand = aller dans le passé = slide gauche
+               Naviguer vers un index plus petit = aller vers le présent = slide droite
+            ──────────────────────────────────────────────────────────── */
+            (function () {
+                const YEARS = [2006, 2014, 2016, 2018, 2019, 2021, 2022, 2023, 2024, 2025];
+                let activeYear = 2025;
 
-            function switchToYear(newYear) {
-                if (newYear === activeYear) return;
+                function switchToYear(newYear) {
+                    if (newYear === activeYear) return;
 
-                const oldIdx = YEARS.indexOf(activeYear);
-                const newIdx = YEARS.indexOf(newYear);
-                const goingToPast = newIdx < oldIdx; /* index plus petit = plus ancien dans le tableau chronologique */
+                    const oldIdx = YEARS.indexOf(activeYear);
+                    const newIdx = YEARS.indexOf(newYear);
+                    const goingToPast = newIdx < oldIdx; /* index plus petit = plus ancien dans le tableau chronologique */
 
-                const oldPanel = document.getElementById('panel' + activeYear);
-                const newPanel = document.getElementById('panel' + newYear);
-                if (!newPanel) return;
+                    const oldPanel = document.getElementById('panel' + activeYear);
+                    const newPanel = document.getElementById('panel' + newYear);
+                    if (!newPanel) return;
 
-                /* vers le passé (gauche) → entre par la gauche (-36px), vers le futur (droite) → entre par la droite (+36px) */
-                newPanel.style.setProperty('--panel-slide-from', goingToPast ? '-36px' : '36px');
+                    /* vers le passé (gauche) → entre par la gauche (-36px), vers le futur (droite) → entre par la droite (+36px) */
+                    newPanel.style.setProperty('--panel-slide-from', goingToPast ? '-36px' : '36px');
 
-                /* mise à jour des boutons */
-                document.querySelectorAll('.fate-tl-year').forEach(btn => {
-                    const active = parseInt(btn.dataset.year) === newYear;
-                    btn.classList.toggle('active', active);
-                    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-                });
+                    /* mise à jour des boutons */
+                    document.querySelectorAll('.fate-tl-year').forEach(btn => {
+                        const active = parseInt(btn.dataset.year) === newYear;
+                        btn.classList.toggle('active', active);
+                        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+                    });
 
-                /* swap panels */
-                if (oldPanel) oldPanel.classList.remove('active');
-                newPanel.classList.add('active');
+                    /* swap panels */
+                    if (oldPanel) oldPanel.classList.remove('active');
+                    newPanel.classList.add('active');
 
-                activeYear = newYear;
+                    activeYear = newYear;
 
-                /* scroll la pill active au centre */
-                const activeBtn = document.querySelector('.fate-tl-year.active');
-                if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
+                    /* scroll la pill active au centre */
+                    const activeBtn = document.querySelector('.fate-tl-year.active');
+                    if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
 
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelectorAll('.fate-tl-year').forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        switchToYear(parseInt(this.dataset.year));
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelectorAll('.fate-tl-year').forEach(function (btn) {
+                        btn.addEventListener('click', function () {
+                            switchToYear(parseInt(this.dataset.year));
+                        });
                     });
                 });
-            });
 
-            /* rétrocompatibilité au cas où main.js appelle encore toggleYear */
-            window.toggleYear = function (year) { switchToYear(year); };
-            window.closeOpenSection = window.toggleYear;
-        })();
+                /* rétrocompatibilité au cas où main.js appelle encore toggleYear */
+                window.toggleYear = function (year) { switchToYear(year); };
+                window.closeOpenSection = window.toggleYear;
+            })();
     </script>
 
 </body>
+
 </html>

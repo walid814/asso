@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Le FATE — 25 ans — 2001 à 2026">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a1e"/>
+      <stop offset="55%" stop-color="#141433"/>
+      <stop offset="100%" stop-color="#0a0a1e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFC107" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#FFC107" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFC107" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#FFC107" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <ellipse cx="800" cy="450" rx="700" ry="380" fill="url(#glow)"/>
+
+  <g transform="translate(800 450)" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" fill="#FFC107">
+    <text y="-110" font-size="58" font-weight="300" letter-spacing="14" fill="#f8f9fb">FORUM ASSOCIATIF TOUS ENSEMBLE</text>
+    <line x1="-320" y1="-50" x2="320" y2="-50" stroke="#FFC107" stroke-width="2" stroke-opacity="0.7"/>
+    <text y="80" font-size="240" font-weight="700" letter-spacing="6">25 ans</text>
+    <line x1="-160" y1="130" x2="160" y2="130" stroke="#FFC107" stroke-width="2" stroke-opacity="0.7"/>
+    <text y="210" font-size="64" font-weight="400" letter-spacing="18" fill="#f8f9fb">2001 — 2026</text>
+  </g>
+</svg>
