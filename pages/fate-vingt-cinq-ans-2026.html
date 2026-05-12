@@ -5,30 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <title>Le FATE bientôt 25 ans (2001 – 2026) | Actualités | Forum Associatif Tous Ensemble</title>
 
-    <title>Le FATE bientôt 25 ans | Actualités | Forum Associatif Tous Ensemble</title>
-
-    <meta name="viewport" content="width=device-width">
-
-
-    <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
-    <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta property="og:description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-    <meta name="keywords" content="Forum, Associatif, tous ensemble, assocaition, france" />
+        content="Crée en avril 2001, le « Forum Associatif Tous Ensemble » est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
+    <meta name="keywords" content="Forum, Associatif, tous ensemble, association, france" />
     <meta name="robots" content="index, follow" />
-    <meta name="DC.title" content="Actualités | Forum Associatif Tous Assemble" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@fate" />
-    <meta name="twitter:creator" content="@fate" />
-    <meta property="og:url" content="https://fatetousensemble.org/" />
-    <meta property="og:title" content="Actualités | Forum Associatif Tous Assemble" />
-
+    <meta name="author" content="Forum Associatif Tous Ensemble (FATE)" />
+    <meta property="og:title" content="Le FATE bientôt 25 ans (2001 – 2026) | Forum Associatif Tous Ensemble" />
+    <meta property="og:description" content="Le FATE fêtera bientôt ses vingt cinq ans (2001 - 2026) — FATE, Lyon." />
+    <meta property="og:image" content="../assets/images/placeholders/banner-25ans.svg" />
+    <meta property="og:url" content="https://forumassotousensemble.org/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@FATEnsemble" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -45,21 +35,361 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/fate-branding.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
 
+    <style>
+        /* ============================================================
+           PAGE ÉVÉNEMENT — FATE BRANDING
+           Palette : #EAB308 (jaune) · #111827 (noir) · #F4EFE6 (beige)
+        ============================================================ */
 
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+        :root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F4EFE6;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ── HERO ─────────────────────────────────────────────────── */
+        .ev-hero {
+            background-color: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1010px) {
+            .ev-hero { margin-top: 70px; }
+        }
+
+        /* motif de points discret */
+        .ev-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* halo jaune décoratif */
+        .ev-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 340px;
+            height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ev-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 56px;
+        }
+
+        @media (max-width: 900px) {
+            .ev-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+                padding: 0 20px;
+            }
+        }
+
+        /* colonne texte gauche */
+        .ev-hero-left {
+            display: flex;
+            align-items: stretch;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .ev-hero-vbar {
+            width: 4px;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+            min-height: 100%;
+        }
+
+        .ev-hero-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .ev-hero-eyebrow {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--y);
+            margin-bottom: 14px;
+        }
+
+        .ev-hero h1 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            font-size: clamp(28px, 4vw, 56px) !important;
+            color: var(--wh) !important;
+            line-height: 1.08 !important;
+            margin: 0 0 24px !important;
+            letter-spacing: -1.5px;
+        }
+
+        .ev-breadcrumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+        }
+
+        .ev-breadcrumb a {
+            color: rgba(255,255,255,.35);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .ev-breadcrumb a:hover { color: var(--y); }
+
+        .ev-breadcrumb .ev-chevron {
+            color: var(--y);
+            font-size: 9px;
+        }
+
+        .ev-breadcrumb span:last-child {
+            color: rgba(255,255,255,.6);
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 280px;
+        }
+
+        /* image droite */
+        .ev-hero-img-wrap {
+            flex-shrink: 0;
+            width: 420px;
+            height: 280px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(0,0,0,.45);
+            position: relative;
+        }
+
+        .ev-hero-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* overlay dégradé sur l'image */
+        .ev-hero-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(17,24,39,.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        @media (max-width: 900px) {
+            .ev-hero-img-wrap {
+                width: 100%;
+                height: 220px;
+            }
+        }
+
+        .ev-hero-rule {
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,.07);
+            margin-top: 52px;
+        }
+
+        /* ── SECTION CONTENU ──────────────────────────────────────── */
+        .ev-content {
+            background: var(--bg);
+            padding: 72px 0 100px;
+        }
+
+        .ev-content-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── META PILULE + DATE ───────────────────────────────────── */
+        .ev-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .ev-tag {
+            background: var(--y);
+            color: var(--dk);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 5px 14px;
+            border-radius: 50px;
+        }
+
+        .ev-date {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: var(--gr);
+            font-weight: 600;
+        }
+
+        .ev-date i { margin-right: 5px; }
+
+        /* ── IMAGE PRINCIPALE ─────────────────────────────────────── */
+        .ev-main-img {
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 16px 48px rgba(0,0,0,.12);
+            aspect-ratio: 16/9;
+        }
+
+        .ev-main-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ── TITRE ARTICLE ────────────────────────────────────────── */
+        .ev-article-title {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: clamp(22px, 3vw, 34px) !important;
+            font-weight: 800 !important;
+            color: var(--dk) !important;
+            line-height: 1.25 !important;
+            margin: 0 0 28px !important;
+            letter-spacing: -0.5px;
+        }
+
+        /* ── CORPS DU CONTENU ─────────────────────────────────────── */
+        .ev-body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15.5px;
+            line-height: 1.85;
+            color: #374151;
+        }
+
+        .ev-body p { margin-bottom: 20px; }
+
+        .ev-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dk);
+            margin: 36px 0 14px;
+            padding-left: 14px;
+            border-left: 4px solid var(--y);
+        }
+
+        .ev-body ul, .ev-body ol {
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        .ev-body li { margin-bottom: 8px; }
+
+        .ev-body strong { color: var(--dk); }
+
+        .ev-body a {
+            color: #B45309;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color .2s;
+        }
+
+        .ev-body a:hover { color: var(--y); }
+
+        /* ── SÉPARATEUR ───────────────────────────────────────────── */
+        .ev-sep {
+            border: none;
+            border-top: 2px solid rgba(0,0,0,.08);
+            margin: 52px 0 40px;
+        }
+
+        /* ── BOUTON RETOUR ────────────────────────────────────────── */
+        .ev-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--dk);
+            color: var(--wh) !important;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none !important;
+            transition: background .25s, transform .2s;
+        }
+
+        .ev-back-btn:hover {
+            background: var(--y);
+            color: var(--dk) !important;
+            transform: translateY(-2px);
+        }
+
+        .ev-back-btn i { font-size: 12px; }
+
+        /* ── RESPONSIVE ───────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .ev-content { padding: 48px 0 72px; }
+            .ev-content-wrap { padding: 0 16px; }
+            .ev-main-img { border-radius: 12px; }
+            .ev-article-title { margin-bottom: 20px !important; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ev-back-btn { transition: none; }
+        }
+    </style>
 </head>
 
-<body class=about-us-page>
-
+<body class="about-us-page">
 
     <div class="conteneur-banniere">
-
-
-
-
 
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
@@ -70,11 +400,6 @@
 
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
 
-
-
-
-
-
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
@@ -82,11 +407,8 @@
 
                 <ul class="navList">
 
-                    <li class="navItem ">
-                        <a href="../pages/fate.html" class="navLinkStrong strongerNav navLink
-                                         ">
-                            FATE
-                        </a>
+                    <li class="navItem">
+                        <a href="fate.html" class="navLink navLinkStrong">FATE</a>
                     </li>
 
                     <li class="navItem hasSubmenu">
@@ -97,57 +419,40 @@
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
-                                    class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
-                                    pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
-                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
-                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
-                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a
-                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
-                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
 
-
-                    <li class=" navItem hasSubmenu">
+                    <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink">
                                 ACTIONS
                                 <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList">
                             <li class="submenuItem">
-                                <a href="../pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
+                                <a href="../pages/actions.html" class="submenuLink">Nos actions</a>
                             </li>
                             <div class="horizontalLine"></div>
                             <li class="submenuItem">
-                                <a href="../pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
+                                <a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="navItem ">
-                        <a href="../pages/archives.html" class="navLinkStrong navLink
-                                         ">
-                            ARCHIVES
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a>
                     </li>
 
                     <li class="navItem hasSubmenu">
@@ -158,21 +463,16 @@
                             </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
-                                    class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
-                                    class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
-                                    class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
-                    <li class="navItem ">
-                        <a href="../pages/contact.html" class="navLinkStrong navLink
-                                         ">
-                            CONTACTS
-                        </a>
+
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
                     </li>
 
                     <li class="navItem">
@@ -185,15 +485,13 @@
             </nav>
         </header>
 
-
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav = document.getElementById('mainNav');
-                const body = document.body;
-                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
+                const mainNav   = document.getElementById('mainNav');
+                const body      = document.body;
+                const navLinks  = document.querySelectorAll('.navLink, .navLinkStrong');
 
-                // Mobile toggle
                 if (toggleBtn) {
                     toggleBtn.addEventListener('click', () => {
                         mainNav.classList.toggle('navOpen');
@@ -201,10 +499,8 @@
                     });
                 }
 
-                // Fermer le menu mobile quand on clique sur un lien
                 navLinks.forEach(link => {
                     link.addEventListener('click', (e) => {
-                        // Ne pas fermer si on clique sur un toggle de sous-menu
                         if (!e.target.closest('.navToggleLink')) {
                             mainNav.classList.remove('navOpen');
                             body.classList.remove('noScroll');
@@ -212,17 +508,13 @@
                     });
                 });
 
-                // Gestion des sous-menus uniquement sur mobile
                 const toggleLinks = document.querySelectorAll('.navToggleLink');
                 toggleLinks.forEach(toggle => {
                     toggle.addEventListener('click', (e) => {
-                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
                         if (window.innerWidth < 992) {
                             e.preventDefault();
                             const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) {
-                                parentLi.classList.toggle('submenuOpen');
-                            }
+                            if (parentLi) parentLi.classList.toggle('submenuOpen');
                         }
                     });
                 });
@@ -230,111 +522,96 @@
         </script>
 
 
+        <!-- ═══════════════════════════════════════════════════════════
+             HERO — fond sombre, barre jaune, breadcrumb, image
+        ════════════════════════════════════════════════════════════════ -->
+        <section class="ev-hero">
+            <div class="ev-hero-inner">
 
-
-
-
-
-        <section class="uni-banner opacityLow"
-            style="background-image: url('../assets/images/placeholders/banner-25ans.svg'); background-position: center; background-size: cover;">
-            <div class="container">
-                <div class="uni-banner-text-area">
-                    <h1>Le FATE bientôt 25 ans</h1>
-                    <ul>
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="actualites.html">Actualités</a></li>
-                        <li>Le FATE bientôt 25 ans</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mainActualiteDetails d-flex justify-content-center align-items-center mt-3">
-            <div class="actualiteDetails">
-
-                <div class="actualiteContainer">
-                    <img class="actuImage" src="../assets/images/placeholders/banner-25ans.svg"
-                        alt="Le FATE bientôt 25 ans">
-                    <div class="actualitesInfo">
-                        <h2 class="actuTitre">Le FATE fêtera bientôt ses vingt cinq ans (2001 - 2026)</h2>
-                        <div class="actuText">
-
-                            <p>Fondé en avril 2001, le Forum Associatif Tous Ensemble (FATE) célébrera bientôt son 25ème
-                                anniversaire ! Un quart de siècle d'engagement, de solidarité et d'actions citoyennes
-                                sur le territoire français et à l'international.</p>
-                            <p>Cet anniversaire sera l'occasion de revenir sur notre parcours, de célébrer nos réussites
-                                avec l'ensemble de nos partenaires et bénévoles, et de tracer de nouvelles perspectives
-                                pour les années à venir.</p>
-                            <br>
-                            <h3>Au programme des festivités (à venir)</h3>
-                            <ul>
-                                <li>Gala d'anniversaire et soirée de rétrospective</li>
-                                <li>Exposition photo retracant 25 ans d'actions</li>
-                                <li>Conférences et tables rondes sur l'engagement associatif</li>
-                            </ul>
-                            <br>
-                            <p>Restez connectés pour découvrir le programme détaillé de cet événement exceptionnel !</p>
-
-                        </div>
+                <!-- texte gauche -->
+                <div class="ev-hero-left">
+                    <div class="ev-hero-vbar"></div>
+                    <div class="ev-hero-text">
+                        
+                        <span class="ev-hero-eyebrow">Actualités · 2026</span>
+                        
+                        <h1>Le FATE bientôt 25 ans (2001 – 2026)</h1>
+                        <nav class="ev-breadcrumb" aria-label="Fil d'Ariane">
+                            <a href="../index.html">Accueil</a>
+                            <span class="ev-chevron"><i class="fas fa-chevron-right"></i></span>
+                            <a href="actualites.html">Actualités</a>
+                            <span class="ev-chevron"><i class="fas fa-chevron-right"></i></span>
+                            <span>Le FATE bientôt 25 ans (2001 – 2026)</span>
+                        </nav>
                     </div>
                 </div>
 
-                <div class="horizontalLine m-3"></div>
+                <!-- image droite -->
+                <div class="ev-hero-img-wrap">
+                    <img src="../assets/images/placeholders/banner-25ans.svg" alt="Le FATE bientôt 25 ans (2001 – 2026)" loading="eager">
+                </div>
 
-                <span class="backgroundForm topRight"></span>
-                <span class="backgroundForm bottomLeft"></span>
+            </div>
+            <div class="ev-hero-rule"></div>
+        </section>
 
-                <h1 class="titre fw-bold">Actualité</h1>
-                <div class="autresActualitesContainer d-flex">
 
-                    <a href="festival-arta-sacra.html">
-                        <div class="actualite d-flex justify-content-center align-items-center flex-column">
-                            <div class="imgContainer d-flex justify-content-center align-items-center">
-                                <img class="actuImage"
-                                    src="../assets/storage/events/expositions/arta_sacra_2025/main.jpg"
-                                    alt="Festival ARTA SACRA">
-                            </div>
-                            <div class="actuInfo d-flex flex-column justify-content-start align-items-start">
-                                <h2 class="actuTitle">Festival ARTA SACRA</h2>
-                                <p class="actuDesc"></p>
-                            </div>
-                        </div>
-                    </a>
+        <!-- ═══════════════════════════════════════════════════════════
+             CONTENU ÉDITORIAL
+        ════════════════════════════════════════════════════════════════ -->
+        <section class="ev-content">
+            <div class="ev-content-wrap">
 
-                    <a href="can-juin-2025.html">
-                        <div class="actualite d-flex justify-content-center align-items-center flex-column">
-                            <div class="imgContainer d-flex justify-content-center align-items-center">
-                                <img class="actuImage" src="../assets/storage/actualites/June2025/CAN2025.png"
-                                    alt="En route pour la CAN 2025">
-                            </div>
-                            <div class="actuInfo d-flex flex-column justify-content-start align-items-start">
-                                <h2 class="actuTitle">En route pour la CAN 2025</h2>
-                                <p class="actuDesc"></p>
-                            </div>
-                        </div>
-                    </a>
+                <!-- pilule catégorie + date -->
+                <div class="ev-meta">
+                    <span class="ev-tag">Actualités</span>
+                    
+                    <span class="ev-date"><i class="far fa-calendar-alt"></i> Actualités · 2026</span>
+                    
+                </div>
 
-                    <a href="routes-de-l-esclavage-a-nos-jours-juin-2025.html">
-                        <div class="actualite d-flex justify-content-center align-items-center flex-column">
-                            <div class="imgContainer d-flex justify-content-center align-items-center">
-                                <img class="actuImage" src="../assets/storage/actualites/June2025/routes_esclavage.png"
-                                    alt="Des routes de l'esclavage à nos jours">
-                            </div>
-                            <div class="actuInfo d-flex flex-column justify-content-start align-items-start">
-                                <h2 class="actuTitle">Des routes de l'esclavage à nos jours</h2>
-                                <p class="actuDesc"></p>
-                            </div>
-                        </div>
-                    </a>
+                <!-- image principale -->
+                <div class="ev-main-img">
+                    <img src="../assets/images/placeholders/banner-25ans.svg" alt="Le FATE bientôt 25 ans (2001 – 2026)" loading="lazy">
+                </div>
+
+                <!-- titre article -->
+                <h2 class="ev-article-title">Le FATE fêtera bientôt ses vingt cinq ans (2001 - 2026)</h2>
+
+                <!-- corps HTML -->
+                <div class="ev-body">
+                    
+<p>Fondé en avril 2001, le Forum Associatif Tous Ensemble (FATE) célébrera bientôt son 25ème
+anniversaire ! Un quart de siècle d'engagement, de solidarité et d'actions citoyennes sur le
+territoire français et à l'international.</p>
+<p>Cet anniversaire sera l'occasion de revenir sur notre parcours, de célébrer nos réussites
+avec l'ensemble de nos partenaires et bénévoles, et de tracer de nouvelles perspectives pour
+les années à venir.</p>
+<h3>Au programme des festivités (à venir)</h3>
+<ul>
+  <li>Gala d'anniversaire et soirée de rétrospective</li>
+  <li>Exposition photo retraçant 25 ans d'actions</li>
+  <li>Conférences et tables rondes sur l'engagement associatif</li>
+</ul>
+<p>Restez connectés pour découvrir le programme détaillé de cet événement exceptionnel !</p>
 
                 </div>
+
+                <hr class="ev-sep">
+
+                <!-- bouton retour -->
+                <a href="actualites.html" class="ev-back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour aux Actualités
+                </a>
+
             </div>
         </section>
 
 
-
-
-
+        <!-- ═══════════════════════════════════════════════════════════
+             FOOTER
+        ════════════════════════════════════════════════════════════════ -->
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
@@ -342,145 +619,60 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
-                                <a href="../index.html"><img
-                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
-                                        alt="image"></a>
-
-
+                                <a href="../index.html"><img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE"></a>
                                 <p>
-                                    <strong>
-                                        Forum Associatif Tous Ensemble
-                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
-                                    le développement d&#039;initiatives citoyennes.
+                                    <strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.
                                 </p>
-
-
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.facebook.com/profile.php?id=61558231605226
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/ target="
-                                                _blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://x.com/FATEnsemble target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.tiktok.com/@fatensemble target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre:</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/fate.html">
-                                            La structure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
                                 </ul>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation:</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
                                     <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                                    </p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a></p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com">art.afrovibes@gmail.com</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone:</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
                                 </div>
                             </div>
                         </div>
 
-
                     </div>
                 </div>
-
 
                 <div class="copyright">
                     <p class="m-0">
@@ -492,29 +684,14 @@
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
 
 
-        <div class="popup">
-            <div class="popup-content">
-                <button class="close-btn" id="popup-close"><i class="fas fa-times"></i></button>
-                <form>
-                    <div class="input-group search-box">
-                        <input type="text" class="form-control" placeholder="search">
-                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
         <div class="go-top">
             <i class="fas fa-chevron-up"></i>
         </div>
-
 
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>
@@ -533,232 +710,21 @@
         <script src="../assets/js/form-validator.min.js"></script>
         <script src="../assets/js/contact-form-script.js"></script>
         <script src="../assets/js/ajaxchimp.min.js"></script>
-        <script src="../assets/js/owl.carousel2.thumbs.min.js"></script>
         <script src="../assets/js/appear.min.js"></script>
         <script src="../assets/js/odometer.min.js"></script>
         <script src="../assets/js/custom.js"></script>
-        <script src="../assets/js/image-fallback.js" defer></script>
-
 
         <script>
             $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
+                $("body").addClass("loaded");
+            });
         </script>
 
-
     </div>
-
-
-    <script src="../assets/js/jquery.min.js"></script>
-
 
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-
-
-
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
-    <script src="../assets/js/video.js"></script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour gérer l'affichage des images
-            const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
-            let isImagesExpanded = false;
-
-            if (showMoreImagesBtn) {
-                showMoreImagesBtn.addEventListener('click', function () {
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    if (!isImagesExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
-                        isImagesExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
-                        isImagesExpanded = false;
-                    }
-                });
-            }
-
-            // Fonction pour gérer l'affichage des vidéos
-            const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
-            let isVideosExpanded = false;
-
-            if (showMoreVideosBtn) {
-                showMoreVideosBtn.addEventListener('click', function () {
-                    const allVideos = document.querySelectorAll('.expositionVideoContainer');
-
-                    if (!isVideosExpanded) {
-                        // Afficher plus de vidéos
-                        let hiddenCount = 0;
-
-                        allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 6);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
-                        isVideosExpanded = true;
-
-                    } else {
-                        // Masquer les vidéos supplémentaires
-                        allVideos.forEach((el, index) => {
-                            if (index >= 6) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
-                        isVideosExpanded = false;
-                    }
-                });
-            }
-
-            // Ancien code pour compatibilité (showMoreBtn)
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            let isExpanded = false;
-
-            if (showMoreBtn) {
-                showMoreBtn.addEventListener('click', function () {
-                    console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-
-                    // Sélectionner toutes les images de la galerie
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    console.log('Nombre total d\'images:', allImages.length); // Debug
-
-                    if (!isExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    // Déclencher l'animation après un court délai
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100); // Délai progressif
-                            }
-                        });
-
-                        // Changer le texte et l'icône du bouton
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
-                        isExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        // Remettre le texte et l'icône originaux
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
-                        isExpanded = false;
-
-                        // Faire défiler vers le titre de la galerie
-                        const galerieTitle = document.querySelector('h3');
-                        if (galerieTitle) {
-                            galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-
-                    console.log('Nouvel état:', isExpanded); // Debug
-                });
-            } else {
-                console.log('Bouton showMoreBtn non trouvé'); // Debug
-            }
-
-        });
-    </script>
-    <script src="../assets/js/language-selector.js"></script>
-    <script src="../assets/js/suggestion.js"></script>
 </body>
 
 </html>

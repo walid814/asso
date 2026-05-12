@@ -5,30 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <title>Nos Collaborations | Forum Associatif Tous Ensemble (FATE)</title>
 
-    <title>collaborations | Forum Associatif Tous Assemble</title>
-
-    <meta name="viewport" content="width=device-width">
-
-
-    <meta name="copyright" content="FATE - Forum Associatif Tous Ensemble" />
-    <meta name="author" content="E-jabbing - e-jabbing.com" />
-    <meta property="og:description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Crée en avril 2001, le “Forum Associatif Tous Ensemble” est un collectif de plus d'une trentaine d'Associations de Lyon et son agglomération." />
-    <meta name="keywords" content="Forum, Associatif, tous ensemble, assocaition, france" />
+        content="Découvrez les partenariats et collaborations menés par F.A.T.E. au fil des années : co-organisations culturelles, événements partagés et synergies associatives à Lyon et à l'international." />
+    <meta name="keywords" content="FATE, collaborations, partenariats, culture africaine, Lyon, association" />
     <meta name="robots" content="index, follow" />
-    <meta name="DC.title" content="collaborations | Forum Associatif Tous Assemble" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@fate" />
-    <meta name="twitter:creator" content="@fate" />
-    <meta property="og:url" content="https://fatetousensemble.org/" />
-    <meta property="og:title" content="collaborations | Forum Associatif Tous Assemble" />
-
+    <meta name="author" content="Forum Associatif Tous Ensemble (FATE)" />
 
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -45,22 +29,550 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/fate-branding.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 
     <link href="../assets/images/logoHeader.png" rel="icon" type="image/png">
 
+    <style>
+        /* ============================================================
+           COLLABORATIONS PAGE — FATE BRANDING DESIGN
+           Palette : #EAB308 (jaune) · #111827 (noir) · #F4EFE6 (beige)
+        ============================================================ */
 
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+        :root {
+            --y:   #EAB308;
+            --dk:  #111827;
+            --bg:  #F4EFE6;
+            --wh:  #FFFFFF;
+            --gr:  #6B7280;
+            --bdr: #E5E7EB;
+        }
+
+        /* ── HERO ──────────────────────────────────────────────── */
+        .collabs-hero {
+            background-color: var(--dk);
+            margin-top: 85px;
+            padding: 68px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1010px) {
+            .collabs-hero { margin-top: 70px; }
+        }
+
+        .collabs-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .collabs-hero::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 340px;
+            height: 340px;
+            background: var(--y);
+            border-radius: 50%;
+            opacity: .07;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .collabs-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        @media (max-width: 900px) {
+            .collabs-hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+                padding: 0 24px;
+            }
+        }
+
+        .collabs-hero-left {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .collabs-hero-vbar {
+            width: 4px;
+            min-height: 100%;
+            background: var(--y);
+            border-radius: 2px;
+            margin-right: 28px;
+            flex-shrink: 0;
+        }
+
+        .collabs-hero-text { flex: 1; min-width: 0; }
+
+        .collabs-hero h1 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            font-size: clamp(40px, 5.5vw, 72px) !important;
+            color: var(--wh) !important;
+            line-height: 1.0 !important;
+            margin: 0 0 20px !important;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .collabs-hero h1 em {
+            color: var(--y);
+            font-style: normal;
+            display: block;
+        }
+
+        .collabs-hero-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.78;
+            color: rgba(255,255,255,.55);
+            max-width: 500px;
+            margin: 0 0 24px;
+        }
+
+        .collabs-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255,255,255,.35);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+        }
+
+        .collabs-breadcrumb a {
+            color: rgba(255,255,255,.35);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .collabs-breadcrumb a:hover { color: var(--y); }
+        .collabs-breadcrumb .chevron { color: var(--y); font-size: 9px; }
+
+        /* ── BADGE DROITE ── */
+        .collabs-hero-badge {
+            flex-shrink: 0;
+            background: var(--y);
+            border-radius: 18px;
+            padding: 28px 38px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            min-width: 180px;
+        }
+
+        .collabs-hero-badge-years {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--dk);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .collabs-hero-badge-sep {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0,0,0,.3);
+            line-height: 1;
+            margin: 2px 0;
+        }
+
+        .collabs-hero-badge-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0,0,0,.55);
+            margin: 10px 0 0;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 900px) {
+            .collabs-hero-badge { display: none; }
+        }
+
+        .collabs-hero-rule {
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,.07);
+            margin-top: 52px;
+        }
+
+        /* ── MAIN ──────────────────────────────────────────────── */
+        .collabs-main {
+            background: #F0EBE0;
+            padding: 72px 0 100px;
+        }
+
+        .collabs-main-wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        @media (max-width: 768px) {
+            .collabs-main-wrap { padding: 0 20px; }
+        }
+
+        /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────── */
+        .fate-timeline {
+            width: 100% !important;
+            align-self: stretch !important;
+            margin-bottom: 36px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 4px 0 20px;
+        }
+
+        .fate-timeline::-webkit-scrollbar { display: none; }
+
+        .fate-timeline-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 16px 0;
+            gap: 0;
+            width: 100%;
+        }
+
+        .fate-tl-line {
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            right: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--y) 0%, rgba(234,179,8,.25) 100%);
+            transform: translateY(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .fate-tl-year {
+            position: relative;
+            z-index: 1;
+            min-width: 76px;
+            height: 44px;
+            padding: 0 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFFFFF;
+            border: 2px solid #E5E7EB;
+            border-radius: 100px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #6B7280;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: border-color .2s, color .2s, transform .2s, box-shadow .2s, background .2s;
+            white-space: nowrap;
+            touch-action: manipulation;
+        }
+
+        .fate-tl-year:hover:not(.active) {
+            border-color: var(--y);
+            color: var(--dk);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(234,179,8,.22);
+        }
+
+        .fate-tl-year.active {
+            background: var(--y);
+            border-color: var(--y);
+            color: var(--dk);
+            font-size: 14px;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 18px rgba(234,179,8,.4);
+        }
+
+        /* ── PANELS ───────────────────────────────────────────────── */
+        .fate-panels-viewport {
+            position: relative;
+            overflow: hidden;
+            width: 100% !important;
+            align-self: stretch !important;
+        }
+
+        .fate-year-panel {
+            display: none;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        .fate-year-panel.active {
+            display: block;
+            animation: panelSlideIn 260ms cubic-bezier(.25,.46,.45,.94) forwards;
+        }
+
+        @keyframes panelSlideIn {
+            from { opacity: 0; transform: translateX(var(--panel-slide-from, 32px)); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ── EN-TÊTE DE PANEL ─────────────────────────────────────── */
+        .fate-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--y);
+        }
+
+        .fate-panel-title {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 20px !important;
+            font-weight: 800 !important;
+            color: var(--dk) !important;
+            margin: 0 !important;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .fate-panel-title span { color: var(--y); }
+
+        /* ── CARTES ───────────────────────────────────────────────── */
+        .actionCardContainer {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            padding: 0 !important;
+            margin-top: 14px !important;
+            width: 100% !important;
+            background: transparent !important;
+            border-radius: 0 !important;
+            overflow: visible !important;
+            box-shadow: none !important;
+            flex-wrap: unset !important;
+            justify-content: unset !important;
+            align-items: unset !important;
+        }
+
+        .actionCardContainer > a {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: block !important;
+            background: #FFFFFF !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(0,0,0,.06) !important;
+            border-left: 4px solid transparent !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,.055) !important;
+            overflow: hidden !important;
+            position: relative;
+            cursor: pointer;
+            transition: transform .22s ease, box-shadow .22s ease, border-left-color .18s ease !important;
+        }
+
+        .actionCardContainer > a:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 28px rgba(0,0,0,.11) !important;
+            border-left-color: var(--y) !important;
+            text-decoration: none !important;
+        }
+
+        .actionCard {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: stretch !important;
+            width: 100% !important;
+            height: 148px !important;
+            min-height: unset !important;
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            gap: 0 !important;
+            overflow: hidden !important;
+            transition: none !important;
+        }
+
+        .actionCard .actionImgContainer {
+            width: 220px !important;
+            min-width: 220px !important;
+            height: 100% !important;
+            flex-shrink: 0 !important;
+            overflow: hidden !important;
+            background: var(--bg) !important;
+            border-radius: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .actionCard .actionImgContainer .actionImage {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border-radius: 0 !important;
+            transition: transform .5s cubic-bezier(.25,.46,.45,.94) !important;
+            display: block;
+        }
+
+        .actionCardContainer > a:hover .actionImage {
+            transform: scale(1.07) !important;
+        }
+
+        .actionCard .actionInfo {
+            flex: 1 !important;
+            padding: 20px 58px 20px 22px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            position: relative;
+            min-width: 0;
+        }
+
+        .actionCard .actionInfo::after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) translateX(-8px);
+            color: var(--y);
+            font-size: 17px;
+            opacity: 0;
+            transition: opacity .2s ease, transform .22s ease;
+        }
+
+        .actionCardContainer > a:hover .actionCard .actionInfo::after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .actionCard .actionInfo .actionTag {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 10px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.6px !important;
+            color: var(--y) !important;
+            margin-bottom: 8px !important;
+            background: rgba(234,179,8,.1) !important;
+            padding: 3px 9px !important;
+            border-radius: 100px !important;
+        }
+
+        .actionCard .actionInfo .actionTitle {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 15.5px !important;
+            font-weight: 700 !important;
+            color: var(--dk) !important;
+            margin: 0 0 7px !important;
+            line-height: 1.36 !important;
+            display: block !important;
+        }
+
+        .actionCardContainer > a:hover .actionTitle {
+            color: #0d1321 !important;
+        }
+
+        .actionCard .actionInfo .actionDescription {
+            font-family: 'Open Sans', sans-serif !important;
+            font-size: 13px !important;
+            line-height: 1.62 !important;
+            color: var(--gr) !important;
+            font-weight: 400 !important;
+            margin: 0 !important;
+            display: -webkit-box !important;
+            -webkit-box-orient: vertical !important;
+            -webkit-line-clamp: 2 !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        /* ── VOIR PLUS ────────────────────────────────────────────── */
+        .voirPlusButton {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            background: var(--y) !important;
+            color: var(--dk) !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12.5px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.9px !important;
+            padding: 11px 26px !important;
+            border-radius: 100px !important;
+            text-decoration: none !important;
+            border: none !important;
+            margin: 14px 0 36px !important;
+            transition: background .2s, transform .2s, box-shadow .2s !important;
+        }
+
+        .voirPlusButton:hover {
+            background: #ca9a00 !important;
+            color: var(--dk) !important;
+            text-decoration: none !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 18px rgba(234,179,8,.35) !important;
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────────────────── */
+        @media (max-width: 640px) {
+            .actionCard {
+                flex-direction: column !important;
+                height: auto !important;
+            }
+
+            .actionCard .actionImgContainer {
+                width: 100% !important;
+                min-width: unset !important;
+                height: 180px !important;
+            }
+
+            .actionCard .actionInfo {
+                padding: 16px 18px 18px !important;
+            }
+
+            .actionCard .actionInfo::after { display: none; }
+
+            .collabs-hero { padding: 56px 0 44px; }
+            .collabs-main { padding: 52px 0 70px; }
+        }
+    </style>
 </head>
 
-<body class=about-us-page>
-
-
+<body class="about-us-page">
     <div class="conteneur-banniere">
 
-
-
-
-
+        <!-- ══ HEADER / NAV ══════════════════════════════════════ -->
         <header class="headerWrapper">
             <div class="mobileNav paddingX">
                 <a href="../index.html" class="logoLink">
@@ -70,18 +582,12 @@
 
             <div class="mobileNavToggle" id="mobileToggle">☰</div>
 
-
-
-
-
-
             <nav class="mainNav" id="mainNav">
                 <a href="../index.html" class="logoLink desktopOnly">
                     <img src="../assets/images/logo.png" alt="logo fate" class="logoImage" />
                 </a>
 
                 <ul class="navList">
-
                     <li class="navItem">
                         <a href="../pages/fate.html" class="navLinkStrong navLink">FATE</a>
                     </li>
@@ -89,93 +595,63 @@
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/actualites.html" class="navLink navLinkStrong navToggleLink">
-                                ACTUALITÉS
-                                <span class="dropdownIcon">+</span>
+                                ACTUALITÉS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList">
-                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html"
-                                    class="submenuLink">Festival ARTA SACRA</a></li>
+                            <li class="submenuItem"><a href="../pages/festival-arta-sacra.html" class="submenuLink">Festival ARTA SACRA</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route
-                                    pour la CAN 2025</a></li>
+                            <li class="submenuItem"><a href="../pages/can-juin-2025.html" class="submenuLink">En route pour la CAN 2025</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html"
-                                    class="submenuLink">Le FATE bientôt vingt cinq ans 2001 - 2026</a></li>
+                            <li class="submenuItem"><a href="../pages/fate-vingt-cinq-ans-2026.html" class="submenuLink">Le FATE bientôt vingt cinq ans 2001&nbsp;- 2026</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html"
-                                    class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
+                            <li class="submenuItem"><a href="../pages/routes-de-l-esclavage-a-nos-jours-juin-2025.html" class="submenuLink">Des routes de l'esclavage à nos jours</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html"
-                                    class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
+                            <li class="submenuItem"><a href="../pages/assainissement-d-eau-douala-septembre-2026.html" class="submenuLink">Eau et assainissement PK17-PK32 Douala</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a
-                                    href="../pages/plantation-bananiers-piments-bihang-2026-2027.html"
-                                    class="submenuLink">Création d'une plantation de bananiers plantains et de piments à
-                                    Bihiang-Cameroun</a></li>
+                            <li class="submenuItem"><a href="../pages/plantation-bananiers-piments-bihang-2026-2027.html" class="submenuLink">Création d'une plantation de bananiers plantains et de piments à Bihiang-Cameroun</a></li>
                         </ul>
                     </li>
 
-
-                    <li class="selectedTab navItem hasSubmenu">
+                    <li class="navItem hasSubmenu selectedTab">
                         <div class="navLinkWrapper">
                             <a href="../pages/actions.html" class="navLink navLinkStrong navToggleLink activeNav">
-                                ACTIONS
-                                <span class="dropdownIcon">+</span>
+                                ACTIONS <span class="dropdownIcon">+</span>
                             </a>
                         </div>
-
                         <ul class="submenuList">
-                            <li class="submenuItem">
-                                <a href="../pages/actions.html" class="submenuLink">
-                                    Nos actions
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/actions.html" class="submenuLink">Nos actions</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem">
-                                <a href="../pages/collaborations.html" class="submenuLink">
-                                    Nos collaborations
-                                </a>
-                            </li>
+                            <li class="submenuItem"><a href="../pages/collaborations.html" class="submenuLink">Nos collaborations</a></li>
                         </ul>
                     </li>
 
-                    <li class="navItem ">
-                        <a href="../pages/archives.html" class="navLinkStrong navLink
-                                         ">
-                            ARCHIVES
-                        </a>
+                    <li class="navItem">
+                        <a href="../pages/archives.html" class="navLinkStrong navLink">ARCHIVES</a>
                     </li>
 
                     <li class="navItem hasSubmenu">
                         <div class="navLinkWrapper">
                             <a href="../pages/partenaires.html" class="navLink navLinkStrong navToggleLink">
-                                PARTENAIRES
-                                <span class="dropdownIcon">+</span>
+                                PARTENAIRES <span class="dropdownIcon">+</span>
                             </a>
                         </div>
                         <ul class="submenuList partenairesSubmenuPush">
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels"
-                                    class="submenuLink">Institutionnels</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionInstitutionnels" class="submenuLink">Institutionnels</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives"
-                                    class="submenuLink">Privés</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionPrives" class="submenuLink">Privés</a></li>
                             <div class="horizontalLine"></div>
-                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif"
-                                    class="submenuLink">Associatifs</a></li>
+                            <li class="submenuItem"><a href="../pages/partenaires.html#sectionAssociatif" class="submenuLink">Associatifs</a></li>
                         </ul>
                     </li>
-                    <li class="navItem ">
-                        <a href="../pages/contact.html" class="navLinkStrong navLink
-                                         ">
-                            CONTACTS
-                        </a>
+
+                    <li class="navItem">
+                        <a href="../pages/contact.html" class="navLinkStrong navLink">CONTACTS</a>
                     </li>
 
                     <li class="navItem">
                         <a href="../pages/soutenir.html" class="buttonNav">Soutenir</a>
                     </li>
-
                     <li class="navItem">
                         <a href="../pages/adherer.html" class="btn-adherer-noir buttonNav">Adhérer</a>
                     </li>
@@ -183,26 +659,20 @@
             </nav>
         </header>
 
-
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav = document.getElementById('mainNav');
-                const body = document.body;
-                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
+                const mainNav   = document.getElementById('mainNav');
+                const body      = document.body;
+                const navLinks  = document.querySelectorAll('.navLink, .navLinkStrong');
 
-                // Mobile toggle
-                if (toggleBtn) {
-                    toggleBtn.addEventListener('click', () => {
-                        mainNav.classList.toggle('navOpen');
-                        body.classList.toggle('noScroll');
-                    });
-                }
+                toggleBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('navOpen');
+                    body.classList.toggle('noScroll');
+                });
 
-                // Fermer le menu mobile quand on clique sur un lien
                 navLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        // Ne pas fermer si on clique sur un toggle de sous-menu
+                    link.addEventListener('click', e => {
                         if (!e.target.closest('.navToggleLink')) {
                             mainNav.classList.remove('navOpen');
                             body.classList.remove('noScroll');
@@ -210,445 +680,286 @@
                     });
                 });
 
-                // Gestion des sous-menus uniquement sur mobile
-                const toggleLinks = document.querySelectorAll('.navToggleLink');
-                toggleLinks.forEach(toggle => {
-                    toggle.addEventListener('click', (e) => {
-                        // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
+                document.querySelectorAll('.navToggleLink').forEach(toggle => {
+                    toggle.addEventListener('click', e => {
                         if (window.innerWidth < 992) {
                             e.preventDefault();
                             const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) {
-                                parentLi.classList.toggle('submenuOpen');
-                            }
+                            if (parentLi) parentLi.classList.toggle('submenuOpen');
                         }
                     });
                 });
             });
         </script>
 
-
-
-
-
-
-
-        <section class="uni-banner opacityLow" style="background-image: url('storage/background/img_actions.jpg');">
-            <div class="container">
-                <div class="uni-banner-text-area">
-                    <h1>
-                        collaborations
-                    </h1>
-                    <ul>
-                        <li>
-                            <a href="../index.html">
-                                Accueil
-                            </a>
-                        </li>
-                        <li>
-                            collaborations
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section class="project pt-70 pb-100">
-            <div class="container">
-                <div class="row justify-content-center">
-
-
-                    <p class="actionFilterDescription">
-                        Découvrez nos partenariats et collaborations avec d&#039;autres organisations pour amplifier
-                        notre impact social et créer des synergies positives.
-                    </p>
-
-
-                    <div class="container actionsParAnneeContainer">
-
-
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2025">
-                                collaborations 2025
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2025')" id="iconCollaborations2025"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2025" class="actionCardContainer">
-
-
-                            <a href="https://forumassotousensemble.org/actions/festival-arta-sacra">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/arta_sacra_2025/main.jpg"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            ARTA SACRA
-                                        </p>
-                                        <p class="actionDescription">
-                                            Découvrez l’exposition Arta Sacra organisée à Vaulx-en-Velin en 2025 : un
-                                            voyage à travers l’art sacré et les différentes expressions spirituelles du
-                                            monde.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-
-
-                            <a href="https://forumassotousensemble.org/actions/10_mai">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/10_mai/main.jpg"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Journée Nationale des Mémoires de la traite, de l&#039;esclavage et de leurs
-                                            abolitions
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2024">
-                                collaborations 2024
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2024')" id="iconCollaborations2024"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2024" class="actionCardContainer">
-
-
-                            <a href="https://forumassotousensemble.org/actions/arta-sacra-2024">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/arta_sacra_2024/main.jpg"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            ARTA SACRA
-                                        </p>
-                                        <p class="actionDescription">
-                                            Découvrez l’exposition Arta Sacra organisée à Vaulx-en-Velin en 2024 : un
-                                            voyage à travers l’art sacré et les différentes expressions spirituelles du
-                                            monde.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2023">
-                                collaborations 2023
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2023')" id="iconCollaborations2023"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2023" class="actionCardContainer">
-
-
-                            <a
-                                href="https://forumassotousensemble.org/actions/semaine%20de%20la%20solidarit%C3%A9%20internationale%20%C3%A0%20lyon%202003">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/Semaine_de_la_solidarité_internationale_2023/main.png"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Festival des solidarités internationales
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2022">
-                                collaborations 2022
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2022')" id="iconCollaborations2022"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2022" class="actionCardContainer">
-
-
-                            <a href="https://forumassotousensemble.org/actions/arta-sacra-2022">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/arta_sacra_2022/main.jpg"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            ARTA SACRA
-                                        </p>
-                                        <p class="actionDescription">
-                                            Découvrez l’exposition Arta Sacra organisée à Vaulx-en-Velin en 2022 : un
-                                            voyage à travers l’art sacré et les différentes expressions spirituelles du
-                                            monde.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-
-
-                            <a href="https://forumassotousensemble.org/actions/visite-tata-senegalaise-2022">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/visite_tata_senegalais/main.jpg"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Visite Tata Sénégalais
-                                        </p>
-                                        <p class="actionDescription">
-                                            Retour sur l’action Et si la justice m&#039;était contée à Vaulx-en-Velin en
-                                            2017, une initiative pédagogique pour comprendre les enjeux de la justice et
-                                            du droit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-
-
-                            <a href="https://forumassotousensemble.org/actions/histoire%20singuli%C3%A8re">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/histoire_singulière/Histoire.png"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Histoire singulière
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-
-
-                            <a
-                                href="https://forumassotousensemble.org/actions/semaine%20de%20la%20solidarit%C3%A9%20internationale%20%C3%A0%20lyon%20">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/Semaine_de_la_solidarité_internationale_2022/main.png"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Festival des solidarités internationales
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2016">
-                                collaborations 2016
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2016')" id="iconCollaborations2016"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2016" class="actionCardContainer">
-
-
-                            <a
-                                href="https://forumassotousensemble.org/actions/M%C3%A9moire%20commune%20%E2%80%93%20comm%C3%A9moration%20de%20l%E2%80%99abolition%20de%20l%E2%80%99esclavage%20">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/10_mai/main.jpg"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Mémoire commune – commémoration de l’abolition de l’esclavage
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2014">
-                                collaborations 2014
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2014')" id="iconCollaborations2014"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2014" class="actionCardContainer">
-
-
-                            <a
-                                href="https://forumassotousensemble.org/actions/Festival%20tout%20le%20monde%20dehors%202014">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/festival_tout_le_monde_dehors_2014/main.png"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Festival tout le monde dehors
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-                        <h1 class="actionFilterYear">
-                            <a href="https://forumassotousensemble.org/collaborations/annee/2012">
-                                collaborations 2012
-                            </a>
-                            <i onclick="closeOpenCollaborationsSection('2012')" id="iconCollaborations2012"
-                                class="icon fas fa-angle-down"></i>
-                        </h1>
-
-
-                        <div id="collaborationsContainer2012" class="actionCardContainer">
-
-
-                            <a
-                                href="https://forumassotousensemble.org/actions/Festival%20tout%20le%20monde%20dehors%20">
-                                <div class="actionCard">
-                                    <div class="actionImgContainer d-flex justify-content-center align-items-center">
-                                        <img src="../assets/storage/events/expositions/festival_tout_le_monde_dehors_2012/main.png"
-                                            class="actionImage gallery-img-default-size">
-                                    </div>
-                                    <div class="horizontalLine"></div>
-                                    <div class="actionInfo">
-                                        <p class="actionTitle">
-                                            Festival tout le monde dehors
-                                        </p>
-                                        <p class="actionDescription">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-
-
-
+        <!-- ══ HERO ══════════════════════════════════════════════ -->
+        <section class="collabs-hero">
+            <div class="collabs-hero-inner">
+
+                <div class="collabs-hero-left">
+                    <div class="collabs-hero-vbar"></div>
+                    <div class="collabs-hero-text">
+                        <h1>Nos<em>Collaborations</em></h1>
+                        <p class="collabs-hero-desc">Partenariats, co-organisations et synergies&nbsp;: découvrez toutes les initiatives menées aux côtés d'autres acteurs culturels, associatifs et institutionnels depuis 2012.</p>
+                        <nav class="collabs-breadcrumb" aria-label="Breadcrumb">
+                            <a href="../index.html">Accueil</a>
+                            <i class="fas fa-chevron-right chevron"></i>
+                            <a href="actions.html">Actions</a>
+                            <i class="fas fa-chevron-right chevron"></i>
+                            <span>Collaborations</span>
+                        </nav>
                     </div>
                 </div>
+
+                <div class="collabs-hero-badge" aria-hidden="true">
+                    <span class="collabs-hero-badge-years">2012</span>
+                    <span class="collabs-hero-badge-sep">—</span>
+                    <span class="collabs-hero-badge-years">2025</span>
+                    <p class="collabs-hero-badge-label">Années de<br>partenariat</p>
+                </div>
+
+            </div>
+            <div class="collabs-hero-rule"></div>
+        </section>
+
+        <!-- ══ CONTENT ════════════════════════════════════════════ -->
+        <section class="collabs-main">
+            <div class="collabs-main-wrap">
+
+                <!-- ── FRISE CHRONOLOGIQUE ── -->
+                <nav class="fate-timeline" aria-label="Filtrer par année">
+                    <div class="fate-timeline-track">
+                        <div class="fate-tl-line" aria-hidden="true"></div>
+                        <button class="fate-tl-year" data-year="2012" aria-pressed="false" type="button">2012</button>
+                        <button class="fate-tl-year" data-year="2014" aria-pressed="false" type="button">2014</button>
+                        <button class="fate-tl-year" data-year="2016" aria-pressed="false" type="button">2016</button>
+                        <button class="fate-tl-year" data-year="2022" aria-pressed="false" type="button">2022</button>
+                        <button class="fate-tl-year" data-year="2023" aria-pressed="false" type="button">2023</button>
+                        <button class="fate-tl-year" data-year="2024" aria-pressed="false" type="button">2024</button>
+                        <button class="fate-tl-year active" data-year="2025" aria-pressed="true" type="button">2025</button>
+                    </div>
+                </nav>
+
+                <!-- ── PANELS ── -->
+                <div class="fate-panels-viewport">
+
+                    <!-- 2025 -->
+                    <div class="fate-year-panel active" id="panel2025">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2025</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="festival-arta-sacra.html">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/arta_sacra_2025/main.jpg"
+                                            class="actionImage" alt="ARTA SACRA 2025" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">ARTA SACRA 2025</p>
+                                        <p class="actionDescription">Découvrez l'exposition Arta Sacra organisée à Vaulx-en-Velin en 2025&nbsp;: un voyage à travers l'art sacré et les différentes expressions spirituelles du monde.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/10_mai/main.jpg"
+                                            class="actionImage" alt="Journée nationale des mémoires" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Journée Nationale des Mémoires de la traite, de l'esclavage et de leurs abolitions</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="fate-year-panel" id="panel2024">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2024</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/arta_sacra_2024/main.jpg"
+                                            class="actionImage" alt="ARTA SACRA 2024" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">ARTA SACRA 2024</p>
+                                        <p class="actionDescription">Découvrez l'exposition Arta Sacra organisée à Vaulx-en-Velin en 2024&nbsp;: un voyage à travers l'art sacré et les différentes expressions spirituelles du monde.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="fate-year-panel" id="panel2023">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2023</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/Semaine_de_la_solidarité_internationale_2023/main.png"
+                                            class="actionImage" alt="Festival des solidarités internationales 2023" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Festival des solidarités internationales</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="fate-year-panel" id="panel2022">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2022</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/arta_sacra_2022/main.jpg"
+                                            class="actionImage" alt="ARTA SACRA 2022" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">ARTA SACRA 2022</p>
+                                        <p class="actionDescription">Découvrez l'exposition Arta Sacra organisée à Vaulx-en-Velin en 2022&nbsp;: un voyage à travers l'art sacré et les différentes expressions spirituelles du monde.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/visite_tata_senegalais/main.jpg"
+                                            class="actionImage" alt="Visite Tata Sénégalais" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Visite Tata Sénégalais</p>
+                                        <p class="actionDescription">Retour sur l'action Et si la justice m'était contée à Vaulx-en-Velin : une initiative pédagogique pour comprendre les enjeux de la justice et du droit.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/histoire_singulière/Histoire.png"
+                                            class="actionImage" alt="Histoire singulière" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Histoire singulière</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/Semaine_de_la_solidarité_internationale_2022/main.png"
+                                            class="actionImage" alt="Festival des solidarités internationales 2022" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Festival des solidarités internationales</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 2016 -->
+                    <div class="fate-year-panel" id="panel2016">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2016</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/10_mai/main.jpg"
+                                            class="actionImage" alt="Mémoire commune 2016" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Mémoire commune – commémoration de l'abolition de l'esclavage</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 2014 -->
+                    <div class="fate-year-panel" id="panel2014">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2014</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/festival_tout_le_monde_dehors_2014/main.png"
+                                            class="actionImage" alt="Festival tout le monde dehors 2014" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Festival tout le monde dehors</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 2012 -->
+                    <div class="fate-year-panel" id="panel2012">
+                        <div class="fate-panel-header">
+                            <h2 class="fate-panel-title">Collaborations en <span>2012</span></h2>
+                        </div>
+                        <div class="actionCardContainer">
+                            <a href="#">
+                                <div class="actionCard">
+                                    <div class="actionImgContainer">
+                                        <img src="../assets/storage/events/expositions/festival_tout_le_monde_dehors_2012/main.png"
+                                            class="actionImage" alt="Festival tout le monde dehors 2012" loading="lazy">
+                                    </div>
+                                    <div class="actionInfo">
+                                        <p class="actionTitle">Festival tout le monde dehors</p>
+                                        <p class="actionDescription"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="voirPlusButton" href="#">En savoir + <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                </div><!-- /.fate-panels-viewport -->
+
             </div>
         </section>
 
+        <!-- ══ FLOATING SUGGESTION ════════════════════════════════ -->
+        <div id="suggestionLink"
+            style="position:fixed;bottom:30px;right:30px;z-index:9500;opacity:0;visibility:hidden;transition:all .3s ease;">
+            <a href="../pages/suggestions.html"
+                style="font-size:1em;padding:14px 22px;border-radius:50px;color:#111827;background:linear-gradient(135deg,#EAB308,#F5C800);text-decoration:none;box-shadow:0 6px 20px rgba(234,179,8,.35);display:flex;align-items:center;gap:8px;font-weight:700;font-family:'Montserrat',sans-serif;">
+                <i class="fas fa-lightbulb"></i> Suggestions
+            </a>
+        </div>
 
-        <script>
-            const closeOpenCollaborationsSection = (year = null) => {
-                // Si une année est spécifiée, utiliser l'ID spécifique à l'année
-                const iconId = year ? `iconCollaborations${year}` : 'iconCollaborations';
-                const containerId = year ? `collaborationsContainer${year}` : 'collaborationsContainer';
-
-                const icon = document.getElementById(iconId);
-                const section = document.getElementById(containerId);
-
-                if (icon && section && icon.classList.contains("fa-angle-down")) {
-                    // section actuellement ouverte → on la ferme
-                    section.style.display = "none";
-                    icon.classList.replace("fa-angle-down", "fa-angle-up");
-                }
-                else if (icon && icon.classList.contains("fa-angle-up")) {
-                    // section actuellement fermée → on la rouvre
-                    section.style.display = "flex"; // utiliser "flex" pour garder la mise en page d'origine
-                    icon.classList.replace("fa-angle-up", "fa-angle-down");
-                }
-            }
-
-            // Animation des cartes au scroll
-            document.addEventListener('DOMContentLoaded', function () {
-                const cards = document.querySelectorAll('.actionCard');
-
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-
-                const observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, observerOptions);
-
-                cards.forEach((card, index) => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-                    observer.observe(card);
-                });
-            });
-        </script>
-
-
-
-
-
-
+        <!-- ══ FOOTER ═════════════════════════════════════════════ -->
         <section class="footer footerContainer">
             <div class="container">
                 <div class="footer-content ptb-100">
@@ -656,423 +967,155 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-logo-area">
-
-                                <a href="../index.html"><img
-                                        src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png"
-                                        alt="image"></a>
-
-
-                                <p>
-                                    <strong>
-                                        Forum Associatif Tous Ensemble
-                                    </strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et
-                                    le développement d&#039;initiatives citoyennes.
-                                </p>
-
-
+                                <a href="../index.html">
+                                    <img src="../assets/storage/logos/April2024/AeHqcm2UtTRBFx8a5Zws.png" alt="Logo FATE">
+                                </a>
+                                <p><strong>Forum Associatif Tous Ensemble</strong> est une structure engagée pour le vivre-ensemble, la solidarité locale et le développement d'initiatives citoyennes.</p>
                                 <div class="footer-social-area">
                                     <ul>
-                                        <li>
-                                            <span>
-                                                Nous suivre:
-                                            </span>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.facebook.com/profile.php?id=61558231605226
-                                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/ target="
-                                                _blank"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://x.com/FATEnsemble target="_blank"><i
-                                                    class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h
-                                                target="_blank"><i class="fab fa-instagram"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href=https://www.tiktok.com/@fatensemble target="_blank"><i
-                                                    class="fab fa-tiktok"></i></a>
-                                        </li>
+                                        <li><span>Nous suivre :</span></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61558231605226" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/forum-associatif-tous-ensemble/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://x.com/FATEnsemble" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/forumassociatif_tousensemble?igsh=czgwZW1oc3FrcG1h" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.tiktok.com/@fatensemble" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-quick-links">
-                                <h3>
-                                    Accès rapides
-                                </h3>
+                                <h3>Accès rapides</h3>
                                 <ul>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/fate.html">
-                                            La structure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/soutenir.html">
-                                            Nous soutenir
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-angle-right"></i>
-                                        <a href="../pages/actions.html">
-                                            Nos actions
-                                        </a>
-                                    </li>
-
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/fate.html">La structure</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/soutenir.html">Nous soutenir</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="../pages/actions.html">Nos actions</a></li>
                                 </ul>
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="footer-links footer-contact">
-                                <h3>
-                                    Nous contacter
-                                </h3>
-
-
+                                <h3>Nous contacter</h3>
                                 <div class="footer-contact-card">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>
-                                        Localisation:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin,
-                                            France</a> <br />
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a> <br />
-                                    </p>
+                                    <h5>Localisation :</h5>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">20 Rue Robert Desnos, 69120 Vaulx-En-Velin, France</a></p>
+                                    <p class="my-1 footerContactLink"><a href="" target="_blank">14 avenue Berthelot, 69007 Lyon, France</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-envelope"></i>
-
-                                    <h5>Email:</h5>
-
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:infosfatetousensemble@gmail.com"><span>infosfatetousensemble@gmail.com</span></a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a
-                                            href="mailto:art.afrovibes@gmail.com"><span>art.afrovibes@gmail.com</span></a>
-                                    </p>
+                                    <h5>Email :</h5>
+                                    <p class="my-1 footerContactLink"><a href="mailto:infosfatetousensemble@gmail.com">infosfatetousensemble@gmail.com</a></p>
+                                    <p class="my-1 footerContactLink"><a href="mailto:art.afrovibes@gmail.com">art.afrovibes@gmail.com</a></p>
                                 </div>
-
-
                                 <div class="footer-contact-card">
                                     <i class="fas fa-phone-alt"></i>
-                                    <h5>
-                                        Par téléphone:
-                                    </h5>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 7 83 67 11 26">+ 33 7 83 67 11 26</a>
-                                    </p>
-                                    <p class="my-1 footerContactLink">
-                                        <a href="tel:++ 33 9 51 18 34 96">+ 33 9 51 18 34 96</a>
-                                    </p>
+                                    <h5>Par téléphone :</h5>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33783671126">+ 33 7 83 67 11 26</a></p>
+                                    <p class="my-1 footerContactLink"><a href="tel:+33951183496">+ 33 9 51 18 34 96</a></p>
                                 </div>
                             </div>
                         </div>
 
-
                     </div>
                 </div>
-
 
                 <div class="copyright">
                     <p class="m-0">
                         <strong>Forum Associatif Tous Ensemble</strong>
-                        &copy; 2023 - 2026. Tous droits réservés par l'équipe FATE.
+                        &copy; 2023&nbsp;– 2026. Tous droits réservés par l'équipe FATE.
                         <span class="ms-1" data-bs-toggle="tooltip" data-bs-placement="top"
                             title="Site conçu par Hervé Anselme Yeffe, Faïk Jebari, Basile Assiga Ateba et Irfat Fejzullahu"
-                            style="cursor: help;">
+                            style="cursor:help;">
                             <i class="fas fa-info-circle"></i>
                         </span>
                     </p>
-
                 </div>
             </div>
         </section>
 
+        <div class="go-top"><i class="fas fa-chevron-up"></i></div>
 
-        <div class="popup">
-            <div class="popup-content">
-                <button class="close-btn" id="popup-close"><i class="fas fa-times"></i></button>
-                <form>
-                    <div class="input-group search-box">
-                        <input type="text" class="form-control" placeholder="search">
-                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-        <div class="go-top">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-
-
-        <script src="../assets/js/jquery.min.js"></script>
-        <script src="../assets/js/jquery-ui.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-            });
-        </script>
-        <script src="../assets/js/meanmenu.js"></script>
-        <script src="../assets/js/owl.carousel.min.js"></script>
-        <script src="../assets/js/magnific-popup.min.js"></script>
-        <script src="../assets/js/TweenMax.js"></script>
-        <script src="../assets/js/nice-select.min.js"></script>
-        <script src="../assets/js/form-validator.min.js"></script>
-        <script src="../assets/js/contact-form-script.js"></script>
-        <script src="../assets/js/ajaxchimp.min.js"></script>
-        <script src="../assets/js/owl.carousel2.thumbs.min.js"></script>
-        <script src="../assets/js/appear.min.js"></script>
-        <script src="../assets/js/odometer.min.js"></script>
-        <script src="../assets/js/custom.js"></script>
-        <script src="../assets/js/image-fallback.js" defer></script>
-
-
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
-        </script>
-
-
-    </div>
-
+    </div><!-- /.conteneur-banniere -->
 
     <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+        });
+    </script>
+    <script src="../assets/js/meanmenu.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="../assets/js/TweenMax.js"></script>
+    <script src="../assets/js/nice-select.min.js"></script>
+    <script src="../assets/js/form-validator.min.js"></script>
+    <script src="../assets/js/contact-form-script.js"></script>
+    <script src="../assets/js/ajaxchimp.min.js"></script>
+    <script src="../assets/js/appear.min.js"></script>
+    <script src="../assets/js/odometer.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
 
+    <script>
+        $(window).bind("load", function () { $("body").addClass("loaded"); });
+    </script>
 
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
-
-
-
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-
-    <script src="../assets/js/video.js"></script>
-
-
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour gérer l'affichage des images
-            const showMoreImagesBtn = document.getElementById('showMoreImagesBtn');
-            let isImagesExpanded = false;
+        /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────────
+           Ordre dans le tableau : du plus ancien au plus récent
+           Aller vers un index plus grand = aller vers le futur = slide droite
+           Aller vers un index plus petit = aller vers le passé = slide gauche
+        ──────────────────────────────────────────────────────────── */
+        (function () {
+            const YEARS = [2012, 2014, 2016, 2022, 2023, 2024, 2025];
+            let activeYear = 2025;
 
-            if (showMoreImagesBtn) {
-                showMoreImagesBtn.addEventListener('click', function () {
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
+            function switchToYear(newYear) {
+                if (newYear === activeYear) return;
 
-                    if (!isImagesExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
+                const oldIdx = YEARS.indexOf(activeYear);
+                const newIdx = YEARS.indexOf(newYear);
+                const goingToPast = newIdx < oldIdx;
 
-                        allImages.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
+                const oldPanel = document.getElementById('panel' + activeYear);
+                const newPanel = document.getElementById('panel' + newYear);
+                if (!newPanel) return;
 
-                            if (isHidden) {
-                                hiddenCount++;
+                newPanel.style.setProperty('--panel-slide-from', goingToPast ? '-36px' : '36px');
 
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins d\'images';
-                        isImagesExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus d\'images';
-                        isImagesExpanded = false;
-                    }
+                document.querySelectorAll('.fate-tl-year').forEach(btn => {
+                    const active = parseInt(btn.dataset.year) === newYear;
+                    btn.classList.toggle('active', active);
+                    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
                 });
+
+                if (oldPanel) oldPanel.classList.remove('active');
+                newPanel.classList.add('active');
+                activeYear = newYear;
+
+                const activeBtn = document.querySelector('.fate-tl-year.active');
+                if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             }
 
-            // Fonction pour gérer l'affichage des vidéos
-            const showMoreVideosBtn = document.getElementById('showMoreVideosBtn');
-            let isVideosExpanded = false;
-
-            if (showMoreVideosBtn) {
-                showMoreVideosBtn.addEventListener('click', function () {
-                    const allVideos = document.querySelectorAll('.expositionVideoContainer');
-
-                    if (!isVideosExpanded) {
-                        // Afficher plus de vidéos
-                        let hiddenCount = 0;
-
-                        allVideos.forEach((el, index) => {
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 6);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins de vidéos';
-                        isVideosExpanded = true;
-
-                    } else {
-                        // Masquer les vidéos supplémentaires
-                        allVideos.forEach((el, index) => {
-                            if (index >= 6) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        this.innerHTML = '<i class="fas fa-video" style="margin-right: 8px;"></i>Afficher plus de vidéos';
-                        isVideosExpanded = false;
-                    }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('.fate-tl-year').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        switchToYear(parseInt(this.dataset.year));
+                    });
                 });
-            }
-
-            // Ancien code pour compatibilité (showMoreBtn)
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            let isExpanded = false;
-
-            if (showMoreBtn) {
-                showMoreBtn.addEventListener('click', function () {
-                    console.log('Bouton cliqué, état actuel:', isExpanded); // Debug
-
-                    // Sélectionner toutes les images de la galerie
-                    const allImages = document.querySelectorAll('.expositionImageContainer');
-
-                    console.log('Nombre total d\'images:', allImages.length); // Debug
-
-                    if (!isExpanded) {
-                        // Afficher plus d'images
-                        let hiddenCount = 0;
-
-                        allImages.forEach((el, index) => {
-                            // Vérifier si l'élément est caché (index >= 9)
-                            const isHidden = el.style.display === 'none' ||
-                                (el.style.display === '' && index >= 9);
-
-                            if (isHidden) {
-                                hiddenCount++;
-
-                                setTimeout(() => {
-                                    el.style.display = 'block';
-                                    el.style.opacity = '0';
-                                    el.style.transform = 'translateY(20px)';
-                                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-                                    // Déclencher l'animation après un court délai
-                                    setTimeout(() => {
-                                        el.style.opacity = '1';
-                                        el.style.transform = 'translateY(0)';
-                                    }, 50);
-                                }, hiddenCount * 100); // Délai progressif
-                            }
-                        });
-
-                        // Changer le texte et l'icône du bouton
-                        this.innerHTML = '<i class="fas fa-eye-slash" style="margin-right: 8px;"></i>Afficher moins';
-                        isExpanded = true;
-
-                    } else {
-                        // Masquer les images supplémentaires
-                        allImages.forEach((el, index) => {
-                            if (index >= 9) {
-                                el.style.opacity = '0';
-                                el.style.transform = 'translateY(-20px)';
-
-                                setTimeout(() => {
-                                    el.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-
-                        // Remettre le texte et l'icône originaux
-                        this.innerHTML = '<i class="fas fa-images" style="margin-right: 8px;"></i>Afficher plus';
-                        isExpanded = false;
-
-                        // Faire défiler vers le titre de la galerie
-                        const galerieTitle = document.querySelector('h3');
-                        if (galerieTitle) {
-                            galerieTitle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-
-                    console.log('Nouvel état:', isExpanded); // Debug
-                });
-            } else {
-                console.log('Bouton showMoreBtn non trouvé'); // Debug
-            }
-
-        });
+            });
+        })();
     </script>
-    <script src="../assets/js/language-selector.js"></script>
-    <script src="../assets/js/suggestion.js"></script>
+
 </body>
 
 </html>
