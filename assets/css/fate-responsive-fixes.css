@@ -40,24 +40,169 @@ body {
    éviter le débordement nav desktop observé à 1024px.
 */
 @media (max-width: 1100px) {
+
+    /* ── PANEL PREMIUM — marine FATE, accents or #FFC107 ─────────── */
     .mainNav {
-        display: none !important;
+        display: flex !important;
+        flex-direction: column;
+        position: fixed !important;
+        top: 70px !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: auto !important;
+        width: min(380px, 88vw) !important;
+        max-width: 88vw !important;
+        height: auto !important;
+        background-color: #0a0a1e !important;
+        background-image:
+            radial-gradient(120% 60% at 100% 0%, rgba(255, 193, 7, 0.06), transparent 60%),
+            linear-gradient(180deg, #0a0a1e 0%, #12122e 55%, #0a0a1e 100%) !important;
+        color: #ffffff !important;
+        z-index: 1050;
+        padding: 32px 26px 28px !important;
+        overflow-y: auto;
+        overflow-x: hidden;
+        align-items: stretch !important;
+        transform: translateX(100%);
+        transition: transform 0.52s cubic-bezier(.22, 1, .36, 1);
+        box-shadow:
+            -1px 0 0 rgba(255, 193, 7, 0.45),
+            -28px 0 70px rgba(0, 0, 0, 0.45);
+        pointer-events: none;
+        visibility: hidden;
     }
 
     .mainNav.navOpen {
-        display: flex !important;
-        flex-direction: column;
+        transform: translateX(0);
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    /* Voile derrière le drawer : marine FATE, ferme au clic. */
+    .navBackdrop {
         position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
+        inset: 0;
+        background: linear-gradient(90deg,
+                rgba(10, 10, 30, 0.45) 0%,
+                rgba(10, 10, 30, 0.65) 100%);
+        z-index: 1040;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.45s ease;
+        backdrop-filter: blur(6px) saturate(120%);
+        -webkit-backdrop-filter: blur(6px) saturate(120%);
+    }
+
+    .navBackdrop.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* ── Liens : Montserrat capitales, transition or au hover ────── */
+    .mainNav.navOpen .navLink,
+    .mainNav.navOpen .navLinkStrong {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        letter-spacing: 1.6px !important;
+        text-transform: uppercase !important;
+        color: rgba(255, 255, 255, 0.86) !important;
+        padding: 16px 4px !important;
+        border-bottom: 1px solid rgba(255, 193, 7, 0.14);
+        position: relative;
+        transition: color 0.25s ease, padding-left 0.3s cubic-bezier(.4, 0, .2, 1), background 0.25s ease;
+    }
+
+    .mainNav.navOpen .navLink::before {
+        content: '';
+        position: absolute;
+        left: -26px;
+        top: 50%;
+        transform: translateY(-50%) scaleY(0);
+        width: 3px;
+        height: 22px;
+        background: #FFC107;
+        transition: transform 0.3s cubic-bezier(.4, 0, .2, 1);
+        transform-origin: center;
+    }
+
+    .mainNav.navOpen .navLink:hover,
+    .mainNav.navOpen .navLink:focus-visible,
+    .mainNav.navOpen .navLinkStrong:hover {
+        color: #FFC107 !important;
+        padding-left: 14px !important;
+        background: transparent !important;
+    }
+
+    .mainNav.navOpen .navLink:hover::before,
+    .mainNav.navOpen .navLink:focus-visible::before {
+        transform: translateY(-50%) scaleY(1);
+    }
+
+    /* Wrapper du lien parent + chevron */
+    .mainNav.navOpen .navLinkWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
-        height: calc(100vh - 70px);
-        background: #ffffff;
-        z-index: 1050;
-        padding: 24px 20px 80px;
-        overflow-y: auto;
-        align-items: stretch !important;
+    }
+
+    .mainNav.navOpen .dropdownIcon {
+        color: #FFC107 !important;
+        font-weight: 300 !important;
+        font-size: 18px !important;
+        opacity: 0.7;
+        margin-left: auto;
+        transition: transform 0.3s ease, opacity 0.25s ease;
+    }
+
+    .mainNav.navOpen .hasSubmenu.submenuOpen .dropdownIcon {
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+    /* ── Cascade : chaque item glisse en place avec un léger délai ── */
+    .mainNav .navItem {
+        opacity: 0;
+        transform: translateX(24px);
+        transition: opacity 0.42s ease, transform 0.5s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    .mainNav.navOpen .navItem {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .mainNav.navOpen .navItem:nth-child(1) {
+        transition-delay: 140ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(2) {
+        transition-delay: 180ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(3) {
+        transition-delay: 220ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(4) {
+        transition-delay: 260ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(5) {
+        transition-delay: 300ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(6) {
+        transition-delay: 340ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(7) {
+        transition-delay: 400ms;
+    }
+
+    .mainNav.navOpen .navItem:nth-child(8) {
+        transition-delay: 440ms;
     }
 
     .mainNav.navOpen .navList {
@@ -68,11 +213,31 @@ body {
         width: 100%;
     }
 
+    /* Empêche `justify-content: space-between` (style.css:10247) de
+       coller le menu en bas du drawer avec un vide blanc au milieu.
+       Sans ce fix, en column le `space-between` répartit verticalement
+       le logoLink (en haut) et le navList (en bas). */
+    .mainNav.navOpen {
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* Masque le logo "desktopOnly" dupliqué à l'intérieur du drawer.
+       La règle `.desktopOnly { display: none }` n'existe que jusqu'à
+       1010px (style.css:10742) ; entre 1011 et 1100, mon drawer mobile
+       est actif mais le logo reste visible → doublon avec le logo
+       du `.mobileNav` du header. */
+    .mainNav.navOpen .desktopOnly,
+    .mainNav.navOpen .logoLink {
+        display: none !important;
+    }
+
     .mainNav.navOpen .navItem {
         width: 100%;
     }
 
-    /* Sous-menus en mode mobile : pleine largeur, position statique */
+    /* Sous-menus : volet en retrait avec liseré or à gauche */
     .mainNav.navOpen .submenuList {
         position: static !important;
         display: none;
@@ -81,28 +246,160 @@ body {
         max-width: 100% !important;
         box-shadow: none !important;
         border: none !important;
-        background: rgba(0, 0, 0, 0.03) !important;
-        border-radius: 8px !important;
-        padding: 4px 0 !important;
-        margin: 4px 0 !important;
+        border-left: 1px solid rgba(255, 193, 7, 0.25) !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 6px 0 10px 14px !important;
+        margin: 4px 0 8px 4px !important;
     }
 
     .mainNav.navOpen .hasSubmenu.submenuOpen .submenuList {
         display: flex !important;
         flex-direction: column;
+        animation: fateSubmenuFade 0.35s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    @keyframes fateSubmenuFade {
+        from {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .mainNav.navOpen .submenuLink {
         white-space: normal !important;
         word-break: break-word;
-        padding: 10px 16px !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 13px !important;
+        letter-spacing: 0.4px !important;
+        color: rgba(255, 255, 255, 0.6) !important;
+        padding: 9px 14px !important;
+        transition: color 0.2s ease, padding-left 0.25s ease;
     }
 
-    /* Bouton "Adhérer" du header : pleine largeur dans le drawer */
-    .mainNav.navOpen .btn-adherer-noir {
-        width: 100%;
-        justify-content: center;
-        margin-top: 16px;
+    .mainNav.navOpen .submenuLink:hover,
+    .mainNav.navOpen .submenuLink:focus-visible {
+        color: #FFC107 !important;
+        padding-left: 18px !important;
+    }
+
+    .mainNav.navOpen .horizontalLine {
+        display: none !important;
+    }
+
+    /* Boutons CTA Soutenir/Adhérer en mode drawer : pleine largeur,
+       sans décor desktop (barre verticale `::before` + margin gauche
+       posé par fate-branding.css:184 sur le <li> avant-dernier — ça
+       fait une barre orpheline en colonne) */
+    .mainNav.navOpen .navList li:nth-last-child(2),
+    .mainNav.navOpen .navList li:last-child {
+        margin-left: 0 !important;
+    }
+
+    .mainNav.navOpen .navList li:nth-last-child(2)::before,
+    .mainNav.navOpen .navList li:last-child::before {
+        display: none !important;
+    }
+
+    /* CTAs Soutenir / Adhérer — version drawer marine */
+    .mainNav.navOpen .buttonNav,
+    .mainNav.navOpen .btn-adherer-noir,
+    .mainNav.navOpen a[href*="soutenir"].buttonNav,
+    .mainNav.navOpen a[href*="adherer"].buttonNav {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 15px 22px !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        letter-spacing: 1.8px !important;
+        text-transform: uppercase !important;
+        text-align: center !important;
+        box-sizing: border-box;
+        border-radius: 50px !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+    }
+
+    .mainNav.navOpen a[href*="soutenir"].buttonNav {
+        background: #FFC107 !important;
+        color: #0a0a1e !important;
+        border: 2px solid #FFC107 !important;
+        box-shadow: 0 10px 28px rgba(255, 193, 7, 0.22) !important;
+    }
+
+    .mainNav.navOpen a[href*="soutenir"].buttonNav:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 32px rgba(255, 193, 7, 0.32) !important;
+        background: #F3C23C !important;
+    }
+
+    .mainNav.navOpen a[href*="adherer"].buttonNav {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: 2px solid rgba(255, 255, 255, 0.5) !important;
+        box-shadow: none !important;
+    }
+
+    .mainNav.navOpen a[href*="adherer"].buttonNav:hover {
+        background: #ffffff !important;
+        color: #0a0a1e !important;
+        border-color: #ffffff !important;
+        transform: translateY(-2px);
+    }
+
+    /* Respiration au-dessus des CTA + filet or au-dessus */
+    .mainNav.navOpen .navList li:nth-last-child(2) {
+        margin-top: 28px !important;
+        padding-top: 24px !important;
+        position: relative;
+    }
+
+    .mainNav.navOpen .navList li:nth-last-child(2)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 30%;
+        right: 30%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.5), transparent);
+    }
+
+    .mainNav.navOpen .navList li:last-child {
+        margin-top: 12px !important;
+    }
+
+    /* Filigrane signature Georgia en bas du drawer */
+    .mainNav::after {
+        content: 'Forum Associatif Tous Ensemble\A Lyon · depuis 2001';
+        white-space: pre;
+        display: block;
+        margin-top: 32px;
+        padding-top: 20px;
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-size: 11px;
+        line-height: 1.7;
+        letter-spacing: 0.4px;
+        color: rgba(255, 193, 7, 0.4);
+        text-align: center;
+        align-self: center;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.4s ease 0.55s, transform 0.4s ease 0.55s;
+        pointer-events: none;
+    }
+
+    .mainNav.navOpen::after {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     /* Burger toujours visible <=1100px */
@@ -486,4 +783,136 @@ iframe {
 */
 html {
     overflow-x: hidden;
+}
+
+
+/* ============================================================
+   19. HEROS DES PAGES INTÉRIEURES — titres tronqués
+   ============================================================
+   Symptôme à 320/375 : sur les pages "À propos" (fate.html),
+   "Collaborations", "Partenaires", etc., le titre principal
+   (`.fate-page-hero h1`) débordait du viewport. Sur fate.html,
+   le `<em>` du titre ("Notre Histoire") avait `white-space: nowrap`
+   qui forçait le mot sur une seule ligne, peu importe la largeur.
+
+   Cause :
+   - `pages-fate.css:101` impose `font-size: clamp(40px, 5.5vw, 72px)`
+     → à 320 px, on est toujours à 40 px minimum, alors qu'il faudrait
+     descendre à 26-30 px pour tenir.
+   - `pages-fate.css:114` impose `white-space: nowrap` sur `em` —
+     fait pour éviter "Notre / Histoire" mais casse à <=375 px.
+
+   Fix : on autorise un seuil mobile plus bas, on libère le wrap,
+   on réduit le letter-spacing négatif (qui rendait le calcul de
+   largeur encore plus serré).
+*/
+@media (max-width: 480px) {
+
+    .fate-page-hero h1,
+    .fate-page-hero h1 em,
+    .collabs-hero h1,
+    .collabs-hero h1 em,
+    .actu-hero h1,
+    .actu-hero h1 em,
+    .actions-hero h1,
+    .actions-hero h1 em,
+    .ev-hero h1,
+    .ev-hero h1 em {
+        font-size: clamp(26px, 8vw, 36px) !important;
+        letter-spacing: -0.5px !important;
+        white-space: normal !important;
+        word-break: break-word;
+        hyphens: auto;
+        line-height: 1.1 !important;
+    }
+
+    .fate-page-hero h1 em,
+    .collabs-hero h1 em,
+    .actu-hero h1 em,
+    .actions-hero h1 em,
+    .ev-hero h1 em {
+        display: block !important;
+    }
+}
+
+/* À 481-768 : laisser un peu plus de respiration */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .fate-page-hero h1,
+    .fate-page-hero h1 em,
+    .collabs-hero h1,
+    .collabs-hero h1 em,
+    .actu-hero h1,
+    .actu-hero h1 em,
+    .actions-hero h1,
+    .actions-hero h1 em,
+    .ev-hero h1,
+    .ev-hero h1 em {
+        font-size: clamp(32px, 5vw, 44px) !important;
+        white-space: normal !important;
+    }
+}
+
+
+/* ============================================================
+   20. PAGES ÉVÉNEMENT — overlay/badges sur l'image hero
+   ============================================================
+   Symptôme à 320 sur les pages CAN/Assainissement/Plantation :
+   les badges en overlay sur l'image hero (`Actions écocitoyennes`,
+   `Missions économiques`) se posaient juste à côté du bord droit,
+   parfois clippés ("Diffusion des marc..." tronqué).
+
+   Fix : padding mobile + max-width 100% sur les overlays / badges.
+*/
+@media (max-width: 480px) {
+
+    .ev-hero,
+    .ev-hero-left,
+    .ev-hero-right,
+    .ev-hero-text,
+    .ev-breadcrumb {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+
+    [class*="ev-overlay"],
+    [class*="ev-badge"] {
+        max-width: calc(100% - 16px);
+        word-break: break-word;
+    }
+}
+
+
+/* ============================================================
+   21. RESIZE MOBILE → DESKTOP — drawer "fantôme"
+   ============================================================
+   Symptôme : ouvrir le burger en mobile, puis agrandir la
+   fenêtre vers desktop, laisse `body.noScroll` actif et la
+   classe `.mainNav.navOpen` posée. Le body est locké, on ne
+   peut plus scroller la page, alors que visuellement on est
+   repassé en mode nav desktop normal.
+
+   Le JS (`main.js`) gère désormais le resize côté logique
+   (cf bloc 1 navigation), mais on garantit ici côté CSS qu'au
+   delà du breakpoint desktop :
+   - `body.noScroll` n'a plus aucun effet (le scroll page reste
+     toujours possible en desktop),
+   - les styles drawer mobile de `.mainNav.navOpen` sont
+     neutralisés (déjà couvert par notre section 2 puisque la
+     règle est `@media (max-width: 1100px)`, mais on double).
+*/
+@media (min-width: 1101px) {
+
+    body.noScroll {
+        overflow: auto !important;
+    }
+
+    .mainNav.navOpen {
+        position: static !important;
+        height: auto !important;
+        background: transparent !important;
+        padding: 0 !important;
+    }
 }
