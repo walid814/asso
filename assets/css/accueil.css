@@ -46,8 +46,13 @@
 .fate-hero-overlay {
     position: absolute;
     inset: 0;
-    background: transparent;
-    /* Sans filtre sombre selon demande */
+    background: linear-gradient(
+        to right,
+        rgba(10, 10, 30, 0.35) 0%,
+        rgba(10, 10, 30, 0.18) 45%,
+        rgba(10, 10, 30, 0.03) 75%,
+        transparent 100%
+    );
     z-index: 1;
     display: flex;
     align-items: center;
@@ -100,7 +105,7 @@
 .fate-hero-sub {
     font-size: 15px;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.80);
+    color: #ffffff;
     margin-bottom: 30px;
     max-width: 500px;
     opacity: 0;
