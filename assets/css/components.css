@@ -1,0 +1,215 @@
+/* ============================================================
+   COMPONENTS.CSS — Footer et éléments partagés injectés via components.js
+   Tokens FATE : --y #EAB308 | --dk #111827 | --bg #F0EBE0
+   ============================================================ */
+
+/* ── FOOTER ROOT ─────────────────────────────────────────── */
+.ft-root {
+    background: #111827;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+/* Ligne jaune en haut */
+.ft-root::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #EAB308;
+}
+
+/* ── GRILLE PRINCIPALE ───────────────────────────────────── */
+.ft-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 64px 48px 48px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.4fr;
+    gap: 48px;
+}
+
+/* ── TITRES DE COLONNES ──────────────────────────────────── */
+.ft-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #EAB308;
+    margin: 0 0 24px;
+}
+
+/* ── COLONNE MARQUE ──────────────────────────────────────── */
+.ft-logo-link { display: inline-block; margin-bottom: 20px; }
+.ft-logo {
+    height: 56px;
+    width: auto;
+    display: block;
+}
+
+.ft-about {
+    font-size: 13.5px;
+    line-height: 1.78;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 28px;
+    max-width: 320px;
+}
+
+/* Social */
+.ft-social-label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.30);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.ft-social-icons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ft-social-icons a {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ft-social-icons a:hover {
+    background: #EAB308;
+    color: #111827;
+    border-color: #EAB308;
+}
+
+/* ── COLONNE LIENS ───────────────────────────────────────── */
+.ft-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ft-links a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.ft-links a i {
+    color: #EAB308;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.ft-links a:hover { color: #EAB308; }
+
+/* ── COLONNE CONTACT ─────────────────────────────────────── */
+.ft-contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ft-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.ft-contact-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(234, 179, 8, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EAB308;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.ft-contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ft-contact-text p,
+.ft-contact-text a {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.ft-contact-text a:hover { color: #EAB308; }
+
+/* ── BARRE BAS ───────────────────────────────────────────── */
+.ft-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ft-copy {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 48px;
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.28);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ft-copy strong { color: rgba(255, 255, 255, 0.50); }
+
+.ft-copy .ft-info-btn {
+    color: rgba(255, 255, 255, 0.20);
+    cursor: help;
+    font-size: 13px;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.ft-copy .ft-info-btn:hover { color: #EAB308; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .ft-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        padding: 52px 36px 40px;
+    }
+    .ft-col--brand { grid-column: 1 / -1; }
+    .ft-about { max-width: none; }
+}
+
+@media (max-width: 580px) {
+    .ft-inner {
+        grid-template-columns: 1fr;
+        padding: 40px 24px 32px;
+        gap: 32px;
+    }
+    .ft-copy { padding: 18px 24px; flex-wrap: wrap; }
+}
