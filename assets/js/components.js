@@ -67,7 +67,7 @@
     </div>
     <div class="mobileNavToggle" id="mobileToggle">&#9776;</div>
 
-    <nav class="mainNav" id="mainNav">
+    <nav class="mainNav" id="mainNav" aria-label="Navigation principale">
         <a href="${h}" class="logoLink desktopOnly">
             <img src="${b}assets/images/logo.png" alt="logo fate" class="logoImage" />
         </a>

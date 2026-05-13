@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 4. Créer la bulle et l'ajouter au <body>
     const suggestionHTML = `
-        <div class="suggestion-prompt" id="suggestionPrompt" style="display: none;">
+        <aside class="suggestion-prompt" id="suggestionPrompt" aria-label="Boîte à idées" style="display: none;">
             <button class="suggestion-close" id="closeSuggestion" aria-label="Fermer la suggestion">
                 <i class="fas fa-times"></i>
             </button>
             <a href="${linkPath}" class="suggestion-link">
-                <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-lightbulb" aria-hidden="true"></i>
                 Une idée ? Une remarque ?
             </a>
-        </div>
+        </aside>
     `;
     document.body.insertAdjacentHTML('beforeend', suggestionHTML);
 

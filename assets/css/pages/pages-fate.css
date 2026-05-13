@@ -411,6 +411,7 @@
             padding: 25px;
         }
 
+        .team-info h3,
         .team-info h4 {
             font-family: 'Montserrat', sans-serif !important;
             font-size: 18px !important;

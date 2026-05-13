@@ -1,0 +1,187 @@
+/* ============================================================
+   FATE — A11Y FIXES (WCAG 2.1 AA — contrastes & couleurs)
+   ------------------------------------------------------------
+   Override unique chargé après fate-responsive-fixes.css.
+   Ne touche aucun CSS existant : se contente de relever les
+   contrastes en-deçà du seuil 4.5:1 (texte normal) ou 3:1
+   (large/bold ≥ 18.7px).
+
+   Audit de référence : axe-core 4.10 sur 18 pages × 2 viewports.
+   ============================================================ */
+
+/* ── 1. FOOTER ─────────────────────────────────────────────────
+   Footer sur fond marine #0a0a1e — l'esthétique « discrète »
+   originale (blanc à 0.20/0.28/0.30 d'alpha) tombait à ~2.8 à
+   3.4:1. Remontée des alphas pour atteindre ≥ 4.5:1 tout en
+   conservant le rendu en filigrane.
+   ────────────────────────────────────────────────────────── */
+.ft-social-label {
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+.ft-copy {
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+.ft-copy strong {
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+.ft-copy .ft-info-btn {
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+.ft-copy .ft-info-btn:hover {
+    color: #FFD449 !important;          /* or vif, > 9:1 sur marine */
+}
+
+/* ── 2. NAV — item actif ──────────────────────────────────────
+   `.activeNav` était en #EAB308 (or saturé) sur le header clair
+   → ~1.9:1. Bascule en marine FATE, l'item actif est de toute
+   façon souligné par sa barre or — la couleur du texte peut
+   rester sobre.
+   ────────────────────────────────────────────────────────── */
+.headerWrapper .navLinkStrong.activeNav,
+.headerWrapper .navLink.activeNav {
+    color: #0a0a1e !important;
+    font-weight: 800;
+}
+
+/* ── 3. LABELS D'ÉVÉNEMENT (.ev-date) ─────────────────────────
+   .ev-date utilisait --gr (#6B7280) sur fond beige #f8f9fb
+   → ~4.6:1 (limite). Foncé pour passer largement AA.
+   ────────────────────────────────────────────────────────── */
+.ev-date {
+    color: #4B5563 !important;          /* gray-600, ~7.5:1 sur blanc */
+}
+
+/* ── 4. LABELS DE CATÉGORIE & FILTRES ──────────────────────────
+   .actu-cat-label (variante card), .projets-label, .blog-date
+   → tous des « pills » or pâle sur fond clair, texte or moyen
+   en dessous d'AA. On fonce le texte et durcit la bordure.
+   ────────────────────────────────────────────────────────── */
+.actu-card .actu-cat-label,
+.actu-cat-label {
+    background: rgba(234, 179, 8, 0.18) !important;
+    border: 1px solid rgba(234, 179, 8, 0.45) !important;
+    color: #6B4F00 !important;          /* or foncé, ~7.1:1 sur blanc */
+}
+.projets-label {
+    background: rgba(255, 193, 7, 0.18) !important;
+    color: #7A4A00 !important;          /* brun-or, ~8.1:1 sur blanc */
+}
+.blog-card .blog-date li,
+.blog-date li {
+    color: #4B5563 !important;
+}
+
+/* ── 5. HEROS — sur-titres et chevrons sur image ──────────────
+   Les `.fate-hero-overtitle` étaient en blanc 0.8 sur image
+   parfois claire (hero ARTA SACRA notamment). On force un
+   text-shadow pour garantir la lisibilité même quand le slide
+   en arrière-plan est très lumineux.
+   ────────────────────────────────────────────────────────── */
+.fate-hero-overtitle,
+.fate-hero-h1,
+.fate-hero-sub {
+    text-shadow: 0 1px 8px rgba(10, 10, 30, 0.55), 0 1px 2px rgba(10, 10, 30, 0.6);
+}
+
+/* ── 6. FOCUS VISIBLE ─────────────────────────────────────────
+   Bonus a11y : focus ring or sur tous les éléments interactifs.
+   axe ne le détecte pas, mais c'est WCAG 2.4.7.
+   ────────────────────────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #FFC107;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ── 7. MAIN — garantie minimale de layout ────────────────────
+   Le wrapper <main> ajouté manuellement aux 18 pages doit se
+   comporter comme un bloc transparent (pas de styling Bootstrap
+   par défaut). Sécurité.
+   ────────────────────────────────────────────────────────── */
+main#main-content {
+    display: block;
+    width: 100%;
+}
+
+/* ── 8. EM/SPAN OR DANS LES TITRES ────────────────────────────
+   Le or pur (#FFC107 / #EAB308) dans les `<em>` et `<span>` des
+   titres tombe à 1.7-1.9:1 sur fond clair. Bascule sur un or
+   mordoré (#8A5C00) qui passe ~5.6:1 tout en restant perçu
+   comme « or chaud ». Le gradient or des h2 spans est aplati
+   en couleur pleine pour les besoins du contraste.
+   ────────────────────────────────────────────────────────── */
+.fate-about-text h2 em,
+.adh-intro h2 em,
+.adh-why-title em,
+.sou-section-head h2 em,
+.ct-section-header h2 em,
+.fate-page-hero h2 em {
+    color: #8A5C00 !important;
+}
+
+.projets-header h2 span,
+.pt-section-header h2 span,
+.pt-section-title span,
+.fate-panel-header h2 span,
+#panel2025 .fate-panel-header h2 span {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    color: #8A5C00 !important;
+}
+
+/* Rôles/postes des membres d'équipe — étaient en --y (or). */
+.team-card .team-info p {
+    color: #8A5C00 !important;
+}
+
+/* Sous-titres de formulaires (--gr trop pâle sur fond clair). */
+.sg-form-header p {
+    color: #4B5563 !important;
+}
+
+/* Liens texte hérités d'anciens styles inline (couleur or). */
+a.html-style-192a76ad,
+a.html-style-af847053,
+a.html-style-40609adf,
+a[class^="html-style-"][class] {
+    color: #8A5C00 !important;
+    text-decoration: underline;
+}
+
+/* ── 9. TEXTES D'INTRODUCTION SECTION ─────────────────────────
+   Tous les `p` d'accroche en --gr (#6B7280) sur fond clair
+   tombent à ~4.4:1 (juste sous AA). Bascule en #4B5563.
+   ────────────────────────────────────────────────────────── */
+.projets-header p,
+.adh-intro p,
+.sou-section-head p,
+.ct-section-header p {
+    color: #4B5563 !important;
+}
+
+/* ── 10. BOUTON DE PARTAGE FACEBOOK ───────────────────────────
+   `.sou-share-btn.facebook` en blanc sur #1877F2 = 3.7:1.
+   Foncé sur #1554B7 → ~6:1, reste perçu comme bleu Facebook.
+   ────────────────────────────────────────────────────────── */
+.sou-share-btn.facebook,
+.supportShareButton.facebook {
+    background: #1554B7 !important;
+    background-color: #1554B7 !important;
+    color: #fff !important;
+}
+
+/* ── 11. SUGGESTION PROMPT — landmark complémentaire ──────────
+   `.suggestion-prompt` est en `position: fixed`, donc hors du
+   `<main>`. axe lève `region` faute de landmark parent. On la
+   marque comme bandeau complémentaire (équivalent role="aside")
+   via CSS pas possible — ajouter `role="complementary"` dans le
+   HTML serait préférable, mais le bloc est généré côté JS dans
+   plusieurs pages. Couvert par script JS (cf. journal a11y).
+   ────────────────────────────────────────────────────────── */
