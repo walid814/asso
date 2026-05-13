@@ -326,101 +326,10 @@
         src="https://www.paypal.com/sdk/js?client-id=BAAIway4cHsj5s7We82Dd1Aam9USU8nc5S0Y6e5ApCHrddu6hZhEGJpzPT56DomQyTBMBD_d_TLLSTWI38&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
     <script src="../assets/js/video.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleBtn = document.getElementById('mobileToggle');
-            const mainNav = document.getElementById('mainNav');
-            const body = document.body;
-            const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
 
-            // Mobile toggle
-            if (toggleBtn) {
-                toggleBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('navOpen');
-                    body.classList.toggle('noScroll');
-                });
-            }
-
-            // Fermer le menu mobile quand on clique sur un lien
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    // Ne pas fermer si on clique sur un toggle de sous-menu
-                    if (!e.target.closest('.navToggleLink')) {
-                        mainNav.classList.remove('navOpen');
-                        body.classList.remove('noScroll');
-                    }
-                });
-            });
-
-            // Gestion des sous-menus uniquement sur mobile
-            const toggleLinks = document.querySelectorAll('.navToggleLink');
-            toggleLinks.forEach(toggle => {
-                toggle.addEventListener('click', (e) => {
-                    // On empêche le script de s'exécuter sur les grands écrans (ordinateurs)
-                    if (window.innerWidth < 992) {
-                        e.preventDefault();
-                        const parentLi = toggle.closest('.hasSubmenu');
-                        if (parentLi) {
-                            parentLi.classList.toggle('submenuOpen');
-                        }
-                    }
-                });
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Loader et animations
-            const pageLoader = document.getElementById('pageLoader');
-            const body = document.body;
-            setTimeout(() => {
-                if (pageLoader) { pageLoader.classList.add('hidden'); setTimeout(() => { pageLoader.style.display = 'none'; }, 500); }
-                body.classList.add('loaded');
-            }, 100);
-
-            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-            }, observerOptions);
-            document.querySelectorAll('.fade-in').forEach(section => observer.observe(section));
-
-            // Validation formulaire
-            const form = document.querySelector('form');
-            const submitBtn = document.querySelector('.btn-submit');
-            if (form) {
-                form.addEventListener('submit', function (e) {
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-                });
-            }
-
-            // Suggestion link scroll
-            const suggestionLink = document.getElementById('suggestionLink');
-            if (suggestionLink) {
-                function checkScroll() {
-                    const scrollPosition = window.scrollY + window.innerHeight;
-                    const documentHeight = document.documentElement.scrollHeight;
-                    const scrollPercent = scrollPosition / documentHeight;
-                    if (scrollPercent >= 0.5) {
-                        suggestionLink.style.opacity = '1';
-                        suggestionLink.style.visibility = 'visible';
-                    } else {
-                        suggestionLink.style.opacity = '0';
-                        suggestionLink.style.visibility = 'hidden';
-                    }
-                }
-                window.addEventListener('scroll', checkScroll);
-                window.addEventListener('resize', checkScroll);
-                checkScroll();
-            }
-
-            // Tooltips Bootstrap
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-        });
-    </script>
     <script src="../assets/js/language-selector.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/pages/suggestions.js"></script>
 </body>
 
 </html>

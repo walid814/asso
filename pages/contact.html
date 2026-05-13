@@ -122,38 +122,6 @@
             </nav>
         </header>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav = document.getElementById('mainNav');
-                const body = document.body;
-                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
-                if (toggleBtn) {
-                    toggleBtn.addEventListener('click', () => {
-                        mainNav.classList.toggle('navOpen');
-                        body.classList.toggle('noScroll');
-                    });
-                }
-                navLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        if (!e.target.closest('.navToggleLink')) {
-                            mainNav.classList.remove('navOpen');
-                            body.classList.remove('noScroll');
-                        }
-                    });
-                });
-                const toggleLinks = document.querySelectorAll('.navToggleLink');
-                toggleLinks.forEach(toggle => {
-                    toggle.addEventListener('click', (e) => {
-                        if (window.innerWidth < 992) {
-                            e.preventDefault();
-                            const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) parentLi.classList.toggle('submenuOpen');
-                        }
-                    });
-                });
-            });
-        </script>
 
         <!-- HERO -->
         <section class="ct-hero">
@@ -295,51 +263,6 @@
 
         </div><!-- /ct-body -->
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const form = document.getElementById("contactForm");
-                const divParent = document.getElementById("chargementContainer");
-
-                const chargement = () => {
-                    if (divParent) {
-                        divParent.innerHTML = `<div class="chargement"><div class="spinner"></div></div>`;
-                    }
-                };
-
-                const submitForm = () => {
-                    const champsRequis = [
-                        document.getElementById("nomRef"),
-                        document.getElementById("emailRef"),
-                        document.getElementById("objetRef"),
-                        document.getElementById("messageRef")
-                    ];
-                    let erreurDetecte = false;
-                    champsRequis.forEach(champ => {
-                        if (champ.value.trim() === "") {
-                            champ.classList.add("inputContainerError");
-                            erreurDetecte = true;
-                        } else {
-                            champ.classList.remove("inputContainerError");
-                        }
-                    });
-                    if (erreurDetecte) {
-                        setTimeout(() => {
-                            document.querySelectorAll(".inputContainerError").forEach(i => i.classList.remove("inputContainerError"));
-                        }, 1000);
-                        return;
-                    }
-                    chargement();
-                    form.submit();
-                };
-
-                if (form) {
-                    form.addEventListener("keydown", event => {
-                        if (event.key === "Enter") { event.preventDefault(); submitForm(); }
-                    });
-                }
-                window.submitForm = submitForm;
-            });
-        </script>
 
         <!-- FOOTER -->
         <section class="footer footerContainer">
@@ -422,12 +345,6 @@
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-            });
-        </script>
         <script src="../assets/js/meanmenu.js"></script>
         <script src="../assets/js/owl.carousel.min.js"></script>
         <script src="../assets/js/magnific-popup.min.js"></script>
@@ -441,7 +358,6 @@
         <script src="../assets/js/odometer.min.js"></script>
         <script src="../assets/js/custom.js"></script>
         <script src="../assets/js/image-fallback.js" defer></script>
-        <script>$(window).bind("load", function () { $("body").addClass("loaded") })</script>
 
     </div>
 
@@ -453,6 +369,8 @@
     <script src="../assets/js/video.js"></script>
     <script src="../assets/js/language-selector.js"></script>
     <script src="../assets/js/suggestion.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/pages/contact.js"></script>
 </body>
 
 </html>

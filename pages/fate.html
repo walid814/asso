@@ -392,36 +392,7 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/language-selector.js"></script>
     <script src="../assets/js/suggestion.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleBtn = document.getElementById('mobileToggle');
-            const mainNav = document.getElementById('mainNav');
-            const body = document.body;
-            if (toggleBtn) {
-                toggleBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('navOpen');
-                    body.classList.toggle('noScroll');
-                });
-            }
-            document.querySelectorAll('.navLink, .navLinkStrong').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    if (!e.target.closest('.navToggleLink')) {
-                        mainNav.classList.remove('navOpen');
-                        body.classList.remove('noScroll');
-                    }
-                });
-            });
-            document.querySelectorAll('.navToggleLink').forEach(toggle => {
-                toggle.addEventListener('click', (e) => {
-                    if (window.innerWidth < 992) {
-                        e.preventDefault();
-                        const parentLi = toggle.closest('.hasSubmenu');
-                        if (parentLi) parentLi.classList.toggle('submenuOpen');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

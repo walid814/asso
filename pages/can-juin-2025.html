@@ -141,41 +141,6 @@
             </nav>
         </header>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav   = document.getElementById('mainNav');
-                const body      = document.body;
-                const navLinks  = document.querySelectorAll('.navLink, .navLinkStrong');
-
-                if (toggleBtn) {
-                    toggleBtn.addEventListener('click', () => {
-                        mainNav.classList.toggle('navOpen');
-                        body.classList.toggle('noScroll');
-                    });
-                }
-
-                navLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        if (!e.target.closest('.navToggleLink')) {
-                            mainNav.classList.remove('navOpen');
-                            body.classList.remove('noScroll');
-                        }
-                    });
-                });
-
-                const toggleLinks = document.querySelectorAll('.navToggleLink');
-                toggleLinks.forEach(toggle => {
-                    toggle.addEventListener('click', (e) => {
-                        if (window.innerWidth < 992) {
-                            e.preventDefault();
-                            const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) parentLi.classList.toggle('submenuOpen');
-                        }
-                    });
-                });
-            });
-        </script>
 
 
         <!-- ═══════════════════════════════════════════════════════════
@@ -353,12 +318,6 @@ une occasion unique de célébrer la fraternité, la culture et l'unité africai
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-            });
-        </script>
         <script src="../assets/js/meanmenu.js"></script>
         <script src="../assets/js/owl.carousel.min.js"></script>
         <script src="../assets/js/magnific-popup.min.js"></script>
@@ -371,17 +330,13 @@ une occasion unique de célébrer la fraternité, la culture et l'unité africai
         <script src="../assets/js/odometer.min.js"></script>
         <script src="../assets/js/custom.js"></script>
 
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded");
-            });
-        </script>
 
     </div>
 
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

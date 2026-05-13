@@ -128,38 +128,6 @@
             </nav>
         </header>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav   = document.getElementById('mainNav');
-                const body      = document.body;
-                const navLinks  = document.querySelectorAll('.navLink, .navLinkStrong');
-
-                toggleBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('navOpen');
-                    body.classList.toggle('noScroll');
-                });
-
-                navLinks.forEach(link => {
-                    link.addEventListener('click', e => {
-                        if (!e.target.closest('.navToggleLink')) {
-                            mainNav.classList.remove('navOpen');
-                            body.classList.remove('noScroll');
-                        }
-                    });
-                });
-
-                document.querySelectorAll('.navToggleLink').forEach(toggle => {
-                    toggle.addEventListener('click', e => {
-                        if (window.innerWidth < 992) {
-                            e.preventDefault();
-                            const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) parentLi.classList.toggle('submenuOpen');
-                        }
-                    });
-                });
-            });
-        </script>
 
         <!-- ══ HERO ══════════════════════════════════════════════ -->
         <section class="collabs-hero">
@@ -510,12 +478,6 @@
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-        });
-    </script>
     <script src="../assets/js/meanmenu.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/magnific-popup.min.js"></script>
@@ -528,61 +490,14 @@
     <script src="../assets/js/odometer.min.js"></script>
     <script src="../assets/js/custom.js"></script>
 
-    <script>
-        $(window).bind("load", function () { $("body").addClass("loaded"); });
-    </script>
 
     <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
-    <script>
-        /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────────
-           Ordre dans le tableau : du plus ancien au plus récent
-           Aller vers un index plus grand = aller vers le futur = slide droite
-           Aller vers un index plus petit = aller vers le passé = slide gauche
-        ──────────────────────────────────────────────────────────── */
-        (function () {
-            const YEARS = [2012, 2014, 2016, 2022, 2023, 2024, 2025];
-            let activeYear = 2025;
 
-            function switchToYear(newYear) {
-                if (newYear === activeYear) return;
-
-                const oldIdx = YEARS.indexOf(activeYear);
-                const newIdx = YEARS.indexOf(newYear);
-                const goingToPast = newIdx < oldIdx;
-
-                const oldPanel = document.getElementById('panel' + activeYear);
-                const newPanel = document.getElementById('panel' + newYear);
-                if (!newPanel) return;
-
-                newPanel.style.setProperty('--panel-slide-from', goingToPast ? '-36px' : '36px');
-
-                document.querySelectorAll('.fate-tl-year').forEach(btn => {
-                    const active = parseInt(btn.dataset.year) === newYear;
-                    btn.classList.toggle('active', active);
-                    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-                });
-
-                if (oldPanel) oldPanel.classList.remove('active');
-                newPanel.classList.add('active');
-                activeYear = newYear;
-
-                const activeBtn = document.querySelector('.fate-tl-year.active');
-                if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelectorAll('.fate-tl-year').forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        switchToYear(parseInt(this.dataset.year));
-                    });
-                });
-            });
-        })();
-    </script>
-
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/pages/collaborations.js"></script>
 </body>
 
 </html>

@@ -144,28 +144,6 @@
             </nav>
         </header>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav = document.getElementById('mainNav');
-                const body = document.body;
-                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
-
-                toggleBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('navOpen');
-                    body.classList.toggle('noScroll');
-                });
-
-                navLinks.forEach(link => {
-                    link.addEventListener('click', e => {
-                        if (!e.target.closest('.navToggleLink')) {
-                            mainNav.classList.remove('navOpen');
-                            body.classList.remove('noScroll');
-                        }
-                    });
-                });
-            });
-        </script>
 
         <!-- ══ HERO ══════════════════════════════════════════════ -->
         <section class="actions-hero">
@@ -707,12 +685,6 @@
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-        });
-    </script>
     <script src="../assets/js/meanmenu.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/magnific-popup.min.js"></script>
@@ -727,11 +699,6 @@
     <script src="../assets/js/custom.js"></script>
 
 
-    <script>
-        $(window).bind("load", function () {
-            $("body").addClass("loaded")
-        })
-    </script>
 
 
     </div>
@@ -744,63 +711,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
-    <script>
-            /* ── FRISE CHRONOLOGIQUE ─────────────────────────────────────
-               Ordre : du plus récent (index 0) au plus ancien (index N)
-               Naviguer vers un index plus grand = aller dans le passé = slide gauche
-               Naviguer vers un index plus petit = aller vers le présent = slide droite
-            ──────────────────────────────────────────────────────────── */
-            (function () {
-                const YEARS = [2006, 2014, 2016, 2018, 2019, 2021, 2022, 2023, 2024, 2025];
-                let activeYear = 2025;
-
-                function switchToYear(newYear) {
-                    if (newYear === activeYear) return;
-
-                    const oldIdx = YEARS.indexOf(activeYear);
-                    const newIdx = YEARS.indexOf(newYear);
-                    const goingToPast = newIdx < oldIdx; /* index plus petit = plus ancien dans le tableau chronologique */
-
-                    const oldPanel = document.getElementById('panel' + activeYear);
-                    const newPanel = document.getElementById('panel' + newYear);
-                    if (!newPanel) return;
-
-                    /* vers le passé (gauche) → entre par la gauche (-36px), vers le futur (droite) → entre par la droite (+36px) */
-                    newPanel.style.setProperty('--panel-slide-from', goingToPast ? '-36px' : '36px');
-
-                    /* mise à jour des boutons */
-                    document.querySelectorAll('.fate-tl-year').forEach(btn => {
-                        const active = parseInt(btn.dataset.year) === newYear;
-                        btn.classList.toggle('active', active);
-                        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-                    });
-
-                    /* swap panels */
-                    if (oldPanel) oldPanel.classList.remove('active');
-                    newPanel.classList.add('active');
-
-                    activeYear = newYear;
-
-                    /* scroll la pill active au centre */
-                    const activeBtn = document.querySelector('.fate-tl-year.active');
-                    if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                }
-
-                document.addEventListener('DOMContentLoaded', function () {
-                    document.querySelectorAll('.fate-tl-year').forEach(function (btn) {
-                        btn.addEventListener('click', function () {
-                            switchToYear(parseInt(this.dataset.year));
-                        });
-                    });
-                });
-
-                /* rétrocompatibilité au cas où main.js appelle encore toggleYear */
-                window.toggleYear = function (year) { switchToYear(year); };
-                window.closeOpenSection = window.toggleYear;
-            })();
-    </script>
 
     <script src="../assets/js/language-selector.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/pages/actions.js"></script>
 </body>
 
 </html>

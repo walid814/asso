@@ -169,48 +169,6 @@
             </nav>
         </header>
 
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const toggleBtn = document.getElementById('mobileToggle');
-                const mainNav = document.getElementById('mainNav');
-                const body = document.body;
-                const navLinks = document.querySelectorAll('.navLink, .navLinkStrong');
-
-
-                if (toggleBtn) {
-                    toggleBtn.addEventListener('click', () => {
-                        mainNav.classList.toggle('navOpen');
-                        body.classList.toggle('noScroll');
-                    });
-                }
-
-                navLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        if (!e.target.closest('.navToggleLink')) {
-                            mainNav.classList.remove('navOpen');
-                            body.classList.remove('noScroll');
-                        }
-                    });
-                });
-
-                const toggleLinks = document.querySelectorAll('.navToggleLink');
-                toggleLinks.forEach(toggle => {
-                    toggle.addEventListener('click', (e) => {
-                        if (window.innerWidth < 992) {
-                            e.preventDefault();
-                            const parentLi = toggle.closest('.hasSubmenu');
-                            if (parentLi) {
-                                parentLi.classList.toggle('submenuOpen');
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
-
-
-
         <section class="fate-hero" id="fateHero">
 
             <div class="fate-hero-slide active">
@@ -281,27 +239,6 @@
             </div>
         </section>
 
-        <script>
-            (function () {
-                var cur = 0;
-                var slides = document.querySelectorAll('#fateHero .fate-hero-slide');
-                var dots = document.querySelectorAll('#fateHero .fate-hero-dot');
-                var timer;
-
-                function show(n) {
-                    slides[cur].classList.remove('active');
-                    dots[cur].classList.remove('active');
-                    cur = (n + slides.length) % slides.length;
-                    slides[cur].classList.add('active');
-                    dots[cur].classList.add('active');
-                }
-                window.fateHeroSlide = function (d) { clearInterval(timer); show(cur + d); go(); };
-                window.fateHeroGoTo = function (n) { clearInterval(timer); show(n); go(); };
-                function go() { timer = setInterval(function () { show(cur + 1); }, 6000); }
-                go();
-            })();
-        </script>
-
         <section class="fate-about-strip">
             <div class="container">
                 <div class="fate-about-wrapper">
@@ -342,12 +279,6 @@
                         </div>
                     </div>
 
-                    <script>
-                        function launchAboutVideo() {
-                            const wrap = document.getElementById('aboutVideoWrap');
-                            wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/oxOJTua3v7g?autoplay=1" title="Forum Associatif Tous Ensemble — Présentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                        }
-                    </script>
                 </div>
             </div>
         </section>
@@ -778,12 +709,6 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-            });
-        </script>
         <script src="assets/js/meanmenu.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/magnific-popup.min.js"></script>
@@ -797,12 +722,6 @@
         <script src="assets/js/odometer.min.js"></script>
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/image-fallback.js" defer></script>
-
-        <script>
-            $(window).bind("load", function () {
-                $("body").addClass("loaded")
-            })
-        </script>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
@@ -830,30 +749,8 @@
         </div>
     </div>
 
-    <script>
-            (function () {
-                if (sessionStorage.getItem('fatePopupSeen')) return;
-                setTimeout(function () {
-                    var overlay = document.getElementById('fate-popup-overlay');
-                    if (overlay) overlay.classList.add('visible');
-                }, 1800);
-            })();
-        function closeFatePopup() {
-            var overlay = document.getElementById('fate-popup-overlay');
-            if (overlay) {
-                overlay.classList.remove('visible');
-                setTimeout(function () { overlay.style.display = 'none'; }, 400);
-                sessionStorage.setItem('fatePopupSeen', '1');
-            }
-        }
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeFatePopup();
-        });
-        document.getElementById('fate-popup-overlay').addEventListener('click', function (e) {
-            if (e.target === this) closeFatePopup();
-        });
-
-    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pages/index.js"></script>
     <script src="assets/js/suggestion.js"></script>
     <script src="assets/js/language-selector.js"></script>
 </body>
