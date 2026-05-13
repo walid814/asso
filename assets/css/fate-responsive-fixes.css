@@ -1,0 +1,489 @@
+/* ============================================================
+   FATE — Corrections responsive
+   ------------------------------------------------------------
+   Auteur : Damien (stage 2026)
+   Objectif : rendre le site totalement responsive de 320 à 1920+,
+   sans toucher aux fichiers CSS des autres stagiaires.
+   Ce fichier est chargé EN DERNIER pour gagner la cascade.
+   Toute règle ici corrige un bug identifié par l'audit Playwright
+   (voir docs/JOURNAL_RESPONSIVE.md pour le détail).
+   ============================================================ */
+
+
+/* ============================================================
+   1. SÉCURITÉ — empêcher tout débordement horizontal global
+   ============================================================
+   Plusieurs sections (marquees, hero carrousels) génèrent des
+   enfants plus larges que le viewport. On force le clip à la
+   racine pour neutraliser tout futur overflow accidentel.
+*/
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+
+/* ============================================================
+   2. NAVIGATION — bug critique
+   ============================================================
+   Symptôme : sur tout viewport <=1010px, le menu était affiché
+   en permanence (visible sous le header), bloquant le contenu.
+
+   Cause : `fate-branding.css:62` force `.mainNav { display:flex
+   !important }` HORS media query, ce qui écrase la règle
+   `display:none` mobile de `style.css:10708`. La classe `.navOpen`
+   du JS ne sert plus à rien.
+
+   Fix : on remet la logique « masqué par défaut sur mobile,
+   visible avec .navOpen ». Breakpoint repoussé à 1100px pour
+   éviter le débordement nav desktop observé à 1024px.
+*/
+@media (max-width: 1100px) {
+    .mainNav {
+        display: none !important;
+    }
+
+    .mainNav.navOpen {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #ffffff;
+        z-index: 1050;
+        padding: 24px 20px 80px;
+        overflow-y: auto;
+        align-items: stretch !important;
+    }
+
+    .mainNav.navOpen .navList {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+        height: auto !important;
+        width: 100%;
+    }
+
+    .mainNav.navOpen .navItem {
+        width: 100%;
+    }
+
+    /* Sous-menus en mode mobile : pleine largeur, position statique */
+    .mainNav.navOpen .submenuList {
+        position: static !important;
+        display: none;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: rgba(0, 0, 0, 0.03) !important;
+        border-radius: 8px !important;
+        padding: 4px 0 !important;
+        margin: 4px 0 !important;
+    }
+
+    .mainNav.navOpen .hasSubmenu.submenuOpen .submenuList {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .mainNav.navOpen .submenuLink {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 10px 16px !important;
+    }
+
+    /* Bouton "Adhérer" du header : pleine largeur dans le drawer */
+    .mainNav.navOpen .btn-adherer-noir {
+        width: 100%;
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+    /* Burger toujours visible <=1100px */
+    .mobileNavToggle,
+    #mobileToggle {
+        display: block !important;
+    }
+
+    .mobileNav {
+        display: flex !important;
+    }
+}
+
+/* Body lock quand le drawer est ouvert (déjà ajouté par main.js) */
+body.noScroll {
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   3. NAVIGATION DESKTOP — micro-ajustement
+   ============================================================
+   À 1024px, la liste de nav (.navList) dépassait l'écran
+   parce que le breakpoint d'origine était 1010px. On a déjà
+   repoussé à 1100px ci-dessus. Ici on réduit le gap pour les
+   intermédiaires 1100-1280px afin d'éviter tout chevauchement
+   avec le bouton "Adhérer".
+*/
+@media (min-width: 1101px) and (max-width: 1280px) {
+    .mainNav .navList {
+        gap: 18px !important;
+    }
+}
+
+
+/* ============================================================
+   4. ACCUEIL — image rapport activités
+   ============================================================
+   Symptôme : `.document-card` et `.rapport-card-img` (carousel
+   des rapports) débordaient à 768/1440 avec une image source à
+   1075px de large. Le parent flex en `overflow:hidden` masquait
+   l'effet, mais c'était à clipper proprement.
+
+   Fix : forcer toutes les images des cards à 100% du conteneur.
+*/
+.document-card,
+.document-card * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.rapport-card-img,
+.rapport-card-img img {
+    max-width: 100% !important;
+    height: auto;
+}
+
+
+/* ============================================================
+   5. ACCUEIL — marquee des archives
+   ============================================================
+   Le track interne (.archives-marquee-track) fait ~2450px par
+   construction (boucle infinie). On s'assure que son parent
+   clippe correctement.
+*/
+.archives-marquee,
+[class*="marquee"] {
+    overflow: hidden !important;
+}
+
+
+/* ============================================================
+   6. PAGE FATE — hero responsive
+   ============================================================
+   Symptôme à 320/375 : `.fate-hero-left/.fate-hero-text`
+   dépassaient (368-336px de large pour un viewport 320-375).
+   Cause : largeur min non bornée + padding latéral.
+*/
+@media (max-width: 480px) {
+    .fate-hero-content,
+    .fate-hero-left,
+    .fate-hero-right,
+    .fate-hero-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box;
+    }
+
+    .fate-hero-h1,
+    .fate-hero-overtitle,
+    .fate-hero-sub {
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    .fate-hero-actions {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .fate-hero-actions .fate-hero-btn-secondary,
+    .fate-hero-actions a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+
+/* ============================================================
+   7. PAGE FATE — timeline horizontale
+   ============================================================
+   Symptôme : `.fate-tl-year` (boutons d'années) débordent à 375.
+   Fix : conteneur scroll horizontal propre + snap.
+*/
+@media (max-width: 768px) {
+    .fate-tl-years,
+    [class*="fate-tl-years"] {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        scrollbar-width: thin;
+    }
+
+    .fate-tl-year {
+        flex: 0 0 auto !important;
+        scroll-snap-align: start;
+    }
+}
+
+
+/* ============================================================
+   8. PAGE COLLABORATIONS — hero
+   ============================================================
+   Symptôme à 375 : .collabs-hero-left (406px) et
+   .collabs-hero-text (374px) dépassaient le viewport.
+*/
+@media (max-width: 768px) {
+    .collabs-hero,
+    .collabs-hero-left,
+    .collabs-hero-right,
+    .collabs-hero-text,
+    .collabs-hero-desc {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .collabs-hero-left,
+    .collabs-hero-right {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .collabs-breadcrumb {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ============================================================
+   9. CONTACT — pop-up suggestion
+   ============================================================
+   Symptôme à 375 : `.suggestion-prompt` (195px) et son bouton
+   close se positionnaient à droite hors viewport.
+*/
+@media (max-width: 480px) {
+    .suggestion-prompt,
+    #suggestionPrompt {
+        right: 12px !important;
+        left: 12px !important;
+        max-width: calc(100vw - 24px) !important;
+        bottom: 80px !important;
+    }
+
+    .suggestion-close {
+        right: 4px !important;
+    }
+}
+
+
+/* ============================================================
+   10. IMAGES — règle de garantie globale
+   ============================================================
+   Garantit qu'aucune image ne dépasse jamais son conteneur,
+   peu importe la page. Filet de sécurité général.
+*/
+img,
+picture > img,
+figure > img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ============================================================
+   11. POP-UP D'ACCUEIL — taille mobile
+   ============================================================
+   `.fate-popup` peut dépasser l'écran à 320px à cause d'un
+   `min-width` trop large. On le contraint.
+*/
+@media (max-width: 480px) {
+    #fate-popup-overlay .fate-popup,
+    .fate-popup {
+        width: calc(100vw - 24px) !important;
+        max-width: calc(100vw - 24px) !important;
+        min-width: 0 !important;
+        margin: 12px !important;
+        padding: 20px !important;
+        box-sizing: border-box;
+    }
+}
+
+
+/* ============================================================
+   12. FORMULAIRES — inputs en pleine largeur sur mobile
+   ============================================================
+   Sécurise tous les formulaires (contact, adherer, suggestions)
+   pour qu'aucun champ ne dépasse, peu importe les classes
+   utilisées par chaque page.
+*/
+@media (max-width: 768px) {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="url"],
+    input[type="search"],
+    textarea,
+    select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-row,
+    .form-group {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+
+/* ============================================================
+   13. TABLEAUX — wrapper scroll sur mobile
+   ============================================================
+   Si des tableaux sont injectés (rapports, partenaires…),
+   on évite qu'ils explosent le layout.
+*/
+@media (max-width: 768px) {
+    table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+/* ============================================================
+   14. FOOTER & TYPOGRAPHIE — fluidité 320→1920
+   ============================================================
+   Évite les ruptures brutales de taille de texte entre
+   breakpoints. clamp() rend les titres fluides.
+*/
+@media (max-width: 480px) {
+
+    h1,
+    .h1 {
+        font-size: clamp(28px, 8vw, 40px) !important;
+        line-height: 1.15 !important;
+    }
+
+    h2,
+    .h2 {
+        font-size: clamp(22px, 6vw, 32px) !important;
+        line-height: 1.2 !important;
+    }
+}
+
+
+/* ============================================================
+   15. IFRAMES (YouTube, Google Maps) — responsive
+   ============================================================
+   Toute iframe doit s'adapter au conteneur.
+*/
+iframe {
+    max-width: 100%;
+}
+
+.video-wrapper,
+[class*="video-wrap"] {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video-wrapper iframe,
+[class*="video-wrap"] iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* ============================================================
+   16. SUGGESTION PROMPT — cause racine du scroll horizontal
+   ============================================================
+   Symptôme : scroll horizontal de la page entière sur l'index
+   (et toute page incluant la prompt) en 320/375/768. Cause :
+   `.suggestion-prompt` est `position: fixed` + `transform:
+   translateX(100%) scale(0.8)` quand non `.show`. Le translateX
+   pousse l'élément hors viewport à droite, et `position: fixed`
+   échappe au clipping de `body { overflow-x: clip }` (les fixed
+   sont positionnés par rapport au viewport, hors du flux body).
+   Conséquence : la page entière scrolle horizontalement.
+
+   Fix : tant que la classe `.show` n'est pas posée par le JS,
+   on retire l'élément du flux visuel via `display: none`. La
+   transition d'apparition reste pilotée par le JS (toggle de
+   `.show`), donc aucun comportement utilisateur n'est cassé.
+
+   Bonus : on neutralise aussi tout `transform` initial qui
+   pourrait causer le même problème sur d'autres éléments fixed.
+*/
+.suggestion-prompt:not(.show),
+#suggestionPrompt:not(.show) {
+    display: none !important;
+}
+
+/* Garde-fou : aucun élément fixed ne doit jamais provoquer un
+   scroll horizontal de la page, même en cours d'animation. */
+@media (max-width: 1100px) {
+
+    .suggestion-prompt,
+    #suggestionPrompt {
+        max-width: calc(100vw - 24px) !important;
+    }
+}
+
+
+/* ============================================================
+   17. HERO SLIDER — neutraliser le scale qui force un scroll
+   ============================================================
+   Symptôme persistant après le fix de la prompt : à 375/768 sur
+   l'index, scroll horizontal subsistant. Cause : les `<img>` du
+   hero ont `transform: scale(1.05)` (effet zoom à l'arrivée du
+   slide). À 105% du parent, l'image déborde de 5% à droite. Le
+   parent `.fate-hero` est pourtant `overflow: hidden`, mais
+   selon l'enchaînement des transitions Playwright capture la
+   page avant la fin de l'animation, et le scale est encore
+   appliqué pleinement. Sur les vrais navigateurs mobile, le
+   même comportement peut générer un sursaut latéral à l'arrivée.
+
+   Fix : sur tous viewports, l'image hero reste à scale(1) ou
+   inférieur — l'effet "zoom" passe d'un effet de scale à un
+   effet d'opacity (déjà géré par le transition opacity:0.8s).
+*/
+.fate-hero-slide img {
+    max-width: 100% !important;
+    transform: scale(1) !important;
+}
+
+
+/* ============================================================
+   18. CLIP HORIZONTAL — double sécurité root
+   ============================================================
+   `overflow-x: clip` est censé contenir tout débordement, mais
+   sur certains navigateurs/setups, des éléments `position: fixed`
+   ou transformés peuvent encore provoquer du scrollWidth résiduel.
+   Le complément `overflow-x: hidden` sur html assure le clipping
+   même dans ces cas — combiné, on couvre tous les moteurs.
+*/
+html {
+    overflow-x: hidden;
+}
